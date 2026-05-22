@@ -37,11 +37,11 @@ namespace Azure.ResourceManager.PlanetaryComputer.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The details of the Microsoft Planetary Computer Pro GeoCatalog. </summary>

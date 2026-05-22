@@ -61,7 +61,6 @@ namespace Azure.ResourceManager.PostgreSql.FlexibleServers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 migrationId is null && currentStatus is null && migrationInstanceResourceId is null && migrationMode is null && migrationOption is null && sourceType is null && sslMode is null && sourceDbServerMetadata is null && targetDbServerMetadata is null && sourceDbServerResourceId is null && sourceDbServerFullyQualifiedDomainName is null && targetDbServerResourceId is null && targetDbServerFullyQualifiedDomainName is null && secretParameters is null && dbsToMigrate is null && setupLogicalReplicationOnSourceDbIfNeeded is null && overwriteDbsInTarget is null && migrationWindowStartTimeInUtc is null && migrationWindowEndTimeInUtc is null && migrateRoles is null && startDataMigration is null && triggerCutover is null && dbsToTriggerCutoverOn is null && cancel is null && dbsToCancelMigrationOn is null ? default : new MigrationProperties(
@@ -90,7 +89,8 @@ namespace Azure.ResourceManager.PostgreSql.FlexibleServers.Models
                     (dbsToTriggerCutoverOn ?? new ChangeTrackingList<string>()).ToList(),
                     cancel,
                     (dbsToCancelMigrationOn ?? new ChangeTrackingList<string>()).ToList(),
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> State of migration. </summary>
@@ -288,7 +288,6 @@ namespace Azure.ResourceManager.PostgreSql.FlexibleServers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 administratorLogin is null && administratorLoginPassword is null && version is null && minorVersion is null && state is null && fullyQualifiedDomainName is null && storage is null && authConfig is null && dataEncryption is null && backup is null && network is null && highAvailability is null && maintenanceWindow is null && sourceServerResourceId is null && pointInTimeUtc is null && availabilityZone is null && replicationRole is null && replicaCapacity is null && replica is null && createMode is null && privateEndpointConnections is null && cluster is null ? default : new ServerProperties(
@@ -316,7 +315,8 @@ namespace Azure.ResourceManager.PostgreSql.FlexibleServers.Models
                     cluster,
                     null),
                 sku,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Backup properties of a server. </summary>
@@ -446,7 +446,6 @@ namespace Azure.ResourceManager.PostgreSql.FlexibleServers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 value is null && description is null && defaultValue is null && dataType is null && allowedValues is null && source is null && isDynamicConfig is null && isReadOnly is null && isConfigPendingRestart is null && unit is null && documentationLink is null ? default : new ConfigurationProperties(
                     value,
                     description,
@@ -459,7 +458,8 @@ namespace Azure.ResourceManager.PostgreSql.FlexibleServers.Models
                     isConfigPendingRestart,
                     unit,
                     documentationLink,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -476,8 +476,8 @@ namespace Azure.ResourceManager.PostgreSql.FlexibleServers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                new FirewallRuleProperties(startIPAddress, endIPAddress, null));
+                new FirewallRuleProperties(startIPAddress, endIPAddress, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -495,8 +495,8 @@ namespace Azure.ResourceManager.PostgreSql.FlexibleServers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                groupId is null && requiredMembers is null && requiredZoneNames is null ? default : new PostgreSqlFlexibleServersPrivateLinkResourceProperties(groupId, (requiredMembers ?? new ChangeTrackingList<string>()).ToList(), (requiredZoneNames ?? new ChangeTrackingList<string>()).ToList(), null));
+                groupId is null && requiredMembers is null && requiredZoneNames is null ? default : new PostgreSqlFlexibleServersPrivateLinkResourceProperties(groupId, (requiredMembers ?? new ChangeTrackingList<string>()).ToList(), (requiredZoneNames ?? new ChangeTrackingList<string>()).ToList(), null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -514,8 +514,8 @@ namespace Azure.ResourceManager.PostgreSql.FlexibleServers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                endpointType is null && members is null && virtualEndpoints is null ? default : new VirtualEndpointResourceProperties(endpointType, (members ?? new ChangeTrackingList<string>()).ToList(), (virtualEndpoints ?? new ChangeTrackingList<string>()).ToList(), null));
+                endpointType is null && members is null && virtualEndpoints is null ? default : new VirtualEndpointResourceProperties(endpointType, (members ?? new ChangeTrackingList<string>()).ToList(), (virtualEndpoints ?? new ChangeTrackingList<string>()).ToList(), null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -534,8 +534,8 @@ namespace Azure.ResourceManager.PostgreSql.FlexibleServers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                new AdministratorMicrosoftEntraProperties(principalType, principalName, objectId, tenantId, null));
+                new AdministratorMicrosoftEntraProperties(principalType, principalName, objectId, tenantId, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Capability for the Azure Database for PostgreSQL flexible server. </summary>
@@ -773,14 +773,14 @@ namespace Azure.ResourceManager.PostgreSql.FlexibleServers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 createdOn is null && lastModifiedOn is null && sizeInKb is null && typePropertiesType is null && uri is null ? default : new CapturedLogProperties(
                     createdOn,
                     lastModifiedOn,
                     sizeInKb,
                     typePropertiesType,
                     uri,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="backupName"> Backup Name for the current backup. </param>
@@ -871,7 +871,6 @@ namespace Azure.ResourceManager.PostgreSql.FlexibleServers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 datasourceSizeInBytes is null && dataTransferredInBytes is null && backupName is null && backupMetadata is null && status is null && startOn is null && endOn is null && percentComplete is null && errorCode is null && errorMessage is null ? default : new LtrBackupOperationResponseProperties(
                     datasourceSizeInBytes,
                     dataTransferredInBytes,
@@ -883,7 +882,8 @@ namespace Azure.ResourceManager.PostgreSql.FlexibleServers.Models
                     percentComplete,
                     errorCode,
                     errorMessage,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -900,8 +900,8 @@ namespace Azure.ResourceManager.PostgreSql.FlexibleServers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                state is null && createdOn is null ? default : new AdvancedThreatProtectionSettingsProperties(state.GetValueOrDefault(), createdOn, null));
+                state is null && createdOn is null ? default : new AdvancedThreatProtectionSettingsProperties(state.GetValueOrDefault(), createdOn, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -919,8 +919,8 @@ namespace Azure.ResourceManager.PostgreSql.FlexibleServers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                backupType is null && completedOn is null && source is null ? default : new BackupAutomaticAndOnDemandProperties(backupType, completedOn, source, null));
+                backupType is null && completedOn is null && source is null ? default : new BackupAutomaticAndOnDemandProperties(backupType, completedOn, source, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -936,8 +936,8 @@ namespace Azure.ResourceManager.PostgreSql.FlexibleServers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                tuningOptionsState is null ? default : new TuningOptionsProperties(tuningOptionsState, null));
+                tuningOptionsState is null ? default : new TuningOptionsProperties(tuningOptionsState, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -964,7 +964,6 @@ namespace Azure.ResourceManager.PostgreSql.FlexibleServers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 kind,
                 initialRecommendedOn is null && lastRecommendedOn is null && timesRecommended is null && improvedQueryIds is null && recommendationReason is null && currentState is null && recommendationType is null && implementationDetails is null && analyzedWorkload is null && estimatedImpact is null && details is null ? default : new ObjectRecommendationProperties(
                     initialRecommendedOn,
@@ -978,7 +977,8 @@ namespace Azure.ResourceManager.PostgreSql.FlexibleServers.Models
                     analyzedWorkload,
                     (estimatedImpact ?? new ChangeTrackingList<RecommendationImpactRecord>()).ToList(),
                     details,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Impact on some metric if this recommended action is applied. </summary>

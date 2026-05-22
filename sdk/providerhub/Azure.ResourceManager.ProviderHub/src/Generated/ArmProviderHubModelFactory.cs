@@ -398,8 +398,8 @@ namespace Azure.ResourceManager.ProviderHub.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                operationsContentContents is null ? default : new OperationsContentProperties((operationsContentContents ?? new ChangeTrackingList<LocalizedOperationDefinition>()).ToList(), null));
+                operationsContentContents is null ? default : new OperationsContentProperties((operationsContentContents ?? new ChangeTrackingList<LocalizedOperationDefinition>()).ToList(), null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Concrete proxy resource types can be created by aliasing this type using a specific property type. </summary>
@@ -416,8 +416,8 @@ namespace Azure.ResourceManager.ProviderHub.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="autoProvisionConfig"> The auto provisioning configuration. </param>
@@ -469,9 +469,9 @@ namespace Azure.ResourceManager.ProviderHub.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
-                kind);
+                kind,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The ThirdPartyProviderAuthorization. </summary>
@@ -543,9 +543,9 @@ namespace Azure.ResourceManager.ProviderHub.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
-                kind);
+                kind,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="routingType"> The resource routing type. </param>
@@ -939,8 +939,8 @@ namespace Azure.ResourceManager.ProviderHub.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="isExpeditedRolloutEnabled"> Indicates whether expedited rollout is enabled/disabled. </param>
@@ -1131,8 +1131,8 @@ namespace Azure.ResourceManager.ProviderHub.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The NotificationRegistrationProperties. </summary>
@@ -1181,8 +1181,8 @@ namespace Azure.ResourceManager.ProviderHub.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The ResourceTypeSkuProperties. </summary>
@@ -1283,8 +1283,8 @@ namespace Azure.ResourceManager.ProviderHub.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The ProviderAuthorizedApplicationProperties. </summary>
@@ -1327,10 +1327,10 @@ namespace Azure.ResourceManager.ProviderHub.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                providerMonitorSettingProvisioningState is null ? default : new ProviderMonitorSettingProperties(providerMonitorSettingProvisioningState, null));
+                providerMonitorSettingProvisioningState is null ? default : new ProviderMonitorSettingProperties(providerMonitorSettingProvisioningState, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The ResourceManagementAction. </summary>

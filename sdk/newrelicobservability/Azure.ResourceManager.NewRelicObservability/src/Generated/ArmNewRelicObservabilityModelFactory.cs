@@ -35,8 +35,8 @@ namespace Azure.ResourceManager.NewRelicObservability.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                new NewRelicMonitoringTagRules(provisioningState, logRules, metricRules, null));
+                new NewRelicMonitoringTagRules(provisioningState, logRules, metricRules, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The resource-specific properties for this resource. </summary>
@@ -91,8 +91,8 @@ namespace Azure.ResourceManager.NewRelicObservability.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The request to update subscriptions needed to be monitored by the NewRelic monitor resource. </summary>
@@ -107,12 +107,6 @@ namespace Azure.ResourceManager.NewRelicObservability.Models
             return new NewRelicMonitoredSubscriptionProperties(patchOperation, monitoredSubscriptionList.ToList(), provisioningState, additionalBinaryDataProperties: null);
         }
 
-        /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
-        /// <param name="name"> The name of the resource. </param>
-        /// <param name="resourceType"> The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts". </param>
-        /// <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
-        /// <param name="tags"> Resource tags. </param>
-        /// <param name="location"> The geo-location where the resource lives. </param>
         /// <param name="provisioningState"> Provisioning State of the resource. </param>
         /// <param name="monitoringStatus"> MonitoringStatus of the resource. </param>
         /// <param name="marketplaceSubscriptionStatus"> NewRelic Organization properties of the resource. </param>
@@ -127,37 +121,27 @@ namespace Azure.ResourceManager.NewRelicObservability.Models
         /// <param name="subscriptionState"> State of the Azure Subscription containing the monitor resource. </param>
         /// <param name="saaSAzureSubscriptionStatus"> Status of Azure Subscription where Marketplace SaaS is located. </param>
         /// <param name="saaSResourceId"> SaaS resource id. </param>
+        /// <param name="name"> Name of the Monitors resource. </param>
         /// <param name="identity"> The managed service identities assigned to this resource. </param>
         /// <returns> A new <see cref="NewRelicObservability.NewRelicMonitorResourceData"/> instance for mocking. </returns>
-        public static NewRelicMonitorResourceData NewRelicMonitorResourceData(ResourceIdentifier id = default, string name = default, ResourceType resourceType = default, SystemData systemData = default, IDictionary<string, string> tags = default, AzureLocation location = default, NewRelicProvisioningState? provisioningState = default, NewRelicObservabilityMonitoringStatus? monitoringStatus = default, NewRelicObservabilityMarketplaceSubscriptionStatus? marketplaceSubscriptionStatus = default, string marketplaceSubscriptionId = default, NewRelicAccountProperties newRelicAccountProperties = default, NewRelicObservabilityUserInfo userInfo = default, NewRelicPlanDetails planData = default, NewRelicLiftrResourceCategory? liftrResourceCategory = default, int? liftrResourcePreference = default, NewRelicObservabilityOrgCreationSource? orgCreationSource = default, NewRelicObservabilityAccountCreationSource? accountCreationSource = default, string subscriptionState = default, string saaSAzureSubscriptionStatus = default, string saaSResourceId = default, ManagedServiceIdentity identity = default)
+        public static NewRelicMonitorResourceData NewRelicMonitorResourceData(NewRelicProvisioningState? provisioningState = default, NewRelicObservabilityMonitoringStatus? monitoringStatus = default, NewRelicObservabilityMarketplaceSubscriptionStatus? marketplaceSubscriptionStatus = default, string marketplaceSubscriptionId = default, NewRelicAccountProperties newRelicAccountProperties = default, NewRelicObservabilityUserInfo userInfo = default, NewRelicPlanDetails planData = default, NewRelicLiftrResourceCategory? liftrResourceCategory = default, int? liftrResourcePreference = default, NewRelicObservabilityOrgCreationSource? orgCreationSource = default, NewRelicObservabilityAccountCreationSource? accountCreationSource = default, string subscriptionState = default, string saaSAzureSubscriptionStatus = default, string saaSResourceId = default, string name = default, ManagedServiceIdentity identity = default)
         {
-            tags ??= new ChangeTrackingDictionary<string, string>();
-
-            return new NewRelicMonitorResourceData(
-                id,
-                name,
-                resourceType,
-                systemData,
-                additionalBinaryDataProperties: null,
-                tags,
-                location,
-                new MonitorProperties(
-                    provisioningState,
-                    monitoringStatus,
-                    marketplaceSubscriptionStatus,
-                    marketplaceSubscriptionId,
-                    newRelicAccountProperties,
-                    userInfo,
-                    planData,
-                    new NewRelicObservabilitySaaSInfo(saaSResourceId, null),
-                    liftrResourceCategory,
-                    liftrResourcePreference,
-                    orgCreationSource,
-                    accountCreationSource,
-                    subscriptionState,
-                    saaSAzureSubscriptionStatus,
-                    null),
-                identity);
+            return new NewRelicMonitorResourceData(new MonitorProperties(
+                provisioningState,
+                monitoringStatus,
+                marketplaceSubscriptionStatus,
+                marketplaceSubscriptionId,
+                newRelicAccountProperties,
+                userInfo,
+                planData,
+                new NewRelicObservabilitySaaSInfo(saaSResourceId, null),
+                liftrResourceCategory,
+                liftrResourcePreference,
+                orgCreationSource,
+                accountCreationSource,
+                subscriptionState,
+                saaSAzureSubscriptionStatus,
+                null), name, identity, additionalBinaryDataProperties: null);
         }
 
         /// <param name="identity"> The managed service identities assigned to this resource. </param>
@@ -382,8 +366,8 @@ namespace Azure.ResourceManager.NewRelicObservability.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                saasId);
+                saasId,
+                additionalBinaryDataProperties: null);
         }
     }
 }

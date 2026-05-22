@@ -40,11 +40,11 @@ namespace Azure.ResourceManager.RecoveryServicesBackup.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                eTag);
+                eTag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Prepare DataMove Request. </summary>
@@ -111,11 +111,11 @@ namespace Azure.ResourceManager.RecoveryServicesBackup.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                eTag);
+                eTag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Backup resource vault config details. </summary>
@@ -137,11 +137,11 @@ namespace Azure.ResourceManager.RecoveryServicesBackup.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                eTag);
+                eTag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Backup resource vault config details. </summary>
@@ -189,11 +189,11 @@ namespace Azure.ResourceManager.RecoveryServicesBackup.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                eTag);
+                eTag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The BackupResourceEncryptionConfigExtendedCreateOrUpdateContent. </summary>
@@ -215,11 +215,11 @@ namespace Azure.ResourceManager.RecoveryServicesBackup.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                eTag);
+                eTag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Private Endpoint Connection Response Properties. </summary>
@@ -241,11 +241,11 @@ namespace Azure.ResourceManager.RecoveryServicesBackup.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                eTag);
+                eTag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="provisioningState"> Gets or sets provisioning state of the private endpoint connection. </param>
@@ -279,11 +279,11 @@ namespace Azure.ResourceManager.RecoveryServicesBackup.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                eTag);
+                eTag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary>
@@ -1500,11 +1500,11 @@ namespace Azure.ResourceManager.RecoveryServicesBackup.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                eTag);
+                eTag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary>
@@ -1647,13 +1647,12 @@ namespace Azure.ResourceManager.RecoveryServicesBackup.Models
         /// <param name="tierType"> Recovery point tier type. </param>
         /// <param name="status"> Recovery point tier status. </param>
         /// <param name="extendedInfo"> Recovery point tier status. </param>
-        /// <param name="type"> Recovery point tier type. </param>
         /// <returns> A new <see cref="Models.RecoveryPointTierInformationV2"/> instance for mocking. </returns>
-        public static RecoveryPointTierInformationV2 RecoveryPointTierInformationV2(RecoveryPointTierType? tierType = default, RecoveryPointTierStatus? status = default, IDictionary<string, string> extendedInfo = default, RecoveryPointTierType? @type = default)
+        public static RecoveryPointTierInformationV2 RecoveryPointTierInformationV2(RecoveryPointTierType? tierType = default, RecoveryPointTierStatus? status = default, IDictionary<string, string> extendedInfo = default)
         {
             extendedInfo ??= new ChangeTrackingDictionary<string, string>();
 
-            return new RecoveryPointTierInformationV2(tierType, status, extendedInfo, additionalBinaryDataProperties: null, @type);
+            return new RecoveryPointTierInformationV2(tierType, status, extendedInfo, additionalBinaryDataProperties: null);
         }
 
         /// <summary> Recovery point specific to PointInTime in SAPHana. </summary>
@@ -1969,11 +1968,11 @@ namespace Azure.ResourceManager.RecoveryServicesBackup.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                eTag);
+                eTag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="friendlyName"> Friendly name of the container. </param>
@@ -2965,11 +2964,11 @@ namespace Azure.ResourceManager.RecoveryServicesBackup.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                eTag);
+                eTag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary>
@@ -3281,11 +3280,11 @@ namespace Azure.ResourceManager.RecoveryServicesBackup.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                eTag);
+                eTag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Azure IaaS VM workload-specific job object. </summary>
@@ -3731,11 +3730,11 @@ namespace Azure.ResourceManager.RecoveryServicesBackup.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                eTag);
+                eTag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The ResourceGuardProxyData. </summary>
@@ -3757,11 +3756,11 @@ namespace Azure.ResourceManager.RecoveryServicesBackup.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                eTag);
+                eTag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The ResourceGuardProxyProperties. </summary>
@@ -4657,11 +4656,11 @@ namespace Azure.ResourceManager.RecoveryServicesBackup.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 eTag,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Models.ProtectableContainerResource"/>. </summary>
@@ -4687,11 +4686,11 @@ namespace Azure.ResourceManager.RecoveryServicesBackup.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 eTag,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Models.WorkloadItemResource"/>. </summary>
@@ -4717,11 +4716,11 @@ namespace Azure.ResourceManager.RecoveryServicesBackup.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 eTag,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Models.TriggerBackupContent"/>. </summary>
@@ -4747,11 +4746,11 @@ namespace Azure.ResourceManager.RecoveryServicesBackup.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 eTag,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Models.ProvisionIlrConnectionContent"/>. </summary>
@@ -4777,11 +4776,11 @@ namespace Azure.ResourceManager.RecoveryServicesBackup.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 eTag,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Models.WorkloadProtectableItemResource"/>. </summary>
@@ -4807,11 +4806,11 @@ namespace Azure.ResourceManager.RecoveryServicesBackup.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 eTag,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Models.FileshareProtectedItem"/>. </summary>

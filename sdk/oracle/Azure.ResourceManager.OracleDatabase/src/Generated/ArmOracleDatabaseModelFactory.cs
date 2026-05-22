@@ -39,11 +39,11 @@ namespace Azure.ResourceManager.OracleDatabase.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                zones.ToList());
+                zones.ToList(),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> CloudExadataInfrastructure resource model. </summary>
@@ -248,8 +248,8 @@ namespace Azure.ResourceManager.OracleDatabase.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> DbServer resource properties. </summary>
@@ -336,10 +336,10 @@ namespace Azure.ResourceManager.OracleDatabase.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> CloudVmCluster resource model. </summary>
@@ -583,8 +583,8 @@ namespace Azure.ResourceManager.OracleDatabase.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> virtualNetworkAddress resource properties. </summary>
@@ -624,8 +624,8 @@ namespace Azure.ResourceManager.OracleDatabase.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                oracleSystemVersion is null ? default : new OracleSystemVersionProperties(oracleSystemVersion, null));
+                oracleSystemVersion is null ? default : new OracleSystemVersionProperties(oracleSystemVersion, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> OracleSubscription resource definition. </summary>
@@ -643,9 +643,9 @@ namespace Azure.ResourceManager.OracleDatabase.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
-                plan);
+                plan,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Oracle Subscription resource model. </summary>
@@ -752,8 +752,8 @@ namespace Azure.ResourceManager.OracleDatabase.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The properties of DbNodeResource. </summary>
@@ -831,8 +831,8 @@ namespace Azure.ResourceManager.OracleDatabase.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                oracleGIVersion is null ? default : new OracleGIVersionProperties(oracleGIVersion, null));
+                oracleGIVersion is null ? default : new OracleGIVersionProperties(oracleGIVersion, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The Oracle Grid Infrastructure (GI) minor version resource definition. </summary>
@@ -849,8 +849,8 @@ namespace Azure.ResourceManager.OracleDatabase.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The Oracle Grid Infrastructure (GI) minor version properties. </summary>
@@ -876,8 +876,8 @@ namespace Azure.ResourceManager.OracleDatabase.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> DbSystemShape resource model. </summary>
@@ -954,8 +954,8 @@ namespace Azure.ResourceManager.OracleDatabase.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Views resource model. </summary>
@@ -996,8 +996,8 @@ namespace Azure.ResourceManager.OracleDatabase.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Zones resource model. </summary>
@@ -1042,8 +1042,8 @@ namespace Azure.ResourceManager.OracleDatabase.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> FlexComponent resource model. </summary>
@@ -1092,10 +1092,10 @@ namespace Azure.ResourceManager.OracleDatabase.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary>
@@ -2207,8 +2207,8 @@ namespace Azure.ResourceManager.OracleDatabase.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> AutonomousDatabaseBackup resource model. </summary>
@@ -2264,8 +2264,8 @@ namespace Azure.ResourceManager.OracleDatabase.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                autonomousDatabaseCharacterSet is null ? default : new AutonomousDatabaseCharacterSetProperties(autonomousDatabaseCharacterSet, null));
+                autonomousDatabaseCharacterSet is null ? default : new AutonomousDatabaseCharacterSetProperties(autonomousDatabaseCharacterSet, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -2281,8 +2281,8 @@ namespace Azure.ResourceManager.OracleDatabase.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                autonomousDatabaseNationalCharacterSet is null ? default : new AutonomousDatabaseNationalCharacterSetProperties(autonomousDatabaseNationalCharacterSet, null));
+                autonomousDatabaseNationalCharacterSet is null ? default : new AutonomousDatabaseNationalCharacterSetProperties(autonomousDatabaseNationalCharacterSet, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> AutonomousDbVersion resource definition. </summary>
@@ -2299,8 +2299,8 @@ namespace Azure.ResourceManager.OracleDatabase.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> ExadbVmCluster resource definition. </summary>
@@ -2323,11 +2323,11 @@ namespace Azure.ResourceManager.OracleDatabase.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                zones.ToList());
+                zones.ToList(),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="zones"> The availability zones. </param>
@@ -2374,8 +2374,8 @@ namespace Azure.ResourceManager.OracleDatabase.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The properties of DbNodeResource. </summary>
@@ -2440,11 +2440,11 @@ namespace Azure.ResourceManager.OracleDatabase.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                zones.ToList());
+                zones.ToList(),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Exadata Database Storage Details. </summary>
@@ -2486,11 +2486,11 @@ namespace Azure.ResourceManager.OracleDatabase.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                zones.ToList());
+                zones.ToList(),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Network Anchor properties. </summary>
@@ -2572,10 +2572,10 @@ namespace Azure.ResourceManager.OracleDatabase.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Resource Anchor properties. </summary>
@@ -2617,11 +2617,11 @@ namespace Azure.ResourceManager.OracleDatabase.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                zones.ToList());
+                zones.ToList(),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="provisioningState"> dbSystem provisioning state. </param>
@@ -2797,8 +2797,8 @@ namespace Azure.ResourceManager.OracleDatabase.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> DbVersion resource model. </summary>

@@ -33,8 +33,8 @@ namespace Azure.ResourceManager.RedHatOpenShift.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                version is null ? default : new OpenShiftVersionProperties(version, null));
+                version is null ? default : new OpenShiftVersionProperties(version, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -51,8 +51,8 @@ namespace Azure.ResourceManager.RedHatOpenShift.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                openShiftVersion is null && platformWorkloadIdentityRoles is null ? default : new PlatformWorkloadIdentityRoleSetProperties(openShiftVersion, (platformWorkloadIdentityRoles ?? new ChangeTrackingList<OpenShiftPlatformWorkloadIdentityRole>()).ToList(), null));
+                openShiftVersion is null && platformWorkloadIdentityRoles is null ? default : new PlatformWorkloadIdentityRoleSetProperties(openShiftVersion, (platformWorkloadIdentityRoles ?? new ChangeTrackingList<OpenShiftPlatformWorkloadIdentityRole>()).ToList(), null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> PlatformWorkloadIdentityRole represents a mapping from a particular OCP operator to the built-in role that should be assigned to that operator's corresponding managed identity. </summary>
@@ -93,7 +93,6 @@ namespace Azure.ResourceManager.RedHatOpenShift.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 provisioningState is null && clusterProfile is null && servicePrincipalProfile is null && platformWorkloadIdentityProfile is null && networkProfile is null && masterProfile is null && workerProfiles is null && workerProfilesStatus is null && apiServerProfile is null && ingressProfiles is null && consoleUri is null ? default : new OpenShiftClusterProperties(
@@ -109,7 +108,8 @@ namespace Azure.ResourceManager.RedHatOpenShift.Models
                     apiServerProfile,
                     (ingressProfiles ?? new ChangeTrackingList<OpenShiftIngressProfile>()).ToList(),
                     null),
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> ClusterProfile represents a cluster profile. </summary>

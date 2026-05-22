@@ -36,14 +36,14 @@ namespace Azure.ResourceManager.MySql.FlexibleServers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 administratorType is null && login is null && sid is null && tenantId is null && identityResourceId is null ? default : new AdministratorProperties(
                     administratorType,
                     login,
                     sid,
                     tenantId,
                     identityResourceId,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -86,7 +86,6 @@ namespace Azure.ResourceManager.MySql.FlexibleServers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 administratorLogin is null && administratorLoginPassword is null && version is null && fullVersion is null && availabilityZone is null && createMode is null && sourceServerResourceId is null && restorePointInOn is null && replicationRole is null && replicaCapacity is null && dataEncryption is null && state is null && fullyQualifiedDomainName is null && databasePort is null && storage is null && backup is null && highAvailability is null && network is null && serverPrivateEndpointConnections is null && maintenanceWindow is null && importSourceProperties is null && maintenancePatchStrategy is null ? default : new ServerProperties(
@@ -114,7 +113,8 @@ namespace Azure.ResourceManager.MySql.FlexibleServers.Models
                     importSourceProperties,
                     null),
                 identity,
-                sku);
+                sku,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Storage Profile properties of a server. </summary>
@@ -176,8 +176,8 @@ namespace Azure.ResourceManager.MySql.FlexibleServers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                groupIds is null && privateLinkServiceConnectionState is null && provisioningState is null && privateEndpointId is null ? default : new PrivateEndpointConnectionProperties((groupIds ?? new ChangeTrackingList<string>()).ToList(), new PrivateEndpoint(privateEndpointId, null), privateLinkServiceConnectionState, provisioningState, null));
+                groupIds is null && privateLinkServiceConnectionState is null && provisioningState is null && privateEndpointId is null ? default : new PrivateEndpointConnectionProperties((groupIds ?? new ChangeTrackingList<string>()).ToList(), new PrivateEndpoint(privateEndpointId, null), privateLinkServiceConnectionState, provisioningState, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="identity"> The cmk identity for the server. </param>
@@ -278,13 +278,13 @@ namespace Azure.ResourceManager.MySql.FlexibleServers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 datasourceSizeInBytes is null && dataTransferredInBytes is null && backupMetadata is null ? default : new BackupAndExportResponseProperties(datasourceSizeInBytes, dataTransferredInBytes, backupMetadata, null),
                 error,
                 status,
                 startOn,
                 endOn,
-                percentComplete);
+                percentComplete,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="numberOfContainers"> Estimated no of storage containers required for resource data to be backed up. </param>
@@ -311,14 +311,14 @@ namespace Azure.ResourceManager.MySql.FlexibleServers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 sizeInKB is null && createdOn is null && typePropertiesType is null && lastModifiedOn is null && uri is null ? default : new LogFileProperties(
                     sizeInKB,
                     createdOn,
                     typePropertiesType,
                     lastModifiedOn,
                     uri,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -336,8 +336,8 @@ namespace Azure.ResourceManager.MySql.FlexibleServers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                backupType is null && completedOn is null && source is null ? default : new ServerBackupProperties(backupType, completedOn, source, null));
+                backupType is null && completedOn is null && source is null ? default : new ServerBackupProperties(backupType, completedOn, source, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -357,14 +357,14 @@ namespace Azure.ResourceManager.MySql.FlexibleServers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 backupNameV2 is null && backupType is null && completedOn is null && source is null && provisioningState is null ? default : new ServerBackupPropertiesV2(
                     backupNameV2,
                     backupType,
                     completedOn,
                     source,
                     provisioningState,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -390,7 +390,6 @@ namespace Azure.ResourceManager.MySql.FlexibleServers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 value is null && currentValue is null && description is null && documentationLink is null && defaultValue is null && dataType is null && allowedValues is null && source is null && isReadOnly is null && isConfigPendingRestart is null && isDynamicConfig is null ? default : new ConfigurationProperties(
                     value,
                     currentValue,
@@ -403,7 +402,8 @@ namespace Azure.ResourceManager.MySql.FlexibleServers.Models
                     isReadOnly,
                     isConfigPendingRestart,
                     isDynamicConfig,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The response of a Configuration list operation. </summary>
@@ -442,8 +442,8 @@ namespace Azure.ResourceManager.MySql.FlexibleServers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                charset is null && collation is null ? default : new DatabaseProperties(charset, collation, null));
+                charset is null && collation is null ? default : new DatabaseProperties(charset, collation, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -460,8 +460,8 @@ namespace Azure.ResourceManager.MySql.FlexibleServers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                new FirewallRuleProperties(startIPAddress, endIPAddress, null));
+                new FirewallRuleProperties(startIPAddress, endIPAddress, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -479,8 +479,8 @@ namespace Azure.ResourceManager.MySql.FlexibleServers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                createdOn is null && state is null && provisioningState is null ? default : new AdvancedThreatProtectionProperties(createdOn, state, provisioningState, null));
+                createdOn is null && state is null && provisioningState is null ? default : new AdvancedThreatProtectionProperties(createdOn, state, provisioningState, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -499,8 +499,8 @@ namespace Azure.ResourceManager.MySql.FlexibleServers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                supportedGeoBackupRegions is null && supportedFlexibleServerEditions is null && supportedServerVersions is null && supportedFeatures is null ? default : new CapabilityPropertiesV2((supportedGeoBackupRegions ?? new ChangeTrackingList<string>()).ToList(), (supportedFlexibleServerEditions ?? new ChangeTrackingList<ServerEditionCapabilityV2>()).ToList(), (supportedServerVersions ?? new ChangeTrackingList<ServerVersionCapabilityV2>()).ToList(), (supportedFeatures ?? new ChangeTrackingList<MySqlFlexibleServerFeatureProperty>()).ToList(), null));
+                supportedGeoBackupRegions is null && supportedFlexibleServerEditions is null && supportedServerVersions is null && supportedFeatures is null ? default : new CapabilityPropertiesV2((supportedGeoBackupRegions ?? new ChangeTrackingList<string>()).ToList(), (supportedFlexibleServerEditions ?? new ChangeTrackingList<ServerEditionCapabilityV2>()).ToList(), (supportedServerVersions ?? new ChangeTrackingList<ServerVersionCapabilityV2>()).ToList(), (supportedFeatures ?? new ChangeTrackingList<MySqlFlexibleServerFeatureProperty>()).ToList(), null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Server edition capabilities. </summary>
@@ -609,7 +609,6 @@ namespace Azure.ResourceManager.MySql.FlexibleServers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 new MaintenanceProperties(
                     maintenanceType,
                     maintenanceState,
@@ -622,7 +621,8 @@ namespace Azure.ResourceManager.MySql.FlexibleServers.Models
                     maintenanceTitle,
                     maintenanceDescription,
                     provisioningState,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Location capabilities. </summary>

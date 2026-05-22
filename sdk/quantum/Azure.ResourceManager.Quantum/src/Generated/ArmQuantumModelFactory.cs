@@ -48,11 +48,11 @@ namespace Azure.ResourceManager.Quantum.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="providers"> List of Providers selected for this Workspace. </param>
@@ -151,8 +151,8 @@ namespace Azure.ResourceManager.Quantum.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties of a Quantum Suite Offer. </summary>

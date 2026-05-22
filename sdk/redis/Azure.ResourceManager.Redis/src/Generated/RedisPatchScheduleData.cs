@@ -34,25 +34,19 @@ namespace Azure.ResourceManager.Redis
         /// <param name="name"> The name of the resource. </param>
         /// <param name="resourceType"> The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts". </param>
         /// <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
-        /// <param name="additionalBinaryDataProperties"> Keeps track of any properties unknown to the library. </param>
         /// <param name="properties"> List of patch schedules for a Redis cache. </param>
-        /// <param name="defaultName"> Default string modeled as parameter for auto generation to work correctly. </param>
         /// <param name="location"> The geo-location where the resource lives. </param>
-        internal RedisPatchScheduleData(ResourceIdentifier id, string name, ResourceType resourceType, SystemData systemData, IDictionary<string, BinaryData> additionalBinaryDataProperties, RedisPatchScheduleSettings properties, RedisPatchScheduleDefaultName defaultName, AzureLocation? location) : base(id, name, resourceType, systemData)
+        /// <param name="additionalBinaryDataProperties"> Keeps track of any properties unknown to the library. </param>
+        internal RedisPatchScheduleData(ResourceIdentifier id, string name, ResourceType resourceType, SystemData systemData, RedisPatchScheduleSettings properties, AzureLocation? location, IDictionary<string, BinaryData> additionalBinaryDataProperties) : base(id, name, resourceType, systemData)
         {
-            _additionalBinaryDataProperties = additionalBinaryDataProperties;
             Properties = properties;
-            DefaultName = defaultName;
             Location = location;
+            _additionalBinaryDataProperties = additionalBinaryDataProperties;
         }
 
         /// <summary> List of patch schedules for a Redis cache. </summary>
         [WirePath("properties")]
         internal RedisPatchScheduleSettings Properties { get; set; }
-
-        /// <summary> Default string modeled as parameter for auto generation to work correctly. </summary>
-        [WirePath("name")]
-        public RedisPatchScheduleDefaultName DefaultName { get; }
 
         /// <summary> The geo-location where the resource lives. </summary>
         [WirePath("location")]

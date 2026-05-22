@@ -63,8 +63,8 @@ namespace Azure.ResourceManager.Quota.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties. </summary>
@@ -101,8 +101,8 @@ namespace Azure.ResourceManager.Quota.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties. </summary>
@@ -137,8 +137,8 @@ namespace Azure.ResourceManager.Quota.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The GroupQuotaRequestStatusProperties. </summary>
@@ -166,8 +166,8 @@ namespace Azure.ResourceManager.Quota.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="value"> Resource name. </param>
@@ -195,8 +195,8 @@ namespace Azure.ResourceManager.Quota.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The GroupQuotaSubscriptionProperties. </summary>
@@ -222,8 +222,8 @@ namespace Azure.ResourceManager.Quota.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The GroupQuotaSubscriptionRequestStatusProperties. </summary>
@@ -250,8 +250,8 @@ namespace Azure.ResourceManager.Quota.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The GroupQuotaLimitListProperties. </summary>
@@ -333,8 +333,8 @@ namespace Azure.ResourceManager.Quota.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The SubscriptionQuotaAllocationsListProperties. </summary>
@@ -387,8 +387,8 @@ namespace Azure.ResourceManager.Quota.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                requestedResource is null && requestSubmittedOn is null && provisioningState is null && faultCode is null ? default : new QuotaAllocationRequestStatusProperties(requestedResource, requestSubmittedOn, provisioningState, faultCode, null));
+                requestedResource is null && requestSubmittedOn is null && provisioningState is null && faultCode is null ? default : new QuotaAllocationRequestStatusProperties(requestedResource, requestSubmittedOn, provisioningState, faultCode, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The GroupQuota Enforcement status for a Azure Location/Region. </summary>
@@ -405,8 +405,8 @@ namespace Azure.ResourceManager.Quota.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The GroupQuotasEnforcementStatusProperties. </summary>
@@ -434,8 +434,8 @@ namespace Azure.ResourceManager.Quota.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Usage properties for the specified resource. </summary>
@@ -498,8 +498,8 @@ namespace Azure.ResourceManager.Quota.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Quota properties for the specified resource. </summary>
@@ -547,14 +547,14 @@ namespace Azure.ResourceManager.Quota.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 provisioningState is null && message is null && error is null && requestSubmitOn is null && value is null ? default : new QuotaRequestProperties(
                     provisioningState,
                     message,
                     error,
                     requestSubmitOn,
                     (value ?? new ChangeTrackingList<QuotaSubRequestDetail>()).ToList(),
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Request property. </summary>

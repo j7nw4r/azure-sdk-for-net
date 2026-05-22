@@ -33,8 +33,8 @@ namespace Azure.ResourceManager.RecoveryServicesDataReplication.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Email configuration model properties. </summary>
@@ -69,11 +69,11 @@ namespace Azure.ResourceManager.RecoveryServicesDataReplication.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Vault properties. </summary>
@@ -104,10 +104,10 @@ namespace Azure.ResourceManager.RecoveryServicesDataReplication.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 properties,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Event model. </summary>
@@ -124,8 +124,8 @@ namespace Azure.ResourceManager.RecoveryServicesDataReplication.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Event model properties. </summary>
@@ -285,10 +285,10 @@ namespace Azure.ResourceManager.RecoveryServicesDataReplication.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Fabric model properties. </summary>
@@ -387,9 +387,9 @@ namespace Azure.ResourceManager.RecoveryServicesDataReplication.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Fabric agent model. </summary>
@@ -406,8 +406,8 @@ namespace Azure.ResourceManager.RecoveryServicesDataReplication.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Fabric agent model properties. </summary>
@@ -456,8 +456,8 @@ namespace Azure.ResourceManager.RecoveryServicesDataReplication.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Job model properties. </summary>
@@ -639,8 +639,8 @@ namespace Azure.ResourceManager.RecoveryServicesDataReplication.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Policy model properties. </summary>
@@ -666,8 +666,8 @@ namespace Azure.ResourceManager.RecoveryServicesDataReplication.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="provisioningState"> Gets or sets provisioning state of the private endpoint connection. </param>
@@ -693,9 +693,9 @@ namespace Azure.ResourceManager.RecoveryServicesDataReplication.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
-                etag);
+                etag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Represents private endpoint connection proxy request. </summary>
@@ -790,8 +790,8 @@ namespace Azure.ResourceManager.RecoveryServicesDataReplication.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Represents private link resource properties. </summary>
@@ -822,8 +822,8 @@ namespace Azure.ResourceManager.RecoveryServicesDataReplication.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Protected item model properties. </summary>
@@ -1290,8 +1290,8 @@ namespace Azure.ResourceManager.RecoveryServicesDataReplication.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                customProperties is null ? default : new DataReplicationProtectedItemPropertiesUpdate(customProperties, null));
+                customProperties is null ? default : new DataReplicationProtectedItemPropertiesUpdate(customProperties, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> HyperV to AzStackHCI Protected item model custom properties. </summary>
@@ -1354,8 +1354,8 @@ namespace Azure.ResourceManager.RecoveryServicesDataReplication.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Recovery point model properties. </summary>
@@ -1403,8 +1403,8 @@ namespace Azure.ResourceManager.RecoveryServicesDataReplication.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Replication extension model properties. </summary>

@@ -64,7 +64,6 @@ namespace Azure.ResourceManager.Redis.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 new RedisProperties(
@@ -94,7 +93,8 @@ namespace Azure.ResourceManager.Redis.Models
                     (privateEndpointConnections ?? new ChangeTrackingList<RedisPrivateEndpointConnectionData>()).ToList(),
                     targetAmrResourceId),
                 zones.ToList(),
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Redis cache access keys. </summary>
@@ -142,8 +142,8 @@ namespace Azure.ResourceManager.Redis.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                groupIds is null && redisPrivateLinkServiceConnectionState is null && redisProvisioningState is null && privateEndpointId is null ? default : new PrivateEndpointConnectionProperties((groupIds ?? new ChangeTrackingList<string>()).ToList(), new PrivateEndpoint(privateEndpointId, null), redisPrivateLinkServiceConnectionState, redisProvisioningState, null));
+                groupIds is null && redisPrivateLinkServiceConnectionState is null && redisProvisioningState is null && privateEndpointId is null ? default : new PrivateEndpointConnectionProperties((groupIds ?? new ChangeTrackingList<string>()).ToList(), new PrivateEndpoint(privateEndpointId, null), redisPrivateLinkServiceConnectionState, redisProvisioningState, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> All Redis Settings. Few possible keys: rdb-backup-enabled,rdb-storage-connection-string,rdb-backup-frequency,maxmemory-delta, maxmemory-policy,notify-keyspace-events, aof-backup-enabled, aof-storage-connection-string-0, aof-storage-connection-string-1 etc. </summary>
@@ -318,8 +318,8 @@ namespace Azure.ResourceManager.Redis.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                groupId is null && requiredMembers is null && requiredZoneNames is null ? default : new RedisPrivateLinkResourceProperties(groupId, (requiredMembers ?? new ChangeTrackingList<string>()).ToList(), (requiredZoneNames ?? new ChangeTrackingList<string>()).ToList(), null));
+                groupId is null && requiredMembers is null && requiredZoneNames is null ? default : new RedisPrivateLinkResourceProperties(groupId, (requiredMembers ?? new ChangeTrackingList<string>()).ToList(), (requiredZoneNames ?? new ChangeTrackingList<string>()).ToList(), null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -336,29 +336,8 @@ namespace Azure.ResourceManager.Redis.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                new RedisFirewallRuleProperties(startIP, endIP, null));
-        }
-
-        /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
-        /// <param name="name"> The name of the resource. </param>
-        /// <param name="resourceType"> The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts". </param>
-        /// <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
-        /// <param name="scheduleEntries"> List of patch schedules for a Redis cache. </param>
-        /// <param name="defaultName"> Default string modeled as parameter for auto generation to work correctly. </param>
-        /// <param name="location"> The geo-location where the resource lives. </param>
-        /// <returns> A new <see cref="Redis.RedisPatchScheduleData"/> instance for mocking. </returns>
-        public static RedisPatchScheduleData RedisPatchScheduleData(ResourceIdentifier id = default, string name = default, ResourceType resourceType = default, SystemData systemData = default, IEnumerable<RedisPatchScheduleSetting> scheduleEntries = default, RedisPatchScheduleDefaultName defaultName = default, AzureLocation? location = default)
-        {
-            return new RedisPatchScheduleData(
-                id,
-                name,
-                resourceType,
-                systemData,
-                additionalBinaryDataProperties: null,
-                new RedisPatchScheduleSettings((scheduleEntries ?? new ChangeTrackingList<RedisPatchScheduleSetting>()).ToList(), null),
-                defaultName,
-                location);
+                new RedisFirewallRuleProperties(startIP, endIP, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -379,7 +358,6 @@ namespace Azure.ResourceManager.Redis.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 linkedRedisCacheId is null && linkedRedisCacheLocation is null && serverRole is null && geoReplicatedPrimaryHostName is null && primaryHostName is null && provisioningState is null ? default : new RedisLinkedServerProperties(
                     linkedRedisCacheId,
                     linkedRedisCacheLocation.GetValueOrDefault(),
@@ -387,7 +365,8 @@ namespace Azure.ResourceManager.Redis.Models
                     geoReplicatedPrimaryHostName,
                     primaryHostName,
                     null,
-                    provisioningState));
+                    provisioningState),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -405,8 +384,8 @@ namespace Azure.ResourceManager.Redis.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                provisioningState is null && typePropertiesType is null && permissions is null ? default : new RedisCacheAccessPolicyProperties(provisioningState, typePropertiesType, permissions, null));
+                provisioningState is null && typePropertiesType is null && permissions is null ? default : new RedisCacheAccessPolicyProperties(provisioningState, typePropertiesType, permissions, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -425,8 +404,8 @@ namespace Azure.ResourceManager.Redis.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                provisioningState is null && objectId is null && objectIdAlias is null && accessPolicyName is null ? default : new RedisCacheAccessPolicyAssignmentProperties(provisioningState, objectId, objectIdAlias, accessPolicyName, null));
+                provisioningState is null && objectId is null && objectIdAlias is null && accessPolicyName is null ? default : new RedisCacheAccessPolicyAssignmentProperties(provisioningState, objectId, objectIdAlias, accessPolicyName, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Parameters body to pass for resource name availability check. </summary>
@@ -546,10 +525,18 @@ namespace Azure.ResourceManager.Redis.Models
         /// <param name="location"> The geo-location where the resource lives. </param>
         /// <param name="scheduleEntries"> List of patch schedules for a Redis cache. </param>
         /// <returns> A new <see cref="Redis.RedisPatchScheduleData"/> instance for mocking. </returns>
-        [EditorBrowsable(EditorBrowsableState.Never)]
-        public static RedisPatchScheduleData RedisPatchScheduleData(ResourceIdentifier id, string name, ResourceType resourceType, SystemData systemData, AzureLocation? location, IEnumerable<RedisPatchScheduleSetting> scheduleEntries)
+        public static RedisPatchScheduleData RedisPatchScheduleData(ResourceIdentifier id = default, string name = default, ResourceType resourceType = default, SystemData systemData = default, AzureLocation? location = default, IEnumerable<RedisPatchScheduleSetting> scheduleEntries = default)
         {
-            return RedisPatchScheduleData(id: id, name: name, resourceType: resourceType, systemData: systemData, scheduleEntries: scheduleEntries, defaultName: default, location: location);
+            scheduleEntries ??= new ChangeTrackingList<RedisPatchScheduleSetting>();
+
+            return new RedisPatchScheduleData(
+                id,
+                name,
+                resourceType,
+                systemData,
+                default,
+                location,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Models.RedisOperationStatus"/>. </summary>

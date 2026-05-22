@@ -43,7 +43,6 @@ namespace Azure.ResourceManager.ResourceConnector.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 distro is null && provisioningState is null && publicKey is null && status is null && version is null && events is null && networkProfile is null && infrastructureConfigProvider is null ? default : new ApplianceProperties(
@@ -56,7 +55,8 @@ namespace Azure.ResourceManager.ResourceConnector.Models
                     (events ?? new ChangeTrackingList<ApplianceEvent>()).ToList(),
                     networkProfile,
                     null),
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Event contains information about customer driven, platform driven, or unplanned events that occurred on the Appliance. </summary>

@@ -34,8 +34,8 @@ namespace Azure.ResourceManager.RecoveryServices.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                groupId is null && requiredMembers is null && requiredZoneNames is null ? default : new RecoveryServicesPrivateLinkResourceProperties(groupId, (requiredMembers ?? new ChangeTrackingList<string>()).ToList(), (requiredZoneNames ?? new ChangeTrackingList<string>()).ToList(), null));
+                groupId is null && requiredMembers is null && requiredZoneNames is null ? default : new RecoveryServicesPrivateLinkResourceProperties(groupId, (requiredMembers ?? new ChangeTrackingList<string>()).ToList(), (requiredZoneNames ?? new ChangeTrackingList<string>()).ToList(), null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -58,13 +58,13 @@ namespace Azure.ResourceManager.RecoveryServices.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
                 identity,
                 sku,
-                etag);
+                etag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="provisioningState"> Provisioning State. </param>
@@ -152,9 +152,9 @@ namespace Azure.ResourceManager.RecoveryServices.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
-                location);
+                location,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="provisioningState"> Gets or sets provisioning state of the private endpoint connection. </param>
@@ -227,13 +227,13 @@ namespace Azure.ResourceManager.RecoveryServices.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
                 sku,
                 identity,
-                etag);
+                etag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Certificate corresponding to a vault that can be used by clients to register themselves with the vault. </summary>
@@ -250,8 +250,8 @@ namespace Azure.ResourceManager.RecoveryServices.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary>
@@ -449,9 +449,9 @@ namespace Azure.ResourceManager.RecoveryServices.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 integrityKey is null && encryptionKey is null && encryptionKeyThumbprint is null && algorithm is null ? default : new VaultExtendedInfo(integrityKey, encryptionKey, encryptionKeyThumbprint, algorithm, null),
-                etag);
+                etag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Response for check name availability API. Resource provider will set availability as true | false. </summary>
@@ -489,8 +489,8 @@ namespace Azure.ResourceManager.RecoveryServices.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties of the DeletedVault. </summary>

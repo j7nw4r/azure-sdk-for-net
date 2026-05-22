@@ -33,8 +33,8 @@ namespace Azure.ResourceManager.PortalServicesCopilot.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The Copilot Settings properties. </summary>

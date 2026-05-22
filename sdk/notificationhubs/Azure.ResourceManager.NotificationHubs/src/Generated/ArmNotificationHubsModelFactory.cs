@@ -50,7 +50,6 @@ namespace Azure.ResourceManager.NotificationHubs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 notificationHubName is null && registrationTtl is null && authorizationRules is null && apnsCredential is null && wnsCredential is null && gcmCredential is null && mpnsCredential is null && admCredential is null && baiduCredential is null && browserCredential is null && xiaomiCredential is null && fcmV1Credential is null && dailyMaxActiveDevices is null ? default : new NotificationHubProperties(
@@ -68,7 +67,8 @@ namespace Azure.ResourceManager.NotificationHubs.Models
                     fcmV1Credential,
                     dailyMaxActiveDevices,
                     null),
-                sku);
+                sku,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> SharedAccessAuthorizationRule properties. </summary>
@@ -135,7 +135,6 @@ namespace Azure.ResourceManager.NotificationHubs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 notificationHubName is null && registrationTtl is null && authorizationRules is null && apnsCredential is null && wnsCredential is null && gcmCredential is null && mpnsCredential is null && admCredential is null && baiduCredential is null && browserCredential is null && xiaomiCredential is null && fcmV1Credential is null && dailyMaxActiveDevices is null ? default : new NotificationHubProperties(
@@ -153,7 +152,8 @@ namespace Azure.ResourceManager.NotificationHubs.Models
                     fcmV1Credential,
                     dailyMaxActiveDevices,
                     null),
-                sku);
+                sku,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -175,10 +175,10 @@ namespace Azure.ResourceManager.NotificationHubs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                success is null && failure is null && failureDescription is null ? default : new DebugSendResult(success, failure, (failureDescription ?? new ChangeTrackingList<NotificationHubPubRegistrationResult>()).ToList(), null));
+                success is null && failure is null && failureDescription is null ? default : new DebugSendResult(success, failure, (failureDescription ?? new ChangeTrackingList<NotificationHubPubRegistrationResult>()).ToList(), null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Notification result for a single registration. </summary>
@@ -217,7 +217,6 @@ namespace Azure.ResourceManager.NotificationHubs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 admCredential is null && apnsCredential is null && baiduCredential is null && browserCredential is null && gcmCredential is null && mpnsCredential is null && wnsCredential is null && xiaomiCredential is null && fcmV1Credential is null ? default : new PnsCredentials(
@@ -230,7 +229,8 @@ namespace Azure.ResourceManager.NotificationHubs.Models
                     wnsCredential,
                     xiaomiCredential,
                     fcmV1Credential,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -265,7 +265,6 @@ namespace Azure.ResourceManager.NotificationHubs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 accessRights is null && primaryKey is null && secondaryKey is null && keyName is null && modifiedOn is null && createdOn is null && claimType is null && claimValue is null && revision is null && rights is null ? default : new SharedAccessAuthorizationRuleProperties(
@@ -278,7 +277,8 @@ namespace Azure.ResourceManager.NotificationHubs.Models
                     claimType,
                     claimValue,
                     revision,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Response for the POST request that returns Namespace or NotificationHub access keys (connection strings). </summary>
@@ -348,7 +348,6 @@ namespace Azure.ResourceManager.NotificationHubs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 namespaceName is null && operationProvisioningState is null && namespaceStatus is null && isEnabled is null && isCritical is null && subscriptionId is null && region is null && metricId is null && createdOn is null && updatedOn is null && hubNamespaceType is null && replicationRegion is null && zoneRedundancy is null && networkAcls is null && pnsCredentials is null && serviceBusEndpoint is null && privateEndpointConnections is null && scaleUnit is null && dataCenter is null && publicNetworkAccess is null ? default : new NotificationHubNamespaceProperties(
@@ -373,7 +372,8 @@ namespace Azure.ResourceManager.NotificationHubs.Models
                     dataCenter,
                     publicNetworkAccess,
                     null),
-                sku);
+                sku,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Represents namespace properties. </summary>
@@ -470,8 +470,8 @@ namespace Azure.ResourceManager.NotificationHubs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="provisioningState"> State of Private Endpoint Connection. </param>
@@ -530,11 +530,11 @@ namespace Azure.ResourceManager.NotificationHubs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 isAvailiable,
-                sku);
+                sku,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Description of a CheckAvailability resource. </summary>
@@ -559,11 +559,11 @@ namespace Azure.ResourceManager.NotificationHubs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 isAvailiable,
-                sku);
+                sku,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> A Private Link Arm Resource. </summary>
@@ -580,8 +580,8 @@ namespace Azure.ResourceManager.NotificationHubs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Represents properties of Private Link Resource. </summary>
@@ -630,7 +630,6 @@ namespace Azure.ResourceManager.NotificationHubs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 namespaceName is null && isEnabled is null && isCritical is null && subscriptionId is null && region is null && metricId is null && createdOn is null && updatedOn is null && serviceBusEndpoint is null && scaleUnit is null && dataCenter is null ? default : new NotificationHubNamespaceProperties(
@@ -655,7 +654,8 @@ namespace Azure.ResourceManager.NotificationHubs.Models
                     dataCenter,
                     default,
                     default),
-                sku);
+                sku,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Models.SharedAccessAuthorizationRuleProperties"/>. </summary>
@@ -716,7 +716,6 @@ namespace Azure.ResourceManager.NotificationHubs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 primaryKey is null && secondaryKey is null && keyName is null && modifiedOn is null && createdOn is null && claimType is null && claimValue is null && revision is null ? default : new SharedAccessAuthorizationRuleProperties(
@@ -729,7 +728,8 @@ namespace Azure.ResourceManager.NotificationHubs.Models
                     claimType,
                     claimValue,
                     revision,
-                    default));
+                    default),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="NotificationHubs.NotificationHubData"/>. </summary>
@@ -802,10 +802,10 @@ namespace Azure.ResourceManager.NotificationHubs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                default);
+                default,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Models.NotificationHubPnsCredentials"/>. </summary>
@@ -833,7 +833,6 @@ namespace Azure.ResourceManager.NotificationHubs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 admCredential is null && apnsCredential is null && baiduCredential is null && gcmCredential is null && mpnsCredential is null && wnsCredential is null ? default : new PnsCredentials(
@@ -846,7 +845,8 @@ namespace Azure.ResourceManager.NotificationHubs.Models
                     wnsCredential,
                     default,
                     default,
-                    default));
+                    default),
+                additionalBinaryDataProperties: null);
         }
     }
 }

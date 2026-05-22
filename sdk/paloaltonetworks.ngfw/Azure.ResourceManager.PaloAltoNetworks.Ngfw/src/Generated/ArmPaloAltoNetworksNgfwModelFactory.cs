@@ -42,7 +42,6 @@ namespace Azure.ResourceManager.PaloAltoNetworks.Ngfw.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 new RulestackProperties(
                     panETag,
                     panLocation,
@@ -55,7 +54,8 @@ namespace Azure.ResourceManager.PaloAltoNetworks.Ngfw.Models
                     securityServices,
                     null),
                 location,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The updatable properties of the GlobalRulestackResource. </summary>
@@ -181,14 +181,14 @@ namespace Azure.ResourceManager.PaloAltoNetworks.Ngfw.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 new FqdnObject(
                     description,
                     (fqdnList ?? new ChangeTrackingList<string>()).ToList(),
                     etag,
                     auditComment,
                     provisioningState,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -224,7 +224,6 @@ namespace Azure.ResourceManager.PaloAltoNetworks.Ngfw.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 new RuleEntry(
                     etag,
                     ruleName,
@@ -246,7 +245,8 @@ namespace Azure.ResourceManager.PaloAltoNetworks.Ngfw.Models
                     decryptionRuleType,
                     (tags ?? new ChangeTrackingList<RulestackTagInfo>()).ToList(),
                     provisioningState,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Address properties. </summary>
@@ -398,14 +398,14 @@ namespace Azure.ResourceManager.PaloAltoNetworks.Ngfw.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 new PrefixObject(
                     description,
                     (prefixList ?? new ChangeTrackingList<string>()).ToList(),
                     etag,
                     auditComment,
                     provisioningState,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -441,7 +441,6 @@ namespace Azure.ResourceManager.PaloAltoNetworks.Ngfw.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 new RuleEntry(
                     etag,
                     ruleName,
@@ -463,7 +462,8 @@ namespace Azure.ResourceManager.PaloAltoNetworks.Ngfw.Models
                     decryptionRuleType,
                     (tags ?? new ChangeTrackingList<RulestackTagInfo>()).ToList(),
                     provisioningState,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -495,7 +495,6 @@ namespace Azure.ResourceManager.PaloAltoNetworks.Ngfw.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 new FirewallDeploymentProperties(
@@ -512,7 +511,8 @@ namespace Azure.ResourceManager.PaloAltoNetworks.Ngfw.Models
                     planData,
                     marketplaceDetails,
                     null),
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Network settings for Firewall. </summary>
@@ -711,7 +711,6 @@ namespace Azure.ResourceManager.PaloAltoNetworks.Ngfw.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 new RulestackProperties(
@@ -725,7 +724,8 @@ namespace Azure.ResourceManager.PaloAltoNetworks.Ngfw.Models
                     provisioningState,
                     securityServices,
                     null),
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The type used for update operations of the LocalRulestackResource. </summary>
@@ -782,8 +782,8 @@ namespace Azure.ResourceManager.PaloAltoNetworks.Ngfw.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                new MetricsObject(applicationInsightsResourceId, applicationInsightsConnectionString, panETag, provisioningState, null));
+                new MetricsObject(applicationInsightsResourceId, applicationInsightsConnectionString, panETag, provisioningState, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -805,7 +805,6 @@ namespace Azure.ResourceManager.PaloAltoNetworks.Ngfw.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 new FirewallStatusProperty(
                     isPanoramaManaged,
                     healthStatus,
@@ -814,7 +813,8 @@ namespace Azure.ResourceManager.PaloAltoNetworks.Ngfw.Models
                     provisioningState,
                     isStrataCloudManaged,
                     strataCloudManagerInfo,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Panorama connectivity information. </summary>
@@ -853,14 +853,14 @@ namespace Azure.ResourceManager.PaloAltoNetworks.Ngfw.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 new FqdnObject(
                     description,
                     (fqdnList ?? new ChangeTrackingList<string>()).ToList(),
                     etag,
                     auditComment,
                     provisioningState,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -896,7 +896,6 @@ namespace Azure.ResourceManager.PaloAltoNetworks.Ngfw.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 new RuleEntry(
                     etag,
                     ruleName,
@@ -918,7 +917,8 @@ namespace Azure.ResourceManager.PaloAltoNetworks.Ngfw.Models
                     decryptionRuleType,
                     (tags ?? new ChangeTrackingList<RulestackTagInfo>()).ToList(),
                     provisioningState,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -939,14 +939,14 @@ namespace Azure.ResourceManager.PaloAltoNetworks.Ngfw.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 new PrefixObject(
                     description,
                     (prefixList ?? new ChangeTrackingList<string>()).ToList(),
                     etag,
                     auditComment,
                     provisioningState,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Create Product Serial Number Request status. </summary>

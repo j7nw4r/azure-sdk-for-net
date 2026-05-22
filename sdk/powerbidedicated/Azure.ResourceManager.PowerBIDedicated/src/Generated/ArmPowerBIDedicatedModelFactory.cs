@@ -42,7 +42,6 @@ namespace Azure.ResourceManager.PowerBIDedicated.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 mode is null && tenantId is null && friendlyName is null && administrationMembers is null && state is null && provisioningState is null ? default : new DedicatedCapacityProperties(
@@ -53,7 +52,8 @@ namespace Azure.ResourceManager.PowerBIDedicated.Models
                     null,
                     state,
                     provisioningState),
-                sku);
+                sku,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="sku"> The SKU of the Dedicated capacity resource. </param>
@@ -109,11 +109,11 @@ namespace Azure.ResourceManager.PowerBIDedicated.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 capacityLimit is null && capacityObjectId is null && provisioningState is null ? default : new AutoScaleVCoreProperties(capacityLimit, null, capacityObjectId, provisioningState),
-                sku);
+                sku,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="sku"> The SKU of the auto scale v-core resource. </param>

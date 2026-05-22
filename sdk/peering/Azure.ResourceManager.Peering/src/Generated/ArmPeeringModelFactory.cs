@@ -38,14 +38,14 @@ namespace Azure.ResourceManager.Peering.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 peerAsn is null && peerContactDetail is null && peerName is null && validationState is null && errorMessage is null ? default : new PeerAsnProperties(
                     peerAsn,
                     (peerContactDetail ?? new ChangeTrackingList<PeerAsnContactDetail>()).ToList(),
                     peerName,
                     validationState,
                     errorMessage,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -71,7 +71,6 @@ namespace Azure.ResourceManager.Peering.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 direct is null && exchange is null && connectivityProbes is null && peeringLocation is null && provisioningState is null ? default : new PeeringProperties(
@@ -82,7 +81,8 @@ namespace Azure.ResourceManager.Peering.Models
                     provisioningState,
                     null),
                 sku,
-                kind);
+                kind,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The properties that define a direct peering. </summary>
@@ -246,7 +246,6 @@ namespace Azure.ResourceManager.Peering.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 sourceAgent is null && destination is null && destinationPort is null && testFrequencyInSec is null && isTestSuccessful is null && path is null && provisioningState is null ? default : new ConnectionMonitorTestProperties(
                     sourceAgent,
                     destination,
@@ -255,7 +254,8 @@ namespace Azure.ResourceManager.Peering.Models
                     isTestSuccessful,
                     (path ?? new ChangeTrackingList<string>()).ToList(),
                     provisioningState,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The properties that define a Log Analytics Workspace. </summary>
@@ -285,8 +285,8 @@ namespace Azure.ResourceManager.Peering.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                asn is null && peeringServicePrefixKey is null && provisioningState is null ? default : new PeeringRegisteredAsnProperties(asn, peeringServicePrefixKey, provisioningState, null));
+                asn is null && peeringServicePrefixKey is null && provisioningState is null ? default : new PeeringRegisteredAsnProperties(asn, peeringServicePrefixKey, provisioningState, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The properties that define a received route. </summary>
@@ -338,14 +338,14 @@ namespace Azure.ResourceManager.Peering.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 prefix is null && prefixValidationState is null && peeringServicePrefixKey is null && errorMessage is null && provisioningState is null ? default : new PeeringRegisteredPrefixProperties(
                     prefix,
                     prefixValidationState,
                     peeringServicePrefixKey,
                     errorMessage,
                     provisioningState,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -367,7 +367,6 @@ namespace Azure.ResourceManager.Peering.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 prefix is null && prefixValidationState is null && learnedType is null && errorMessage is null && events is null && peeringServicePrefixKey is null && provisioningState is null ? default : new PeeringServicePrefixProperties(
                     prefix,
                     prefixValidationState,
@@ -376,7 +375,8 @@ namespace Azure.ResourceManager.Peering.Models
                     (events ?? new ChangeTrackingList<PeeringServicePrefixEvent>()).ToList(),
                     peeringServicePrefixKey,
                     provisioningState,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The details of the event associated with a prefix. </summary>
@@ -414,14 +414,14 @@ namespace Azure.ResourceManager.Peering.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 prefix is null && azureRegion is null && azureService is null && isPrimaryRegion is null && bgpCommunity is null ? default : new CdnPeeringPrefixProperties(
                     prefix,
                     azureRegion,
                     azureService,
                     isPrimaryRegion,
                     bgpCommunity,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Looking glass output model. </summary>
@@ -471,8 +471,8 @@ namespace Azure.ResourceManager.Peering.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                country is null && state is null && azureRegion is null ? default : new PeeringServiceLocationProperties(country, state, azureRegion, null));
+                country is null && state is null && azureRegion is null ? default : new PeeringServiceLocationProperties(country, state, azureRegion, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -489,8 +489,8 @@ namespace Azure.ResourceManager.Peering.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                serviceProviderName is null && peeringLocations is null ? default : new PeeringServiceProviderProperties(serviceProviderName, (peeringLocations ?? new ChangeTrackingList<string>()).ToList(), null));
+                serviceProviderName is null && peeringLocations is null ? default : new PeeringServiceProviderProperties(serviceProviderName, (peeringLocations ?? new ChangeTrackingList<string>()).ToList(), null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Peering.PeeringData"/>. </summary>
@@ -534,9 +534,9 @@ namespace Azure.ResourceManager.Peering.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 kind,
-                default);
+                default,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Peering.PeeringServiceData"/>. </summary>
@@ -563,11 +563,11 @@ namespace Azure.ResourceManager.Peering.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 default,
-                default);
+                default,
+                additionalBinaryDataProperties: null);
         }
     }
 }

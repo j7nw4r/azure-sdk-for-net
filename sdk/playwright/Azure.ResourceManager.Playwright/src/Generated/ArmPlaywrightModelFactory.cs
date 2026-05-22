@@ -39,11 +39,11 @@ namespace Azure.ResourceManager.Playwright.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Playwright workspace resource properties. </summary>
@@ -104,8 +104,8 @@ namespace Azure.ResourceManager.Playwright.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Subscription-level location-based Playwright quota resource properties. </summary>
@@ -140,8 +140,8 @@ namespace Azure.ResourceManager.Playwright.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Playwright workspace quota resource properties. </summary>

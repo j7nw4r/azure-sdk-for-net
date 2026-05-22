@@ -49,7 +49,6 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 new AccessBridgeProperties(
@@ -64,7 +63,8 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                     provisioningState,
                     null),
                 eTag,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> AccessBridgeSecurityRule captures an individual access rule enforced by the bridge. </summary>
@@ -163,7 +163,6 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 new BareMetalMachineProperties(
@@ -205,7 +204,8 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                     provisioningState,
                     null),
                 eTag,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> ActionState represents the state of an action taken against a resource. This can be used to represent both explicitly and implicitly defined action types. </summary>
@@ -458,7 +458,6 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 additionalEgressEndpoints is null && enableDefaultEgressEndpoints is null && storageOptions is null && associatedResourceIds is null && clusterId is null && detailedStatus is null && detailedStatusMessage is null && enabledEgressEndpoints is null && hybridAksClustersAssociatedIds is null && interfaceName is null && storageStatus is null && virtualMachinesAssociatedIds is null && provisioningState is null ? default : new CloudServicesNetworkProperties(
@@ -477,7 +476,8 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                     provisioningState,
                     null),
                 eTag,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> EgressEndpoint represents the connection from a cloud services network to the specified endpoint for a common purpose. </summary>
@@ -551,7 +551,6 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 new ClusterManagerProperties(
@@ -569,7 +568,8 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                     null),
                 eTag,
                 identity,
-                kind);
+                kind,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> ClusterAvailableVersion represents the cluster version that the cluster manager can be asked to create and manage. </summary>
@@ -653,7 +653,6 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 new ClusterProperties(
@@ -692,7 +691,8 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                 eTag,
                 extendedLocation,
                 identity,
-                kind);
+                kind,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> RackDefinition represents details regarding the rack. </summary>
@@ -911,7 +911,6 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 new KubernetesClusterProperties(
@@ -934,7 +933,8 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                     provisioningState,
                     null),
                 eTag,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> AdministratorConfiguration represents the administrative credentials that will be applied to the control plane and agent pool nodes in Kubernetes clusters. </summary>
@@ -1207,12 +1207,12 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 new KubernetesVersionProperties((values ?? new ChangeTrackingList<NetworkCloudKubernetesVersionValue>()).ToList(), provisioningState, null),
                 eTag,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> KubernetesVersionValue describes a specific Kubernetes version that can be deployed. </summary>
@@ -1262,7 +1262,6 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 new L2NetworkProperties(
@@ -1278,7 +1277,8 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                     provisioningState,
                     null),
                 eTag,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> L2NetworkPatchParameters represents the body of the request to patch the L2 network. </summary>
@@ -1324,7 +1324,6 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 new L3NetworkProperties(
@@ -1345,7 +1344,8 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                     provisioningState,
                     null),
                 eTag,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> L3NetworkPatchParameters represents the body of the request to patch the cloud services network. </summary>
@@ -1379,7 +1379,6 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 new RackSkuProperties(
                     (computeMachines ?? new ChangeTrackingList<MachineSkuSlot>()).ToList(),
                     (controllerMachines ?? new ChangeTrackingList<MachineSkuSlot>()).ToList(),
@@ -1390,7 +1389,8 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                     rackType,
                     (storageAppliances ?? new ChangeTrackingList<StorageApplianceSkuSlot>()).ToList(),
                     (supportedRackSkuIds ?? new ChangeTrackingList<string>()).ToList(),
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> MachineDisk represents the properties of the disk. </summary>
@@ -1451,7 +1451,6 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 new RackProperties(
@@ -1465,7 +1464,8 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                     provisioningState,
                     null),
                 eTag,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="rackLocation"> The free-form description of the rack location. (e.g. "DTN Datacenter, Floor 3, Isle 9, Rack 2B"). </param>
@@ -1517,7 +1517,6 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 new StorageApplianceProperties(
@@ -1543,7 +1542,8 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                     provisioningState,
                     null),
                 eTag,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> StorageApplianceExpansionShelf represents an expansion shelf connected to a storage appliance. </summary>
@@ -1626,7 +1626,6 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 new TrunkedNetworkProperties(
@@ -1643,7 +1642,8 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                     provisioningState,
                     null),
                 eTag,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> TrunkedNetworkPatchParameters represents the body of the request to patch the Trunked network. </summary>
@@ -1702,7 +1702,6 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 new VirtualMachineProperties(
@@ -1736,7 +1735,8 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                     null),
                 eTag,
                 extendedLocation,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> StorageProfile represents information about a disk. </summary>
@@ -1796,7 +1796,6 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 new VolumeProperties(
@@ -1810,7 +1809,8 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                     provisioningState,
                     null),
                 eTag,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> VolumePatchParameters represents the body of the request to patch the volume resource. </summary>
@@ -1853,7 +1853,6 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 new BareMetalMachineKeySetProperties(
@@ -1871,7 +1870,8 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                     provisioningState,
                     null),
                 eTag,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> KeySetUserStatus represents the status of the key set user. </summary>
@@ -1923,7 +1923,6 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 new BmcKeySetProperties(
@@ -1938,7 +1937,8 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                     provisioningState,
                     null),
                 eTag,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="expireOn"> The date and time after which the users in this key set will be removed from the baseboard management controllers. </param>
@@ -1976,7 +1976,6 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 new ClusterMetricsConfigurationProperties(
@@ -1988,7 +1987,8 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                     provisioningState,
                     null),
                 eTag,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="collectionInterval"> The interval in minutes by which metrics will be collected. </param>
@@ -2034,7 +2034,6 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 new AgentPoolProperties(
@@ -2054,7 +2053,8 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                     provisioningState,
                     null),
                 eTag,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="count"> The number of virtual machines that use this configuration. </param>
@@ -2093,7 +2093,6 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 options is null && availabilityLifecycle is null && detailedStatus is null && detailedStatusMessage is null && @required is null && version is null && provisioningState is null ? default : new KubernetesClusterFeatureProperties(
@@ -2105,7 +2104,8 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                     version,
                     provisioningState,
                     null),
-                eTag);
+                eTag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="options"> The configured options for the feature. </param>
@@ -2144,7 +2144,6 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 new ConsoleProperties(
@@ -2158,7 +2157,8 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                     provisioningState,
                     null),
                 eTag,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="enabled"> The indicator of whether the console access is enabled. </param>
@@ -2227,7 +2227,6 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 bmcConnectionString is null && bmcCredentials is null && bmcMacAddress is null && bootMacAddress is null && machineDetails is null && machineName is null && machineSkuId is null && rackId is null && serialNumber is null && actionStates is null && associatedResourceIds is null && caCertificate is null && clusterId is null && cordonStatus is null && detailedStatus is null && detailedStatusMessage is null && hardwareInventory is null && hardwareValidationStatus is null && hybridAksClustersAssociatedIds is null && kubernetesNodeName is null && kubernetesVersion is null && machineClusterVersion is null && machineRoles is null && oamIPv4Address is null && oamIPv6Address is null && osImage is null && powerState is null && readyState is null && runtimeProtectionStatus is null && secretRotationStatus is null && serviceTag is null && virtualMachinesAssociatedIds is null && provisioningState is null ? default : new BareMetalMachineProperties(
@@ -2269,7 +2268,8 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                     provisioningState,
                     default),
                 etag,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Models.RuntimeProtectionStatus"/>. </summary>
@@ -2318,7 +2318,6 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 additionalEgressEndpoints is null && enableDefaultEgressEndpoints is null && storageOptions is null && associatedResourceIds is null && clusterId is null && detailedStatus is null && detailedStatusMessage is null && enabledEgressEndpoints is null && hybridAksClustersAssociatedIds is null && interfaceName is null && storageStatus is null && virtualMachinesAssociatedIds is null && provisioningState is null ? default : new CloudServicesNetworkProperties(
@@ -2337,7 +2336,8 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                     provisioningState,
                     default),
                 etag,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="NetworkCloud.NetworkCloudClusterManagerData"/>. </summary>
@@ -2370,7 +2370,6 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 analyticsWorkspaceId is null && availabilityZones is null && clusterVersions is null && detailedStatus is null && detailedStatusMessage is null && fabricControllerId is null && managedResourceGroupConfiguration is null && provisioningState is null && vmSize is null ? default : new ClusterManagerProperties(
@@ -2388,7 +2387,8 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                     default),
                 etag,
                 identity,
-                default);
+                default,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="NetworkCloud.NetworkCloudClusterData"/>. </summary>
@@ -2443,7 +2443,6 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 aggregatorOrSingleRackDefinition is null && analyticsOutputSettings is null && analyticsWorkspaceId is null && clusterLocation is null && clusterServicePrincipal is null && clusterVersion is null && commandOutputSettings is null && computeDeploymentThreshold is null && computeRackDefinitions is null && managedResourceGroupConfiguration is null && networkFabricId is null && runtimeProtectionEnforcementLevel is null && secretArchive is null && secretArchiveSettings is null && updateStrategy is null && vulnerabilityScanningContainerScan is null && actionStates is null && availableUpgradeVersions is null && clusterCapacity is null && clusterConnectionStatus is null && clusterManagerConnectionStatus is null && clusterManagerId is null && detailedStatus is null && detailedStatusMessage is null && manualActionCount is null && supportExpireOn is null && workloadResourceIds is null && provisioningState is null ? default : new ClusterProperties(
@@ -2482,7 +2481,8 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                 etag,
                 extendedLocation,
                 identity,
-                default);
+                default,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="NetworkCloud.NetworkCloudKubernetesClusterData"/>. </summary>
@@ -2522,7 +2522,6 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 aadAdminGroupObjectIds is null && administratorConfiguration is null && controlPlaneNodeConfiguration is null && initialAgentPoolConfigurations is null && kubernetesVersion is null && managedResourceGroupConfiguration is null && networkConfiguration is null && attachedNetworkIds is null && availableUpgrades is null && clusterId is null && connectedClusterId is null && controlPlaneKubernetesVersion is null && detailedStatus is null && detailedStatusMessage is null && featureStatuses is null && nodes is null && provisioningState is null ? default : new KubernetesClusterProperties(
@@ -2545,7 +2544,8 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                     provisioningState,
                     default),
                 etag,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="NetworkCloud.NetworkCloudL2NetworkData"/>. </summary>
@@ -2578,7 +2578,6 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 hybridAksPluginType is null && interfaceName is null && l2IsolationDomainId is null && associatedResourceIds is null && clusterId is null && detailedStatus is null && detailedStatusMessage is null && hybridAksClustersAssociatedIds is null && virtualMachinesAssociatedIds is null && provisioningState is null ? default : new L2NetworkProperties(
@@ -2594,7 +2593,8 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                     provisioningState,
                     default),
                 etag,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="NetworkCloud.NetworkCloudL3NetworkData"/>. </summary>
@@ -2632,7 +2632,6 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 hybridAksIpamEnabled is null && hybridAksPluginType is null && interfaceName is null && ipAllocationType is null && ipv4ConnectedPrefix is null && ipv6ConnectedPrefix is null && l3IsolationDomainId is null && associatedResourceIds is null && clusterId is null && detailedStatus is null && detailedStatusMessage is null && hybridAksClustersAssociatedIds is null && virtualMachinesAssociatedIds is null && provisioningState is null ? default : new L3NetworkProperties(
@@ -2653,7 +2652,8 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                     provisioningState,
                     default),
                 etag,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="NetworkCloud.NetworkCloudRackSkuData"/>. </summary>
@@ -2736,7 +2736,6 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 availabilityZone is null && rackLocation is null && rackSerialNumber is null && rackSkuId is null && clusterId is null && detailedStatus is null && detailedStatusMessage is null && provisioningState is null ? default : new RackProperties(
@@ -2750,7 +2749,8 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                     provisioningState,
                     default),
                 etag,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="NetworkCloud.NetworkCloudStorageApplianceData"/>. </summary>
@@ -2792,7 +2792,6 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 rackId is null && storageApplianceSkuId is null && serialNumber is null && administratorCredentials is null && caCertificate is null && capacity is null && capacityUsed is null && clusterId is null && detailedStatus is null && detailedStatusMessage is null && managementIPv4Address is null && manufacturer is null && model is null && remoteVendorManagementFeature is null && remoteVendorManagementStatus is null && secretRotationStatus is null && version is null && provisioningState is null ? default : new StorageApplianceProperties(
@@ -2818,7 +2817,8 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                     provisioningState,
                     default),
                 etag,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="NetworkCloud.NetworkCloudTrunkedNetworkData"/>. </summary>
@@ -2852,7 +2852,6 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 hybridAksPluginType is null && interfaceName is null && isolationDomainIds is null && vlans is null && associatedResourceIds is null && clusterId is null && detailedStatus is null && detailedStatusMessage is null && hybridAksClustersAssociatedIds is null && virtualMachinesAssociatedIds is null && provisioningState is null ? default : new TrunkedNetworkProperties(
@@ -2869,7 +2868,8 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                     provisioningState,
                     default),
                 etag,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="NetworkCloud.NetworkCloudVirtualMachineData"/>. </summary>
@@ -2920,7 +2920,6 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 adminUsername is null && bootMethod is null && cloudServicesNetworkAttachment is null && isolateEmulatorThread is null && networkAttachments is null && networkData is null && networkDataContent is null && placementHints is null && sshPublicKeys is null && storageProfile is null && userData is null && userDataContent is null && virtioInterface is null && vmDeviceModel is null && vmImage is null && vmImageRepositoryCredentials is null && availabilityZone is null && bareMetalMachineId is null && clusterId is null && detailedStatus is null && detailedStatusMessage is null && powerState is null && volumes is null && provisioningState is null ? default : new VirtualMachineProperties(
@@ -2954,7 +2953,8 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                     default),
                 etag,
                 extendedLocation,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="NetworkCloud.NetworkCloudVolumeData"/>. </summary>
@@ -2985,7 +2985,6 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 storageApplianceId is null && allocatedInSizeMiB is null && attachedTo is null && detailedStatus is null && detailedStatusMessage is null && serialNumber is null && provisioningState is null ? default : new VolumeProperties(
@@ -2999,7 +2998,8 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                     provisioningState,
                     default),
                 etag,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Models.NetworkCloudOperationStatusResult"/>. </summary>
@@ -3067,7 +3067,6 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 azureGroupId is null && jumpHostsAllowed is null && osGroupName is null && privilegeLevelName is null && userList is null && detailedStatus is null && detailedStatusMessage is null && lastValidatedOn is null && userListStatus is null && provisioningState is null ? default : new BareMetalMachineKeySetProperties(
@@ -3085,7 +3084,8 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                     provisioningState,
                     default),
                 etag,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="NetworkCloud.NetworkCloudBmcKeySetData"/>. </summary>
@@ -3117,7 +3117,6 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 azureGroupId is null && userList is null && detailedStatus is null && detailedStatusMessage is null && lastValidatedOn is null && userListStatus is null && provisioningState is null ? default : new BmcKeySetProperties(
@@ -3132,7 +3131,8 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                     provisioningState,
                     default),
                 etag,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="NetworkCloud.NetworkCloudClusterMetricsConfigurationData"/>. </summary>
@@ -3161,7 +3161,6 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 enabledMetrics is null && detailedStatus is null && detailedStatusMessage is null && disabledMetrics is null && provisioningState is null ? default : new ClusterMetricsConfigurationProperties(
@@ -3173,7 +3172,8 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                     provisioningState,
                     default),
                 etag,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="NetworkCloud.NetworkCloudAgentPoolData"/>. </summary>
@@ -3210,7 +3210,6 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 administratorConfiguration is null && agentOptions is null && attachedNetworkConfiguration is null && availabilityZones is null && labels is null && taints is null && upgradeSettings is null && vmSkuName is null && detailedStatus is null && detailedStatusMessage is null && kubernetesVersion is null && provisioningState is null ? default : new AgentPoolProperties(
@@ -3230,7 +3229,8 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                     provisioningState,
                     default),
                 etag,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="NetworkCloud.NetworkCloudKubernetesClusterFeatureData"/>. </summary>
@@ -3259,7 +3259,6 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 options is null && availabilityLifecycle is null && detailedStatus is null && detailedStatusMessage is null && @required is null && version is null && provisioningState is null ? default : new KubernetesClusterFeatureProperties(
@@ -3271,7 +3270,8 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                     version,
                     provisioningState,
                     default),
-                etag);
+                etag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="NetworkCloud.NetworkCloudVirtualMachineConsoleData"/>. </summary>
@@ -3302,7 +3302,6 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 expireOn is null && keyData is null && detailedStatus is null && detailedStatusMessage is null && privateLinkServiceId is null && virtualMachineAccessId is null && provisioningState is null ? default : new ConsoleProperties(
@@ -3316,7 +3315,8 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                     provisioningState,
                     default),
                 etag,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="NetworkCloud.NetworkCloudBareMetalMachineData"/>. </summary>
@@ -3371,7 +3371,6 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 bmcConnectionString is null && bmcCredentials is null && bmcMacAddress is null && bootMacAddress is null && machineDetails is null && machineName is null && machineSkuId is null && rackId is null && serialNumber is null && associatedResourceIds is null && clusterId is null && cordonStatus is null && detailedStatus is null && detailedStatusMessage is null && hardwareInventory is null && hardwareValidationStatus is null && hybridAksClustersAssociatedIds is null && kubernetesNodeName is null && kubernetesVersion is null && machineClusterVersion is null && machineRoles is null && oamIPv4Address is null && oamIPv6Address is null && osImage is null && powerState is null && readyState is null && runtimeProtectionStatus is null && secretRotationStatus is null && serviceTag is null && virtualMachinesAssociatedIds is null && provisioningState is null ? default : new BareMetalMachineProperties(
@@ -3413,7 +3412,8 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                     provisioningState,
                     default),
                 etag,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Models.SecretArchiveReference"/>. </summary>
@@ -3481,7 +3481,6 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 aggregatorOrSingleRackDefinition is null && analyticsOutputSettings is null && analyticsWorkspaceId is null && clusterLocation is null && clusterServicePrincipal is null && clusterVersion is null && commandOutputSettings is null && computeDeploymentThreshold is null && computeRackDefinitions is null && managedResourceGroupConfiguration is null && networkFabricId is null && runtimeProtectionEnforcementLevel is null && secretArchive is null && secretArchiveSettings is null && updateStrategy is null && vulnerabilityScanningContainerScan is null && availableUpgradeVersions is null && clusterCapacity is null && clusterConnectionStatus is null && clusterManagerConnectionStatus is null && clusterManagerId is null && detailedStatus is null && detailedStatusMessage is null && manualActionCount is null && supportExpireOn is null && workloadResourceIds is null && provisioningState is null ? default : new ClusterProperties(
@@ -3520,7 +3519,8 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                 etag,
                 extendedLocation,
                 identity,
-                default);
+                default,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="NetworkCloud.NetworkCloudStorageApplianceData"/>. </summary>
@@ -3561,7 +3561,6 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 rackId is null && storageApplianceSkuId is null && serialNumber is null && administratorCredentials is null && capacity is null && capacityUsed is null && clusterId is null && detailedStatus is null && detailedStatusMessage is null && managementIPv4Address is null && manufacturer is null && model is null && remoteVendorManagementFeature is null && remoteVendorManagementStatus is null && secretRotationStatus is null && version is null && provisioningState is null ? default : new StorageApplianceProperties(
@@ -3587,7 +3586,8 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                     provisioningState,
                     default),
                 etag,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="NetworkCloud.NetworkCloudBareMetalMachineData"/>. </summary>
@@ -3666,7 +3666,6 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 analyticsWorkspaceId is null && availabilityZones is null && clusterVersions is null && detailedStatus is null && detailedStatusMessage is null && fabricControllerId is null && managedResourceGroupConfiguration is null && provisioningState is null && vmSize is null ? default : new ClusterManagerProperties(
@@ -3684,7 +3683,8 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                     default),
                 default,
                 identity,
-                default);
+                default,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="NetworkCloud.NetworkCloudClusterData"/>. </summary>
@@ -3737,7 +3737,6 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 aggregatorOrSingleRackDefinition is null && analyticsWorkspaceId is null && analyticsWorkspaceId is null && clusterLocation is null && clusterServicePrincipal is null && clusterVersion is null && commandOutputSettings is null && computeDeploymentThreshold is null && computeRackDefinitions is null && managedResourceGroupConfiguration is null && networkFabricId is null && runtimeProtectionEnforcementLevel is null && secretArchive is null && updateStrategy is null && availableUpgradeVersions is null && clusterCapacity is null && clusterConnectionStatus is null && clusterManagerConnectionStatus is null && clusterManagerId is null && detailedStatus is null && detailedStatusMessage is null && manualActionCount is null && supportExpireOn is null && workloadResourceIds is null && provisioningState is null ? default : new ClusterProperties(
@@ -3776,7 +3775,8 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                 default,
                 extendedLocation,
                 identity,
-                default);
+                default,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="NetworkCloud.NetworkCloudL3NetworkData"/>. </summary>
@@ -3819,7 +3819,6 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 hybridAksIpamEnabled is null && hybridAksPluginType is null && interfaceName is null && ipAllocationType is null && ipv4ConnectedPrefix is null && ipv6ConnectedPrefix is null && l3IsolationDomainId is null && associatedResourceIds is null && clusterId is null && detailedStatus is null && detailedStatusMessage is null && hybridAksClustersAssociatedIds is null && virtualMachinesAssociatedIds is null && provisioningState is null ? default : new L3NetworkProperties(
@@ -3840,7 +3839,8 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                     provisioningState,
                     default),
                 default,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="NetworkCloud.NetworkCloudStorageApplianceData"/>. </summary>
@@ -3947,7 +3947,6 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 analyticsWorkspaceId is null && availabilityZones is null && clusterVersions is null && detailedStatus is null && detailedStatusMessage is null && fabricControllerId is null && managedResourceGroupConfiguration is null && provisioningState is null && vmSize is null ? default : new ClusterManagerProperties(
@@ -3965,7 +3964,8 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                     default),
                 default,
                 default,
-                default);
+                default,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="NetworkCloud.NetworkCloudClusterData"/>. </summary>
@@ -4013,7 +4013,6 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 aggregatorOrSingleRackDefinition is null && analyticsWorkspaceId is null && analyticsWorkspaceId is null && clusterLocation is null && clusterServicePrincipal is null && clusterVersion is null && computeDeploymentThreshold is null && computeRackDefinitions is null && managedResourceGroupConfiguration is null && networkFabricId is null && availableUpgradeVersions is null && clusterCapacity is null && clusterConnectionStatus is null && clusterManagerConnectionStatus is null && clusterManagerId is null && detailedStatus is null && detailedStatusMessage is null && manualActionCount is null && supportExpireOn is null && workloadResourceIds is null && provisioningState is null ? default : new ClusterProperties(
@@ -4052,7 +4051,8 @@ namespace Azure.ResourceManager.NetworkCloud.Models
                 default,
                 extendedLocation,
                 default,
-                default);
+                default,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="NetworkCloud.NetworkCloudStorageApplianceData"/>. </summary>

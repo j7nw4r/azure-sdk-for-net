@@ -33,8 +33,8 @@ namespace Azure.ResourceManager.Relationships.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> dependencyOf relationship properties. </summary>
@@ -89,8 +89,8 @@ namespace Azure.ResourceManager.Relationships.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> ServiceGroupMember relationship properties. </summary>

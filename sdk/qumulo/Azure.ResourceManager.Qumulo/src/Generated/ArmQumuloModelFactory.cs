@@ -47,7 +47,6 @@ namespace Azure.ResourceManager.Qumulo.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 marketplaceDetails is null && armProvisioningState is null && storageSkuName is null && delegatedSubnetId is null && clusterLoginUri is null && privateIPs is null && adminPassword is null && availabilityZone is null && userDetailsEmail is null ? default : new FileSystemResourceProperties(
@@ -62,7 +61,8 @@ namespace Azure.ResourceManager.Qumulo.Models
                     availabilityZone,
                     null),
                 identity,
-                initialCapacity);
+                initialCapacity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> MarketplaceDetails of Qumulo FileSystem resource. </summary>

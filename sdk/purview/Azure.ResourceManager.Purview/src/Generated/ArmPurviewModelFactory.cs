@@ -59,7 +59,6 @@ namespace Azure.ResourceManager.Purview.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 accountStatus is null && createdOn is null && createdBy is null && createdByObjectId is null && defaultDomain is null && endpoints is null && friendlyName is null && ingestionStorage is null && managedEventHubState is null && managedResourceGroupName is null && managedResources is null && managedResourcesPublicNetworkAccess is null && mergeInfo is null && privateEndpointConnections is null && provisioningState is null && publicNetworkAccess is null && tenantEndpointState is null && cloudConnectorsAwsExternalId is null ? default : new PurviewAccountProperties(
@@ -83,7 +82,8 @@ namespace Azure.ResourceManager.Purview.Models
                     tenantEndpointState,
                     null),
                 identity,
-                sku);
+                sku,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="accountStatus"> Gets or sets the status of the account. </param>
@@ -211,8 +211,8 @@ namespace Azure.ResourceManager.Purview.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                connectionState is null && provisioningState is null && privateEndpointId is null ? default : new PrivateEndpointConnectionProperties(new PrivateEndpoint(privateEndpointId, null), connectionState, provisioningState, null));
+                connectionState is null && provisioningState is null && privateEndpointId is null ? default : new PrivateEndpointConnectionProperties(new PrivateEndpoint(privateEndpointId, null), connectionState, provisioningState, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The account update properties. </summary>
@@ -265,7 +265,6 @@ namespace Azure.ResourceManager.Purview.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 consumerGroup is null && credentials is null && eventHubPartitionId is null && eventHubResourceId is null && eventHubType is null && eventStreamingState is null && eventStreamingType is null ? default : new KafkaConfigurationProperties(
                     consumerGroup,
                     credentials,
@@ -274,7 +273,8 @@ namespace Azure.ResourceManager.Purview.Models
                     eventHubType,
                     eventStreamingState,
                     eventStreamingType,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -292,8 +292,8 @@ namespace Azure.ResourceManager.Purview.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                groupId is null && requiredMembers is null && requiredZoneNames is null ? default : new PurviewPrivateLinkResourceProperties(groupId, (requiredMembers ?? new ChangeTrackingList<string>()).ToList(), (requiredZoneNames ?? new ChangeTrackingList<string>()).ToList(), null));
+                groupId is null && requiredMembers is null && requiredZoneNames is null ? default : new PurviewPrivateLinkResourceProperties(groupId, (requiredMembers ?? new ChangeTrackingList<string>()).ToList(), (requiredZoneNames ?? new ChangeTrackingList<string>()).ToList(), null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Feature request model. </summary>
@@ -427,8 +427,8 @@ namespace Azure.ResourceManager.Purview.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
     }
 }

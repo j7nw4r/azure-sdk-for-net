@@ -34,8 +34,8 @@ namespace Azure.ResourceManager.Nginx.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Nginx Deployment Api Key Response Properties. </summary>
@@ -84,12 +84,12 @@ namespace Azure.ResourceManager.Nginx.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
                 identity,
-                skuName is null ? default : new NginxResourceSku(skuName, null));
+                skuName is null ? default : new NginxResourceSku(skuName, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="provisioningState"> Provisioning State. </param>
@@ -280,9 +280,9 @@ namespace Azure.ResourceManager.Nginx.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
-                location);
+                location,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Nginx Certificate Properties. </summary>
@@ -323,8 +323,8 @@ namespace Azure.ResourceManager.Nginx.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Nginx Configuration Response Properties. </summary>
@@ -503,8 +503,8 @@ namespace Azure.ResourceManager.Nginx.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Nginx Deployment Waf Policy Properties. </summary>

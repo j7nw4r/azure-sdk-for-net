@@ -40,12 +40,12 @@ namespace Azure.ResourceManager.OnlineExperimentation.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
                 identity,
-                sku);
+                sku,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="workspaceId"> The Id of the workspace. </param>
@@ -92,8 +92,8 @@ namespace Azure.ResourceManager.OnlineExperimentation.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties of the private endpoint connection. </summary>
@@ -145,8 +145,8 @@ namespace Azure.ResourceManager.OnlineExperimentation.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties of a private link resource. </summary>

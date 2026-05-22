@@ -36,8 +36,8 @@ namespace Azure.ResourceManager.NetApp.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                current is null && @default is null && usage is null ? default : new QuotaItemProperties(current, @default, usage, null));
+                current is null && @default is null && usage is null ? default : new QuotaItemProperties(current, @default, usage, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Volume group properties. </summary>
@@ -306,9 +306,9 @@ namespace Azure.ResourceManager.NetApp.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 location,
-                provisioningState is null && groupMetaData is null ? default : new VolumeGroupListProperties(provisioningState, groupMetaData, null));
+                provisioningState is null && groupMetaData is null ? default : new VolumeGroupListProperties(provisioningState, groupMetaData, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -405,7 +405,6 @@ namespace Azure.ResourceManager.NetApp.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 new VolumeProperties(
@@ -473,7 +472,8 @@ namespace Azure.ResourceManager.NetApp.Models
                     breakthroughMode,
                     null),
                 eTag,
-                zones.ToList());
+                zones.ToList(),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -518,7 +518,6 @@ namespace Azure.ResourceManager.NetApp.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 serviceLevel is null && usageThreshold is null && protocolTypes is null && throughputMibps is null && dataProtection is null && isDefaultQuotaEnabled is null && defaultUserQuotaInKiBs is null && defaultGroupQuotaInKiBs is null && unixPermissions is null && isCoolAccessEnabled is null && coolnessPeriod is null && coolAccessRetrievalPolicy is null && coolAccessTieringPolicy is null && isSnapshotDirectoryVisible is null && smbAccessBasedEnumeration is null && smbNonBrowsable is null && exportRules is null ? default : new VolumePatchProperties(
@@ -539,7 +538,8 @@ namespace Azure.ResourceManager.NetApp.Models
                     isSnapshotDirectoryVisible,
                     smbAccessBasedEnumeration,
                     smbNonBrowsable,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Get group Id list for LDAP User request. </summary>
@@ -677,7 +677,6 @@ namespace Azure.ResourceManager.NetApp.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 new SnapshotPolicyProperties(
@@ -688,7 +687,8 @@ namespace Azure.ResourceManager.NetApp.Models
                     isEnabled,
                     provisioningState,
                     null),
-                eTag);
+                eTag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -713,7 +713,6 @@ namespace Azure.ResourceManager.NetApp.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 hourlySchedule is null && dailySchedule is null && weeklySchedule is null && monthlySchedule is null && isEnabled is null && provisioningState is null ? default : new SnapshotPolicyProperties(
@@ -723,7 +722,8 @@ namespace Azure.ResourceManager.NetApp.Models
                     monthlySchedule,
                     isEnabled,
                     provisioningState,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -751,7 +751,6 @@ namespace Azure.ResourceManager.NetApp.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 new BackupPolicyProperties(
@@ -764,7 +763,8 @@ namespace Azure.ResourceManager.NetApp.Models
                     isEnabled,
                     (volumeBackups ?? new ChangeTrackingList<NetAppVolumeBackupDetail>()).ToList(),
                     null),
-                eTag);
+                eTag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Volume details using the backup policy. </summary>
@@ -802,7 +802,6 @@ namespace Azure.ResourceManager.NetApp.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 backupPolicyId is null && provisioningState is null && dailyBackupsToKeep is null && weeklyBackupsToKeep is null && monthlyBackupsToKeep is null && volumesAssigned is null && isEnabled is null && volumeBackups is null ? default : new BackupPolicyProperties(
@@ -814,7 +813,8 @@ namespace Azure.ResourceManager.NetApp.Models
                     volumesAssigned,
                     isEnabled,
                     (volumeBackups ?? new ChangeTrackingList<NetAppVolumeBackupDetail>()).ToList(),
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -837,10 +837,10 @@ namespace Azure.ResourceManager.NetApp.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                provisioningState is null && quotaSizeInKiBs is null && quotaType is null && quotaTarget is null ? default : new VolumeQuotaRulesProperties(provisioningState, quotaSizeInKiBs, quotaType, quotaTarget, null));
+                provisioningState is null && quotaSizeInKiBs is null && quotaType is null && quotaTarget is null ? default : new VolumeQuotaRulesProperties(provisioningState, quotaSizeInKiBs, quotaType, quotaTarget, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="tags"> Resource tags. </param>
@@ -875,8 +875,8 @@ namespace Azure.ResourceManager.NetApp.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary>
@@ -957,10 +957,10 @@ namespace Azure.ResourceManager.NetApp.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                provisioningState is null ? default : new BackupVaultProperties(provisioningState, null));
+                provisioningState is null ? default : new BackupVaultProperties(provisioningState, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Backup Vault information. </summary>
@@ -1003,7 +1003,6 @@ namespace Azure.ResourceManager.NetApp.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 path is null && fileSystemUser is null && provisioningState is null && status is null && server is null && permissions is null && keyVaultDetails is null ? default : new BucketProperties(
                     path,
                     fileSystemUser,
@@ -1012,7 +1011,8 @@ namespace Azure.ResourceManager.NetApp.Models
                     server,
                     permissions,
                     keyVaultDetails,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties of the server managing the lifecycle of volume buckets. </summary>
@@ -1064,14 +1064,14 @@ namespace Azure.ResourceManager.NetApp.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 fileSystemUser is null && provisioningState is null && server is null && permissions is null && keyVaultDetails is null ? default : new BucketPatchProperties(
                     fileSystemUser,
                     provisioningState,
                     server,
                     permissions,
                     keyVaultDetails,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Bucket Access Key, Secret Key, and Expiry date and time of the key pair. </summary>
@@ -1104,12 +1104,12 @@ namespace Azure.ResourceManager.NetApp.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
                 etag,
-                zones.ToList());
+                zones.ToList(),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="filePath"> The file path of the Cache. </param>
@@ -1260,12 +1260,12 @@ namespace Azure.ResourceManager.NetApp.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
                 eTag,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> NetApp elastic account properties. </summary>
@@ -1330,12 +1330,12 @@ namespace Azure.ResourceManager.NetApp.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
                 eTag,
-                zones.ToList());
+                zones.ToList(),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Elastic capacity pool properties. </summary>
@@ -1422,12 +1422,12 @@ namespace Azure.ResourceManager.NetApp.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
                 eTag,
-                zones.ToList());
+                zones.ToList(),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="filePath"> A unique file path for the volume. Used when creating mount targets. This needs to be unique within the elastic capacity pool. </param>
@@ -1521,8 +1521,8 @@ namespace Azure.ResourceManager.NetApp.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                elasticSnapshotProvisioningState is null ? default : new ElasticSnapshotProperties(elasticSnapshotProvisioningState, null));
+                elasticSnapshotProvisioningState is null ? default : new ElasticSnapshotProperties(elasticSnapshotProvisioningState, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> NetApp Elastic Snapshot Policy under an Elastic Account. </summary>
@@ -1544,11 +1544,11 @@ namespace Azure.ResourceManager.NetApp.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                eTag);
+                eTag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Elastic Snapshot policy properties. </summary>
@@ -1626,11 +1626,11 @@ namespace Azure.ResourceManager.NetApp.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 elasticBackupVaultProvisioningState is null ? default : new ElasticBackupVaultProperties(elasticBackupVaultProvisioningState, null),
-                eTag);
+                eTag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The type used for update operations of the ElasticBackupVault. </summary>
@@ -1662,11 +1662,11 @@ namespace Azure.ResourceManager.NetApp.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                eTag);
+                eTag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Elastic Backup Policy properties. </summary>
@@ -1714,8 +1714,8 @@ namespace Azure.ResourceManager.NetApp.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Elastic Backup properties. </summary>
@@ -1772,12 +1772,12 @@ namespace Azure.ResourceManager.NetApp.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
                 eTag,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Active Directory Configuration properties. </summary>
@@ -1885,8 +1885,8 @@ namespace Azure.ResourceManager.NetApp.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                storageToNetworkProximity is null && availabilityZoneMappings is null ? default : new NetAppRegionInfo(storageToNetworkProximity, (availabilityZoneMappings ?? new ChangeTrackingList<AvailabilityZoneMapping>()).ToList(), null));
+                storageToNetworkProximity is null && availabilityZoneMappings is null ? default : new NetAppRegionInfo(storageToNetworkProximity, (availabilityZoneMappings ?? new ChangeTrackingList<AvailabilityZoneMapping>()).ToList(), null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Provides region specific information. </summary>
@@ -1926,7 +1926,6 @@ namespace Azure.ResourceManager.NetApp.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 provisioningState is null && activeDirectories is null && entraIdConfig is null && encryption is null && disableShowmount is null && nfsV4IdDomain is null && multiAdStatus is null && ldapConfiguration is null ? default : new AccountProperties(
@@ -1940,7 +1939,8 @@ namespace Azure.ResourceManager.NetApp.Models
                     ldapConfiguration,
                     null),
                 eTag,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Active Directory. </summary>
@@ -2053,16 +2053,16 @@ namespace Azure.ResourceManager.NetApp.Models
         /// <param name="name"> The name of the resource. </param>
         /// <param name="resourceType"> The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts". </param>
         /// <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
+        /// <param name="tags"> Resource tags. </param>
         /// <param name="location"> The geo-location where the resource lives. </param>
         /// <param name="identity"> The managed service identities assigned to this resource. </param>
-        /// <param name="tags"> Resource tags. </param>
         /// <param name="activeDirectories"> Active Directories. </param>
         /// <param name="encryption"> Encryption settings. </param>
         /// <param name="nfsV4IdDomain"> Domain for NFSv4 user ID mapping. This property will be set for all NetApp accounts in the subscription and region and only affect non ldap NFSv4 volumes. </param>
         /// <param name="ldapConfiguration"> LDAP Configuration for the account. </param>
         /// <param name="entraIdConfig"> Entra ID configuration for the account. </param>
         /// <returns> A new <see cref="Models.NetAppAccountPatch"/> instance for mocking. </returns>
-        public static NetAppAccountPatch NetAppAccountPatch(ResourceIdentifier id = default, string name = default, ResourceType resourceType = default, SystemData systemData = default, AzureLocation location = default, ManagedServiceIdentity identity = default, IDictionary<string, string> tags = default, IEnumerable<NetAppAccountActiveDirectory> activeDirectories = default, NetAppAccountEncryption encryption = default, string nfsV4IdDomain = default, LdapConfiguration ldapConfiguration = default, EntraIdConfigPatch entraIdConfig = default)
+        public static NetAppAccountPatch NetAppAccountPatch(ResourceIdentifier id = default, string name = default, ResourceType resourceType = default, SystemData systemData = default, IDictionary<string, string> tags = default, AzureLocation location = default, ManagedServiceIdentity identity = default, IEnumerable<NetAppAccountActiveDirectory> activeDirectories = default, NetAppAccountEncryption encryption = default, string nfsV4IdDomain = default, LdapConfiguration ldapConfiguration = default, EntraIdConfigPatch entraIdConfig = default)
         {
             tags ??= new ChangeTrackingDictionary<string, string>();
 
@@ -2071,17 +2071,17 @@ namespace Azure.ResourceManager.NetApp.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
+                tags,
                 location,
                 identity,
-                tags,
                 activeDirectories is null && encryption is null && nfsV4IdDomain is null && ldapConfiguration is null && entraIdConfig is null ? default : new AccountPropertiesPatch(
                     (activeDirectories ?? new ChangeTrackingList<NetAppAccountActiveDirectory>()).ToList(),
                     encryption,
                     nfsV4IdDomain,
                     ldapConfiguration,
                     entraIdConfig,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Encryption transition request. </summary>
@@ -2151,7 +2151,6 @@ namespace Azure.ResourceManager.NetApp.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 new PoolProperties(
@@ -2166,7 +2165,8 @@ namespace Azure.ResourceManager.NetApp.Models
                     isCoolAccessEnabled,
                     encryptionType,
                     null),
-                eTag);
+                eTag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -2189,10 +2189,10 @@ namespace Azure.ResourceManager.NetApp.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                size is null && qosType is null && isCoolAccessEnabled is null && customThroughputMibpsInt is null ? default : new PoolPatchProperties(size, qosType, isCoolAccessEnabled, customThroughputMibpsInt, null));
+                size is null && qosType is null && isCoolAccessEnabled is null && customThroughputMibpsInt is null ? default : new PoolPatchProperties(size, qosType, isCoolAccessEnabled, customThroughputMibpsInt, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Restore payload for Single File Backup Restore. </summary>
@@ -2223,8 +2223,8 @@ namespace Azure.ResourceManager.NetApp.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                path is null && size is null && parentPath is null && provisioningState is null ? default : new SubvolumeProperties(path, size, parentPath, provisioningState, null));
+                path is null && size is null && parentPath is null && provisioningState is null ? default : new SubvolumeProperties(path, size, parentPath, provisioningState, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -2249,7 +2249,6 @@ namespace Azure.ResourceManager.NetApp.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 path is null && parentPath is null && size is null && bytesUsed is null && permissions is null && createdOn is null && accessedOn is null && modifiedOn is null && changedOn is null && provisioningState is null ? default : new SubvolumeModelProperties(
                     path,
                     parentPath,
@@ -2261,7 +2260,8 @@ namespace Azure.ResourceManager.NetApp.Models
                     modifiedOn,
                     changedOn,
                     provisioningState,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Resource name availability request content. </summary>
@@ -2403,7 +2403,6 @@ namespace Azure.ResourceManager.NetApp.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 provisioningState is null && activeDirectories is null && encryption is null && disableShowmount is null && nfsV4IdDomain is null && multiAdStatus is null ? default : new AccountProperties(
@@ -2417,7 +2416,8 @@ namespace Azure.ResourceManager.NetApp.Models
                     default,
                     default),
                 etag,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="NetApp.NetAppBackupPolicyData"/>. </summary>
@@ -2447,7 +2447,6 @@ namespace Azure.ResourceManager.NetApp.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 backupPolicyId is null && provisioningState is null && dailyBackupsToKeep is null && weeklyBackupsToKeep is null && monthlyBackupsToKeep is null && volumesAssigned is null && isEnabled is null && volumeBackups is null ? default : new BackupPolicyProperties(
@@ -2460,7 +2459,8 @@ namespace Azure.ResourceManager.NetApp.Models
                     isEnabled,
                     (volumeBackups ?? new ChangeTrackingList<NetAppVolumeBackupDetail>()).ToList(),
                     default),
-                etag);
+                etag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="NetApp.NetAppVolumeSnapshotData"/>. </summary>
@@ -2480,9 +2480,9 @@ namespace Azure.ResourceManager.NetApp.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 default,
-                location);
+                location,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="NetApp.NetAppVolumeQuotaRuleData"/>. </summary>
@@ -2507,10 +2507,10 @@ namespace Azure.ResourceManager.NetApp.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                quotaSizeInKiBs is null && quotaType is null && quotaTarget is null ? default : new VolumeQuotaRulesProperties(default, quotaSizeInKiBs, quotaType, quotaTarget, default));
+                quotaSizeInKiBs is null && quotaType is null && quotaTarget is null ? default : new VolumeQuotaRulesProperties(default, quotaSizeInKiBs, quotaType, quotaTarget, default),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Models.NetAppVolumeQuotaRulePatch"/>. </summary>
@@ -2553,7 +2553,6 @@ namespace Azure.ResourceManager.NetApp.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 hourlySchedule is null && dailySchedule is null && weeklySchedule is null && monthlySchedule is null && isEnabled is null && provisioningState is null ? default : new SnapshotPolicyProperties(
@@ -2564,7 +2563,8 @@ namespace Azure.ResourceManager.NetApp.Models
                     isEnabled,
                     provisioningState,
                     default),
-                etag);
+                etag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="NetApp.NetAppVolumeGroupData"/>. </summary>
@@ -2586,9 +2586,9 @@ namespace Azure.ResourceManager.NetApp.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 default,
-                location);
+                location,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Models.NetAppVolumeGroupVolume"/>. </summary>
@@ -2810,7 +2810,6 @@ namespace Azure.ResourceManager.NetApp.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 provisioningState is null && activeDirectories is null && encryption is null && disableShowmount is null ? default : new AccountProperties(
@@ -2824,7 +2823,8 @@ namespace Azure.ResourceManager.NetApp.Models
                     default,
                     default),
                 etag,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Models.NetAppEncryptionIdentity"/>. </summary>

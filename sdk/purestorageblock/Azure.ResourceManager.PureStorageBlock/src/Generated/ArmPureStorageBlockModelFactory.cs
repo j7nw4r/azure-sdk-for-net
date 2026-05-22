@@ -37,10 +37,10 @@ namespace Azure.ResourceManager.PureStorageBlock.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties of a Reservation resource. </summary>
@@ -214,11 +214,11 @@ namespace Azure.ResourceManager.PureStorageBlock.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties of a storage pool. </summary>
@@ -389,8 +389,8 @@ namespace Azure.ResourceManager.PureStorageBlock.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> AVS storage container properties. </summary>
@@ -434,8 +434,8 @@ namespace Azure.ResourceManager.PureStorageBlock.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Volume properties. </summary>
@@ -504,8 +504,8 @@ namespace Azure.ResourceManager.PureStorageBlock.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> AVS VM properties. </summary>
@@ -559,8 +559,8 @@ namespace Azure.ResourceManager.PureStorageBlock.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
     }
 }

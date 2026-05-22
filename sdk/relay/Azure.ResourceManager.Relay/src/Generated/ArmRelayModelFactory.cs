@@ -34,9 +34,9 @@ namespace Azure.ResourceManager.Relay.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 rights is null ? default : new AuthorizationRuleProperties((rights ?? new ChangeTrackingList<RelayAccessRight>()).ToList(), null),
-                location);
+                location,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Namespace/Relay Connection String. </summary>
@@ -84,7 +84,6 @@ namespace Azure.ResourceManager.Relay.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 createdOn is null && updatedOn is null && listenerCount is null && isClientAuthorizationRequired is null && userMetadata is null ? default : new HybridConnectionProperties(
                     createdOn,
                     updatedOn,
@@ -92,7 +91,8 @@ namespace Azure.ResourceManager.Relay.Models
                     isClientAuthorizationRequired,
                     userMetadata,
                     null),
-                location);
+                location,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -116,7 +116,6 @@ namespace Azure.ResourceManager.Relay.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 isDynamic is null && createdOn is null && updatedOn is null && listenerCount is null && relayType is null && isClientAuthorizationRequired is null && isTransportSecurityRequired is null && userMetadata is null ? default : new WcfRelayProperties(
                     isDynamic,
                     createdOn,
@@ -127,7 +126,8 @@ namespace Azure.ResourceManager.Relay.Models
                     isTransportSecurityRequired,
                     userMetadata,
                     null),
-                location);
+                location,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -145,8 +145,8 @@ namespace Azure.ResourceManager.Relay.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                groupId is null && requiredMembers is null && requiredZoneNames is null ? default : new RelayPrivateLinkResourceProperties(groupId, (requiredMembers ?? new ChangeTrackingList<string>()).ToList(), (requiredZoneNames ?? new ChangeTrackingList<string>()).ToList(), null));
+                groupId is null && requiredMembers is null && requiredZoneNames is null ? default : new RelayPrivateLinkResourceProperties(groupId, (requiredMembers ?? new ChangeTrackingList<string>()).ToList(), (requiredZoneNames ?? new ChangeTrackingList<string>()).ToList(), null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -173,7 +173,6 @@ namespace Azure.ResourceManager.Relay.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 sku,
                 provisioningState is null && status is null && createdOn is null && updatedOn is null && serviceBusEndpoint is null && metricId is null && privateEndpointConnections is null && publicNetworkAccess is null ? default : new RelayNamespaceProperties(
                     provisioningState,
@@ -185,7 +184,8 @@ namespace Azure.ResourceManager.Relay.Models
                     (privateEndpointConnections ?? new ChangeTrackingList<RelayPrivateEndpointConnectionData>()).ToList(),
                     publicNetworkAccess,
                     null),
-                tags);
+                tags,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -204,8 +204,8 @@ namespace Azure.ResourceManager.Relay.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                trustedServiceAccessEnabled is null && defaultAction is null && publicNetworkAccess is null && ipRules is null ? default : new NetworkRuleSetProperties(trustedServiceAccessEnabled, defaultAction, publicNetworkAccess, (ipRules ?? new ChangeTrackingList<RelayNetworkRuleSetIPRule>()).ToList(), null));
+                trustedServiceAccessEnabled is null && defaultAction is null && publicNetworkAccess is null && ipRules is null ? default : new NetworkRuleSetProperties(trustedServiceAccessEnabled, defaultAction, publicNetworkAccess, (ipRules ?? new ChangeTrackingList<RelayNetworkRuleSetIPRule>()).ToList(), null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Description of the check name availability request properties. </summary>
@@ -253,11 +253,11 @@ namespace Azure.ResourceManager.Relay.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 default,
-                sku);
+                sku,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Relay.RelayPrivateEndpointConnectionData"/>. </summary>
@@ -277,9 +277,9 @@ namespace Azure.ResourceManager.Relay.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 default,
-                location);
+                location,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Relay.RelayNetworkRuleSetData"/>. </summary>
