@@ -39,11 +39,11 @@ namespace Azure.ResourceManager.Monitor.PipelineGroups.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties that need to be specified to create a new pipeline group instance. </summary>

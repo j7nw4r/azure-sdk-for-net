@@ -33,9 +33,9 @@ namespace Azure.ResourceManager.Monitor.Slis.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="provisioningState"> Indicates the provisioning status of the last operation. </param>

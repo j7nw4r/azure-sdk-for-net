@@ -37,10 +37,10 @@ namespace Azure.ResourceManager.InformaticaDataManagement.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="provisioningState"> Provisioning State of the resource. </param>
@@ -250,8 +250,8 @@ namespace Azure.ResourceManager.InformaticaDataManagement.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="provisioningState"> Provisioning State of the resource. </param>

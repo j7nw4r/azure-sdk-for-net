@@ -7,6 +7,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using Azure;
 using Azure.Core;
@@ -163,25 +164,6 @@ namespace Azure.ResourceManager.KeyVault.Models
                 additionalBinaryDataProperties: null);
         }
 
-        /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
-        /// <param name="resourceType"> The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts". </param>
-        /// <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
-        /// <param name="name"> The resource name of the access policy. </param>
-        /// <param name="location"> The resource type of the access policy. </param>
-        /// <param name="accessPolicies"> An array of 0 to 16 identities that have access to the key vault. All identities in the array must use the same tenant ID as the key vault's tenant ID. </param>
-        /// <returns> A new <see cref="Models.KeyVaultAccessPolicyParameters"/> instance for mocking. </returns>
-        public static KeyVaultAccessPolicyParameters KeyVaultAccessPolicyParameters(ResourceIdentifier id = default, ResourceType resourceType = default, SystemData systemData = default, string name = default, AzureLocation? location = default, IEnumerable<KeyVaultAccessPolicy> accessPolicies = default)
-        {
-            return new KeyVaultAccessPolicyParameters(
-                id,
-                resourceType,
-                systemData,
-                additionalBinaryDataProperties: null,
-                name,
-                location,
-                new KeyVaultAccessPolicyProperties((accessPolicies ?? new ChangeTrackingList<KeyVaultAccessPolicy>()).ToList(), null));
-        }
-
         /// <summary> Properties of the vault access policy. </summary>
         /// <param name="accessPolicies"> An array of 0 to 16 identities that have access to the key vault. All identities in the array must use the same tenant ID as the key vault's tenant ID. </param>
         /// <returns> A new <see cref="Models.KeyVaultAccessPolicyProperties"/> instance for mocking. </returns>
@@ -211,10 +193,10 @@ namespace Azure.ResourceManager.KeyVault.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 groupId is null && requiredMembers is null && requiredZoneNames is null ? default : new KeyVaultPrivateLinkResourceProperties(groupId, (requiredMembers ?? new ChangeTrackingList<string>()).ToList(), (requiredZoneNames ?? new ChangeTrackingList<string>()).ToList(), null),
                 location,
-                tags);
+                tags,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Deleted vault information with extended details. </summary>
@@ -231,8 +213,8 @@ namespace Azure.ResourceManager.KeyVault.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties of the deleted vault. </summary>
@@ -277,11 +259,11 @@ namespace Azure.ResourceManager.KeyVault.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 connectionState is null && provisioningState is null && privateEndpointId is null ? default : new PrivateEndpointConnectionProperties(new PrivateEndpoint(privateEndpointId, null), connectionState, provisioningState, null),
                 location,
                 tags,
-                etag);
+                etag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties of the managed HSM Pool. </summary>
@@ -392,8 +374,8 @@ namespace Azure.ResourceManager.KeyVault.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties of the deleted managed HSM. </summary>
@@ -436,10 +418,10 @@ namespace Azure.ResourceManager.KeyVault.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
                 location,
-                tags);
+                tags,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties of the secret. </summary>
@@ -573,10 +555,31 @@ namespace Azure.ResourceManager.KeyVault.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
+        }
+
+        /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
+        /// <param name="resourceType"> The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts". </param>
+        /// <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
+        /// <param name="name"> The resource name of the access policy. </param>
+        /// <param name="location"> The resource type of the access policy. </param>
+        /// <param name="accessPolicies"> An array of 0 to 16 identities that have access to the key vault. All identities in the array must use the same tenant ID as the key vault's tenant ID. </param>
+        /// <returns> A new <see cref="Models.KeyVaultAccessPolicyParameters"/> instance for mocking. </returns>
+        [EditorBrowsable(EditorBrowsableState.Never)]
+        public static KeyVaultAccessPolicyParameters KeyVaultAccessPolicyParameters(ResourceIdentifier id, ResourceType resourceType, SystemData systemData, string name, AzureLocation? location, IEnumerable<KeyVaultAccessPolicy> accessPolicies)
+        {
+
+            return new KeyVaultAccessPolicyParameters(
+                id,
+                name,
+                resourceType,
+                systemData,
+                location,
+                accessPolicies is null ? default : new KeyVaultAccessPolicyProperties((accessPolicies ?? new ChangeTrackingList<KeyVaultAccessPolicy>()).ToList(), default),
+                additionalBinaryDataProperties: null);
         }
     }
 }

@@ -24,6 +24,8 @@ namespace Azure.ResourceManager.EventHubs.Models
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
         /// <param name="name"> The name of the resource. </param>
         /// <param name="resourceType"> The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts". </param>
+        /// <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
+        /// <param name="tags"> Resource tags. </param>
         /// <param name="location"> The geo-location where the resource lives. </param>
         /// <param name="createdOn"> The UTC time when the Event Hubs Cluster was created. </param>
         /// <param name="provisioningState"> Provisioning state of the Cluster. </param>
@@ -32,11 +34,9 @@ namespace Azure.ResourceManager.EventHubs.Models
         /// <param name="status"> Status of the Cluster resource. </param>
         /// <param name="supportsScaling"> A value that indicates whether Scaling is Supported. </param>
         /// <param name="platformCapabilitiesConfidentialComputeMode"> Setting to Enable or Disable Confidential Compute. </param>
-        /// <param name="tags"> Resource tags. </param>
         /// <param name="sku"> Properties of the cluster SKU. </param>
-        /// <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
         /// <returns> A new <see cref="EventHubs.EventHubsClusterData"/> instance for mocking. </returns>
-        public static EventHubsClusterData EventHubsClusterData(ResourceIdentifier id = default, string name = default, ResourceType resourceType = default, AzureLocation location = default, DateTimeOffset? createdOn = default, EventHubsClusterProvisioningState? provisioningState = default, DateTimeOffset? updatedOn = default, string metricId = default, string status = default, bool? supportsScaling = default, EventHubsConfidentialComputeMode? platformCapabilitiesConfidentialComputeMode = default, IDictionary<string, string> tags = default, EventHubsClusterSku sku = default, SystemData systemData = default)
+        public static EventHubsClusterData EventHubsClusterData(ResourceIdentifier id = default, string name = default, ResourceType resourceType = default, SystemData systemData = default, IDictionary<string, string> tags = default, AzureLocation location = default, DateTimeOffset? createdOn = default, EventHubsClusterProvisioningState? provisioningState = default, DateTimeOffset? updatedOn = default, string metricId = default, string status = default, bool? supportsScaling = default, EventHubsConfidentialComputeMode? platformCapabilitiesConfidentialComputeMode = default, EventHubsClusterSku sku = default)
         {
             tags ??= new ChangeTrackingDictionary<string, string>();
 
@@ -44,7 +44,8 @@ namespace Azure.ResourceManager.EventHubs.Models
                 id,
                 name,
                 resourceType,
-                additionalBinaryDataProperties: null,
+                systemData,
+                tags,
                 location,
                 createdOn is null && provisioningState is null && updatedOn is null && metricId is null && status is null && supportsScaling is null && platformCapabilitiesConfidentialComputeMode is null ? default : new ClusterProperties(
                     createdOn,
@@ -55,9 +56,8 @@ namespace Azure.ResourceManager.EventHubs.Models
                     supportsScaling,
                     new PlatformCapabilities(new ConfidentialCompute(platformCapabilitiesConfidentialComputeMode, null), null),
                     null),
-                tags,
                 sku,
-                systemData);
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Pre-provisioned and readily available Event Hubs Cluster count per region. </summary>
@@ -82,9 +82,9 @@ namespace Azure.ResourceManager.EventHubs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 rights is null ? default : new AuthorizationRuleProperties((rights ?? new ChangeTrackingList<EventHubsAccessRight>()).ToList(), null),
-                location);
+                location,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Namespace/EventHub Connection String. </summary>
@@ -137,7 +137,6 @@ namespace Azure.ResourceManager.EventHubs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 provisioningState is null && partnerNamespace is null && alternateName is null && role is null && pendingReplicationOperationsCount is null ? default : new ArmDisasterRecoveryProperties(
                     provisioningState,
                     partnerNamespace,
@@ -145,7 +144,8 @@ namespace Azure.ResourceManager.EventHubs.Models
                     role,
                     pendingReplicationOperationsCount,
                     null),
-                location);
+                location,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Parameters supplied to the Regenerate Authorization Rule operation, specifies which key needs to be reset. </summary>
@@ -181,7 +181,6 @@ namespace Azure.ResourceManager.EventHubs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 partitionIds is null && createdOn is null && updatedOn is null && messageRetentionInDays is null && partitionCount is null && status is null && captureDescription is null && retentionDescription is null && identifier is null && userMetadata is null && messageTimestampType is null ? default : new EventhubProperties(
                     (partitionIds ?? new ChangeTrackingList<string>()).ToList(),
                     createdOn,
@@ -195,7 +194,8 @@ namespace Azure.ResourceManager.EventHubs.Models
                     identifier,
                     userMetadata,
                     null),
-                location);
+                location,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -220,7 +220,6 @@ namespace Azure.ResourceManager.EventHubs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 provisioningState is null && provisioningIssues is null && networkSecurityPerimeter is null && resourceAssociation is null && profile is null && isBackingResource is null && applicableFeatures is null && parentAssociationName is null && sourceResourceId is null ? default : new NetworkSecurityPerimeterConfigurationProperties(
                     provisioningState,
                     (provisioningIssues ?? new ChangeTrackingList<EventHubsProvisioningIssue>()).ToList(),
@@ -232,7 +231,8 @@ namespace Azure.ResourceManager.EventHubs.Models
                     parentAssociationName,
                     sourceResourceId,
                     null),
-                location);
+                location,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Describes Provisioning issue for given NetworkSecurityPerimeterConfiguration. </summary>
@@ -298,8 +298,8 @@ namespace Azure.ResourceManager.EventHubs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties of Access Rule. </summary>
@@ -341,9 +341,9 @@ namespace Azure.ResourceManager.EventHubs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 createdOn is null && updatedOn is null && userMetadata is null ? default : new ConsumerGroupProperties(createdOn, updatedOn, userMetadata, null),
-                location);
+                location,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Contains all settings for the cluster. </summary>
@@ -359,6 +359,8 @@ namespace Azure.ResourceManager.EventHubs.Models
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
         /// <param name="name"> The name of the resource. </param>
         /// <param name="resourceType"> The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts". </param>
+        /// <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
+        /// <param name="tags"> Resource tags. </param>
         /// <param name="location"> The geo-location where the resource lives. </param>
         /// <param name="minimumTlsVersion"> The minimum TLS version for the cluster to support, e.g. '1.2'. </param>
         /// <param name="provisioningState"> Provisioning state of the Namespace. </param>
@@ -379,12 +381,10 @@ namespace Azure.ResourceManager.EventHubs.Models
         /// <param name="alternateName"> Alternate name specified when alias and namespace names are same. </param>
         /// <param name="geoDataReplication"> Geo Data Replication settings for the namespace. </param>
         /// <param name="platformCapabilitiesConfidentialComputeMode"> Setting to Enable or Disable Confidential Compute. </param>
-        /// <param name="tags"> Resource tags. </param>
-        /// <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
         /// <param name="sku"> Properties of sku resource. </param>
         /// <param name="identity"> Properties of BYOK Identity description. </param>
         /// <returns> A new <see cref="EventHubs.EventHubsNamespaceData"/> instance for mocking. </returns>
-        public static EventHubsNamespaceData EventHubsNamespaceData(ResourceIdentifier id = default, string name = default, ResourceType resourceType = default, AzureLocation location = default, EventHubsTlsVersion? minimumTlsVersion = default, string provisioningState = default, string status = default, DateTimeOffset? createdOn = default, DateTimeOffset? updatedOn = default, string serviceBusEndpoint = default, ResourceIdentifier clusterArmId = default, string metricId = default, bool? isAutoInflateEnabled = default, EventHubsPublicNetworkAccess? publicNetworkAccess = default, int? maximumThroughputUnits = default, bool? kafkaEnabled = default, bool? zoneRedundant = default, EventHubsEncryption encryption = default, IEnumerable<EventHubsPrivateEndpointConnectionData> privateEndpointConnections = default, bool? disableLocalAuth = default, string alternateName = default, EventHubsNamespaceGeoDataReplicationProperties geoDataReplication = default, EventHubsConfidentialComputeMode? platformCapabilitiesConfidentialComputeMode = default, IDictionary<string, string> tags = default, SystemData systemData = default, EventHubsSku sku = default, ManagedServiceIdentity identity = default)
+        public static EventHubsNamespaceData EventHubsNamespaceData(ResourceIdentifier id = default, string name = default, ResourceType resourceType = default, SystemData systemData = default, IDictionary<string, string> tags = default, AzureLocation location = default, EventHubsTlsVersion? minimumTlsVersion = default, string provisioningState = default, string status = default, DateTimeOffset? createdOn = default, DateTimeOffset? updatedOn = default, string serviceBusEndpoint = default, ResourceIdentifier clusterArmId = default, string metricId = default, bool? isAutoInflateEnabled = default, EventHubsPublicNetworkAccess? publicNetworkAccess = default, int? maximumThroughputUnits = default, bool? kafkaEnabled = default, bool? zoneRedundant = default, EventHubsEncryption encryption = default, IEnumerable<EventHubsPrivateEndpointConnectionData> privateEndpointConnections = default, bool? disableLocalAuth = default, string alternateName = default, EventHubsNamespaceGeoDataReplicationProperties geoDataReplication = default, EventHubsConfidentialComputeMode? platformCapabilitiesConfidentialComputeMode = default, EventHubsSku sku = default, ManagedServiceIdentity identity = default)
         {
             tags ??= new ChangeTrackingDictionary<string, string>();
 
@@ -392,7 +392,8 @@ namespace Azure.ResourceManager.EventHubs.Models
                 id,
                 name,
                 resourceType,
-                additionalBinaryDataProperties: null,
+                systemData,
+                tags,
                 location,
                 minimumTlsVersion is null && provisioningState is null && status is null && createdOn is null && updatedOn is null && serviceBusEndpoint is null && clusterArmId is null && metricId is null && isAutoInflateEnabled is null && publicNetworkAccess is null && maximumThroughputUnits is null && kafkaEnabled is null && zoneRedundant is null && encryption is null && privateEndpointConnections is null && disableLocalAuth is null && alternateName is null && geoDataReplication is null && platformCapabilitiesConfidentialComputeMode is null ? default : new EHNamespaceProperties(
                     minimumTlsVersion,
@@ -415,10 +416,9 @@ namespace Azure.ResourceManager.EventHubs.Models
                     new PlatformCapabilities(new ConfidentialCompute(platformCapabilitiesConfidentialComputeMode, null), null),
                     geoDataReplication,
                     null),
-                tags,
-                systemData,
                 sku,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties to configure Encryption. </summary>
@@ -473,7 +473,6 @@ namespace Azure.ResourceManager.EventHubs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 trustedServiceAccessEnabled is null && defaultAction is null && virtualNetworkRules is null && ipRules is null && publicNetworkAccess is null ? default : new NetworkRuleSetProperties(
                     trustedServiceAccessEnabled,
                     defaultAction,
@@ -481,7 +480,8 @@ namespace Azure.ResourceManager.EventHubs.Models
                     (ipRules ?? new ChangeTrackingList<EventHubsNetworkRuleSetIPRules>()).ToList(),
                     publicNetworkAccess,
                     null),
-                location);
+                location,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Paged collection of NetworkRuleSet items. </summary>
@@ -510,8 +510,8 @@ namespace Azure.ResourceManager.EventHubs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                groupId is null && requiredMembers is null && requiredZoneNames is null ? default : new EventHubsPrivateLinkResourceProperties(groupId, (requiredMembers ?? new ChangeTrackingList<string>()).ToList(), (requiredZoneNames ?? new ChangeTrackingList<string>()).ToList(), null));
+                groupId is null && requiredMembers is null && requiredZoneNames is null ? default : new EventHubsPrivateLinkResourceProperties(groupId, (requiredMembers ?? new ChangeTrackingList<string>()).ToList(), (requiredZoneNames ?? new ChangeTrackingList<string>()).ToList(), null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -533,7 +533,6 @@ namespace Azure.ResourceManager.EventHubs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 updatedAtUtc is null && createdAtUtc is null && eTag is null && groupProperties is null && schemaCompatibility is null && schemaType is null ? default : new SchemaGroupProperties(
                     updatedAtUtc,
                     createdAtUtc,
@@ -542,7 +541,8 @@ namespace Azure.ResourceManager.EventHubs.Models
                     schemaCompatibility,
                     schemaType,
                     null),
-                location);
+                location,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -561,9 +561,9 @@ namespace Azure.ResourceManager.EventHubs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 isEnabled is null && clientAppGroupIdentifier is null && policies is null ? default : new ApplicationGroupProperties(isEnabled, clientAppGroupIdentifier, (policies ?? new ChangeTrackingList<EventHubsApplicationGroupPolicy>()).ToList(), null),
-                location);
+                location,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="EventHubs.EventHubsClusterData"/>. </summary>
@@ -584,7 +584,7 @@ namespace Azure.ResourceManager.EventHubs.Models
         [EditorBrowsable(EditorBrowsableState.Never)]
         public static EventHubsClusterData EventHubsClusterData(ResourceIdentifier id, string name, ResourceType resourceType, SystemData systemData, IDictionary<string, string> tags, AzureLocation location, EventHubsClusterSku sku, DateTimeOffset? createdOn, EventHubsClusterProvisioningState? provisioningState, DateTimeOffset? updatedOn, string metricId, string status, bool? supportsScaling)
         {
-            return EventHubsClusterData(id: id, name: name, resourceType: resourceType, location: location, createdOn: createdOn, provisioningState: provisioningState, updatedOn: updatedOn, metricId: metricId, status: status, supportsScaling: supportsScaling, platformCapabilitiesConfidentialComputeMode: default, tags: tags, sku: sku, systemData: systemData);
+            return EventHubsClusterData(id: id, name: name, resourceType: resourceType, systemData: systemData, tags: tags, location: location, createdOn: createdOn, provisioningState: provisioningState, updatedOn: updatedOn, metricId: metricId, status: status, supportsScaling: supportsScaling, platformCapabilitiesConfidentialComputeMode: default, sku: sku);
         }
 
         /// <summary> Initializes a new instance of <see cref="EventHubs.EventHubsNamespaceData"/>. </summary>
@@ -617,7 +617,7 @@ namespace Azure.ResourceManager.EventHubs.Models
         [EditorBrowsable(EditorBrowsableState.Never)]
         public static EventHubsNamespaceData EventHubsNamespaceData(ResourceIdentifier id, string name, ResourceType resourceType, SystemData systemData, IDictionary<string, string> tags, AzureLocation location, EventHubsSku sku, ManagedServiceIdentity identity, EventHubsTlsVersion? minimumTlsVersion, string provisioningState, string status, DateTimeOffset? createdOn, DateTimeOffset? updatedOn, string serviceBusEndpoint, ResourceIdentifier clusterArmId, string metricId, bool? isAutoInflateEnabled, EventHubsPublicNetworkAccess? publicNetworkAccess, int? maximumThroughputUnits, bool? kafkaEnabled, bool? zoneRedundant, EventHubsEncryption encryption, IEnumerable<EventHubsPrivateEndpointConnectionData> privateEndpointConnections, bool? disableLocalAuth, string alternateName)
         {
-            return EventHubsNamespaceData(id: id, name: name, resourceType: resourceType, location: location, minimumTlsVersion: minimumTlsVersion, provisioningState: provisioningState, status: status, createdOn: createdOn, updatedOn: updatedOn, serviceBusEndpoint: serviceBusEndpoint, clusterArmId: clusterArmId, metricId: metricId, isAutoInflateEnabled: isAutoInflateEnabled, publicNetworkAccess: publicNetworkAccess, maximumThroughputUnits: maximumThroughputUnits, kafkaEnabled: kafkaEnabled, zoneRedundant: zoneRedundant, encryption: encryption, privateEndpointConnections: privateEndpointConnections, disableLocalAuth: disableLocalAuth, alternateName: alternateName, geoDataReplication: default, platformCapabilitiesConfidentialComputeMode: default, tags: tags, systemData: systemData, sku: sku, identity: identity);
+            return EventHubsNamespaceData(id: id, name: name, resourceType: resourceType, systemData: systemData, tags: tags, location: location, minimumTlsVersion: minimumTlsVersion, provisioningState: provisioningState, status: status, createdOn: createdOn, updatedOn: updatedOn, serviceBusEndpoint: serviceBusEndpoint, clusterArmId: clusterArmId, metricId: metricId, isAutoInflateEnabled: isAutoInflateEnabled, publicNetworkAccess: publicNetworkAccess, maximumThroughputUnits: maximumThroughputUnits, kafkaEnabled: kafkaEnabled, zoneRedundant: zoneRedundant, encryption: encryption, privateEndpointConnections: privateEndpointConnections, disableLocalAuth: disableLocalAuth, alternateName: alternateName, geoDataReplication: default, platformCapabilitiesConfidentialComputeMode: default, sku: sku, identity: identity);
         }
 
         /// <summary> Initializes a new instance of <see cref="EventHubs.EventHubsPrivateEndpointConnectionData"/>. </summary>
@@ -637,9 +637,9 @@ namespace Azure.ResourceManager.EventHubs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 default,
-                location);
+                location,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="EventHubs.EventHubData"/>. </summary>

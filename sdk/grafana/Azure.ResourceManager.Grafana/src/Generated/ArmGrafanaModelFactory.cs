@@ -39,12 +39,12 @@ namespace Azure.ResourceManager.Grafana.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
                 sku,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="provisioningState"> Provisioning state of the resource. </param>
@@ -106,8 +106,8 @@ namespace Azure.ResourceManager.Grafana.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                connectionState is null && groupIds is null && provisioningState is null && privateEndpointId is null ? default : new PrivateEndpointConnectionProperties(new PrivateEndpoint(privateEndpointId, null), connectionState, (groupIds ?? new ChangeTrackingList<string>()).ToList(), provisioningState, null));
+                connectionState is null && groupIds is null && provisioningState is null && privateEndpointId is null ? default : new PrivateEndpointConnectionProperties(new PrivateEndpoint(privateEndpointId, null), connectionState, (groupIds ?? new ChangeTrackingList<string>()).ToList(), provisioningState, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Plugin of Grafana. </summary>
@@ -228,8 +228,8 @@ namespace Azure.ResourceManager.Grafana.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                provisioningState is null && groupId is null && requiredMembers is null && requiredZoneNames is null ? default : new GrafanaPrivateLinkResourceProperties(provisioningState, groupId, (requiredMembers ?? new ChangeTrackingList<string>()).ToList(), (requiredZoneNames ?? new ChangeTrackingList<string>()).ToList(), null));
+                provisioningState is null && groupId is null && requiredMembers is null && requiredZoneNames is null ? default : new GrafanaPrivateLinkResourceProperties(provisioningState, groupId, (requiredMembers ?? new ChangeTrackingList<string>()).ToList(), (requiredZoneNames ?? new ChangeTrackingList<string>()).ToList(), null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -256,7 +256,6 @@ namespace Azure.ResourceManager.Grafana.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 provisioningState is null && privateLinkResourceId is null && privateLinkResourceRegion is null && groupIds is null && requestMessage is null && connectionState is null && privateLinkServiceUri is null && privateLinkServicePrivateIP is null ? default : new ManagedPrivateEndpointModelProperties(
@@ -268,7 +267,8 @@ namespace Azure.ResourceManager.Grafana.Models
                     connectionState,
                     privateLinkServiceUri,
                     privateLinkServicePrivateIP,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The state of managed private endpoint connection. </summary>
@@ -308,10 +308,10 @@ namespace Azure.ResourceManager.Grafana.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The GrafanaIntegrationFabricProperties. </summary>
@@ -354,10 +354,10 @@ namespace Azure.ResourceManager.Grafana.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                provisioningState is null ? default : new ManagedDashboardProperties(provisioningState, null));
+                provisioningState is null ? default : new ManagedDashboardProperties(provisioningState, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The parameters for a PATCH request to a managed dashboard resource. </summary>
@@ -384,8 +384,8 @@ namespace Azure.ResourceManager.Grafana.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties specific to the dashboard definition. </summary>

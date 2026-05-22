@@ -38,11 +38,11 @@ namespace Azure.ResourceManager.MongoDBAtlas.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties specific to Organization. </summary>

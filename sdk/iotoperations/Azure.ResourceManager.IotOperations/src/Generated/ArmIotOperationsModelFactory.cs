@@ -39,12 +39,12 @@ namespace Azure.ResourceManager.IotOperations.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
                 extendedLocation,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="description"> Detailed description of the Instance. </param>
@@ -109,9 +109,9 @@ namespace Azure.ResourceManager.IotOperations.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="advanced"> Advanced settings of Broker. </param>
@@ -263,9 +263,9 @@ namespace Azure.ResourceManager.IotOperations.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Defines a Broker listener. A listener is a collection of ports on which the broker accepts connections from clients. </summary>
@@ -315,9 +315,9 @@ namespace Azure.ResourceManager.IotOperations.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> BrokerAuthentication Resource properties. </summary>
@@ -382,9 +382,9 @@ namespace Azure.ResourceManager.IotOperations.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> BrokerAuthorization Resource properties. </summary>
@@ -475,9 +475,9 @@ namespace Azure.ResourceManager.IotOperations.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> DataflowProfile Resource properties. </summary>
@@ -506,9 +506,9 @@ namespace Azure.ResourceManager.IotOperations.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Dataflow Resource properties. </summary>
@@ -653,9 +653,9 @@ namespace Azure.ResourceManager.IotOperations.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="endpointType"> Endpoint Type. </param>
@@ -702,9 +702,9 @@ namespace Azure.ResourceManager.IotOperations.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> DataflowGraph properties. </summary>
@@ -781,9 +781,9 @@ namespace Azure.ResourceManager.IotOperations.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> RegistryEndpoint properties. </summary>
@@ -821,9 +821,9 @@ namespace Azure.ResourceManager.IotOperations.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="provisioningState"> The status of the last operation. </param>
@@ -970,9 +970,9 @@ namespace Azure.ResourceManager.IotOperations.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> AkriConnector properties. </summary>

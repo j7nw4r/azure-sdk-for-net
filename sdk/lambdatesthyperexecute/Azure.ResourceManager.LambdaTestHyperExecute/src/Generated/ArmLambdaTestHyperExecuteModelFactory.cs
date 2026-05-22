@@ -38,11 +38,11 @@ namespace Azure.ResourceManager.LambdaTestHyperExecute.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Marketplace details for an organization. </summary>

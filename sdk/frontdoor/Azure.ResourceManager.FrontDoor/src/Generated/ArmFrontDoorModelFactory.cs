@@ -50,7 +50,6 @@ namespace Azure.ResourceManager.FrontDoor.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 friendlyName is null && routingRules is null && loadBalancingSettings is null && healthProbeSettings is null && backendPools is null && frontendEndpoints is null && backendPoolsSettings is null && enabledState is null && resourceState is null && provisioningState is null && cname is null && frontdoorId is null && rulesEngines is null && extendedProperties is null ? default : new FrontDoorProperties(
@@ -68,7 +67,8 @@ namespace Azure.ResourceManager.FrontDoor.Models
                     cname,
                     frontdoorId,
                     (rulesEngines ?? new ChangeTrackingList<FrontDoorRulesEngineData>()).ToList(),
-                    extendedProperties));
+                    extendedProperties),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -85,8 +85,8 @@ namespace Azure.ResourceManager.FrontDoor.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                rules is null && resourceState is null ? default : new RulesEngineProperties((rules ?? new ChangeTrackingList<RulesEngineRule>()).ToList(), null, resourceState));
+                rules is null && resourceState is null ? default : new RulesEngineProperties((rules ?? new ChangeTrackingList<RulesEngineRule>()).ToList(), null, resourceState),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> One or more actions that will execute, modifying the request and/or response. </summary>
@@ -308,7 +308,6 @@ namespace Azure.ResourceManager.FrontDoor.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 description is null && experimentEndpointA is null && experimentEndpointB is null && enabledState is null && resourceState is null && status is null && scriptFileUri is null ? default : new ExperimentProperties(
@@ -319,7 +318,8 @@ namespace Azure.ResourceManager.FrontDoor.Models
                     resourceState,
                     status,
                     scriptFileUri,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="tags"> Resource tags. </param>
@@ -360,7 +360,6 @@ namespace Azure.ResourceManager.FrontDoor.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 policySettings is null && frontendEndpointLinks is null && routingRuleLinks is null && securityPolicyLinks is null && provisioningState is null && resourceState is null && rules is null && managedRuleSets is null && exceptions is null ? default : new WebApplicationFirewallPolicyProperties(
@@ -374,7 +373,8 @@ namespace Azure.ResourceManager.FrontDoor.Models
                     resourceState,
                     null),
                 eTag,
-                skuName is null ? default : new FrontDoorSku(skuName, null));
+                skuName is null ? default : new FrontDoorSku(skuName, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Defines contents of a web application rule. </summary>
@@ -579,11 +579,11 @@ namespace Azure.ResourceManager.FrontDoor.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 resourceState is null && enabledState is null ? default : new ProfileProperties(resourceState, enabledState, null),
-                eTag);
+                eTag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="enabledState"> The enabled state of the Profile. </param>
@@ -616,10 +616,10 @@ namespace Azure.ResourceManager.FrontDoor.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                description is null && endpoint is null && endpointType is null && backend is null ? default : new PreconfiguredEndpointProperties(description, endpoint, endpointType, backend, null));
+                description is null && endpoint is null && endpointType is null && backend is null ? default : new PreconfiguredEndpointProperties(description, endpoint, endpointType, backend, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -647,7 +647,6 @@ namespace Azure.ResourceManager.FrontDoor.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 latencyScorecardId is null && latencyScorecardName is null && description is null && scorecardEndpointA is null && scorecardEndpointB is null && startOn is null && endOn is null && country is null && latencyMetrics is null ? default : new LatencyScorecardProperties(
@@ -660,7 +659,8 @@ namespace Azure.ResourceManager.FrontDoor.Models
                     endOn,
                     country,
                     (latencyMetrics ?? new ChangeTrackingList<LatencyMetric>()).ToList(),
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Defines the properties of a latency metric used in the latency scorecard. </summary>
@@ -714,7 +714,6 @@ namespace Azure.ResourceManager.FrontDoor.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 endpoint is null && startOn is null && endOn is null && aggregationInterval is null && timeSeriesType is null && country is null && timeSeriesData is null ? default : new TimeseriesProperties(
@@ -725,7 +724,8 @@ namespace Azure.ResourceManager.FrontDoor.Models
                     timeSeriesType,
                     country,
                     (timeSeriesData ?? new ChangeTrackingList<FrontDoorTimeSeriesDataPoint>()).ToList(),
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -749,7 +749,6 @@ namespace Azure.ResourceManager.FrontDoor.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 provisioningState is null && ruleSetId is null && ruleSetType is null && ruleSetVersion is null && ruleGroups is null ? default : new ManagedRuleSetDefinitionProperties(
@@ -758,7 +757,8 @@ namespace Azure.ResourceManager.FrontDoor.Models
                     ruleSetType,
                     ruleSetVersion,
                     (ruleGroups ?? new ChangeTrackingList<ManagedRuleGroupDefinition>()).ToList(),
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Describes a managed rule group. </summary>
@@ -838,7 +838,6 @@ namespace Azure.ResourceManager.FrontDoor.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 policySettings is null && rules is null && managedRuleSets is null && frontendEndpointLinks is null && routingRuleLinks is null && securityPolicyLinks is null && provisioningState is null && resourceState is null ? default : new WebApplicationFirewallPolicyProperties(
@@ -852,7 +851,8 @@ namespace Azure.ResourceManager.FrontDoor.Models
                     resourceState,
                     default),
                 etag,
-                skuName is null ? default : new FrontDoorSku(skuName, default));
+                skuName is null ? default : new FrontDoorSku(skuName, default),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Models.ManagedRuleDefinition"/>. </summary>
@@ -888,11 +888,11 @@ namespace Azure.ResourceManager.FrontDoor.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 resourceState is null && enabledState is null ? default : new ProfileProperties(resourceState, enabledState, default),
-                etag);
+                etag,
+                additionalBinaryDataProperties: null);
         }
     }
 }

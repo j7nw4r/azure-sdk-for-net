@@ -74,8 +74,8 @@ namespace Azure.ResourceManager.Maps.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                groupIds is null && privateLinkServiceConnectionState is null && provisioningState is null && privateEndpointId is null ? default : new PrivateEndpointConnectionProperties((groupIds ?? new ChangeTrackingList<string>()).ToList(), new PrivateEndpoint(privateEndpointId, null), privateLinkServiceConnectionState, provisioningState, null));
+                groupIds is null && privateLinkServiceConnectionState is null && provisioningState is null && privateEndpointId is null ? default : new PrivateEndpointConnectionProperties((groupIds ?? new ChangeTrackingList<string>()).ToList(), new PrivateEndpoint(privateEndpointId, null), privateLinkServiceConnectionState, provisioningState, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The SKU of the Maps Account. </summary>
@@ -192,10 +192,10 @@ namespace Azure.ResourceManager.Maps.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Creator resource properties. </summary>
@@ -237,8 +237,8 @@ namespace Azure.ResourceManager.Maps.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                groupId is null && requiredMembers is null && requiredZoneNames is null ? default : new MapsPrivateLinkResourceProperties(groupId, (requiredMembers ?? new ChangeTrackingList<string>()).ToList(), (requiredZoneNames ?? new ChangeTrackingList<string>()).ToList(), null));
+                groupId is null && requiredMembers is null && requiredZoneNames is null ? default : new MapsPrivateLinkResourceProperties(groupId, (requiredMembers ?? new ChangeTrackingList<string>()).ToList(), (requiredZoneNames ?? new ChangeTrackingList<string>()).ToList(), null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Maps.MapsAccountData"/>. </summary>
@@ -262,13 +262,13 @@ namespace Azure.ResourceManager.Maps.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
                 sku,
                 kind,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Models.MapsAccountProperties"/>. </summary>

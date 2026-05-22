@@ -55,7 +55,6 @@ namespace Azure.ResourceManager.KubernetesConfiguration.Extensions.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 extensionType is null && isAutoUpgradeMinorVersionEnabled is null && releaseTrain is null && version is null && scope is null && configurationSettings is null && configurationProtectedSettings is null && currentVersion is null && provisioningState is null && statuses is null && errorInfo is null && customLocationSettings is null && packageUri is null && aksAssignedIdentity is null && isSystemExtension is null && autoUpgradeMode is null && managementDetails is null && additionalDetails is null && extensionState is null ? default : new KubernetesClusterExtensionProperties(
                     extensionType,
                     isAutoUpgradeMinorVersionEnabled,
@@ -79,7 +78,8 @@ namespace Azure.ResourceManager.KubernetesConfiguration.Extensions.Models
                     null),
                 identity,
                 managedBy,
-                plan);
+                plan,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Metadata about the managing entity of the extension and the permitted operations. </summary>

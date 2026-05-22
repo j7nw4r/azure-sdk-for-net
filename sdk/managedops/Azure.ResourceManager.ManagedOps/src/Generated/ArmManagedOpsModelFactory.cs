@@ -33,8 +33,8 @@ namespace Azure.ResourceManager.ManagedOps.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="sku"> Product plan details of this resource. </param>

@@ -33,8 +33,8 @@ namespace Azure.ResourceManager.ImpactReporting.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Workload impact properties. </summary>
@@ -97,8 +97,8 @@ namespace Azure.ResourceManager.ImpactReporting.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Impact category properties. </summary>
@@ -146,8 +146,8 @@ namespace Azure.ResourceManager.ImpactReporting.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Impact category properties. </summary>
@@ -194,8 +194,8 @@ namespace Azure.ResourceManager.ImpactReporting.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Details of the Connector. </summary>

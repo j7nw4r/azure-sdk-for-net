@@ -38,12 +38,12 @@ namespace Azure.ResourceManager.Kubernetes.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
                 identity,
-                kind);
+                kind,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="agentPublicKeyCertificate"> Base64 encoded public certificate used by the agent to do the initial handshake to the backend services in Azure. </param>

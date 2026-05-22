@@ -39,12 +39,12 @@ namespace Azure.ResourceManager.HardwareSecurityModules.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
                 identity,
-                sku);
+                sku,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties of a Cloud HSM Cluster. </summary>
@@ -96,9 +96,9 @@ namespace Azure.ResourceManager.HardwareSecurityModules.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
-                etag);
+                etag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="privateEndpointId"> The resource identifier of the private endpoint. </param>
@@ -232,12 +232,12 @@ namespace Azure.ResourceManager.HardwareSecurityModules.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
                 new DedicatedHsmSku(skuName, null),
-                zones.ToList());
+                zones.ToList(),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties of the dedicated hsm. </summary>
@@ -334,8 +334,8 @@ namespace Azure.ResourceManager.HardwareSecurityModules.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties of a private link resource. </summary>

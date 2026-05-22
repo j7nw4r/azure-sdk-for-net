@@ -34,8 +34,8 @@ namespace Azure.ResourceManager.HybridConnectivity.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Endpoint details. </summary>
@@ -102,8 +102,8 @@ namespace Azure.ResourceManager.HybridConnectivity.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                serviceName is null && resourceId is null && port is null && provisioningState is null ? default : new ServiceConfigurationProperties(serviceName.GetValueOrDefault(), resourceId, port, provisioningState, null));
+                serviceName is null && resourceId is null && port is null && provisioningState is null ? default : new ServiceConfigurationProperties(serviceName.GetValueOrDefault(), resourceId, port, provisioningState, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> ConnectorId and SolutionTypes and their properties to Generate AWS CFT Template. </summary>
@@ -153,10 +153,10 @@ namespace Azure.ResourceManager.HybridConnectivity.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties of public cloud connectors. </summary>
@@ -198,8 +198,8 @@ namespace Azure.ResourceManager.HybridConnectivity.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                tags);
+                tags,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Solution Configuration. </summary>
@@ -216,8 +216,8 @@ namespace Azure.ResourceManager.HybridConnectivity.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="provisioningState"> The resource provisioning state. </param>
@@ -253,8 +253,8 @@ namespace Azure.ResourceManager.HybridConnectivity.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Concrete proxy resource types can be created by aliasing this type using a specific property type. </summary>
@@ -271,8 +271,8 @@ namespace Azure.ResourceManager.HybridConnectivity.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Definition of inventory. </summary>
@@ -309,8 +309,8 @@ namespace Azure.ResourceManager.HybridConnectivity.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Definition of Solution type resource. </summary>
@@ -404,8 +404,8 @@ namespace Azure.ResourceManager.HybridConnectivity.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
+                additionalBinaryDataProperties: null,
                 default);
         }
 

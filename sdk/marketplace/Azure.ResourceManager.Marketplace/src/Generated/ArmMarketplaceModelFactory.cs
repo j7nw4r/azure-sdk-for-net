@@ -64,7 +64,6 @@ namespace Azure.ResourceManager.Marketplace.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 availability is null && privateStoreId is null && etag is null && privateStoreName is null && tenantId is null && isGov is null && collectionIds is null && branding is null && recipients is null && sendToAllMarketplaceAdmins is null ? default : new PrivateStoreProperties(
                     availability,
                     privateStoreId,
@@ -75,7 +74,8 @@ namespace Azure.ResourceManager.Marketplace.Models
                     (collectionIds ?? new ChangeTrackingList<Guid>()).ToList(),
                     branding,
                     new NotificationsSettingsProperties((recipients ?? new ChangeTrackingList<NotificationRecipient>()).ToList(), sendToAllMarketplaceAdmins, null),
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Describes the json payload for a notified recipient for new requests. </summary>
@@ -412,7 +412,6 @@ namespace Azure.ResourceManager.Marketplace.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 offerId is null && offerDisplayName is null && publisherId is null && plansDetails is null && isClosed is null && messageCode is null ? default : new RequestApprovalProperties(
                     offerId,
                     offerDisplayName,
@@ -420,7 +419,8 @@ namespace Azure.ResourceManager.Marketplace.Models
                     (plansDetails ?? new ChangeTrackingList<PrivateStorePlanDetails>()).ToList(),
                     isClosed,
                     messageCode,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Return plan with request details. </summary>
@@ -477,7 +477,6 @@ namespace Azure.ResourceManager.Marketplace.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 offerId is null && displayName is null && publisherId is null && adminAction is null && approvedPlans is null && comment is null && administrator is null && plans is null && collectionIds is null && iconUri is null ? default : new AdminRequestApprovalProperties(
                     offerId,
                     displayName,
@@ -489,7 +488,8 @@ namespace Azure.ResourceManager.Marketplace.Models
                     (plans ?? new ChangeTrackingList<PlanRequesterDetails>()).ToList(),
                     (collectionIds ?? new ChangeTrackingList<Guid>()).ToList(),
                     iconUri,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Plan with requesters details. </summary>
@@ -544,7 +544,6 @@ namespace Azure.ResourceManager.Marketplace.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 collectionId is null && collectionName is null && claim is null && areAllSubscriptionsSelected is null && areAllItemsApproved is null && approveAllItemsModifiedOn is null && subscriptionsList is null && isEnabled is null && numberOfOffers is null && appliedRules is null ? default : new CollectionProperties(
                     collectionId,
                     collectionName,
@@ -556,7 +555,8 @@ namespace Azure.ResourceManager.Marketplace.Models
                     isEnabled,
                     numberOfOffers,
                     (appliedRules ?? new ChangeTrackingList<MarketplaceRule>()).ToList(),
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The transfer items response. The response contains two lists that indicate for each collection whether the operation succeeded or failed. </summary>
@@ -603,7 +603,6 @@ namespace Azure.ResourceManager.Marketplace.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 uniqueOfferId is null && offerDisplayName is null && publisherDisplayName is null && etag is null && privateStoreId is null && createdOn is null && modifiedOn is null && specificPlanIdsLimitation is null && isUpdateSuppressedDueToIdempotence is null && iconFileUris is null && isStopSell is null && plans is null ? default : new PrivateStoreOfferResult(
                     uniqueOfferId,
                     offerDisplayName,
@@ -617,7 +616,8 @@ namespace Azure.ResourceManager.Marketplace.Models
                     iconFileUris,
                     isStopSell,
                     (plans ?? new ChangeTrackingList<PrivateStorePlan>()).ToList(),
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Object of plans per context. </summary>
@@ -707,7 +707,6 @@ namespace Azure.ResourceManager.Marketplace.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 uniqueOfferId is null && offerDisplayName is null && publisherDisplayName is null && eTag is null && privateStoreId is null && createdOn is null && modifiedOn is null && specificPlanIdsLimitation is null && isUpdateSuppressedDueToIdempotence is null && iconFileUris is null && plans is null ? default : new PrivateStoreOfferResult(
                     uniqueOfferId,
                     offerDisplayName,
@@ -721,7 +720,8 @@ namespace Azure.ResourceManager.Marketplace.Models
                     new ChangeTrackingDictionary<string, Uri>(iconFileUris ?? new ChangeTrackingDictionary<string, Uri>()),
                     default,
                     (plans ?? new ChangeTrackingList<PrivateStorePlan>()).ToList(),
-                    default));
+                    default),
+                additionalBinaryDataProperties: null);
         }
     }
 }

@@ -39,11 +39,11 @@ namespace Azure.ResourceManager.MongoCluster.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="createMode"> The mode to create a mongo cluster. </param>
@@ -112,8 +112,8 @@ namespace Azure.ResourceManager.MongoCluster.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties of the private endpoint connection. </summary>
@@ -237,8 +237,8 @@ namespace Azure.ResourceManager.MongoCluster.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The properties of a mongo cluster firewall rule. </summary>
@@ -265,8 +265,8 @@ namespace Azure.ResourceManager.MongoCluster.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Concrete proxy resource types can be created by aliasing this type using a specific property type. </summary>
@@ -283,8 +283,8 @@ namespace Azure.ResourceManager.MongoCluster.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties of a private link resource. </summary>
@@ -314,8 +314,8 @@ namespace Azure.ResourceManager.MongoCluster.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Represents a Mongo cluster user. </summary>
@@ -332,8 +332,8 @@ namespace Azure.ResourceManager.MongoCluster.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Definition of Mongo user resource on a cluster. </summary>

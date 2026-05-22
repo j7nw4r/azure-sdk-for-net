@@ -97,7 +97,6 @@ namespace Azure.ResourceManager.ContainerServiceFleet.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 clusterResourceId is null && @group is null && provisioningState is null && labels is null && status is null ? default : new FleetMemberProperties(
                     clusterResourceId,
                     @group,
@@ -105,7 +104,8 @@ namespace Azure.ResourceManager.ContainerServiceFleet.Models
                     labels,
                     status,
                     null),
-                eTag);
+                eTag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Status information for the fleet member. </summary>
@@ -141,7 +141,6 @@ namespace Azure.ResourceManager.ContainerServiceFleet.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 provisioningState is null && managedNamespaceProperties is null && adoptionPolicy is null && deletePolicy is null && propagationPolicy is null && status is null && portalFqdn is null ? default : new FleetManagedNamespaceProperties(
@@ -153,7 +152,8 @@ namespace Azure.ResourceManager.ContainerServiceFleet.Models
                     status,
                     portalFqdn,
                     null),
-                eTag);
+                eTag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The namespace properties for the fleet managed namespace. </summary>
@@ -256,7 +256,6 @@ namespace Azure.ResourceManager.ContainerServiceFleet.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 provisioningState is null && displayName is null && gateType is null && target is null && state is null ? default : new GateProperties(
                     provisioningState,
                     displayName,
@@ -264,7 +263,8 @@ namespace Azure.ResourceManager.ContainerServiceFleet.Models
                     target,
                     state.GetValueOrDefault(),
                     null),
-                eTag);
+                eTag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The properties of the Update Run that the Gate is targeting. </summary>
@@ -547,12 +547,12 @@ namespace Azure.ResourceManager.ContainerServiceFleet.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 default,
                 eTag,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="ContainerServiceFleet.ContainerServiceFleetMemberData"/>. </summary>
@@ -611,9 +611,9 @@ namespace Azure.ResourceManager.ContainerServiceFleet.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 default,
-                eTag);
+                eTag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Models.ContainerServiceFleetUpdateStageStatus"/>. </summary>
@@ -657,9 +657,9 @@ namespace Azure.ResourceManager.ContainerServiceFleet.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 default,
-                eTag);
+                eTag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="ContainerServiceFleet.ContainerServiceFleetData"/>. </summary>

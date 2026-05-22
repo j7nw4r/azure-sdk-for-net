@@ -38,11 +38,11 @@ namespace Azure.ResourceManager.HealthDataAIServices.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Details of the HealthDataAIServices DeidService. </summary>
@@ -72,8 +72,8 @@ namespace Azure.ResourceManager.HealthDataAIServices.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="groupIds"> The group ids for the private endpoint resource. </param>
@@ -113,8 +113,8 @@ namespace Azure.ResourceManager.HealthDataAIServices.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Private Links for DeidService resource. </summary>
@@ -131,8 +131,8 @@ namespace Azure.ResourceManager.HealthDataAIServices.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties of a private link resource. </summary>

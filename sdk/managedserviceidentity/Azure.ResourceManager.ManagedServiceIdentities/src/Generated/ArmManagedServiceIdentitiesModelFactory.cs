@@ -39,10 +39,10 @@ namespace Azure.ResourceManager.ManagedServiceIdentities.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                tenantId is null && principalId is null && clientId is null && clientSecretUri is null ? default : new SystemAssignedIdentityProperties(tenantId, principalId, clientId, clientSecretUri, null));
+                tenantId is null && principalId is null && clientId is null && clientSecretUri is null ? default : new SystemAssignedIdentityProperties(tenantId, principalId, clientId, clientSecretUri, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -61,8 +61,8 @@ namespace Azure.ResourceManager.ManagedServiceIdentities.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                issuerUri is null && subject is null && audiences is null && claimsMatchingExpression is null ? default : new FederatedIdentityCredentialProperties(issuerUri, subject, (audiences ?? new ChangeTrackingList<string>()).ToList(), claimsMatchingExpression, null));
+                issuerUri is null && subject is null && audiences is null && claimsMatchingExpression is null ? default : new FederatedIdentityCredentialProperties(issuerUri, subject, (audiences ?? new ChangeTrackingList<string>()).ToList(), claimsMatchingExpression, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -86,7 +86,6 @@ namespace Azure.ResourceManager.ManagedServiceIdentities.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 tenantId is null && principalId is null && clientId is null && isolationScope is null && assignmentRestrictionsProviders is null ? default : new UserAssignedIdentityProperties(
@@ -95,7 +94,8 @@ namespace Azure.ResourceManager.ManagedServiceIdentities.Models
                     clientId,
                     isolationScope,
                     new AssignmentRestrictions((assignmentRestrictionsProviders ?? new ChangeTrackingList<string>()).ToList(), null),
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -119,7 +119,6 @@ namespace Azure.ResourceManager.ManagedServiceIdentities.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 tenantId is null && principalId is null && clientId is null && isolationScope is null && assignmentRestrictionsProviders is null ? default : new UserAssignedIdentityProperties(
@@ -128,7 +127,8 @@ namespace Azure.ResourceManager.ManagedServiceIdentities.Models
                     clientId,
                     isolationScope,
                     new AssignmentRestrictions((assignmentRestrictionsProviders ?? new ChangeTrackingList<string>()).ToList(), null),
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="ManagedServiceIdentities.UserAssignedIdentityData"/>. </summary>

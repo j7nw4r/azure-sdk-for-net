@@ -45,7 +45,6 @@ namespace Azure.ResourceManager.Maintenance.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 @namespace is null && extensionProperties is null && maintenanceScope is null && visibility is null && installPatches is null && startOn is null && expireOn is null && duration is null && timeZone is null && recurEvery is null ? default : new MaintenanceConfigurationProperties(
@@ -61,7 +60,8 @@ namespace Azure.ResourceManager.Maintenance.Models
                         null),
                     visibility,
                     installPatches,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Input properties for patching a Windows machine. </summary>
@@ -108,8 +108,8 @@ namespace Azure.ResourceManager.Maintenance.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                status is null && resourceId is null && lastUpdatedOn is null ? default : new ApplyUpdateProperties(status, resourceId, lastUpdatedOn, null));
+                status is null && resourceId is null && lastUpdatedOn is null ? default : new ApplyUpdateProperties(status, resourceId, lastUpdatedOn, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -128,9 +128,9 @@ namespace Azure.ResourceManager.Maintenance.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 maintenanceConfigurationId is null && resourceId is null && filter is null ? default : new ConfigurationAssignmentProperties(maintenanceConfigurationId, resourceId, filter, null),
-                location);
+                location,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Azure query for the update configuration. </summary>

@@ -65,8 +65,8 @@ namespace Azure.ResourceManager.LoadTesting.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                limit is null && usage is null && provisioningState is null ? default : new QuotaResourceProperties(limit, usage, provisioningState, null));
+                limit is null && usage is null && provisioningState is null ? default : new QuotaResourceProperties(limit, usage, provisioningState, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -85,8 +85,8 @@ namespace Azure.ResourceManager.LoadTesting.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                currentUsage is null && currentQuota is null && newQuota is null && dimensions is null ? default : new QuotaBucketRequestProperties(currentUsage, currentQuota, newQuota, dimensions, null));
+                currentUsage is null && currentQuota is null && newQuota is null && dimensions is null ? default : new QuotaBucketRequestProperties(currentUsage, currentQuota, newQuota, dimensions, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -102,9 +102,9 @@ namespace Azure.ResourceManager.LoadTesting.Models
                 id,
                 name,
                 resourceType,
-                additionalBinaryDataProperties: null,
                 systemData,
-                isAvailable is null && availabilityStatus is null ? default : new CheckQuotaAvailabilityResponseProperties(isAvailable, availabilityStatus, null));
+                isAvailable is null && availabilityStatus is null ? default : new CheckQuotaAvailabilityResponseProperties(isAvailable, availabilityStatus, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> LoadTest mapping resource details. </summary>
@@ -121,8 +121,8 @@ namespace Azure.ResourceManager.LoadTesting.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> LoadTest profile mapping resource details. </summary>
@@ -139,8 +139,8 @@ namespace Azure.ResourceManager.LoadTesting.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Max monthly virtual usage hours resource. </summary>
@@ -157,8 +157,8 @@ namespace Azure.ResourceManager.LoadTesting.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Max monthly virtual usage hours resource limit properties. </summary>
@@ -193,11 +193,11 @@ namespace Azure.ResourceManager.LoadTesting.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 default,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
     }
 }

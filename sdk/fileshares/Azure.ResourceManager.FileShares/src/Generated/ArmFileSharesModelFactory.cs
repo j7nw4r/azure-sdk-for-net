@@ -36,10 +36,10 @@ namespace Azure.ResourceManager.FileShares.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="mountName"> The name of the file share as seen by the end user when mounting the share, such as in a URI or UNC format in their operating system. </param>
@@ -101,8 +101,8 @@ namespace Azure.ResourceManager.FileShares.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="groupIds"> The group ids for the private endpoint resource. </param>
@@ -152,8 +152,8 @@ namespace Azure.ResourceManager.FileShares.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> FileShareSnapshot properties. </summary>
@@ -281,8 +281,8 @@ namespace Azure.ResourceManager.FileShares.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties of a private link resource. </summary>

@@ -39,10 +39,10 @@ namespace Azure.ResourceManager.HDInsight.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
                 eTag,
-                tags);
+                tags,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="computeRoles"> The list of roles in the cluster. </param>
@@ -245,13 +245,13 @@ namespace Azure.ResourceManager.HDInsight.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
                 eTag,
                 zones.ToList(),
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="clusterVersion"> The version of the cluster. </param>
@@ -477,8 +477,8 @@ namespace Azure.ResourceManager.HDInsight.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                groupId is null && requiredMembers is null && requiredZoneNames is null ? default : new HDInsightPrivateLinkResourceProperties(groupId, (requiredMembers ?? new ChangeTrackingList<string>()).ToList(), (requiredZoneNames ?? new ChangeTrackingList<string>()).ToList(), null));
+                groupId is null && requiredMembers is null && requiredZoneNames is null ? default : new HDInsightPrivateLinkResourceProperties(groupId, (requiredMembers ?? new ChangeTrackingList<string>()).ToList(), (requiredZoneNames ?? new ChangeTrackingList<string>()).ToList(), null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The configuration object for the specified cluster. </summary>
@@ -897,13 +897,13 @@ namespace Azure.ResourceManager.HDInsight.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
                 etag,
                 zones.ToList(),
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of HDInsightPrivateEndpointConnectionData. </summary>
@@ -923,8 +923,8 @@ namespace Azure.ResourceManager.HDInsight.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                default);
+                default,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of HDInsightApplicationData. </summary>
@@ -946,10 +946,10 @@ namespace Azure.ResourceManager.HDInsight.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
                 etag,
-                tags);
+                tags,
+                additionalBinaryDataProperties: null);
         }
     }
 }

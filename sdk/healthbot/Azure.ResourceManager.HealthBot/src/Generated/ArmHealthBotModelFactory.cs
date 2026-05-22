@@ -89,12 +89,12 @@ namespace Azure.ResourceManager.HealthBot.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
                 default,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Models.HealthBotProperties"/>. </summary>

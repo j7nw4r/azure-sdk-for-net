@@ -37,11 +37,11 @@ namespace Azure.ResourceManager.Fabric.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                sku);
+                sku,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="provisioningState"> The current deployment state of Microsoft Fabric resource. The provisioningState is to indicate states for resource provisioning. </param>
