@@ -33,8 +33,8 @@ namespace Azure.ResourceManager.Hci.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                kubernetesVersionValue is null ? default : new KubernetesVersionProperties(kubernetesVersionValue, null));
+                kubernetesVersionValue is null ? default : new KubernetesVersionProperties(kubernetesVersionValue, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -50,8 +50,8 @@ namespace Azure.ResourceManager.Hci.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                platformUpdateDetails is null ? default : new PlatformUpdateProperties((platformUpdateDetails ?? new ChangeTrackingList<PlatformUpdateDetails>()).ToList(), null));
+                platformUpdateDetails is null ? default : new PlatformUpdateProperties((platformUpdateDetails ?? new ChangeTrackingList<PlatformUpdateDetails>()).ToList(), null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Represents details of a specific platform update. </summary>
@@ -91,8 +91,8 @@ namespace Azure.ResourceManager.Hci.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Represents properties of a os image resource. </summary>
@@ -119,8 +119,8 @@ namespace Azure.ResourceManager.Hci.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                updatePayloads is null ? default : new UpdateContentProperties((updatePayloads ?? new ChangeTrackingList<ContentPayload>()).ToList(), null));
+                updatePayloads is null ? default : new UpdateContentProperties((updatePayloads ?? new ChangeTrackingList<ContentPayload>()).ToList(), null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Represents details of a specific update content payload. </summary>
@@ -213,14 +213,14 @@ namespace Azure.ResourceManager.Hci.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 provisioningState is null && publisherId is null && content is null && contentVersion is null && skuMappings is null ? default : new OfferProperties(
                     provisioningState,
                     publisherId,
                     content,
                     contentVersion,
                     (skuMappings ?? new ChangeTrackingList<HciSkuMappings>()).ToList(),
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> SKU Mapping details. </summary>
@@ -285,7 +285,6 @@ namespace Azure.ResourceManager.Hci.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 provisioningState is null && status is null && connectivityStatus is null && cloudId is null && ring is null && cloudManagementEndpoint is null && aadClientId is null && aadTenantId is null && aadApplicationObjectId is null && aadServicePrincipalObjectId is null && softwareAssuranceProperties is null && isManagementCluster is null && logCollectionProperties is null && remoteSupportProperties is null && desiredProperties is null && reportedProperties is null && isolatedVmAttestationConfiguration is null && trialDaysRemaining is null && billingModel is null && registrationTimestamp is null && lastSyncTimestamp is null && lastBillingTimestamp is null && serviceEndpoint is null && resourceProviderObjectId is null && secretsLocations is null && clusterPattern is null && confidentialVmProperties is null && sdnProperties is null && localAvailabilityZones is null && identityProvider is null && storageType is null && nextBillingModel is null ? default : new ClusterProperties(
@@ -323,7 +322,8 @@ namespace Azure.ResourceManager.Hci.Models
                     storageType,
                     null),
                 identity,
-                kind);
+                kind,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Log Collection properties of the cluster. </summary>
@@ -873,8 +873,8 @@ namespace Azure.ResourceManager.Hci.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                new EdgeDeviceKind(kind));
+                new EdgeDeviceKind(kind),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Edge device job for Azure Stack HCI solution. </summary>
@@ -891,8 +891,8 @@ namespace Azure.ResourceManager.Hci.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 EdgeDeviceKind.HCI,
+                additionalBinaryDataProperties: null,
                 properties);
         }
 
@@ -1085,8 +1085,8 @@ namespace Azure.ResourceManager.Hci.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                new DeviceKind(kind));
+                new DeviceKind(kind),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Arc-enabled edge device with HCI OS. </summary>
@@ -1103,8 +1103,8 @@ namespace Azure.ResourceManager.Hci.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 DeviceKind.HCI,
+                additionalBinaryDataProperties: null,
                 properties);
         }
 
@@ -1511,7 +1511,6 @@ namespace Azure.ResourceManager.Hci.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 provisioningState is null && aggregateState is null && perNodeExtensionDetails is null && managedBy is null && forceUpdateTag is null && publisher is null && arcExtensionType is null && typeHandlerVersion is null && shouldAutoUpgradeMinorVersion is null && settings is null && protectedSettings is null && enableAutomaticUpgrade is null ? default : new ExtensionProperties(
                     provisioningState,
                     new ExtensionParameters(
@@ -1527,7 +1526,8 @@ namespace Azure.ResourceManager.Hci.Models
                     aggregateState,
                     (perNodeExtensionDetails ?? new ChangeTrackingList<PerNodeExtensionState>()).ToList(),
                     managedBy,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Status of Arc Extension for a particular node in HCI Cluster. </summary>
@@ -1590,8 +1590,8 @@ namespace Azure.ResourceManager.Hci.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                provisioningState is null ? default : new PublisherProperties(provisioningState, null));
+                provisioningState is null ? default : new PublisherProperties(provisioningState, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -1611,14 +1611,14 @@ namespace Azure.ResourceManager.Hci.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 securedCoreComplianceAssignment is null && wdacComplianceAssignment is null && smbEncryptionForIntraClusterTrafficComplianceAssignment is null && securityComplianceStatus is null && provisioningState is null ? default : new SecurityProperties(
                     securedCoreComplianceAssignment,
                     wdacComplianceAssignment,
                     smbEncryptionForIntraClusterTrafficComplianceAssignment,
                     securityComplianceStatus,
                     provisioningState,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Security compliance properties of the resource. </summary>
@@ -1657,7 +1657,6 @@ namespace Azure.ResourceManager.Hci.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 provisioningState is null && publisherId is null && offerId is null && content is null && contentVersion is null && skuMappings is null ? default : new SkuProperties(
                     provisioningState,
                     publisherId,
@@ -1665,58 +1664,8 @@ namespace Azure.ResourceManager.Hci.Models
                     content,
                     contentVersion,
                     (skuMappings ?? new ChangeTrackingList<HciSkuMappings>()).ToList(),
-                    null));
-        }
-
-        /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
-        /// <param name="name"> The name of the resource. </param>
-        /// <param name="resourceType"> The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts". </param>
-        /// <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
-        /// <param name="provisioningState"> Provisioning state of the UpdateRuns proxy resource. Indicates the current lifecycle status of the update operation, such as whether it has been accepted, is in progress, or has completed. </param>
-        /// <param name="timeStarted"> Timestamp of the update run was started. </param>
-        /// <param name="lastCompletedOn"> Timestamp of the most recently completed step in the update run. </param>
-        /// <param name="duration"> Duration of the update run. </param>
-        /// <param name="state"> Represents the current state of the update run. Indicates whether the update is in progress, has completed successfully, failed, or is in an unknown state. </param>
-        /// <param name="name0"> Name of the step. </param>
-        /// <param name="description"> More detailed description of the step. </param>
-        /// <param name="errorMessage"> Error message, specified if the step is in a failed state. </param>
-        /// <param name="status"> Status of the step, bubbled up from the ECE action plan for installation attempts. Values are: 'Success', 'Error', 'InProgress', and 'Unknown status'. </param>
-        /// <param name="startOn"> When the step started, or empty if it has not started executing. </param>
-        /// <param name="endOn"> When the step reached a terminal state. </param>
-        /// <param name="lastUpdatedOn"> Completion time of this step or the last completed sub-step. </param>
-        /// <param name="expectedExecutionTime"> Expected execution time of a given step. This is optionally authored in the update action plan and can be empty. </param>
-        /// <param name="steps"> Recursive model for child steps of this step. </param>
-        /// <param name="updateRunName"> The name of the Update Run. </param>
-        /// <param name="location"> The geo-location where the resource lives. </param>
-        /// <returns> A new <see cref="Hci.HciClusterUpdateRunData"/> instance for mocking. </returns>
-        public static HciClusterUpdateRunData HciClusterUpdateRunData(ResourceIdentifier id = default, string name = default, ResourceType resourceType = default, SystemData systemData = default, HciProvisioningState? provisioningState = default, DateTimeOffset? timeStarted = default, DateTimeOffset? lastCompletedOn = default, string duration = default, UpdateRunPropertiesState? state = default, string name0 = default, string description = default, string errorMessage = default, string status = default, DateTimeOffset? startOn = default, DateTimeOffset? endOn = default, DateTimeOffset? lastUpdatedOn = default, string expectedExecutionTime = default, IEnumerable<HciUpdateStep> steps = default, string updateRunName = default, AzureLocation? location = default)
-        {
-            return new HciClusterUpdateRunData(
-                id,
-                name,
-                resourceType,
-                systemData,
-                additionalBinaryDataProperties: null,
-                provisioningState is null && timeStarted is null && lastCompletedOn is null && duration is null && state is null && name0 is null && description is null && errorMessage is null && status is null && startOn is null && endOn is null && lastUpdatedOn is null && expectedExecutionTime is null && steps is null ? default : new UpdateRunProperties(
-                    provisioningState,
-                    timeStarted,
-                    lastCompletedOn,
-                    duration,
-                    state,
-                    new HciUpdateStep(
-                        name0,
-                        description,
-                        errorMessage,
-                        status,
-                        startOn,
-                        endOn,
-                        lastUpdatedOn,
-                        expectedExecutionTime,
-                        (steps ?? new ChangeTrackingList<HciUpdateStep>()).ToList(),
-                        null),
                     null),
-                updateRunName,
-                location);
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Progress representation of the update run steps. </summary>
@@ -1761,8 +1710,8 @@ namespace Azure.ResourceManager.Hci.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Represents properties of a validated solution recipe resource. </summary>
@@ -1900,11 +1849,11 @@ namespace Azure.ResourceManager.Hci.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties for edge machine. </summary>
@@ -2215,8 +2164,8 @@ namespace Azure.ResourceManager.Hci.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary>
@@ -2479,8 +2428,8 @@ namespace Azure.ResourceManager.Hci.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary>
@@ -2591,11 +2540,11 @@ namespace Azure.ResourceManager.Hci.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties for device pool. </summary>
@@ -2709,7 +2658,6 @@ namespace Azure.ResourceManager.Hci.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 provisioningState is null && status is null && connectivityStatus is null && cloudId is null && cloudManagementEndpoint is null && aadClientId is null && aadTenantId is null && aadApplicationObjectId is null && aadServicePrincipalObjectId is null && softwareAssuranceProperties is null && logCollectionProperties is null && remoteSupportProperties is null && desiredProperties is null && reportedProperties is null && isolatedVmAttestationConfiguration is null && trialDaysRemaining is null && billingModel is null && billingModel is null && trialDaysRemaining is null && registrationTimestamp is null && lastSyncTimestamp is null && lastBillingTimestamp is null && serviceEndpoint is null && resourceProviderObjectId is null ? default : new ClusterProperties(
@@ -2747,7 +2695,8 @@ namespace Azure.ResourceManager.Hci.Models
                     default,
                     default),
                 default,
-                default);
+                default,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Models.SoftwareAssuranceProperties"/>. </summary>
@@ -2873,36 +2822,18 @@ namespace Azure.ResourceManager.Hci.Models
         /// <param name="expectedExecutionTime"> Expected execution time of a given step. This is optionally authored in the update action plan and can be empty. </param>
         /// <param name="steps"> Recursive model for child steps of this step. </param>
         /// <returns> A new <see cref="Hci.HciClusterUpdateRunData"/> instance for mocking. </returns>
-        [EditorBrowsable(EditorBrowsableState.Never)]
-        public static HciClusterUpdateRunData HciClusterUpdateRunData(ResourceIdentifier id, string name, ResourceType resourceType, SystemData systemData, AzureLocation? location, HciProvisioningState? provisioningState, DateTimeOffset? timeStarted, DateTimeOffset? lastUpdatedOn, string duration, UpdateRunPropertiesState? state, string namePropertiesProgressName, string description, string errorMessage, string status, DateTimeOffset? startOn, DateTimeOffset? endOn, DateTimeOffset? lastCompletedOn, string expectedExecutionTime, IEnumerable<HciUpdateStep> steps)
+        public static HciClusterUpdateRunData HciClusterUpdateRunData(ResourceIdentifier id = default, string name = default, ResourceType resourceType = default, SystemData systemData = default, AzureLocation? location = default, HciProvisioningState? provisioningState = default, DateTimeOffset? timeStarted = default, DateTimeOffset? lastUpdatedOn = default, string duration = default, UpdateRunPropertiesState? state = default, string namePropertiesProgressName = default, string description = default, string errorMessage = default, string status = default, DateTimeOffset? startOn = default, DateTimeOffset? endOn = default, DateTimeOffset? lastCompletedOn = default, string expectedExecutionTime = default, IEnumerable<HciUpdateStep> steps = default)
         {
+            steps ??= new ChangeTrackingList<HciUpdateStep>();
 
             return new HciClusterUpdateRunData(
                 id,
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                provisioningState is null && timeStarted is null && lastCompletedOn is null && duration is null && state is null && namePropertiesProgressName is null && description is null && errorMessage is null && status is null && startOn is null && endOn is null && lastUpdatedOn is null && expectedExecutionTime is null && steps is null ? default : new UpdateRunProperties(
-                    provisioningState,
-                    timeStarted,
-                    lastCompletedOn,
-                    duration,
-                    state,
-                    new HciUpdateStep(
-                        namePropertiesProgressName,
-                        description,
-                        errorMessage,
-                        status,
-                        startOn,
-                        endOn,
-                        lastUpdatedOn,
-                        expectedExecutionTime,
-                        (steps ?? new ChangeTrackingList<HciUpdateStep>()).ToList(),
-                        default),
-                    default),
                 default,
-                location);
+                location,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Hci.HciClusterUpdateSummaryData"/>. </summary>
@@ -2935,9 +2866,9 @@ namespace Azure.ResourceManager.Hci.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 default,
-                location);
+                location,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Hci.HciClusterUpdateData"/>. </summary>
@@ -2980,9 +2911,9 @@ namespace Azure.ResourceManager.Hci.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 default,
-                location);
+                location,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Models.HciReportedProperties"/>. </summary>
@@ -3085,7 +3016,6 @@ namespace Azure.ResourceManager.Hci.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 provisioningState is null && arcInstanceResourceGroup is null && arcApplicationClientId is null && arcApplicationTenantId is null && arcServicePrincipalObjectId is null && arcApplicationObjectId is null && aggregateState is null && perNodeDetails is null && connectivityProperties is null ? default : new ArcSettingProperties(
                     provisioningState,
                     arcInstanceResourceGroup,
@@ -3097,7 +3027,8 @@ namespace Azure.ResourceManager.Hci.Models
                     (perNodeDetails ?? new ChangeTrackingList<PerNodeArcState>()).ToList(),
                     connectivityProperties,
                     default,
-                    default));
+                    default),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of PerNodeArcState. </summary>
@@ -3152,7 +3083,6 @@ namespace Azure.ResourceManager.Hci.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 provisioningState is null && status is null && cloudId is null && cloudManagementEndpoint is null && aadClientId is null && aadTenantId is null && aadApplicationObjectId is null && aadServicePrincipalObjectId is null && softwareAssuranceProperties is null && desiredProperties is null && reportedProperties is null && trialDaysRemaining is null && billingModel is null && billingModel is null && trialDaysRemaining is null && registrationTimestamp is null && lastSyncTimestamp is null && lastBillingTimestamp is null && serviceEndpoint is null && resourceProviderObjectId is null ? default : new ClusterProperties(
@@ -3190,7 +3120,8 @@ namespace Azure.ResourceManager.Hci.Models
                     default,
                     default),
                 default,
-                default);
+                default,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of HciClusterReportedProperties. </summary>

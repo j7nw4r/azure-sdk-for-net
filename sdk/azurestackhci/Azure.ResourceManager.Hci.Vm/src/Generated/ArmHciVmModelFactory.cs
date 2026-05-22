@@ -37,11 +37,11 @@ namespace Azure.ResourceManager.Hci.Vm.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties under the gallery image resource. </summary>
@@ -127,11 +127,11 @@ namespace Azure.ResourceManager.Hci.Vm.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="dhcpOptionsDnsServers"> The list of DNS servers IP addresses. </param>
@@ -263,11 +263,11 @@ namespace Azure.ResourceManager.Hci.Vm.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties under the marketplace gallery image resource. </summary>
@@ -349,11 +349,11 @@ namespace Azure.ResourceManager.Hci.Vm.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="ipConfigurations"> IPConfigurations - A list of IPConfigurations of the network interface. </param>
@@ -441,12 +441,12 @@ namespace Azure.ResourceManager.Hci.Vm.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
                 extendedLocation,
-                eTag);
+                eTag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Network Security Group resource. </summary>
@@ -507,9 +507,9 @@ namespace Azure.ResourceManager.Hci.Vm.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Security rule resource. </summary>
@@ -564,11 +564,11 @@ namespace Azure.ResourceManager.Hci.Vm.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties under the storage container resource. </summary>
@@ -637,11 +637,11 @@ namespace Azure.ResourceManager.Hci.Vm.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties under the virtual hard disk resource. </summary>
@@ -784,10 +784,10 @@ namespace Azure.ResourceManager.Hci.Vm.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
                 extendedLocation,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="hardwareProfile"> HardwareProfile - Specifies the hardware settings for the virtual machine instance. </param>
@@ -974,8 +974,8 @@ namespace Azure.ResourceManager.Hci.Vm.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Defines the resource properties. </summary>
@@ -1003,8 +1003,8 @@ namespace Azure.ResourceManager.Hci.Vm.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Defines the attestation status properties. </summary>
@@ -1049,8 +1049,8 @@ namespace Azure.ResourceManager.Hci.Vm.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Defines the resource properties. </summary>
@@ -1083,11 +1083,11 @@ namespace Azure.ResourceManager.Hci.Vm.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="addressPrefixes"> A list of one or more CIDR blocks that define the address space. </param>
@@ -1125,9 +1125,9 @@ namespace Azure.ResourceManager.Hci.Vm.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="addressPrefix"> Subnet CIDR. </param>
@@ -1199,11 +1199,11 @@ namespace Azure.ResourceManager.Hci.Vm.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="publicIPAddressVersion"> Whether the public IP is v4 or v6. Defaults to IPv4. </param>
@@ -1254,11 +1254,11 @@ namespace Azure.ResourceManager.Hci.Vm.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Nat Gateway resource properties. </summary>
@@ -1331,11 +1331,11 @@ namespace Azure.ResourceManager.Hci.Vm.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Load Balancer resource properties. </summary>

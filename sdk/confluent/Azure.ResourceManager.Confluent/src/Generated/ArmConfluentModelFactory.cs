@@ -99,7 +99,6 @@ namespace Azure.ResourceManager.Confluent.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 new OrganizationResourceProperties(
@@ -110,7 +109,8 @@ namespace Azure.ResourceManager.Confluent.Models
                     offerDetail,
                     userDetail,
                     new LinkOrganization(linkOrganizationToken, null),
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Confluent Offer detail. </summary>
@@ -505,9 +505,9 @@ namespace Azure.ResourceManager.Confluent.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 kind,
-                metadata is null && streamGovernanceConfigPackage is null ? default : new EnvironmentProperties(new StreamGovernanceConfig(streamGovernanceConfigPackage, null), metadata, null));
+                metadata is null && streamGovernanceConfigPackage is null ? default : new EnvironmentProperties(new StreamGovernanceConfig(streamGovernanceConfigPackage, null), metadata, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="kind"> Kind of the cluster. </param>
@@ -567,9 +567,9 @@ namespace Azure.ResourceManager.Confluent.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 kind,
-                metadata is null && spec is null && status is null ? default : new ClusterProperties(metadata, spec, status, null));
+                metadata is null && spec is null && status is null ? default : new ClusterProperties(metadata, spec, status, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -587,8 +587,8 @@ namespace Azure.ResourceManager.Confluent.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                new ConnectorResourceProperties(connectorBasicInfo, connectorServiceTypeInfo, partnerConnectorInfo, null));
+                new ConnectorResourceProperties(connectorBasicInfo, connectorServiceTypeInfo, partnerConnectorInfo, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The partner connector type is KafkaAzureBlobStorageSink. </summary>
@@ -717,7 +717,6 @@ namespace Azure.ResourceManager.Confluent.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 kind is null && topicId is null && metadata is null && inputConfigs is null && partitionsCount is null && replicationFactor is null && partitionsRelated is null && configsRelated is null && partitionsReassignmentsRelated is null ? default : new TopicProperties(
                     kind,
                     topicId,
@@ -728,7 +727,8 @@ namespace Azure.ResourceManager.Confluent.Models
                     new TopicsRelatedLink(partitionsReassignmentsRelated, null),
                     partitionsCount,
                     replicationFactor,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -751,7 +751,6 @@ namespace Azure.ResourceManager.Confluent.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 publisher is null && product is null && plan is null && licenseTextLink is null && privacyPolicyLink is null && retrieveOn is null && signature is null && isAccepted is null ? default : new ConfluentAgreementProperties(
                     publisher,
                     product,
@@ -761,7 +760,8 @@ namespace Azure.ResourceManager.Confluent.Models
                     retrieveOn,
                     signature,
                     isAccepted,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Validation response from the provider. </summary>

@@ -39,11 +39,11 @@ namespace Azure.ResourceManager.ApiCenter.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The properties of the service. </summary>
@@ -89,8 +89,8 @@ namespace Azure.ResourceManager.ApiCenter.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Deleted service properties. </summary>
@@ -116,8 +116,8 @@ namespace Azure.ResourceManager.ApiCenter.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Metadata schema properties. </summary>
@@ -145,8 +145,8 @@ namespace Azure.ResourceManager.ApiCenter.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> API entity. </summary>
@@ -163,8 +163,8 @@ namespace Azure.ResourceManager.ApiCenter.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="title"> API title. </param>
@@ -211,8 +211,8 @@ namespace Azure.ResourceManager.ApiCenter.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> API definition entity. </summary>
@@ -229,8 +229,8 @@ namespace Azure.ResourceManager.ApiCenter.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> API definition properties entity. </summary>
@@ -275,8 +275,8 @@ namespace Azure.ResourceManager.ApiCenter.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> API source properties. </summary>
@@ -321,8 +321,8 @@ namespace Azure.ResourceManager.ApiCenter.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Environment entity. </summary>
@@ -339,8 +339,8 @@ namespace Azure.ResourceManager.ApiCenter.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Server information of the environment. </summary>
@@ -385,11 +385,11 @@ namespace Azure.ResourceManager.ApiCenter.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 apiCenterServiceProvisioningState is null ? default : new ApiCenterServiceProperties(apiCenterServiceProvisioningState, default, default),
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
     }
 }

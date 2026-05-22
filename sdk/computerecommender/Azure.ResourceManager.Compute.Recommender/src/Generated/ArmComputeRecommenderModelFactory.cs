@@ -32,8 +32,8 @@ namespace Azure.ResourceManager.Compute.Recommender.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                computeRecommenderDiagnosticSupportedResourceTypes is null ? default : new ComputeRecommenderDiagnosticProperties((computeRecommenderDiagnosticSupportedResourceTypes ?? new ChangeTrackingList<string>()).ToList(), null));
+                computeRecommenderDiagnosticSupportedResourceTypes is null ? default : new ComputeRecommenderDiagnosticProperties((computeRecommenderDiagnosticSupportedResourceTypes ?? new ChangeTrackingList<string>()).ToList(), null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> SpotPlacementScores API Input. </summary>

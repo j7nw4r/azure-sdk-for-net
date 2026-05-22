@@ -38,10 +38,10 @@ namespace Azure.ResourceManager.ArtifactSigning.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                accountUri is null && provisioningState is null && skuName is null ? default : new CodeSigningAccountProperties(accountUri, new ArtifactSigningAccountSku(skuName.GetValueOrDefault(), null), provisioningState, null));
+                accountUri is null && provisioningState is null && skuName is null ? default : new CodeSigningAccountProperties(accountUri, new ArtifactSigningAccountSku(skuName.GetValueOrDefault(), null), provisioningState, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="tags"> Resource tags. </param>

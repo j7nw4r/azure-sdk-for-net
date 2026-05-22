@@ -40,7 +40,6 @@ namespace Azure.ResourceManager.Attestation.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 trustModel is null && status is null && attestUri is null && publicNetworkAccess is null && privateEndpointConnections is null && tpmAttestationAuthentication is null ? default : new StatusResult(
@@ -50,7 +49,8 @@ namespace Azure.ResourceManager.Attestation.Models
                     publicNetworkAccess,
                     (privateEndpointConnections ?? new ChangeTrackingList<AttestationPrivateEndpointConnectionData>()).ToList(),
                     tpmAttestationAuthentication,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -68,8 +68,8 @@ namespace Azure.ResourceManager.Attestation.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                privateLinkServiceConnectionState is null && provisioningState is null && privateEndpointId is null ? default : new PrivateEndpointConnectionProperties(new PrivateEndpoint(privateEndpointId, null), privateLinkServiceConnectionState, provisioningState, null));
+                privateLinkServiceConnectionState is null && provisioningState is null && privateEndpointId is null ? default : new PrivateEndpointConnectionProperties(new PrivateEndpoint(privateEndpointId, null), privateLinkServiceConnectionState, provisioningState, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Parameters for creating an attestation provider. </summary>
@@ -188,8 +188,8 @@ namespace Azure.ResourceManager.Attestation.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties of a private link resource. </summary>

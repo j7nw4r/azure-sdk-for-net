@@ -35,14 +35,14 @@ namespace Azure.ResourceManager.Chaos.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 publisher is null && targetType is null && description is null && parametersSchema is null && urn is null ? default : new CapabilityProperties(
                     publisher,
                     targetType,
                     description,
                     parametersSchema,
                     urn,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Model that represents a Target resource. </summary>
@@ -62,9 +62,9 @@ namespace Azure.ResourceManager.Chaos.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
-                location);
+                location,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -90,7 +90,6 @@ namespace Azure.ResourceManager.Chaos.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 publisher is null && targetType is null && displayName is null && description is null && parametersSchema is null && urn is null && kind is null && azureRbacActions is null && azureRbacDataActions is null && requiredAzureRoleDefinitionIds is null && runtimeKind is null ? default : new CapabilityTypeProperties(
                     publisher,
                     targetType,
@@ -103,7 +102,8 @@ namespace Azure.ResourceManager.Chaos.Models
                     (azureRbacDataActions ?? new ChangeTrackingList<string>()).ToList(),
                     (requiredAzureRoleDefinitionIds ?? new ChangeTrackingList<string>()).ToList(),
                     new ChaosCapabilityMetadataRuntimeProperties(runtimeKind, null),
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -126,11 +126,11 @@ namespace Azure.ResourceManager.Chaos.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 identity,
-                new ExperimentProperties(provisioningState, (steps ?? new ChangeTrackingList<ChaosExperimentStep>()).ToList(), (selectors ?? new ChangeTrackingList<ChaosTargetSelector>()).ToList(), null));
+                new ExperimentProperties(provisioningState, (steps ?? new ChangeTrackingList<ChaosExperimentStep>()).ToList(), (selectors ?? new ChangeTrackingList<ChaosTargetSelector>()).ToList(), null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Model that represents a step in the Experiment resource. </summary>
@@ -243,8 +243,8 @@ namespace Azure.ResourceManager.Chaos.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                status is null && startedOn is null && stoppedOn is null ? default : new ExperimentExecutionProperties(status, startedOn, stoppedOn, null));
+                status is null && startedOn is null && stoppedOn is null ? default : new ExperimentExecutionProperties(status, startedOn, stoppedOn, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -265,7 +265,6 @@ namespace Azure.ResourceManager.Chaos.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 status is null && startedOn is null && stoppedOn is null && failureReason is null && lastActionOn is null && runInformationSteps is null ? default : new ExperimentExecutionDetailsProperties(
                     status,
                     startedOn,
@@ -273,7 +272,8 @@ namespace Azure.ResourceManager.Chaos.Models
                     failureReason,
                     lastActionOn,
                     new ExperimentExecutionDetailsPropertiesRunInformation((runInformationSteps ?? new ChangeTrackingList<ChaosExperimentRunStepStatus>()).ToList(), null),
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Model that represents the a list of branches and branch statuses. </summary>
@@ -367,8 +367,8 @@ namespace Azure.ResourceManager.Chaos.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                new TargetTypeProperties(displayName, description, propertiesSchema, (resourceTypes ?? new ChangeTrackingList<string>()).ToList(), null));
+                new TargetTypeProperties(displayName, description, propertiesSchema, (resourceTypes ?? new ChangeTrackingList<string>()).ToList(), null),
+                additionalBinaryDataProperties: null);
         }
     }
 }

@@ -38,11 +38,11 @@ namespace Azure.ResourceManager.ArizeAIObservabilityEval.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="marketplace"> Marketplace details of the resource. </param>

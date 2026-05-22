@@ -189,14 +189,14 @@ namespace Azure.ResourceManager.CognitiveServices.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
                 eTag,
                 kind,
                 sku,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties of Cognitive Services account. </summary>
@@ -337,10 +337,10 @@ namespace Azure.ResourceManager.CognitiveServices.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 connectionState is null && provisioningState is null && groupIds is null && privateEndpointId is null ? default : new CognitiveServicesPrivateEndpointConnectionProperties(new PrivateEndpoint(privateEndpointId, null), connectionState, provisioningState, (groupIds ?? new ChangeTrackingList<string>()).ToList(), null),
                 eTag,
-                location);
+                location,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The api properties for special APIs. </summary>
@@ -582,8 +582,8 @@ namespace Azure.ResourceManager.CognitiveServices.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties of a private link resource. </summary>
@@ -618,10 +618,10 @@ namespace Azure.ResourceManager.CognitiveServices.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
                 eTag,
-                tags);
+                tags,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> RAI External SafetyProvider schema properties. </summary>
@@ -669,11 +669,11 @@ namespace Azure.ResourceManager.CognitiveServices.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
                 sku,
                 eTag,
-                tags);
+                tags,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties of Cognitive Services account deployment. </summary>
@@ -792,13 +792,13 @@ namespace Azure.ResourceManager.CognitiveServices.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
                 tags,
                 location,
                 eTag,
                 kind,
-                sku);
+                sku,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties of Cognitive Services account commitment plan. </summary>
@@ -873,10 +873,10 @@ namespace Azure.ResourceManager.CognitiveServices.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 accountId is null ? default : new CommitmentPlanAccountAssociationProperties(accountId, null),
                 eTag,
-                tags);
+                tags,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Cognitive Services EncryptionScope. </summary>
@@ -897,10 +897,10 @@ namespace Azure.ResourceManager.CognitiveServices.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
                 eTag,
-                tags);
+                tags,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties to EncryptionScope. </summary>
@@ -932,10 +932,10 @@ namespace Azure.ResourceManager.CognitiveServices.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
                 eTag,
-                tags);
+                tags,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Azure OpenAI Content Filters properties. </summary>
@@ -980,10 +980,10 @@ namespace Azure.ResourceManager.CognitiveServices.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
                 eTag,
-                tags);
+                tags,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -1003,10 +1003,10 @@ namespace Azure.ResourceManager.CognitiveServices.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 raiBlocklistDescription is null ? default : new RaiBlocklistProperties(raiBlocklistDescription, null),
                 eTag,
-                tags);
+                tags,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Cognitive Services Rai Topic. </summary>
@@ -1027,10 +1027,10 @@ namespace Azure.ResourceManager.CognitiveServices.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
                 eTag,
-                tags);
+                tags,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Cognitive Services RAI Tool Label resource. </summary>
@@ -1051,10 +1051,10 @@ namespace Azure.ResourceManager.CognitiveServices.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
                 eTag,
-                tags);
+                tags,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="toolConnectionName"> The unique tool connection name, e.g., 'Web_Search'. </param>
@@ -1093,8 +1093,8 @@ namespace Azure.ResourceManager.CognitiveServices.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> NSP Configuration for an Cognitive Services account. </summary>
@@ -1111,8 +1111,8 @@ namespace Azure.ResourceManager.CognitiveServices.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The properties of an NSP Configuration. </summary>
@@ -1217,10 +1217,10 @@ namespace Azure.ResourceManager.CognitiveServices.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 state is null ? default : new DefenderForAISettingProperties(state, null),
                 eTag,
-                tags);
+                tags,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Cognitive Services project is an Azure resource representing the provisioned account's project, it's type, location and SKU. </summary>
@@ -1243,12 +1243,12 @@ namespace Azure.ResourceManager.CognitiveServices.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
                 eTag,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties of Cognitive Services Project'. </summary>
@@ -1285,8 +1285,8 @@ namespace Azure.ResourceManager.CognitiveServices.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary>
@@ -1793,8 +1793,8 @@ namespace Azure.ResourceManager.CognitiveServices.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The CognitiveServicesCapabilityHostProperties. </summary>
@@ -1845,8 +1845,8 @@ namespace Azure.ResourceManager.CognitiveServices.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The CognitiveServicesProjectScopedCapabilityHostProperties. </summary>
@@ -1886,8 +1886,8 @@ namespace Azure.ResourceManager.CognitiveServices.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties of Quota Tier resource'. </summary>
@@ -1926,8 +1926,8 @@ namespace Azure.ResourceManager.CognitiveServices.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary>
@@ -2053,8 +2053,8 @@ namespace Azure.ResourceManager.CognitiveServices.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The properties of the managed network settings of a cognitive services account. </summary>
@@ -2133,8 +2133,8 @@ namespace Azure.ResourceManager.CognitiveServices.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Resource type representing an agentic application as a management construct. </summary>
@@ -2206,8 +2206,8 @@ namespace Azure.ResourceManager.CognitiveServices.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Agent Deployment resource. </summary>
@@ -2224,8 +2224,8 @@ namespace Azure.ResourceManager.CognitiveServices.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary>
@@ -2419,9 +2419,9 @@ namespace Azure.ResourceManager.CognitiveServices.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 location,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Cognitive Services Model. </summary>
@@ -2542,14 +2542,14 @@ namespace Azure.ResourceManager.CognitiveServices.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
                 etag,
                 kind,
                 sku,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Models.CognitiveServicesAccountProperties"/>. </summary>
@@ -2614,10 +2614,10 @@ namespace Azure.ResourceManager.CognitiveServices.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 privateEndpointId is null && connectionState is null && provisioningState is null && groupIds is null ? default : new CognitiveServicesPrivateEndpointConnectionProperties(new PrivateEndpoint(privateEndpointId, default), connectionState, provisioningState, (groupIds ?? new ChangeTrackingList<string>()).ToList(), default),
                 etag,
-                location);
+                location,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Models.ServiceAccountThrottlingMatchPattern"/>. </summary>
@@ -2689,11 +2689,11 @@ namespace Azure.ResourceManager.CognitiveServices.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
                 sku,
                 etag,
-                tags);
+                tags,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Models.CognitiveServicesAccountDeploymentProperties"/>. </summary>
@@ -2739,13 +2739,13 @@ namespace Azure.ResourceManager.CognitiveServices.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
                 tags,
                 location,
                 etag,
                 kind,
-                sku);
+                sku,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="CognitiveServices.CognitiveServicesEncryptionScopeData"/>. </summary>
@@ -2767,10 +2767,10 @@ namespace Azure.ResourceManager.CognitiveServices.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
                 etag,
-                tags);
+                tags,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="CognitiveServices.RaiPolicyData"/>. </summary>
@@ -2792,10 +2792,10 @@ namespace Azure.ResourceManager.CognitiveServices.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
                 etag,
-                tags);
+                tags,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Models.RaiPolicyProperties"/>. </summary>
@@ -2830,10 +2830,10 @@ namespace Azure.ResourceManager.CognitiveServices.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 raiBlocklistDescription is null ? default : new RaiBlocklistProperties(raiBlocklistDescription, default),
                 etag,
-                tags);
+                tags,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="CognitiveServices.RaiBlocklistItemData"/>. </summary>
@@ -2855,10 +2855,10 @@ namespace Azure.ResourceManager.CognitiveServices.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
                 etag,
-                tags);
+                tags,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="CognitiveServices.CommitmentPlanAccountAssociationData"/>. </summary>
@@ -2880,10 +2880,10 @@ namespace Azure.ResourceManager.CognitiveServices.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 accountId is null ? default : new CommitmentPlanAccountAssociationProperties(accountId, default),
                 etag,
-                tags);
+                tags,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="CognitiveServices.DefenderForAISettingData"/>. </summary>
@@ -2905,10 +2905,10 @@ namespace Azure.ResourceManager.CognitiveServices.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 state is null ? default : new DefenderForAISettingProperties(state, default),
                 etag,
-                tags);
+                tags,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="CognitiveServices.CognitiveServicesProjectData"/>. </summary>
@@ -2932,12 +2932,12 @@ namespace Azure.ResourceManager.CognitiveServices.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
                 etag,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Models.CognitiveServicesCapabilityHostProperties"/>. </summary>

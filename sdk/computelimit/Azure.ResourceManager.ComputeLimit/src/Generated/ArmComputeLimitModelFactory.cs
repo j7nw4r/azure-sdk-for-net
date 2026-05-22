@@ -32,8 +32,8 @@ namespace Azure.ResourceManager.ComputeLimit.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                guestSubscriptionProvisioningState is null ? default : new GuestSubscriptionProperties(guestSubscriptionProvisioningState, null));
+                guestSubscriptionProvisioningState is null ? default : new GuestSubscriptionProperties(guestSubscriptionProvisioningState, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Compute limits shared by the subscription. </summary>
@@ -50,8 +50,8 @@ namespace Azure.ResourceManager.ComputeLimit.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties of the compute shared limit. </summary>
@@ -88,8 +88,8 @@ namespace Azure.ResourceManager.ComputeLimit.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties of the compute limit feature. </summary>
@@ -115,8 +115,8 @@ namespace Azure.ResourceManager.ComputeLimit.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties of a VM family resource. </summary>

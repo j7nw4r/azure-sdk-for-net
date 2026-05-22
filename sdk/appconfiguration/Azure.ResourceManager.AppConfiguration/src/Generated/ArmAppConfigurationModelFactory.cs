@@ -52,7 +52,6 @@ namespace Azure.ResourceManager.AppConfiguration.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 provisioningState is null && createdOn is null && endpoint is null && privateEndpointConnections is null && publicNetworkAccess is null && disableLocalAuth is null && softDeleteRetentionInDays is null && defaultKeyValueRevisionRetentionPeriodInSeconds is null && enablePurgeProtection is null && dataPlaneProxy is null && createMode is null && encryptionKeyVaultProperties is null && telemetryResourceId is null && managedOnBehalfOfMoboBrokerResources is null && azureFrontDoorResourceId is null ? default : new ConfigurationStoreProperties(
@@ -73,7 +72,8 @@ namespace Azure.ResourceManager.AppConfiguration.Models
                     new AzureFrontDoorProperties(azureFrontDoorResourceId, null),
                     null),
                 identity,
-                new AppConfigurationSku(skuName, null));
+                new AppConfigurationSku(skuName, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The state of a private link service connection. </summary>
@@ -160,7 +160,6 @@ namespace Azure.ResourceManager.AppConfiguration.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 configurationStoreId is null && location is null && deletedOn is null && scheduledPurgeOn is null && tags is null && isPurgeProtectionEnabled is null ? default : new DeletedConfigurationStoreProperties(
                     configurationStoreId,
                     location,
@@ -168,7 +167,8 @@ namespace Azure.ResourceManager.AppConfiguration.Models
                     scheduledPurgeOn,
                     tags,
                     isPurgeProtectionEnabled,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -186,8 +186,8 @@ namespace Azure.ResourceManager.AppConfiguration.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                groupId is null && requiredMembers is null && requiredZoneNames is null ? default : new AppConfigurationPrivateLinkResourceProperties(groupId, (requiredMembers ?? new ChangeTrackingList<string>()).ToList(), (requiredZoneNames ?? new ChangeTrackingList<string>()).ToList(), null));
+                groupId is null && requiredMembers is null && requiredZoneNames is null ? default : new AppConfigurationPrivateLinkResourceProperties(groupId, (requiredMembers ?? new ChangeTrackingList<string>()).ToList(), (requiredZoneNames ?? new ChangeTrackingList<string>()).ToList(), null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -222,7 +222,6 @@ namespace Azure.ResourceManager.AppConfiguration.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 key is null && label is null && value is null && contentType is null && eTag is null && lastModifiedOn is null && isLocked is null && tags is null ? default : new KeyValueProperties(
                     key,
                     label,
@@ -232,7 +231,8 @@ namespace Azure.ResourceManager.AppConfiguration.Models
                     lastModifiedOn,
                     isLocked,
                     tags,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -258,7 +258,6 @@ namespace Azure.ResourceManager.AppConfiguration.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 provisioningState is null && status is null && filters is null && compositionType is null && createdOn is null && expireOn is null && retentionPeriod is null && size is null && itemsCount is null && tags is null && eTag is null ? default : new SnapshotProperties(
                     provisioningState,
                     status,
@@ -271,7 +270,8 @@ namespace Azure.ResourceManager.AppConfiguration.Models
                     itemsCount,
                     tags,
                     eTag,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Parameters used for checking whether a resource name is available. </summary>
@@ -333,11 +333,11 @@ namespace Azure.ResourceManager.AppConfiguration.Models
         {
             return new AppConfigurationPrivateEndpointConnectionReference(
                 id,
+                name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                name,
-                default);
+                default,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="AppConfiguration.AppConfigurationPrivateEndpointConnectionData"/>. </summary>
@@ -356,8 +356,8 @@ namespace Azure.ResourceManager.AppConfiguration.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                default);
+                default,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="AppConfiguration.AppConfigurationReplicaData"/>. </summary>
@@ -376,9 +376,9 @@ namespace Azure.ResourceManager.AppConfiguration.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 default,
-                location);
+                location,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="AppConfiguration.AppConfigurationSnapshotData"/>. </summary>
@@ -408,7 +408,6 @@ namespace Azure.ResourceManager.AppConfiguration.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 provisioningState is null && status is null && filters is null && compositionType is null && createdOn is null && expireOn is null && retentionPeriod is null && size is null && itemsCount is null && tags is null && eTag is null ? default : new SnapshotProperties(
                     provisioningState,
                     status,
@@ -421,7 +420,8 @@ namespace Azure.ResourceManager.AppConfiguration.Models
                     itemsCount,
                     tags ?? new ChangeTrackingDictionary<string, string>(),
                     eTag,
-                    default));
+                    default),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="AppConfiguration.AppConfigurationStoreData"/>. </summary>

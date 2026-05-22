@@ -38,11 +38,11 @@ namespace Azure.ResourceManager.Astro.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties specific to Data Organization resource. </summary>

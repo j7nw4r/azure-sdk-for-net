@@ -104,7 +104,6 @@ namespace Azure.ResourceManager.Communication.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 provisioningState is null && dataLocation is null && fromSenderDomain is null && mailFromSenderDomain is null && domainManagement is null && verificationStates is null && verificationRecords is null && userEngagementTracking is null ? default : new DomainProperties(
@@ -116,7 +115,8 @@ namespace Azure.ResourceManager.Communication.Models
                     verificationStates,
                     verificationRecords,
                     userEngagementTracking,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> List of VerificationStatusRecord. </summary>
@@ -211,10 +211,10 @@ namespace Azure.ResourceManager.Communication.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                provisioningState is null && dataLocation is null ? default : new EmailServiceProperties(provisioningState, dataLocation, null));
+                provisioningState is null && dataLocation is null ? default : new EmailServiceProperties(provisioningState, dataLocation, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> A class representing update parameters for EmailService resource. </summary>
@@ -243,8 +243,8 @@ namespace Azure.ResourceManager.Communication.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                dataLocation is null && username is null && displayName is null && provisioningState is null ? default : new SenderUsernameProperties(dataLocation, username, displayName, provisioningState, null));
+                dataLocation is null && username is null && displayName is null && provisioningState is null ? default : new SenderUsernameProperties(dataLocation, username, displayName, provisioningState, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -262,8 +262,8 @@ namespace Azure.ResourceManager.Communication.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                username is null && entraApplicationId is null && tenantId is null ? default : new SmtpUsernameProperties(username, entraApplicationId, tenantId.GetValueOrDefault(), null));
+                username is null && entraApplicationId is null && tenantId is null ? default : new SmtpUsernameProperties(username, entraApplicationId, tenantId.GetValueOrDefault(), null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -282,8 +282,8 @@ namespace Azure.ResourceManager.Communication.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                listName is null && lastUpdatedOn is null && createdOn is null && dataLocation is null ? default : new SuppressionListProperties(listName, lastUpdatedOn, createdOn, dataLocation, null));
+                listName is null && lastUpdatedOn is null && createdOn is null && dataLocation is null ? default : new SuppressionListProperties(listName, lastUpdatedOn, createdOn, dataLocation, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -304,7 +304,6 @@ namespace Azure.ResourceManager.Communication.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 email is null && firstName is null && lastName is null && notes is null && lastModified is null && dataLocation is null ? default : new SuppressionListAddressProperties(
                     email,
                     firstName,
@@ -312,7 +311,8 @@ namespace Azure.ResourceManager.Communication.Models
                     notes,
                     lastModified,
                     dataLocation,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Communication.CommunicationServiceResourceData"/>. </summary>
@@ -343,11 +343,11 @@ namespace Azure.ResourceManager.Communication.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 default,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
     }
 }

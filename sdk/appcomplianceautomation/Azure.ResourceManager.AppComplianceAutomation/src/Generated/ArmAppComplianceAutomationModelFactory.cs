@@ -32,8 +32,8 @@ namespace Azure.ResourceManager.AppComplianceAutomation.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="triggerOn"> Report collection trigger time. </param>
@@ -244,8 +244,8 @@ namespace Azure.ResourceManager.AppComplianceAutomation.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Webhook properties. </summary>
@@ -298,8 +298,8 @@ namespace Azure.ResourceManager.AppComplianceAutomation.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Snapshot's properties. </summary>
@@ -549,8 +549,8 @@ namespace Azure.ResourceManager.AppComplianceAutomation.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> ScopingConfiguration's properties. </summary>
@@ -589,8 +589,8 @@ namespace Azure.ResourceManager.AppComplianceAutomation.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Evidence's properties. </summary>

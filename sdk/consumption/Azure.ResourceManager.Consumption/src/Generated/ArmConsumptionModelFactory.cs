@@ -39,10 +39,10 @@ namespace Azure.ResourceManager.Consumption.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 pricesheets is null && nextLink is null && download is null ? default : new PriceSheetModel((pricesheets ?? new ChangeTrackingList<PriceSheetProperties>()).ToList(), nextLink, download, null),
                 eTag,
-                tags);
+                tags,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The properties of the price sheet. </summary>
@@ -139,7 +139,6 @@ namespace Azure.ResourceManager.Consumption.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 category is null && amount is null && timeGrain is null && timePeriod is null && filter is null && currentSpend is null && notifications is null && forecastSpend is null ? default : new BudgetProperties(
                     category,
                     amount,
@@ -150,7 +149,8 @@ namespace Azure.ResourceManager.Consumption.Models
                     notifications,
                     forecastSpend,
                     null),
-                etag);
+                etag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> May be used to filter budgets by resource group, resource, or meter. </summary>
@@ -248,7 +248,6 @@ namespace Azure.ResourceManager.Consumption.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 balanceSummary is null && pendingCreditAdjustments is null && expiredCredit is null && pendingEligibleCharges is null && creditCurrency is null && billingCurrency is null && reseller is null && isEstimatedBalance is null && propertiesETag is null ? default : new CreditSummaryProperties(
                     balanceSummary,
                     pendingCreditAdjustments,
@@ -261,7 +260,8 @@ namespace Azure.ResourceManager.Consumption.Models
                     propertiesETag,
                     null),
                 eTag,
-                tags);
+                tags,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Summary of credit balances. </summary>
@@ -365,10 +365,10 @@ namespace Azure.ResourceManager.Consumption.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 UsageDetailsKind.Legacy,
                 etag,
                 tags,
+                additionalBinaryDataProperties: null,
                 new LegacyUsageDetailProperties(
                     billingAccountId,
                     billingAccountName,
@@ -525,10 +525,10 @@ namespace Azure.ResourceManager.Consumption.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 UsageDetailsKind.Modern,
                 etag,
                 tags,
+                additionalBinaryDataProperties: null,
                 new ModernUsageDetailProperties(
                     billingAccountId,
                     effectivePrice,
@@ -647,7 +647,6 @@ namespace Azure.ResourceManager.Consumption.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 billingPeriodId is null && usageStartOn is null && usageEndOn is null && resourceRate is null && offerName is null && resourceGroup is null && additionalInfo is null && orderNumber is null && instanceName is null && instanceId is null && currency is null && consumedQuantity is null && unitOfMeasure is null && pretaxCost is null && isEstimated is null && meterId is null && subscriptionGuid is null && subscriptionName is null && accountName is null && departmentName is null && consumedService is null && costCenter is null && additionalProperties is null && publisherName is null && planName is null && isRecurringCharge is null ? default : new MarketplaceProperties(
                     billingPeriodId,
                     usageStartOn,
@@ -677,7 +676,8 @@ namespace Azure.ResourceManager.Consumption.Models
                     isRecurringCharge,
                     null),
                 etag,
-                tags);
+                tags,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The tag resource. </summary>
@@ -721,9 +721,9 @@ namespace Azure.ResourceManager.Consumption.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 ChargeSummaryKind.Legacy,
                 etag,
+                additionalBinaryDataProperties: null,
                 new LegacyChargeSummaryProperties(
                     billingPeriodId,
                     usageStart,
@@ -760,9 +760,9 @@ namespace Azure.ResourceManager.Consumption.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 ChargeSummaryKind.Modern,
                 eTag,
+                additionalBinaryDataProperties: null,
                 new ModernChargeSummaryProperties(
                     billingPeriodId,
                     usageStart,
@@ -811,7 +811,6 @@ namespace Azure.ResourceManager.Consumption.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 currency is null && beginningBalance is null && endingBalance is null && newPurchases is null && adjustments is null && utilized is null && serviceOverage is null && chargesBilledSeparately is null && totalOverage is null && totalUsage is null && azureMarketplaceServiceCharges is null && billingFrequency is null && isPriceHidden is null && overageRefund is null && newPurchasesDetails is null && adjustmentDetails is null ? default : new BalanceProperties(
                     currency,
                     beginningBalance,
@@ -831,7 +830,8 @@ namespace Azure.ResourceManager.Consumption.Models
                     (adjustmentDetails ?? new ChangeTrackingList<ConsumptionBalanceAdjustmentDetail>()).ToList(),
                     null),
                 eTag,
-                tags);
+                tags,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The ConsumptionBalanceNewPurchasesDetail. </summary>
@@ -883,7 +883,6 @@ namespace Azure.ResourceManager.Consumption.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 reservationOrderId is null && reservationId is null && skuName is null && reservedHours is null && useOn is null && usedHours is null && minUtilizationPercentage is null && avgUtilizationPercentage is null && maxUtilizationPercentage is null && kind is null && purchasedQuantity is null && remainingQuantity is null && totalReservedQuantity is null && usedQuantity is null && utilizedPercentage is null ? default : new ReservationSummaryProperties(
                     reservationOrderId,
                     reservationId,
@@ -902,7 +901,8 @@ namespace Azure.ResourceManager.Consumption.Models
                     utilizedPercentage,
                     null),
                 etag,
-                tags);
+                tags,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -932,7 +932,6 @@ namespace Azure.ResourceManager.Consumption.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 reservationOrderId is null && instanceFlexibilityRatio is null && instanceFlexibilityGroup is null && reservationId is null && skuName is null && reservedHours is null && consumptionOccurredOn is null && usedHours is null && instanceId is null && totalReservedQuantity is null && kind is null ? default : new ReservationDetailProperties(
                     reservationOrderId,
                     instanceFlexibilityRatio,
@@ -947,7 +946,8 @@ namespace Azure.ResourceManager.Consumption.Models
                     kind,
                     null),
                 etag,
-                tags);
+                tags,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary>
@@ -973,12 +973,12 @@ namespace Azure.ResourceManager.Consumption.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 location,
                 sku,
                 eTag,
                 tags,
-                new ReservationRecommendationKind(kind));
+                new ReservationRecommendationKind(kind),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The ConsumptionLegacyReservationRecommendation. </summary>
@@ -1001,12 +1001,12 @@ namespace Azure.ResourceManager.Consumption.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 location,
                 sku,
                 eTag,
                 tags,
                 ReservationRecommendationKind.Legacy,
+                additionalBinaryDataProperties: null,
                 properties);
         }
 
@@ -1174,12 +1174,12 @@ namespace Azure.ResourceManager.Consumption.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 location,
                 sku,
                 eTag,
                 tags,
                 ReservationRecommendationKind.Modern,
+                additionalBinaryDataProperties: null,
                 properties);
         }
 
@@ -1354,7 +1354,6 @@ namespace Azure.ResourceManager.Consumption.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 location,
                 sku,
                 currency is null && properties is null && resourceGroup is null && savings is null && scope is null && usage is null ? default : new ReservationRecommendationDetailsProperties(
@@ -1366,7 +1365,8 @@ namespace Azure.ResourceManager.Consumption.Models
                     usage,
                     null),
                 etag,
-                tags);
+                tags,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Details of the resource. </summary>
@@ -1493,7 +1493,6 @@ namespace Azure.ResourceManager.Consumption.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 transactOn is null && reservationOrderId is null && description is null && eventType is null && quantity is null && amount is null && currency is null && reservationOrderName is null && purchasingEnrollment is null && purchasingSubscriptionGuid is null && purchasingSubscriptionName is null && armSkuName is null && term is null && region is null && accountName is null && accountOwnerEmail is null && departmentName is null && costCenter is null && currentEnrollment is null && billingFrequency is null && billingMonth is null && monetaryCommitment is null && overage is null ? default : new LegacyReservationTransactionProperties(
                     transactOn,
                     reservationOrderId,
@@ -1519,7 +1518,8 @@ namespace Azure.ResourceManager.Consumption.Models
                     monetaryCommitment,
                     overage,
                     null),
-                tags.ToList());
+                tags.ToList(),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -1557,7 +1557,6 @@ namespace Azure.ResourceManager.Consumption.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 new ModernReservationTransactionProperties(
                     amount,
                     armSkuName,
@@ -1580,7 +1579,8 @@ namespace Azure.ResourceManager.Consumption.Models
                     reservationOrderName,
                     term,
                     null),
-                tags.ToList());
+                tags.ToList(),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -1609,7 +1609,6 @@ namespace Azure.ResourceManager.Consumption.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 billingPeriodId is null && usageStartOn is null && usageEndOn is null && azureCharges is null && marketplaceCharges is null && chargesBilledSeparately is null && currency is null && children is null && includedSubscriptions is null && excludedSubscriptions is null ? default : new ManagementGroupAggregatedCostProperties(
                     billingPeriodId,
                     usageStartOn,
@@ -1623,7 +1622,8 @@ namespace Azure.ResourceManager.Consumption.Models
                     (excludedSubscriptions ?? new ChangeTrackingList<string>()).ToList(),
                     null),
                 etag,
-                tags);
+                tags,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -1665,7 +1665,6 @@ namespace Azure.ResourceManager.Consumption.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 transactOn is null && description is null && newCredit is null && adjustments is null && creditExpired is null && charges is null && closedBalance is null && billingAccountId is null && billingAccountDisplayName is null && eventType is null && invoiceNumber is null && billingProfileId is null && billingProfileDisplayName is null && lotId is null && lotSource is null && canceledCredit is null && creditCurrency is null && billingCurrency is null && reseller is null && creditExpiredInBillingCurrency is null && newCreditInBillingCurrency is null && adjustmentsInBillingCurrency is null && chargesInBillingCurrency is null && closedBalanceInBillingCurrency is null && isEstimatedBalance is null && propertiesETag is null ? default : new EventProperties(
                     transactOn,
                     description,
@@ -1694,7 +1693,8 @@ namespace Azure.ResourceManager.Consumption.Models
                     isEstimatedBalance,
                     propertiesETag,
                     null),
-                internalETag);
+                internalETag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -1727,7 +1727,6 @@ namespace Azure.ResourceManager.Consumption.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 originalAmount is null && closedBalance is null && source is null && startOn is null && expireOn is null && poNumber is null && purchasedOn is null && status is null && creditCurrency is null && billingCurrency is null && originalAmountInBillingCurrency is null && closedBalanceInBillingCurrency is null && reseller is null && isEstimatedBalance is null && propertiesETag is null && organizationType is null && usedAmount is null ? default : new LotProperties(
                     originalAmount,
                     closedBalance,
@@ -1747,7 +1746,8 @@ namespace Azure.ResourceManager.Consumption.Models
                     organizationType,
                     usedAmount,
                     null),
-                eTag);
+                eTag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Models.ConsumptionBalanceResult"/>. </summary>
@@ -1783,7 +1783,6 @@ namespace Azure.ResourceManager.Consumption.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 currency is null && beginningBalance is null && endingBalance is null && newPurchases is null && adjustments is null && utilized is null && serviceOverage is null && chargesBilledSeparately is null && totalOverage is null && totalUsage is null && azureMarketplaceServiceCharges is null && billingFrequency is null && isPriceHidden is null && newPurchasesDetails is null && adjustmentDetails is null ? default : new BalanceProperties(
                     currency,
                     beginningBalance,
@@ -1803,7 +1802,8 @@ namespace Azure.ResourceManager.Consumption.Models
                     (adjustmentDetails ?? new ChangeTrackingList<ConsumptionBalanceAdjustmentDetail>()).ToList(),
                     default),
                 etag,
-                tags);
+                tags,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Models.PriceSheetProperties"/>. </summary>
@@ -1860,7 +1860,6 @@ namespace Azure.ResourceManager.Consumption.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 transactOn is null && description is null && newCredit is null && adjustments is null && creditExpired is null && charges is null && closedBalance is null && eventType is null && invoiceNumber is null && billingProfileId is null && billingProfileDisplayName is null && lotId is null && lotSource is null && canceledCredit is null && creditCurrency is null && billingCurrency is null && reseller is null && creditExpiredInBillingCurrency is null && newCreditInBillingCurrency is null && adjustmentsInBillingCurrency is null && chargesInBillingCurrency is null && closedBalanceInBillingCurrency is null ? default : new EventProperties(
                     transactOn,
                     description,
@@ -1889,7 +1888,8 @@ namespace Azure.ResourceManager.Consumption.Models
                     default,
                     default,
                     default),
-                default);
+                default,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Models.ConsumptionLotSummary"/>. </summary>
@@ -1920,7 +1920,6 @@ namespace Azure.ResourceManager.Consumption.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 originalAmount is null && closedBalance is null && source is null && startOn is null && expireOn is null && poNumber is null && purchasedOn is null && status is null && creditCurrency is null && billingCurrency is null && originalAmountInBillingCurrency is null && closedBalanceInBillingCurrency is null && reseller is null ? default : new LotProperties(
                     originalAmount,
                     closedBalance,
@@ -1940,7 +1939,8 @@ namespace Azure.ResourceManager.Consumption.Models
                     default,
                     default,
                     default),
-                etag);
+                etag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Models.ConsumptionModernChargeSummary"/>. </summary>
@@ -1969,9 +1969,9 @@ namespace Azure.ResourceManager.Consumption.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 ChargeSummaryKind.Modern,
                 etag,
+                additionalBinaryDataProperties: null,
                 billingPeriodId is null && usageStart is null && usageEnd is null && azureCharges is null && chargesBilledSeparately is null && marketplaceCharges is null && billingAccountId is null && billingProfileId is null && invoiceSectionId is null && customerId is null && isInvoiced is null ? default : new ModernChargeSummaryProperties(
                     billingPeriodId,
                     usageStart,

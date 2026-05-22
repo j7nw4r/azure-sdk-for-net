@@ -40,12 +40,12 @@ namespace Azure.ResourceManager.AgriculturePlatform.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
                 identity,
-                sku);
+                sku,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="provisioningState"> The status of the last operation. </param>

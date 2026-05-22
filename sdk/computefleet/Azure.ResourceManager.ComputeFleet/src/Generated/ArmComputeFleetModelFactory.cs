@@ -43,13 +43,13 @@ namespace Azure.ResourceManager.ComputeFleet.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
                 zones.ToList(),
                 identity,
-                plan);
+                plan,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="provisioningState"> The status of the last operation. </param>
@@ -816,9 +816,9 @@ namespace Azure.ResourceManager.ComputeFleet.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 operationStatus,
-                error);
+                error,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> ApiError for Fleet. </summary>
@@ -875,9 +875,9 @@ namespace Azure.ResourceManager.ComputeFleet.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 operationStatus,
-                error);
+                error,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Models.ComputeFleetProperties"/>. </summary>

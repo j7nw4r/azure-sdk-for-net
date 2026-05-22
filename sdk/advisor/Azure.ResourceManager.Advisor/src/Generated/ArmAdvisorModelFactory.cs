@@ -64,8 +64,8 @@ namespace Azure.ResourceManager.Advisor.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                displayName is null && dependsOn is null && applicableScenarios is null && supportedValues is null ? default : new AdvisorMetadataEntityProperties(displayName, (dependsOn ?? new ChangeTrackingList<string>()).ToList(), (applicableScenarios ?? new ChangeTrackingList<MetadataScenarioType>()).ToList(), (supportedValues ?? new ChangeTrackingList<MetadataSupportedValueDetail>()).ToList(), null));
+                displayName is null && dependsOn is null && applicableScenarios is null && supportedValues is null ? default : new AdvisorMetadataEntityProperties(displayName, (dependsOn ?? new ChangeTrackingList<string>()).ToList(), (applicableScenarios ?? new ChangeTrackingList<MetadataScenarioType>()).ToList(), (supportedValues ?? new ChangeTrackingList<MetadataSupportedValueDetail>()).ToList(), null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The metadata supported value detail. </summary>
@@ -115,7 +115,6 @@ namespace Azure.ResourceManager.Advisor.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 category is null && control is null && impact is null && impactedField is null && impactedValue is null && lastUpdatedOn is null && metadata is null && recommendationTypeId is null && risk is null && shortDescription is null && suppressionIds is null && extendedProperties is null && resourceMetadata is null && description is null && label is null && learnMoreLink is null && potentialBenefits is null && actions is null && remediation is null && exposedMetadataProperties is null && isTracked is null && trackedProperties is null && review is null && resourceWorkload is null && sourceSystem is null && notes is null ? default : new AdvisorRecommendationProperties(
                     category,
                     control,
@@ -143,7 +142,8 @@ namespace Azure.ResourceManager.Advisor.Models
                     resourceWorkload,
                     sourceSystem,
                     notes,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Recommendation resource metadata. </summary>
@@ -199,8 +199,8 @@ namespace Azure.ResourceManager.Advisor.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                suppressionId is null && ttl is null && expireOn is null ? default : new AdvisorSuppressionProperties(suppressionId, ttl, expireOn, null));
+                suppressionId is null && ttl is null && expireOn is null ? default : new AdvisorSuppressionProperties(suppressionId, ttl, expireOn, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -217,8 +217,8 @@ namespace Azure.ResourceManager.Advisor.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                lastRefreshedScore is null && timeSeries is null ? default : new AdvisorScoreEntityProperties(lastRefreshedScore, (timeSeries ?? new ChangeTrackingList<AdvisorTimeSeriesEntity>()).ToList(), null));
+                lastRefreshedScore is null && timeSeries is null ? default : new AdvisorScoreEntityProperties(lastRefreshedScore, (timeSeries ?? new ChangeTrackingList<AdvisorTimeSeriesEntity>()).ToList(), null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The details of Advisor Score. </summary>
@@ -274,7 +274,6 @@ namespace Azure.ResourceManager.Advisor.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 workloadId is null && workloadName is null && assessmentId is null && description is null && typeId is null && @type is null && score is null && state is null && typeVersion is null && locale is null ? default : new AdvisorAssessmentProperties(
                     workloadId,
                     workloadName,
@@ -286,7 +285,8 @@ namespace Azure.ResourceManager.Advisor.Models
                     state,
                     typeVersion,
                     locale,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -307,7 +307,6 @@ namespace Azure.ResourceManager.Advisor.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 reviewName is null && workloadName is null && reviewStatus is null && recommendationsCount is null && publishedOn is null && updatedOn is null ? default : new AdvisorResiliencyReviewProperties(
                     reviewName,
                     workloadName,
@@ -315,7 +314,8 @@ namespace Azure.ResourceManager.Advisor.Models
                     recommendationsCount,
                     publishedOn,
                     updatedOn,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -340,7 +340,6 @@ namespace Azure.ResourceManager.Advisor.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 reviewId is null && title is null && priority is null && appliesToSubscriptions is null && recommendationStatus is null && updatedOn is null && rejectReason is null && potentialBenefits is null && description is null && notes is null ? default : new AdvisorTriageRecommendationProperties(
                     reviewId,
                     title,
@@ -352,7 +351,8 @@ namespace Azure.ResourceManager.Advisor.Models
                     potentialBenefits,
                     description,
                     notes,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -374,7 +374,6 @@ namespace Azure.ResourceManager.Advisor.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 reviewId is null && recommendationId is null && subscriptionId is null && resourceGroup is null && triageResourceType is null && resourceId is null && resourceName is null ? default : new AdvisorTriageProperties(
                     reviewId,
                     recommendationId,
@@ -383,7 +382,8 @@ namespace Azure.ResourceManager.Advisor.Models
                     triageResourceType,
                     resourceId,
                     resourceName,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -402,8 +402,8 @@ namespace Azure.ResourceManager.Advisor.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                isExcluded is null && lowCpuThreshold is null && duration is null && digests is null ? default : new AdvisorConfigurationProperties(isExcluded, lowCpuThreshold, duration, (digests ?? new ChangeTrackingList<AdvisorDigestConfiguration>()).ToList(), null));
+                isExcluded is null && lowCpuThreshold is null && duration is null && digests is null ? default : new AdvisorConfigurationProperties(isExcluded, lowCpuThreshold, duration, (digests ?? new ChangeTrackingList<AdvisorDigestConfiguration>()).ToList(), null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Advisor Digest configuration entity. </summary>

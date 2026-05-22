@@ -40,10 +40,10 @@ namespace Azure.ResourceManager.LargeInstance.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Describes the properties of an Azure Large Instance. </summary>
@@ -143,11 +143,11 @@ namespace Azure.ResourceManager.LargeInstance.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The type used for updating tags in AzureLargeStorageInstance resources. </summary>

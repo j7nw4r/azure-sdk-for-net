@@ -38,11 +38,11 @@ namespace Azure.ResourceManager.CloudHealth.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> HealthModel properties. </summary>
@@ -80,8 +80,8 @@ namespace Azure.ResourceManager.CloudHealth.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary>
@@ -224,8 +224,8 @@ namespace Azure.ResourceManager.CloudHealth.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary>
@@ -265,8 +265,8 @@ namespace Azure.ResourceManager.CloudHealth.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties which are common across all kinds of entities. </summary>
@@ -377,8 +377,8 @@ namespace Azure.ResourceManager.CloudHealth.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Relationship properties. </summary>
@@ -419,8 +419,8 @@ namespace Azure.ResourceManager.CloudHealth.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Discovery rule properties. </summary>

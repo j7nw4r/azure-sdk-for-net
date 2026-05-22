@@ -37,10 +37,10 @@ namespace Azure.ResourceManager.ConnectedCache.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Model representing customer for connectedCache resource. </summary>
@@ -207,10 +207,10 @@ namespace Azure.ResourceManager.ConnectedCache.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Model representing an Mcc cache node connectedCache resource. </summary>
@@ -513,10 +513,10 @@ namespace Azure.ResourceManager.ConnectedCache.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                mccCacheNodeBgpCidrs is null ? default : new MccCacheNodeBgpCidrsConfiguration((mccCacheNodeBgpCidrs ?? new ChangeTrackingList<string>()).ToList(), null));
+                mccCacheNodeBgpCidrs is null ? default : new MccCacheNodeBgpCidrsConfiguration((mccCacheNodeBgpCidrs ?? new ChangeTrackingList<string>()).ToList(), null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Mcc cache node resource all install details. </summary>
@@ -537,10 +537,10 @@ namespace Azure.ResourceManager.ConnectedCache.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="customerId"> Mcc customer resource Id. </param>
@@ -586,10 +586,10 @@ namespace Azure.ResourceManager.ConnectedCache.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Mcc cache node resource auto update history properties. </summary>
@@ -622,10 +622,10 @@ namespace Azure.ResourceManager.ConnectedCache.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Mcc cache node resource issue history properties. </summary>
@@ -678,10 +678,10 @@ namespace Azure.ResourceManager.ConnectedCache.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Represents the high level Nodes needed to provision cache node resources. </summary>
@@ -702,10 +702,10 @@ namespace Azure.ResourceManager.ConnectedCache.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Mcc cache node resource Tls certificate history details. </summary>
@@ -726,10 +726,10 @@ namespace Azure.ResourceManager.ConnectedCache.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Mcc cache node resource auto update properties. </summary>

@@ -879,10 +879,10 @@ namespace Azure.ResourceManager.ComputeSchedule.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Scheduled action properties. </summary>
@@ -1070,8 +1070,8 @@ namespace Azure.ResourceManager.ComputeSchedule.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties for an occurrence. </summary>
@@ -1119,8 +1119,8 @@ namespace Azure.ResourceManager.ComputeSchedule.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Scheduled action extension properties. </summary>
@@ -1206,8 +1206,8 @@ namespace Azure.ResourceManager.ComputeSchedule.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The properties of the occurrence extension. </summary>

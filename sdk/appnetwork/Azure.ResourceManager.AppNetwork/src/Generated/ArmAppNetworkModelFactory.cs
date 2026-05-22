@@ -37,11 +37,11 @@ namespace Azure.ResourceManager.AppNetwork.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 appLinkProvisioningState is null ? default : new AppLinkProperties(appLinkProvisioningState, null),
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The type used for update operations of the AppLink. </summary>
@@ -72,10 +72,10 @@ namespace Azure.ResourceManager.AppNetwork.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="clusterType"> Cluster type. </param>
@@ -122,8 +122,8 @@ namespace Azure.ResourceManager.AppNetwork.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> AppLinkMember upgrade history properties. </summary>
@@ -160,8 +160,8 @@ namespace Azure.ResourceManager.AppNetwork.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="kubernetesVersion"> Kubernetes version. </param>

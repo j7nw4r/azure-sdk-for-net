@@ -19,20 +19,19 @@ namespace Azure.ResourceManager.BotService.Models
     /// <summary> A factory class for creating instances of the models for mocking. </summary>
     public static partial class ArmBotServiceModelFactory
     {
-        /// <summary> Bot resource definition. </summary>
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
         /// <param name="name"> The name of the resource. </param>
         /// <param name="resourceType"> The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts". </param>
+        /// <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
         /// <param name="tags"> Resource tags. </param>
         /// <param name="location"> The geo-location where the resource lives. </param>
         /// <param name="properties"> The resource-specific properties for this resource. </param>
         /// <param name="sku"> Gets or sets the SKU of the resource. </param>
         /// <param name="kind"> Required. Gets or sets the Kind of the resource. </param>
-        /// <param name="eTag"> Entity Tag. </param>
+        /// <param name="etag"> Entity Tag. </param>
         /// <param name="zones"> Entity zones. </param>
-        /// <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
         /// <returns> A new <see cref="BotService.BotData"/> instance for mocking. </returns>
-        public static BotData BotData(ResourceIdentifier id = default, string name = default, ResourceType resourceType = default, IDictionary<string, string> tags = default, AzureLocation location = default, BotProperties properties = default, BotServiceSku sku = default, BotServiceKind? kind = default, ETag? eTag = default, IEnumerable<string> zones = default, SystemData systemData = default)
+        public static BotData BotData(ResourceIdentifier id = default, string name = default, ResourceType resourceType = default, SystemData systemData = default, IDictionary<string, string> tags = default, AzureLocation location = default, BotProperties properties = default, BotServiceSku sku = default, BotServiceKind? kind = default, ETag? etag = default, IEnumerable<string> zones = default)
         {
             tags ??= new ChangeTrackingDictionary<string, string>();
             zones ??= new ChangeTrackingList<string>();
@@ -41,15 +40,15 @@ namespace Azure.ResourceManager.BotService.Models
                 id,
                 name,
                 resourceType,
-                additionalBinaryDataProperties: null,
+                systemData,
                 tags,
                 location,
                 properties,
                 sku,
                 kind,
-                eTag,
+                etag,
                 zones.ToList(),
-                systemData);
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The parameters to provide for the Bot. </summary>
@@ -154,8 +153,8 @@ namespace Azure.ResourceManager.BotService.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties of Network Security Perimeter configuration. </summary>
@@ -327,24 +326,23 @@ namespace Azure.ResourceManager.BotService.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                groupId is null && requiredMembers is null && requiredZoneNames is null ? default : new BotServicePrivateLinkResourceProperties(groupId, (requiredMembers ?? new ChangeTrackingList<string>()).ToList(), (requiredZoneNames ?? new ChangeTrackingList<string>()).ToList(), null));
+                groupId is null && requiredMembers is null && requiredZoneNames is null ? default : new BotServicePrivateLinkResourceProperties(groupId, (requiredMembers ?? new ChangeTrackingList<string>()).ToList(), (requiredZoneNames ?? new ChangeTrackingList<string>()).ToList(), null),
+                additionalBinaryDataProperties: null);
         }
 
-        /// <summary> Bot channel resource definition. </summary>
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
         /// <param name="name"> The name of the resource. </param>
         /// <param name="resourceType"> The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts". </param>
+        /// <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
         /// <param name="tags"> Resource tags. </param>
         /// <param name="location"> The geo-location where the resource lives. </param>
         /// <param name="properties"> The resource-specific properties for this resource. </param>
         /// <param name="sku"> Gets or sets the SKU of the resource. </param>
         /// <param name="kind"> Required. Gets or sets the Kind of the resource. </param>
-        /// <param name="eTag"> Entity Tag. </param>
+        /// <param name="etag"> Entity Tag. </param>
         /// <param name="zones"> Entity zones. </param>
-        /// <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
         /// <returns> A new <see cref="BotService.BotChannelData"/> instance for mocking. </returns>
-        public static BotChannelData BotChannelData(ResourceIdentifier id = default, string name = default, ResourceType resourceType = default, IDictionary<string, string> tags = default, AzureLocation location = default, BotChannelProperties properties = default, BotServiceSku sku = default, BotServiceKind? kind = default, ETag? eTag = default, IEnumerable<string> zones = default, SystemData systemData = default)
+        public static BotChannelData BotChannelData(ResourceIdentifier id = default, string name = default, ResourceType resourceType = default, SystemData systemData = default, IDictionary<string, string> tags = default, AzureLocation location = default, BotChannelProperties properties = default, BotServiceSku sku = default, BotServiceKind? kind = default, ETag? etag = default, IEnumerable<string> zones = default)
         {
             tags ??= new ChangeTrackingDictionary<string, string>();
             zones ??= new ChangeTrackingList<string>();
@@ -353,15 +351,15 @@ namespace Azure.ResourceManager.BotService.Models
                 id,
                 name,
                 resourceType,
-                additionalBinaryDataProperties: null,
+                systemData,
                 tags,
                 location,
                 properties,
                 sku,
                 kind,
-                eTag,
+                etag,
                 zones.ToList(),
-                systemData);
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="channelName"> The channel name. </param>
@@ -918,10 +916,10 @@ namespace Azure.ResourceManager.BotService.Models
             return new M365Extensions("M365Extensions", etag, provisioningState, location, additionalBinaryDataProperties: null);
         }
 
-        /// <summary> The ARM channel of list channel with keys operation response. </summary>
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
         /// <param name="name"> The name of the resource. </param>
         /// <param name="resourceType"> The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts". </param>
+        /// <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
         /// <param name="tags"> Resource tags. </param>
         /// <param name="location"> The geo-location where the resource lives. </param>
         /// <param name="resource"> The set of properties specific to bot channel resource. </param>
@@ -932,11 +930,10 @@ namespace Azure.ResourceManager.BotService.Models
         /// <param name="properties"> The set of properties specific to bot channel resource. </param>
         /// <param name="sku"> Gets or sets the SKU of the resource. </param>
         /// <param name="kind"> Required. Gets or sets the Kind of the resource. </param>
-        /// <param name="eTag"> Entity Tag. </param>
+        /// <param name="etag"> Entity Tag. </param>
         /// <param name="zones"> Entity zones. </param>
-        /// <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
         /// <returns> A new <see cref="Models.BotChannelGetWithKeysResult"/> instance for mocking. </returns>
-        public static BotChannelGetWithKeysResult BotChannelGetWithKeysResult(ResourceIdentifier id = default, string name = default, ResourceType resourceType = default, IDictionary<string, string> tags = default, AzureLocation location = default, BotChannelProperties resource = default, BotChannelSettings setting = default, string provisioningState = default, string entityTag = default, string changedTime = default, BotChannelProperties properties = default, BotServiceSku sku = default, BotServiceKind? kind = default, ETag? eTag = default, IEnumerable<string> zones = default, SystemData systemData = default)
+        public static BotChannelGetWithKeysResult BotChannelGetWithKeysResult(ResourceIdentifier id = default, string name = default, ResourceType resourceType = default, SystemData systemData = default, IDictionary<string, string> tags = default, AzureLocation location = default, BotChannelProperties resource = default, BotChannelSettings setting = default, string provisioningState = default, string entityTag = default, string changedTime = default, BotChannelProperties properties = default, BotServiceSku sku = default, BotServiceKind? kind = default, ETag? etag = default, IEnumerable<string> zones = default)
         {
             tags ??= new ChangeTrackingDictionary<string, string>();
             zones ??= new ChangeTrackingList<string>();
@@ -945,7 +942,7 @@ namespace Azure.ResourceManager.BotService.Models
                 id,
                 name,
                 resourceType,
-                additionalBinaryDataProperties: null,
+                systemData,
                 tags,
                 location,
                 resource,
@@ -956,9 +953,9 @@ namespace Azure.ResourceManager.BotService.Models
                 properties,
                 sku,
                 kind,
-                eTag,
+                etag,
                 zones.ToList(),
-                systemData);
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Channel settings definition. </summary>
@@ -1000,20 +997,19 @@ namespace Azure.ResourceManager.BotService.Models
             return new BotChannelRegenerateKeysContent(siteName, key, additionalBinaryDataProperties: null);
         }
 
-        /// <summary> Connection setting resource definition. </summary>
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
         /// <param name="name"> The name of the resource. </param>
         /// <param name="resourceType"> The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts". </param>
+        /// <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
+        /// <param name="tags"> Resource tags. </param>
         /// <param name="location"> The geo-location where the resource lives. </param>
         /// <param name="properties"> The resource-specific properties for this resource. </param>
-        /// <param name="tags"> Contains resource tags defined as key/value pairs. </param>
         /// <param name="sku"> Gets or sets the SKU of the resource. </param>
         /// <param name="kind"> Required. Gets or sets the Kind of the resource. </param>
-        /// <param name="eTag"> Entity Tag. </param>
+        /// <param name="etag"> Entity Tag. </param>
         /// <param name="zones"> Entity zones. </param>
-        /// <param name="systemData"> Azure Resource Manager metadata containing createdBy and modifiedBy information. </param>
         /// <returns> A new <see cref="BotService.BotConnectionSettingData"/> instance for mocking. </returns>
-        public static BotConnectionSettingData BotConnectionSettingData(ResourceIdentifier id = default, string name = default, ResourceType resourceType = default, AzureLocation location = default, BotConnectionSettingProperties properties = default, IDictionary<string, string> tags = default, BotServiceSku sku = default, BotServiceKind? kind = default, ETag? eTag = default, IEnumerable<string> zones = default, SystemData systemData = default)
+        public static BotConnectionSettingData BotConnectionSettingData(ResourceIdentifier id = default, string name = default, ResourceType resourceType = default, SystemData systemData = default, IDictionary<string, string> tags = default, AzureLocation location = default, BotConnectionSettingProperties properties = default, BotServiceSku sku = default, BotServiceKind? kind = default, ETag? etag = default, IEnumerable<string> zones = default)
         {
             tags ??= new ChangeTrackingDictionary<string, string>();
             zones ??= new ChangeTrackingList<string>();
@@ -1022,15 +1018,15 @@ namespace Azure.ResourceManager.BotService.Models
                 id,
                 name,
                 resourceType,
-                additionalBinaryDataProperties: null,
+                systemData,
+                tags,
                 location,
                 properties,
-                tags,
                 sku,
                 kind,
-                eTag,
+                etag,
                 zones.ToList(),
-                systemData);
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties for a Connection Setting Item. </summary>
@@ -1159,40 +1155,6 @@ namespace Azure.ResourceManager.BotService.Models
                 additionalBinaryDataProperties: null);
         }
 
-        /// <summary> Initializes a new instance of <see cref="BotService.BotData"/>. </summary>
-        /// <param name="id"> The id. </param>
-        /// <param name="name"> The name. </param>
-        /// <param name="resourceType"> The resourceType. </param>
-        /// <param name="systemData"> The systemData. </param>
-        /// <param name="tags"> The tags. </param>
-        /// <param name="location"> The location. </param>
-        /// <param name="properties"> The set of properties specific to bot resource. </param>
-        /// <param name="sku"> Gets or sets the SKU of the resource. </param>
-        /// <param name="kind"> Required. Gets or sets the Kind of the resource. </param>
-        /// <param name="etag"> Entity Tag. </param>
-        /// <param name="zones"> Entity zones. </param>
-        /// <returns> A new <see cref="BotService.BotData"/> instance for mocking. </returns>
-        [EditorBrowsable(EditorBrowsableState.Never)]
-        public static BotData BotData(ResourceIdentifier id, string name, ResourceType resourceType, SystemData systemData, IDictionary<string, string> tags, AzureLocation location, BotProperties properties, BotServiceSku sku, BotServiceKind? kind, ETag? etag, IEnumerable<string> zones)
-        {
-            tags ??= new ChangeTrackingDictionary<string, string>();
-            zones ??= new ChangeTrackingList<string>();
-
-            return new BotData(
-                id,
-                name,
-                resourceType,
-                additionalBinaryDataProperties: null,
-                tags,
-                location,
-                properties,
-                sku,
-                kind,
-                etag,
-                zones.ToList(),
-                systemData);
-        }
-
         /// <summary> Initializes a new instance of <see cref="Models.BotProperties"/>. </summary>
         /// <param name="displayName"> The Name of the bot. </param>
         /// <param name="description"> The description of the bot. </param>
@@ -1255,132 +1217,8 @@ namespace Azure.ResourceManager.BotService.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                default);
-        }
-
-        /// <summary> Initializes a new instance of <see cref="BotService.BotChannelData"/>. </summary>
-        /// <param name="id"> The id. </param>
-        /// <param name="name"> The name. </param>
-        /// <param name="resourceType"> The resourceType. </param>
-        /// <param name="systemData"> The systemData. </param>
-        /// <param name="tags"> The tags. </param>
-        /// <param name="location"> The location. </param>
-        /// <param name="properties">
-        /// The set of properties specific to bot channel resource
-        ///             Please note  is the base class. According to the scenario, a derived class of the base class might need to be assigned here, or this property needs to be casted to one of the possible derived classes.
-        ///             The available derived classes include , , , , , , , , , , , , , , , , ,  and .
-        /// </param>
-        /// <param name="sku"> Gets or sets the SKU of the resource. </param>
-        /// <param name="kind"> Required. Gets or sets the Kind of the resource. </param>
-        /// <param name="etag"> Entity Tag. </param>
-        /// <param name="zones"> Entity zones. </param>
-        /// <returns> A new <see cref="BotService.BotChannelData"/> instance for mocking. </returns>
-        [EditorBrowsable(EditorBrowsableState.Never)]
-        public static BotChannelData BotChannelData(ResourceIdentifier id, string name, ResourceType resourceType, SystemData systemData, IDictionary<string, string> tags, AzureLocation location, BotChannelProperties properties, BotServiceSku sku, BotServiceKind? kind, ETag? etag, IEnumerable<string> zones)
-        {
-            tags ??= new ChangeTrackingDictionary<string, string>();
-            zones ??= new ChangeTrackingList<string>();
-
-            return new BotChannelData(
-                id,
-                name,
-                resourceType,
-                additionalBinaryDataProperties: null,
-                tags,
-                location,
-                properties,
-                sku,
-                kind,
-                etag,
-                zones.ToList(),
-                systemData);
-        }
-
-        /// <summary> Initializes a new instance of <see cref="Models.BotChannelGetWithKeysResult"/>. </summary>
-        /// <param name="id"> The id. </param>
-        /// <param name="name"> The name. </param>
-        /// <param name="resourceType"> The resourceType. </param>
-        /// <param name="systemData"> The systemData. </param>
-        /// <param name="tags"> The tags. </param>
-        /// <param name="location"> The location. </param>
-        /// <param name="resource">
-        /// The set of properties specific to bot channel resource
-        ///             Please note  is the base class. According to the scenario, a derived class of the base class might need to be assigned here, or this property needs to be casted to one of the possible derived classes.
-        ///             The available derived classes include , , , , , , , , , , , , , , , , ,  and .
-        /// </param>
-        /// <param name="setting"> Channel settings. </param>
-        /// <param name="provisioningState"> Provisioning state of the resource. </param>
-        /// <param name="entityTag"> Entity tag of the resource. </param>
-        /// <param name="changedTime"> Changed time of the resource. </param>
-        /// <param name="properties">
-        /// The set of properties specific to bot channel resource
-        ///             Please note  is the base class. According to the scenario, a derived class of the base class might need to be assigned here, or this property needs to be casted to one of the possible derived classes.
-        ///             The available derived classes include , , , , , , , , , , , , , , , , ,  and .
-        /// </param>
-        /// <param name="sku"> Gets or sets the SKU of the resource. </param>
-        /// <param name="kind"> Required. Gets or sets the Kind of the resource. </param>
-        /// <param name="etag"> Entity Tag. </param>
-        /// <param name="zones"> Entity zones. </param>
-        /// <returns> A new <see cref="Models.BotChannelGetWithKeysResult"/> instance for mocking. </returns>
-        [EditorBrowsable(EditorBrowsableState.Never)]
-        public static BotChannelGetWithKeysResult BotChannelGetWithKeysResult(ResourceIdentifier id, string name, ResourceType resourceType, SystemData systemData, IDictionary<string, string> tags, AzureLocation location, BotChannelProperties resource, BotChannelSettings setting, string provisioningState, string entityTag, string changedTime, BotChannelProperties properties, BotServiceSku sku, BotServiceKind? kind, ETag? etag, IEnumerable<string> zones)
-        {
-            tags ??= new ChangeTrackingDictionary<string, string>();
-            zones ??= new ChangeTrackingList<string>();
-
-            return new BotChannelGetWithKeysResult(
-                id,
-                name,
-                resourceType,
-                additionalBinaryDataProperties: null,
-                tags,
-                location,
-                resource,
-                setting,
-                provisioningState,
-                entityTag,
-                changedTime,
-                properties,
-                sku,
-                kind,
-                etag,
-                zones.ToList(),
-                systemData);
-        }
-
-        /// <summary> Initializes a new instance of <see cref="BotService.BotConnectionSettingData"/>. </summary>
-        /// <param name="id"> The id. </param>
-        /// <param name="name"> The name. </param>
-        /// <param name="resourceType"> The resourceType. </param>
-        /// <param name="systemData"> The systemData. </param>
-        /// <param name="tags"> The tags. </param>
-        /// <param name="location"> The location. </param>
-        /// <param name="properties"> The set of properties specific to bot channel resource. </param>
-        /// <param name="sku"> Gets or sets the SKU of the resource. </param>
-        /// <param name="kind"> Required. Gets or sets the Kind of the resource. </param>
-        /// <param name="etag"> Entity Tag. </param>
-        /// <param name="zones"> Entity zones. </param>
-        /// <returns> A new <see cref="BotService.BotConnectionSettingData"/> instance for mocking. </returns>
-        [EditorBrowsable(EditorBrowsableState.Never)]
-        public static BotConnectionSettingData BotConnectionSettingData(ResourceIdentifier id, string name, ResourceType resourceType, SystemData systemData, IDictionary<string, string> tags, AzureLocation location, BotConnectionSettingProperties properties, BotServiceSku sku, BotServiceKind? kind, ETag? etag, IEnumerable<string> zones)
-        {
-            tags ??= new ChangeTrackingDictionary<string, string>();
-            zones ??= new ChangeTrackingList<string>();
-
-            return new BotConnectionSettingData(
-                id,
-                name,
-                resourceType,
-                additionalBinaryDataProperties: null,
-                location,
-                properties,
-                tags,
-                sku,
-                kind,
-                etag,
-                zones.ToList(),
-                systemData);
+                default,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Models.BotConnectionSettingProperties"/>. </summary>

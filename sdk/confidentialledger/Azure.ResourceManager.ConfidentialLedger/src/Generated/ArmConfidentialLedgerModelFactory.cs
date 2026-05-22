@@ -46,10 +46,10 @@ namespace Azure.ResourceManager.ConfidentialLedger.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Additional Confidential Ledger properties. </summary>

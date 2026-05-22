@@ -43,7 +43,6 @@ namespace Azure.ResourceManager.BillingBenefits.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
@@ -52,7 +51,8 @@ namespace Azure.ResourceManager.BillingBenefits.Models
                 eTag,
                 identity,
                 sku,
-                plan);
+                plan,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary>
@@ -416,7 +416,6 @@ namespace Azure.ResourceManager.BillingBenefits.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 displayName is null && provisioningState is null && displayProvisioningState is null && billingScopeId is null && billingProfileId is null && customerId is null && billingAccountId is null && term is null && billingPlan is null && appliedScopeType is null && userFriendlyAppliedScopeType is null && appliedScopeProperties is null && commitment is null && effectOn is null && expireOn is null && purchaseOn is null && benefitStartOn is null && extendedStatusInfo is null && isRenewed is null && utilization is null && renewSource is null && renewDestination is null && renewPurchaseProperties is null ? default : new SavingsPlanModelProperties(
                     displayName,
                     provisioningState,
@@ -442,7 +441,8 @@ namespace Azure.ResourceManager.BillingBenefits.Models
                     renewDestination,
                     new RenewProperties(renewPurchaseProperties, null),
                     null),
-                new ResourceSku(skuName, null));
+                new ResourceSku(skuName, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The BillingBenefitsExtendedStatusInfo. </summary>
@@ -512,7 +512,6 @@ namespace Azure.ResourceManager.BillingBenefits.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 status is null && productCode is null && reason is null && credit is null && startOn is null && endOn is null && policies is null && billingAccountResourceId is null && billingProfileResourceId is null && breakdown is null && provisioningState is null && systemId is null && customerId is null && resourceId is null ? default : new CreditProperties(
@@ -536,7 +535,8 @@ namespace Azure.ResourceManager.BillingBenefits.Models
                 eTag,
                 identity,
                 sku,
-                plan);
+                plan,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Credit breakdown item representing a milestone, line-item, or no-charge service. </summary>
@@ -588,7 +588,6 @@ namespace Azure.ResourceManager.BillingBenefits.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
@@ -597,7 +596,8 @@ namespace Azure.ResourceManager.BillingBenefits.Models
                 eTag,
                 identity,
                 sku,
-                plan);
+                plan,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary>
@@ -763,7 +763,6 @@ namespace Azure.ResourceManager.BillingBenefits.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 displayName is null && billingAccountResourceId is null && provisioningState is null && status is null && startOn is null && endOn is null && productCode is null && benefitResourceId is null && resourceId is null && primaryResourceId is null && systemId is null && milestones is null && primaryBillingAccountResourceId is null ? default : new ContributorConditionalCreditProperties(
                     default,
                     displayName,
@@ -779,7 +778,8 @@ namespace Azure.ResourceManager.BillingBenefits.Models
                     primaryResourceId,
                     systemId,
                     (milestones ?? new ChangeTrackingList<ContributorConditionalCreditMilestone>()).ToList(),
-                    primaryBillingAccountResourceId));
+                    primaryBillingAccountResourceId),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="commitment"> Commitment towards the benefit. </param>
@@ -836,7 +836,6 @@ namespace Azure.ResourceManager.BillingBenefits.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 displayName is null && savingsPlanOrderId is null && provisioningState is null && billingScopeId is null && term is null && billingPlan is null && appliedScopeType is null && appliedScopeProperties is null && commitment is null && isRenewed is null ? default : new SavingsPlanOrderAliasProperties(
                     displayName,
                     savingsPlanOrderId,
@@ -850,7 +849,8 @@ namespace Azure.ResourceManager.BillingBenefits.Models
                     isRenewed,
                     null),
                 new ResourceSku(skuName, null),
-                kind);
+                kind,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -879,7 +879,6 @@ namespace Azure.ResourceManager.BillingBenefits.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 displayName is null && provisioningState is null && billingScopeId is null && billingProfileId is null && customerId is null && billingAccountId is null && term is null && billingPlan is null && expireOn is null && benefitStartOn is null && planInformation is null && savingsPlans is null && extendedStatusInfo is null ? default : new SavingsPlanOrderModelProperties(
                     displayName,
                     provisioningState,
@@ -895,7 +894,8 @@ namespace Azure.ResourceManager.BillingBenefits.Models
                     (savingsPlans ?? new ChangeTrackingList<string>()).ToList(),
                     extendedStatusInfo,
                     null),
-                new ResourceSku(skuName, null));
+                new ResourceSku(skuName, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Information describing the type of billing plan for this savings plan. </summary>
@@ -1002,7 +1002,6 @@ namespace Azure.ResourceManager.BillingBenefits.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 displayName is null && reservationOrderId is null && provisioningState is null && billingScopeId is null && term is null && billingPlan is null && appliedScopeType is null && appliedScopeProperties is null && quantity is null && isRenewed is null && reservedResourceType is null && reviewOn is null && reservedResourceInstanceFlexibility is null ? default : new ReservationOrderAliasResponseProperties(
                     displayName,
                     reservationOrderId,
@@ -1019,7 +1018,8 @@ namespace Azure.ResourceManager.BillingBenefits.Models
                     new ReservationOrderAliasResponsePropertiesReservedResourceProperties(reservedResourceInstanceFlexibility, null),
                     null),
                 new ResourceSku(skuName, null),
-                location);
+                location,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -1047,7 +1047,6 @@ namespace Azure.ResourceManager.BillingBenefits.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 new ResourceSku(skuName, null),
                 location,
                 displayName is null && billingScopeId is null && term is null && billingPlan is null && appliedScopeType is null && appliedScopeProperties is null && quantity is null && isRenewed is null && reservedResourceType is null && reviewOn is null && reservedResourceInstanceFlexibility is null ? default : new ReservationOrderAliasRequestProperties(
@@ -1062,7 +1061,8 @@ namespace Azure.ResourceManager.BillingBenefits.Models
                     reservedResourceType,
                     reviewOn,
                     new ReservationOrderAliasRequestPropertiesReservedResourceProperties(reservedResourceInstanceFlexibility, null),
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="displayName"> Display name. </param>
@@ -1175,7 +1175,6 @@ namespace Azure.ResourceManager.BillingBenefits.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 status is null && sourceResourceId is null && impactedBillingPeriod is null && credit is null ? default : new CreditSourceProperties(status, sourceResourceId, impactedBillingPeriod, credit, null),
@@ -1184,7 +1183,8 @@ namespace Azure.ResourceManager.BillingBenefits.Models
                 eTag,
                 identity,
                 sku,
-                plan);
+                plan,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Credit patch request. </summary>
@@ -1228,7 +1228,6 @@ namespace Azure.ResourceManager.BillingBenefits.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 productCode is null && status is null && startOn is null && endOn is null && provisioningState is null && billingAccountResourceId is null && billingProfileResourceId is null && customerResourceId is null && systemId is null ? default : new FreeServicesProperties(
@@ -1247,7 +1246,8 @@ namespace Azure.ResourceManager.BillingBenefits.Models
                 eTag,
                 identity,
                 sku,
-                plan);
+                plan,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="endOn"> Updated expiration date and time of the free services. </param>

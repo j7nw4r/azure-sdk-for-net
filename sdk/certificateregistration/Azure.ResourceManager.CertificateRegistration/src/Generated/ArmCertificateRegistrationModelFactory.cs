@@ -56,7 +56,6 @@ namespace Azure.ResourceManager.CertificateRegistration.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 certificates is null && distinguishedName is null && domainVerificationToken is null && validityInYears is null && keySize is null && certificateProductType is null && isAutoRenew is null && provisioningState is null && status is null && signedCertificate is null && csr is null && intermediate is null && root is null && serialNumber is null && lastCertificateIssuedOn is null && expireOn is null && isPrivateKeyExternal is null && appServiceCertificateNotRenewableReasons is null && nextAutoRenewOn is null && contact is null ? default : new AppServiceCertificateOrderProperties(
@@ -81,7 +80,8 @@ namespace Azure.ResourceManager.CertificateRegistration.Models
                     nextAutoRenewOn,
                     contact,
                     null),
-                kind);
+                kind,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Key Vault container for a certificate that is purchased through Azure. </summary>
@@ -164,7 +164,6 @@ namespace Azure.ResourceManager.CertificateRegistration.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 certificates is null && distinguishedName is null && domainVerificationToken is null && validityInYears is null && keySize is null && certificateProductType is null && isAutoRenew is null && provisioningState is null && status is null && signedCertificate is null && csr is null && intermediate is null && root is null && serialNumber is null && lastCertificateIssuedOn is null && expireOn is null && isPrivateKeyExternal is null && appServiceCertificateNotRenewableReasons is null && nextAutoRenewOn is null && contact is null ? default : new AppServiceCertificateOrderPatchResourceProperties(
                     certificates,
                     distinguishedName,
@@ -187,7 +186,8 @@ namespace Azure.ResourceManager.CertificateRegistration.Models
                     nextAutoRenewOn,
                     contact,
                     null),
-                kind);
+                kind,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -207,9 +207,9 @@ namespace Azure.ResourceManager.CertificateRegistration.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 keySize is null && delayExistingRevokeInHours is null && csr is null && isPrivateKeyExternal is null ? default : new ReissueCertificateOrderRequestProperties(keySize, delayExistingRevokeInHours, csr, isPrivateKeyExternal, null),
-                kind);
+                kind,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -228,9 +228,9 @@ namespace Azure.ResourceManager.CertificateRegistration.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 keySize is null && csr is null && isPrivateKeyExternal is null ? default : new RenewCertificateOrderRequestProperties(keySize, csr, isPrivateKeyExternal, null),
-                kind);
+                kind,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Site seal. </summary>
@@ -279,11 +279,11 @@ namespace Azure.ResourceManager.CertificateRegistration.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 keyVaultId is null && keyVaultSecretName is null && provisioningState is null ? default : new AppServiceCertificateProperties(keyVaultId, keyVaultSecretName, provisioningState, null),
-                kind);
+                kind,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -302,9 +302,9 @@ namespace Azure.ResourceManager.CertificateRegistration.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 keyVaultId is null && keyVaultSecretName is null && provisioningState is null ? default : new AppServiceCertificateProperties(keyVaultId, keyVaultSecretName, provisioningState, null),
-                kind);
+                kind,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -325,7 +325,6 @@ namespace Azure.ResourceManager.CertificateRegistration.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 metadata is null && dataset is null && status is null && dataProvidersMetadata is null && suggestedUtterances is null ? default : new DetectorResponseProperties(
                     metadata,
                     (dataset ?? new ChangeTrackingList<DiagnosticDataset>()).ToList(),
@@ -333,7 +332,8 @@ namespace Azure.ResourceManager.CertificateRegistration.Models
                     (dataProvidersMetadata ?? new ChangeTrackingList<DataProviderMetadata>()).ToList(),
                     suggestedUtterances,
                     null),
-                kind);
+                kind,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Definition of Detector. </summary>

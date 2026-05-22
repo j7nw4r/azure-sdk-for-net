@@ -35,8 +35,8 @@ namespace Azure.ResourceManager.Avs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary>
@@ -111,8 +111,8 @@ namespace Azure.ResourceManager.Avs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                provisioningState is null && expressRouteAuthorizationId is null && expressRouteAuthorizationKey is null && expressRouteId is null ? default : new ExpressRouteAuthorizationProperties(provisioningState, expressRouteAuthorizationId, expressRouteAuthorizationKey, expressRouteId, null));
+                provisioningState is null && expressRouteAuthorizationId is null && expressRouteAuthorizationKey is null && expressRouteId is null ? default : new ExpressRouteAuthorizationProperties(provisioningState, expressRouteAuthorizationId, expressRouteAuthorizationKey, expressRouteId, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -130,8 +130,8 @@ namespace Azure.ResourceManager.Avs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                provisioningState is null && status is null && linkedCloud is null ? default : new CloudLinkProperties(provisioningState, status, linkedCloud, null));
+                provisioningState is null && status is null && linkedCloud is null ? default : new CloudLinkProperties(provisioningState, status, linkedCloud, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> List of all zones and associated hosts for a cluster. </summary>
@@ -199,7 +199,6 @@ namespace Azure.ResourceManager.Avs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 provisioningState is null && addressPrefix is null && authorizationKey is null && circuitConnectionStatus is null && peerExpressRouteCircuit is null && expressRouteId is null ? default : new GlobalReachConnectionProperties(
                     provisioningState,
                     addressPrefix,
@@ -207,7 +206,8 @@ namespace Azure.ResourceManager.Avs.Models
                     circuitConnectionStatus,
                     peerExpressRouteCircuit,
                     expressRouteId,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -225,8 +225,8 @@ namespace Azure.ResourceManager.Avs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                provisioningState is null && activationKey is null && status is null ? default : new HcxEnterpriseSiteProperties(provisioningState, activationKey, status, null));
+                provisioningState is null && activationKey is null && status is null ? default : new HcxEnterpriseSiteProperties(provisioningState, activationKey, status, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> A host resource. </summary>
@@ -247,10 +247,10 @@ namespace Azure.ResourceManager.Avs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
                 zones.ToList(),
-                sku);
+                sku,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary>
@@ -334,8 +334,8 @@ namespace Azure.ResourceManager.Avs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                provisioningState is null && networkBlock is null ? default : new IscsiPathProperties(provisioningState, networkBlock, null));
+                provisioningState is null && networkBlock is null ? default : new IscsiPathProperties(provisioningState, networkBlock, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> A license resource. </summary>
@@ -352,8 +352,8 @@ namespace Azure.ResourceManager.Avs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary>
@@ -427,8 +427,8 @@ namespace Azure.ResourceManager.Avs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> properties of a maintenance. </summary>
@@ -654,8 +654,8 @@ namespace Azure.ResourceManager.Avs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary>
@@ -779,7 +779,6 @@ namespace Azure.ResourceManager.Avs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 managementCluster is null && internet is null && identitySources is null && availability is null && encryption is null && extendedNetworkBlocks is null && provisioningState is null && circuit is null && endpoints is null && networkBlock is null && managementNetwork is null && provisioningNetwork is null && vMotionNetwork is null && vCenterPassword is null && nsxtPassword is null && vCenterCertificateThumbprint is null && nsxtCertificateThumbprint is null && externalCloudLinks is null && secondaryCircuit is null && nsxPublicIPQuotaRaised is null && virtualNetworkId is null && dnsZoneType is null && vcfLicense is null ? default : new PrivateCloudProperties(
@@ -809,7 +808,8 @@ namespace Azure.ResourceManager.Avs.Models
                     null),
                 sku,
                 identity,
-                zones.ToList());
+                zones.ToList(),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> An Encryption Key. </summary>
@@ -956,8 +956,8 @@ namespace Azure.ResourceManager.Avs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The properties of a provisioned network. </summary>
@@ -984,8 +984,8 @@ namespace Azure.ResourceManager.Avs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties of a Pure Storage Policy Based Management policy. </summary>
@@ -1015,14 +1015,14 @@ namespace Azure.ResourceManager.Avs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 provisioningState is null && description is null && timeout is null && audience is null && parameters is null ? default : new ScriptCmdletProperties(
                     provisioningState,
                     description,
                     timeout,
                     audience,
                     (parameters ?? new ChangeTrackingList<ScriptParameter>()).ToList(),
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> An parameter that the script will accept. </summary>
@@ -1082,7 +1082,6 @@ namespace Azure.ResourceManager.Avs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 scriptCmdletId is null && parameters is null && hiddenParameters is null && failureReason is null && timeout is null && retention is null && submittedOn is null && startedOn is null && finishedOn is null && provisioningState is null && output is null && namedOutputs is null && information is null && warnings is null && errors is null ? default : new ScriptExecutionProperties(
                     scriptCmdletId,
                     (parameters ?? new ChangeTrackingList<ScriptExecutionParameterDetails>()).ToList(),
@@ -1099,7 +1098,8 @@ namespace Azure.ResourceManager.Avs.Models
                     (information ?? new ChangeTrackingList<string>()).ToList(),
                     (warnings ?? new ChangeTrackingList<string>()).ToList(),
                     (errors ?? new ChangeTrackingList<string>()).ToList(),
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -1119,14 +1119,14 @@ namespace Azure.ResourceManager.Avs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 provisioningState is null && description is null && version is null && company is null && uri is null ? default : new ScriptPackageProperties(
                     provisioningState,
                     description,
                     version,
                     company,
                     uri,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> A SKU for a resource. </summary>
@@ -1236,14 +1236,14 @@ namespace Azure.ResourceManager.Avs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 provisioningState is null && displayName is null && moRefId is null && folderPath is null && restrictMovement is null ? default : new VirtualMachineProperties(
                     provisioningState,
                     displayName,
                     moRefId,
                     folderPath,
                     restrictMovement,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -1259,8 +1259,8 @@ namespace Azure.ResourceManager.Avs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                provisioningState is null ? default : new WorkloadNetworkProperties(provisioningState, null));
+                provisioningState is null ? default : new WorkloadNetworkProperties(provisioningState, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> NSX DHCP. </summary>
@@ -1277,8 +1277,8 @@ namespace Azure.ResourceManager.Avs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary>
@@ -1370,7 +1370,6 @@ namespace Azure.ResourceManager.Avs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 displayName is null && dnsServiceIP is null && defaultDnsZone is null && fqdnZones is null && logLevel is null && status is null && provisioningState is null && revision is null ? default : new WorkloadNetworkDnsServiceProperties(
                     displayName,
                     dnsServiceIP,
@@ -1380,7 +1379,8 @@ namespace Azure.ResourceManager.Avs.Models
                     status,
                     provisioningState,
                     revision,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -1402,7 +1402,6 @@ namespace Azure.ResourceManager.Avs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 displayName is null && domain is null && dnsServerIPs is null && sourceIP is null && dnsServices is null && provisioningState is null && revision is null ? default : new WorkloadNetworkDnsZoneProperties(
                     displayName,
                     (domain ?? new ChangeTrackingList<string>()).ToList(),
@@ -1411,7 +1410,8 @@ namespace Azure.ResourceManager.Avs.Models
                     dnsServices,
                     provisioningState,
                     revision,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -1429,8 +1429,8 @@ namespace Azure.ResourceManager.Avs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                provisioningState is null && displayName is null && path is null ? default : new WorkloadNetworkGatewayProperties(provisioningState, displayName, path, null));
+                provisioningState is null && displayName is null && path is null ? default : new WorkloadNetworkGatewayProperties(provisioningState, displayName, path, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -1452,7 +1452,6 @@ namespace Azure.ResourceManager.Avs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 displayName is null && direction is null && source is null && destination is null && status is null && provisioningState is null && revision is null ? default : new WorkloadNetworkPortMirroringProperties(
                     displayName,
                     direction,
@@ -1461,7 +1460,8 @@ namespace Azure.ResourceManager.Avs.Models
                     status,
                     provisioningState,
                     revision,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -1480,8 +1480,8 @@ namespace Azure.ResourceManager.Avs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                displayName is null && numberOfPublicIPs is null && publicIPBlock is null && provisioningState is null ? default : new WorkloadNetworkPublicIPProperties(displayName, numberOfPublicIPs, publicIPBlock, provisioningState, null));
+                displayName is null && numberOfPublicIPs is null && publicIPBlock is null && provisioningState is null ? default : new WorkloadNetworkPublicIPProperties(displayName, numberOfPublicIPs, publicIPBlock, provisioningState, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -1503,7 +1503,6 @@ namespace Azure.ResourceManager.Avs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 displayName is null && connectedGateway is null && subnet is null && portVif is null && status is null && provisioningState is null && revision is null ? default : new WorkloadNetworkSegmentProperties(
                     displayName,
                     connectedGateway,
@@ -1512,7 +1511,8 @@ namespace Azure.ResourceManager.Avs.Models
                     status,
                     provisioningState,
                     revision,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Subnet configuration for segment. </summary>
@@ -1549,8 +1549,8 @@ namespace Azure.ResourceManager.Avs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                provisioningState is null && displayName is null && vmType is null ? default : new WorkloadNetworkVirtualMachineProperties(provisioningState, displayName, vmType, null));
+                provisioningState is null && displayName is null && vmType is null ? default : new WorkloadNetworkVirtualMachineProperties(provisioningState, displayName, vmType, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Avs.AvsPrivateCloudClusterData"/>. </summary>
@@ -1574,7 +1574,6 @@ namespace Azure.ResourceManager.Avs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 clusterSize is null && provisioningState is null && clusterId is null && hosts is null && vsanDatastoreName is null ? default : new ClusterProperties(
                     clusterSize,
                     provisioningState,
@@ -1582,7 +1581,8 @@ namespace Azure.ResourceManager.Avs.Models
                     (hosts ?? new ChangeTrackingList<string>()).ToList(),
                     vsanDatastoreName,
                     default),
-                sku);
+                sku,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Avs.AvsPrivateCloudData"/>. </summary>
@@ -1658,8 +1658,8 @@ namespace Azure.ResourceManager.Avs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                default);
+                default,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Avs.AvsPrivateCloudData"/>. </summary>

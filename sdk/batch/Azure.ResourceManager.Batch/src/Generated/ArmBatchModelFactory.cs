@@ -52,10 +52,10 @@ namespace Azure.ResourceManager.Batch.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 provisioningState is null && groupIds is null && connectionState is null && privateEndpointId is null ? default : new PrivateEndpointConnectionProperties(provisioningState, new PrivateEndpoint(privateEndpointId, null), (groupIds ?? new ChangeTrackingList<string>()).ToList(), connectionState, null),
                 eTag,
-                tags);
+                tags,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The private link service connection state of the private endpoint connection. </summary>
@@ -196,7 +196,6 @@ namespace Azure.ResourceManager.Batch.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 displayName is null && lastModifiedOn is null && createdOn is null && provisioningState is null && provisioningStateTransitOn is null && allocationState is null && allocationStateTransitionOn is null && vmSize is null && currentDedicatedNodes is null && currentLowPriorityNodes is null && scaleSettings is null && autoScaleRun is null && interNodeCommunication is null && networkConfiguration is null && taskSlotsPerNode is null && taskSchedulingPolicy is null && userAccounts is null && metadata is null && startTask is null && applicationPackages is null && resizeOperationStatus is null && mountConfiguration is null && upgradePolicy is null && deploymentVmConfiguration is null ? default : new PoolProperties(
                     displayName,
                     lastModifiedOn,
@@ -225,7 +224,8 @@ namespace Azure.ResourceManager.Batch.Models
                     null),
                 identity,
                 eTag,
-                tags);
+                tags,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="imageReference"> A reference to an Azure Virtual Machines Marketplace image or the Azure Image resource of a custom Virtual Machine. To get the list of all imageReferences verified by Azure Batch, see the 'List supported node agent SKUs' operation. </param>
@@ -459,8 +459,8 @@ namespace Azure.ResourceManager.Batch.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Network security configuration properties. </summary>
@@ -649,12 +649,12 @@ namespace Azure.ResourceManager.Batch.Models
                 id,
                 name,
                 resourceType,
-                additionalBinaryDataProperties: null,
+                systemData,
                 default,
                 identity,
                 tags,
-                systemData,
-                location);
+                location,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Models.BatchIPRule"/>. </summary>
@@ -689,10 +689,10 @@ namespace Azure.ResourceManager.Batch.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 provisioningState is null && privateEndpointId is null && groupIds is null && connectionState is null ? default : new PrivateEndpointConnectionProperties(provisioningState, new PrivateEndpoint(privateEndpointId, default), (groupIds ?? new ChangeTrackingList<string>()).ToList(), connectionState, default),
                 etag,
-                tags);
+                tags,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Models.BatchAccountCreateOrUpdateContent"/>. </summary>
@@ -735,10 +735,10 @@ namespace Azure.ResourceManager.Batch.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 default,
                 default,
-                tags);
+                tags,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Batch.BatchApplicationPackageData"/>. </summary>
@@ -764,7 +764,6 @@ namespace Azure.ResourceManager.Batch.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 state is null && format is null && storageUri is null && storageUriExpireOn is null && lastActivatedOn is null ? default : new ApplicationPackageProperties(
                     state,
                     format,
@@ -773,7 +772,8 @@ namespace Azure.ResourceManager.Batch.Models
                     lastActivatedOn,
                     default),
                 etag,
-                tags);
+                tags,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Batch.BatchAccountDetectorData"/>. </summary>
@@ -794,10 +794,10 @@ namespace Azure.ResourceManager.Batch.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 default,
                 default,
-                tags);
+                tags,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Models.BatchAccessRule"/>. </summary>
@@ -853,7 +853,6 @@ namespace Azure.ResourceManager.Batch.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 displayName is null && lastModifiedOn is null && createdOn is null && provisioningState is null && provisioningStateTransitOn is null && allocationState is null && allocationStateTransitionOn is null && vmSize is null && deploymentVmConfiguration is null && currentDedicatedNodes is null && currentLowPriorityNodes is null && scaleSettings is null && autoScaleRun is null && interNodeCommunication is null && networkConfiguration is null && taskSlotsPerNode is null && taskSchedulingPolicy is null && userAccounts is null && metadata is null && startTask is null && applicationPackages is null && resizeOperationStatus is null && mountConfiguration is null && upgradePolicy is null ? default : new PoolProperties(
                     displayName,
                     lastModifiedOn,
@@ -882,7 +881,8 @@ namespace Azure.ResourceManager.Batch.Models
                     default),
                 identity,
                 etag,
-                tags);
+                tags,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Batch.BatchPrivateLinkResourceData"/>. </summary>
@@ -907,10 +907,10 @@ namespace Azure.ResourceManager.Batch.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 default,
                 default,
-                tags);
+                tags,
+                additionalBinaryDataProperties: null);
         }
     }
 }
