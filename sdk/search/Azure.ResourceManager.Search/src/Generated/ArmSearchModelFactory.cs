@@ -112,8 +112,8 @@ namespace Azure.ResourceManager.Search.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Describes a shared private link resource managed by the Azure AI Search service. </summary>
@@ -130,8 +130,8 @@ namespace Azure.ResourceManager.Search.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Network security perimeter (NSP) configuration resource. </summary>
@@ -148,8 +148,8 @@ namespace Azure.ResourceManager.Search.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Network security configuration properties. </summary>
@@ -309,7 +309,6 @@ namespace Azure.ResourceManager.Search.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 replicaCount is null && partitionCount is null && endpoint is null && hostingMode is null && computeType is null && publicInternetAccess is null && status is null && statusDetails is null && provisioningState is null && networkRuleSet is null && dataExfiltrationProtections is null && encryptionWithCmk is null && isLocalAuthDisabled is null && authOptions is null && semanticSearch is null && knowledgeRetrieval is null && privateEndpointConnections is null && sharedPrivateLinkResources is null && eTag is null && isUpgradeAvailable is null && serviceUpgradedOn is null ? default : new SearchServiceProperties(
@@ -336,7 +335,8 @@ namespace Azure.ResourceManager.Search.Models
                     serviceUpgradedOn,
                     null),
                 searchSkuName is null ? default : new SearchSku(searchSkuName, null),
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Network specific rules that determine how the Azure AI Search service may be reached. </summary>
@@ -399,7 +399,6 @@ namespace Azure.ResourceManager.Search.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 replicaCount is null && partitionCount is null && endpoint is null && hostingMode is null && computeType is null && publicInternetAccess is null && status is null && statusDetails is null && provisioningState is null && networkRuleSet is null && dataExfiltrationProtections is null && encryptionWithCmk is null && isLocalAuthDisabled is null && authOptions is null && semanticSearch is null && knowledgeRetrieval is null && privateEndpointConnections is null && sharedPrivateLinkResources is null && eTag is null && isUpgradeAvailable is null && serviceUpgradedOn is null ? default : new SearchServiceProperties(
@@ -426,7 +425,8 @@ namespace Azure.ResourceManager.Search.Models
                     serviceUpgradedOn,
                     null),
                 searchSkuName is null ? default : new SearchSku(searchSkuName, null),
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Response containing the primary and secondary admin API keys for a given Azure AI Search service. </summary>
@@ -461,8 +461,8 @@ namespace Azure.ResourceManager.Search.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Describes the properties of a supported private link resource for the Azure AI Search service. For a given API version, this represents the 'supported' groupIds when creating a shared private link resource. </summary>
@@ -537,7 +537,6 @@ namespace Azure.ResourceManager.Search.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 replicaCount is null && partitionCount is null && endpoint is null && hostingMode is null && computeType is null && status is null && statusDetails is null && provisioningState is null && ipRules is null && dataExfiltrationProtections is null && encryptionWithCmk is null && isLocalAuthDisabled is null && authOptions is null && semanticSearch is null && privateEndpointConnections is null && sharedPrivateLinkResources is null ? default : new SearchServiceProperties(
@@ -564,7 +563,8 @@ namespace Azure.ResourceManager.Search.Models
                     default,
                     default),
                 default,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Search.SearchServiceData"/>. </summary>
@@ -601,7 +601,6 @@ namespace Azure.ResourceManager.Search.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 replicaCount is null && partitionCount is null && hostingMode is null && status is null && statusDetails is null && provisioningState is null && ipRules is null && encryptionWithCmk is null && isLocalAuthDisabled is null && authOptions is null && semanticSearch is null && privateEndpointConnections is null && sharedPrivateLinkResources is null ? default : new SearchServiceProperties(
@@ -628,7 +627,8 @@ namespace Azure.ResourceManager.Search.Models
                     default,
                     default),
                 default,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Models.SearchServicePatch"/>. </summary>
@@ -670,7 +670,6 @@ namespace Azure.ResourceManager.Search.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 replicaCount is null && partitionCount is null && endpoint is null && hostingMode is null && computeType is null && status is null && statusDetails is null && provisioningState is null && ipRules is null && dataExfiltrationProtections is null && encryptionWithCmk is null && isLocalAuthDisabled is null && authOptions is null && semanticSearch is null && privateEndpointConnections is null && sharedPrivateLinkResources is null ? default : new SearchServiceProperties(
@@ -697,7 +696,8 @@ namespace Azure.ResourceManager.Search.Models
                     default,
                     default),
                 default,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Models.SearchServicePatch"/>. </summary>
@@ -734,7 +734,6 @@ namespace Azure.ResourceManager.Search.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 replicaCount is null && partitionCount is null && hostingMode is null && status is null && statusDetails is null && provisioningState is null && ipRules is null && encryptionWithCmk is null && isLocalAuthDisabled is null && authOptions is null && semanticSearch is null && privateEndpointConnections is null && sharedPrivateLinkResources is null ? default : new SearchServiceProperties(
@@ -761,7 +760,8 @@ namespace Azure.ResourceManager.Search.Models
                     default,
                     default),
                 default,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Search.SearchServiceData"/>. </summary>

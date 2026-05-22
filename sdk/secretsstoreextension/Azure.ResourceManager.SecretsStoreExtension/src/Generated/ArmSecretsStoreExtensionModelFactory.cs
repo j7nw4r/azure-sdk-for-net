@@ -39,11 +39,11 @@ namespace Azure.ResourceManager.SecretsStoreExtension.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The properties of the AzureKeyVaultSecretProviderClass. </summary>
@@ -94,11 +94,11 @@ namespace Azure.ResourceManager.SecretsStoreExtension.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The properties of the SecretSync instance. </summary>

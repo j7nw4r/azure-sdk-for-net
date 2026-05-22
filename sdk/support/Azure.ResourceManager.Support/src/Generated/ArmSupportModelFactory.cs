@@ -34,8 +34,8 @@ namespace Azure.ResourceManager.Support.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                displayName is null && resourceTypes is null ? default : new ServiceProperties(displayName, (resourceTypes ?? new ChangeTrackingList<string>()).ToList(), null));
+                displayName is null && resourceTypes is null ? default : new ServiceProperties(displayName, (resourceTypes ?? new ChangeTrackingList<string>()).ToList(), null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Output of the service classification API. </summary>
@@ -126,8 +126,8 @@ namespace Azure.ResourceManager.Support.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                displayName is null && secondaryConsentEnabled is null ? default : new ProblemClassificationProperties(displayName, (secondaryConsentEnabled ?? new ChangeTrackingList<SecondaryConsentEnabled>()).ToList(), null));
+                displayName is null && secondaryConsentEnabled is null ? default : new ProblemClassificationProperties(displayName, (secondaryConsentEnabled ?? new ChangeTrackingList<SecondaryConsentEnabled>()).ToList(), null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -148,7 +148,6 @@ namespace Azure.ResourceManager.Support.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 new CommunicationDetailsProperties(
                     communicationType,
                     communicationDirection,
@@ -156,7 +155,8 @@ namespace Azure.ResourceManager.Support.Models
                     subject,
                     body,
                     createdOn,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Input of CheckNameAvailability API. </summary>
@@ -219,7 +219,6 @@ namespace Azure.ResourceManager.Support.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 new SupportTicketDetailsProperties(
                     supportTicketId,
                     description,
@@ -250,7 +249,8 @@ namespace Azure.ResourceManager.Support.Models
                     (secondaryConsent ?? new ChangeTrackingList<SecondaryConsent>()).ToList(),
                     directConnectEscalation,
                     communityForumPost,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Contact information associated with the support ticket. </summary>
@@ -387,8 +387,8 @@ namespace Azure.ResourceManager.Support.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                messages is null && startOn is null ? default : new ChatTranscriptDetailsProperties((messages ?? new ChangeTrackingList<ChatTranscriptMessageProperties>()).ToList(), startOn, null));
+                messages is null && startOn is null ? default : new ChatTranscriptDetailsProperties((messages ?? new ChangeTrackingList<ChatTranscriptMessageProperties>()).ToList(), startOn, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Describes the properties of a Message Details resource. </summary>
@@ -423,8 +423,8 @@ namespace Azure.ResourceManager.Support.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                createdOn is null && expireOn is null ? default : new FileWorkspaceDetailsProperties(createdOn, expireOn, null));
+                createdOn is null && expireOn is null ? default : new FileWorkspaceDetailsProperties(createdOn, expireOn, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -443,8 +443,8 @@ namespace Azure.ResourceManager.Support.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                createdOn is null && chunkSize is null && fileSize is null && numberOfChunks is null ? default : new FileDetailsProperties(createdOn, chunkSize, fileSize, numberOfChunks, null));
+                createdOn is null && chunkSize is null && fileSize is null && numberOfChunks is null ? default : new FileDetailsProperties(createdOn, chunkSize, fileSize, numberOfChunks, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Models.SecondaryConsentEnabled"/>. </summary>

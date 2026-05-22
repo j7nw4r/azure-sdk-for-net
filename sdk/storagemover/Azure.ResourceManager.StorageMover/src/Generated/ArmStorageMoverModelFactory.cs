@@ -38,10 +38,10 @@ namespace Azure.ResourceManager.StorageMover.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                description is null && provisioningState is null ? default : new StorageMoverProperties(description, provisioningState, null));
+                description is null && provisioningState is null ? default : new StorageMoverProperties(description, provisioningState, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="description"> A description for the Storage Mover. </param>
@@ -80,7 +80,6 @@ namespace Azure.ResourceManager.StorageMover.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 new AgentProperties(
                     description,
                     agentVersion,
@@ -96,7 +95,8 @@ namespace Azure.ResourceManager.StorageMover.Models
                     new UploadLimitSchedule((uploadLimitScheduleWeeklyRecurrences ?? new ChangeTrackingList<UploadLimitWeeklyRecurrence>()).ToList(), null),
                     errorDetails,
                     provisioningState,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The weekly recurrence of the WAN-link upload limit schedule. The start time must be earlier in the day than the end time. The recurrence must not span across multiple days. </summary>
@@ -148,9 +148,9 @@ namespace Azure.ResourceManager.StorageMover.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary>
@@ -322,8 +322,8 @@ namespace Azure.ResourceManager.StorageMover.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                description is null && provisioningState is null ? default : new ProjectProperties(description, provisioningState, null));
+                description is null && provisioningState is null ? default : new ProjectProperties(description, provisioningState, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="sourceEndpointProperties"> The properties of the cloud source endpoint to migrate. </param>
@@ -404,8 +404,8 @@ namespace Azure.ResourceManager.StorageMover.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties of the Connection resource. </summary>
@@ -475,7 +475,6 @@ namespace Azure.ResourceManager.StorageMover.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 status is null && scanStatus is null && agentName is null && agentResourceId is null && executionStartOn is null && executionEndOn is null && triggerType is null && scheduledExecutionOn is null && lastStatusUpdate is null && itemsScanned is null && itemsExcluded is null && itemsUnsupported is null && itemsNoTransferNeeded is null && itemsFailed is null && itemsTransferred is null && bytesScanned is null && bytesExcluded is null && bytesUnsupported is null && bytesNoTransferNeeded is null && bytesFailed is null && bytesTransferred is null && sourceName is null && sourceResourceId is null && sourceProperties is null && targetName is null && targetResourceId is null && targetProperties is null && jobDefinitionProperties is null && error is null && warnings is null && provisioningState is null ? default : new JobRunProperties(
                     status,
                     scanStatus,
@@ -508,7 +507,8 @@ namespace Azure.ResourceManager.StorageMover.Models
                     error,
                     (warnings ?? new ChangeTrackingList<JobRunWarning>()).ToList(),
                     provisioningState,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Error type. </summary>

@@ -39,10 +39,10 @@ namespace Azure.ResourceManager.StandbyPool.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Details of the StandbyVirtualMachinePool. </summary>
@@ -81,8 +81,8 @@ namespace Azure.ResourceManager.StandbyPool.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Details of the StandbyVirtualMachine. </summary>
@@ -108,8 +108,8 @@ namespace Azure.ResourceManager.StandbyPool.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Contains information about a standby pool as last known by the StandbyPool resource provider. </summary>
@@ -170,10 +170,10 @@ namespace Azure.ResourceManager.StandbyPool.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Details of the StandbyContainerGroupPool. </summary>
@@ -237,8 +237,8 @@ namespace Azure.ResourceManager.StandbyPool.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Contains information about a standby pool as last known by the StandbyPool resource provider. </summary>

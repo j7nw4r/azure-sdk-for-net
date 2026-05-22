@@ -76,7 +76,6 @@ namespace Azure.ResourceManager.ServiceFabric.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 addOnFeatures is null && availableClusterVersions is null && azureActiveDirectory is null && certificate is null && certificateCommonNames is null && clientCertificateCommonNames is null && clientCertificateThumbprints is null && clusterCodeVersion is null && clusterEndpoint is null && clusterId is null && clusterState is null && diagnosticsStorageAccountConfig is null && isEventStoreServiceEnabled is null && fabricSettings is null && managementEndpoint is null && nodeTypes is null && provisioningState is null && reliabilityLevel is null && reverseProxyCertificate is null && reverseProxyCertificateCommonNames is null && upgradeDescription is null && upgradeMode is null && vmImage is null && serviceFabricZonalUpgradeMode is null && vmssZonalUpgradeMode is null && isInfrastructureServiceManagerEnabled is null && upgradeWave is null && upgradePauseStartOn is null && upgradePauseEndOn is null && isWaveUpgradePaused is null && notifications is null && isHttpGatewayExclusiveAuthModeEnabled is null && maxUnusedVersionsToKeep is null ? default : new ClusterProperties(
@@ -114,7 +113,8 @@ namespace Azure.ResourceManager.ServiceFabric.Models
                     (notifications ?? new ChangeTrackingList<ClusterNotification>()).ToList(),
                     isHttpGatewayExclusiveAuthModeEnabled,
                     null),
-                eTag);
+                eTag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The detail of the Service Fabric runtime version result. </summary>
@@ -379,8 +379,8 @@ namespace Azure.ResourceManager.ServiceFabric.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                vmSize is null ? default : new VMSize(vmSize, null));
+                vmSize is null ? default : new VMSize(vmSize, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -401,11 +401,11 @@ namespace Azure.ResourceManager.ServiceFabric.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 provisioningState is null ? default : new ApplicationTypeResourceProperties(provisioningState, null),
-                etag);
+                etag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -428,11 +428,11 @@ namespace Azure.ResourceManager.ServiceFabric.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 provisioningState is null && appPackageUri is null && defaultParameterList is null ? default : new ApplicationTypeVersionResourceProperties(provisioningState, appPackageUri, defaultParameterList, null),
-                etag);
+                etag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -463,7 +463,6 @@ namespace Azure.ResourceManager.ServiceFabric.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 typeVersion is null && parameters is null && upgradePolicy is null && minimumNodes is null && maximumNodes is null && removeApplicationCapacity is null && metrics is null && managedIdentities is null && provisioningState is null && typeName is null ? default : new ApplicationResourceProperties(
@@ -479,7 +478,8 @@ namespace Azure.ResourceManager.ServiceFabric.Models
                     provisioningState,
                     typeName),
                 eTag,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Defines a health policy used to evaluate the health of an application or one of its children entities. </summary>
@@ -524,7 +524,6 @@ namespace Azure.ResourceManager.ServiceFabric.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 typeVersion is null && parameters is null && upgradePolicy is null && minimumNodes is null && maximumNodes is null && removeApplicationCapacity is null && metrics is null && managedIdentities is null ? default : new ApplicationResourceUpdateProperties(
@@ -536,7 +535,8 @@ namespace Azure.ResourceManager.ServiceFabric.Models
                     removeApplicationCapacity,
                     (metrics ?? new ChangeTrackingList<ApplicationMetricDescription>()).ToList(),
                     (managedIdentities ?? new ChangeTrackingList<ApplicationUserAssignedIdentity>()).ToList(),
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The service resource. </summary>
@@ -558,11 +558,11 @@ namespace Azure.ResourceManager.ServiceFabric.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                eTag);
+                eTag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary>
@@ -751,10 +751,10 @@ namespace Azure.ResourceManager.ServiceFabric.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary>
@@ -859,8 +859,8 @@ namespace Azure.ResourceManager.ServiceFabric.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                codeVersion is null && supportExpireOn is null && environment is null ? default : new ClusterVersionDetails(codeVersion, supportExpireOn, environment, null));
+                codeVersion is null && supportExpireOn is null && environment is null ? default : new ClusterVersionDetails(codeVersion, supportExpireOn, environment, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of ServiceFabricClusterData. </summary>
@@ -935,7 +935,6 @@ namespace Azure.ResourceManager.ServiceFabric.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 addOnFeatures is null && availableClusterVersions is null && azureActiveDirectory is null && certificate is null && certificateCommonNames is null && clientCertificateCommonNames is null && clientCertificateThumbprints is null && clusterCodeVersion is null && clusterEndpoint is null && clusterId is null && clusterState is null && diagnosticsStorageAccountConfig is null && isEventStoreServiceEnabled is null && fabricSettings is null && managementEndpoint is null && nodeTypes is null && provisioningState is null && reliabilityLevel is null && reverseProxyCertificate is null && reverseProxyCertificateCommonNames is null && upgradeDescription is null && upgradeMode is null && maxUnusedVersionsToKeep is null && vmImage is null && serviceFabricZonalUpgradeMode is null && vmssZonalUpgradeMode is null && isInfrastructureServiceManagerEnabled is null && upgradeWave is null && upgradePauseStartOn is null && upgradePauseEndOn is null && isWaveUpgradePaused is null && notifications is null ? default : new ClusterProperties(
@@ -973,7 +972,8 @@ namespace Azure.ResourceManager.ServiceFabric.Models
                     (notifications ?? new ChangeTrackingList<ClusterNotification>()).ToList(),
                     default,
                     default),
-                etag);
+                etag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of ServiceFabricApplicationData. </summary>
@@ -1006,7 +1006,6 @@ namespace Azure.ResourceManager.ServiceFabric.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 typeVersion is null && parameters is null && upgradePolicy is null && minimumNodes is null && maximumNodes is null && removeApplicationCapacity is null && metrics is null && managedIdentities is null && provisioningState is null && typeName is null ? default : new ApplicationResourceProperties(
@@ -1022,7 +1021,8 @@ namespace Azure.ResourceManager.ServiceFabric.Models
                     provisioningState,
                     typeName),
                 etag,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of ServiceFabricApplicationPatch. </summary>
@@ -1052,7 +1052,6 @@ namespace Azure.ResourceManager.ServiceFabric.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 typeVersion is null && parameters is null && upgradePolicy is null && minimumNodes is null && maximumNodes is null && removeApplicationCapacity is null && metrics is null && managedIdentities is null ? default : new ApplicationResourceUpdateProperties(
@@ -1064,7 +1063,8 @@ namespace Azure.ResourceManager.ServiceFabric.Models
                     removeApplicationCapacity,
                     (metrics ?? new ChangeTrackingList<ApplicationMetricDescription>()).ToList(),
                     (managedIdentities ?? new ChangeTrackingList<ApplicationUserAssignedIdentity>()).ToList(),
-                    default));
+                    default),
+                additionalBinaryDataProperties: null);
         }
     }
 }

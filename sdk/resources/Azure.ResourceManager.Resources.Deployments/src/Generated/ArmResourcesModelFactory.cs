@@ -36,10 +36,10 @@ namespace Azure.ResourceManager.Resources.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
                 location,
-                tags);
+                tags,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="provisioningState"> Denotes the state of provisioning. </param>
@@ -287,9 +287,9 @@ namespace Azure.ResourceManager.Resources.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 error,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The deployment export result. </summary>

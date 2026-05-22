@@ -33,9 +33,9 @@ namespace Azure.ResourceManager.WorkloadOrchestration.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
-                etag);
+                etag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> DynamicSchema Properties. </summary>
@@ -66,11 +66,11 @@ namespace Azure.ResourceManager.WorkloadOrchestration.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                etag);
+                etag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Schema Properties. </summary>
@@ -117,9 +117,9 @@ namespace Azure.ResourceManager.WorkloadOrchestration.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
-                etag);
+                etag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Schema Version Properties. </summary>
@@ -162,10 +162,10 @@ namespace Azure.ResourceManager.WorkloadOrchestration.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
                 extendedLocation,
-                etag);
+                etag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Solution Version Properties. </summary>
@@ -243,9 +243,9 @@ namespace Azure.ResourceManager.WorkloadOrchestration.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
-                etag);
+                etag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties of a Job resource, including type, status, parameters, steps, and error details. </summary>
@@ -340,12 +340,12 @@ namespace Azure.ResourceManager.WorkloadOrchestration.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
                 etag,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Target Properties. </summary>
@@ -557,9 +557,9 @@ namespace Azure.ResourceManager.WorkloadOrchestration.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
-                etag);
+                etag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -576,9 +576,9 @@ namespace Azure.ResourceManager.WorkloadOrchestration.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
-                etag);
+                etag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Schema Reference Properties. </summary>
@@ -605,10 +605,10 @@ namespace Azure.ResourceManager.WorkloadOrchestration.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
                 extendedLocation,
-                etag);
+                etag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Solution Properties. </summary>
@@ -647,9 +647,9 @@ namespace Azure.ResourceManager.WorkloadOrchestration.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
-                etag);
+                etag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Solution Template Version Properties. </summary>
@@ -723,11 +723,11 @@ namespace Azure.ResourceManager.WorkloadOrchestration.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                etag);
+                etag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Solution Template Properties. </summary>
@@ -803,10 +803,10 @@ namespace Azure.ResourceManager.WorkloadOrchestration.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
                 extendedLocation,
-                etag);
+                etag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Instance Properties. </summary>
@@ -848,10 +848,10 @@ namespace Azure.ResourceManager.WorkloadOrchestration.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
                 extendedLocation,
-                etag);
+                etag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Instance History Properties. </summary>
@@ -917,11 +917,11 @@ namespace Azure.ResourceManager.WorkloadOrchestration.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                etag);
+                etag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Config Template Properties. </summary>
@@ -969,9 +969,9 @@ namespace Azure.ResourceManager.WorkloadOrchestration.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
-                etag);
+                etag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Config Template Version Properties. </summary>
@@ -998,10 +998,10 @@ namespace Azure.ResourceManager.WorkloadOrchestration.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
                 extendedLocation,
-                etag);
+                etag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Workflow Properties. </summary>
@@ -1028,10 +1028,10 @@ namespace Azure.ResourceManager.WorkloadOrchestration.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
                 extendedLocation,
-                etag);
+                etag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Workflow Version Properties. </summary>
@@ -1100,10 +1100,10 @@ namespace Azure.ResourceManager.WorkloadOrchestration.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
                 extendedLocation,
-                etag);
+                etag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Execution Properties. </summary>
@@ -1178,12 +1178,12 @@ namespace Azure.ResourceManager.WorkloadOrchestration.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 edgeDiagnosticProvisioningState is null ? default : new EdgeDiagnosticProperties(edgeDiagnosticProvisioningState, null),
                 extendedLocation,
-                etag);
+                etag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The type used for update operations of the Diagnostic. </summary>
@@ -1215,10 +1215,10 @@ namespace Azure.ResourceManager.WorkloadOrchestration.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Context Properties. </summary>
@@ -1271,8 +1271,8 @@ namespace Azure.ResourceManager.WorkloadOrchestration.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Site Reference Properties. </summary>

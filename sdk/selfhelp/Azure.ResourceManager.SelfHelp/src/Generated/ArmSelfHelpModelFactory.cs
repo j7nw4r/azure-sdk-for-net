@@ -36,14 +36,14 @@ namespace Azure.ResourceManager.SelfHelp.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 globalParameters is null && insights is null && acceptedOn is null && provisioningState is null && diagnostics is null ? default : new DiagnosticResourceProperties(
                     globalParameters,
                     (insights ?? new ChangeTrackingList<SelfHelpDiagnosticInvocation>()).ToList(),
                     acceptedOn,
                     provisioningState,
                     (diagnostics ?? new ChangeTrackingList<SelfHelpDiagnosticInfo>()).ToList(),
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Solution Invocation with additional params needed for invocation. </summary>
@@ -114,7 +114,6 @@ namespace Azure.ResourceManager.SelfHelp.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 triggerCriteria is null && parameters is null && solutionId is null && provisioningState is null && title is null && content is null && replacementMaps is null && sections is null ? default : new SolutionResourceProperties(
                     (triggerCriteria ?? new ChangeTrackingList<SolutionTriggerCriterion>()).ToList(),
                     parameters,
@@ -124,7 +123,8 @@ namespace Azure.ResourceManager.SelfHelp.Models
                     content,
                     replacementMaps,
                     (sections ?? new ChangeTrackingList<SelfHelpSection>()).ToList(),
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Solution replacement maps. </summary>
@@ -321,7 +321,6 @@ namespace Azure.ResourceManager.SelfHelp.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 solutionId is null && parameters is null && title is null && appendix is null && content is null && provisioningState is null ? default : new SimplifiedSolutionsResourceProperties(
                     solutionId,
                     parameters,
@@ -329,7 +328,8 @@ namespace Azure.ResourceManager.SelfHelp.Models
                     appendix,
                     content,
                     provisioningState,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -348,8 +348,8 @@ namespace Azure.ResourceManager.SelfHelp.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                solutionId is null && parameters is null && provisioningState is null && steps is null ? default : new TroubleshooterInstanceProperties(solutionId, parameters, provisioningState, (steps ?? new ChangeTrackingList<SelfHelpStep>()).ToList(), null));
+                solutionId is null && parameters is null && provisioningState is null && steps is null ? default : new TroubleshooterInstanceProperties(solutionId, parameters, provisioningState, (steps ?? new ChangeTrackingList<SelfHelpStep>()).ToList(), null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Troubleshooter step. </summary>
@@ -503,7 +503,6 @@ namespace Azure.ResourceManager.SelfHelp.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 problemTitle is null && problemDescription is null && serviceId is null && problemClassificationId is null && solutions is null && relatedServices is null ? default : new NlpSolutions(
                     problemTitle,
                     problemDescription,
@@ -511,7 +510,8 @@ namespace Azure.ResourceManager.SelfHelp.Models
                     problemClassificationId,
                     (solutions ?? new ChangeTrackingList<SolutionMetadataProperties>()).ToList(),
                     (relatedServices ?? new ChangeTrackingList<ClassificationService>()).ToList(),
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Metadata Properties. </summary>
@@ -556,14 +556,14 @@ namespace Azure.ResourceManager.SelfHelp.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 solutionId is null && title is null && content is null && replacementMaps is null && sections is null ? default : new SolutionsResourcePropertiesSelfHelp(
                     solutionId,
                     title,
                     content,
                     replacementMaps,
                     (sections ?? new ChangeTrackingList<SolutionSection>()).ToList(),
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Solution replacement maps. </summary>
@@ -613,8 +613,8 @@ namespace Azure.ResourceManager.SelfHelp.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                solutions is null ? default : new SelfhelpSolutions((solutions ?? new ChangeTrackingList<SolutionMetadataProperties>()).ToList(), null));
+                solutions is null ? default : new SelfhelpSolutions((solutions ?? new ChangeTrackingList<SolutionMetadataProperties>()).ToList(), null),
+                additionalBinaryDataProperties: null);
         }
     }
 }

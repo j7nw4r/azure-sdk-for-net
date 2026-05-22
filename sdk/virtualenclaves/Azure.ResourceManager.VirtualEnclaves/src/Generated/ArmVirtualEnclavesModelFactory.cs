@@ -37,10 +37,10 @@ namespace Azure.ResourceManager.VirtualEnclaves.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="provisioningState"> Provisioning State. </param>
@@ -91,11 +91,11 @@ namespace Azure.ResourceManager.VirtualEnclaves.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="provisioningState"> Provisioning State. </param>
@@ -337,11 +337,11 @@ namespace Azure.ResourceManager.VirtualEnclaves.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="addressSpace"> Address Space. </param>
@@ -492,10 +492,10 @@ namespace Azure.ResourceManager.VirtualEnclaves.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Describes the properties of an Transit Hub. </summary>
@@ -540,10 +540,10 @@ namespace Azure.ResourceManager.VirtualEnclaves.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Enclave Connection Resource properties. </summary>
@@ -598,10 +598,10 @@ namespace Azure.ResourceManager.VirtualEnclaves.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Enclave Endpoint Resource properties. </summary>
@@ -658,10 +658,10 @@ namespace Azure.ResourceManager.VirtualEnclaves.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Community Endpoint Resource properties. </summary>
@@ -723,8 +723,8 @@ namespace Azure.ResourceManager.VirtualEnclaves.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Approval Base model. </summary>

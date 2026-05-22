@@ -170,10 +170,10 @@ namespace Azure.ResourceManager.ServiceFabricManagedClusters.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                provisioningState is null ? default : new ApplicationTypeResourceProperties(provisioningState, null));
+                provisioningState is null ? default : new ApplicationTypeResourceProperties(provisioningState, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Application type update request. </summary>
@@ -204,10 +204,10 @@ namespace Azure.ResourceManager.ServiceFabricManagedClusters.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                provisioningState is null && appPackageUri is null ? default : new ApplicationTypeVersionResourceProperties(provisioningState, appPackageUri, null));
+                provisioningState is null && appPackageUri is null ? default : new ApplicationTypeVersionResourceProperties(provisioningState, appPackageUri, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Application type version update request. </summary>
@@ -238,10 +238,10 @@ namespace Azure.ResourceManager.ServiceFabricManagedClusters.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The service resource properties. </summary>
@@ -465,8 +465,8 @@ namespace Azure.ResourceManager.ServiceFabricManagedClusters.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                clusterCodeVersion is null && versionSupportExpireOn is null && osType is null ? default : new ManagedClusterVersionDetails(clusterCodeVersion, versionSupportExpireOn, osType, null));
+                clusterCodeVersion is null && versionSupportExpireOn is null && osType is null ? default : new ManagedClusterVersionDetails(clusterCodeVersion, versionSupportExpireOn, osType, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -482,8 +482,8 @@ namespace Azure.ResourceManager.ServiceFabricManagedClusters.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                vmSize is null ? default : new ServiceFabricManagedVmSizeProperties(vmSize, null));
+                vmSize is null ? default : new ServiceFabricManagedVmSizeProperties(vmSize, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Describes a network security rule. </summary>
@@ -674,7 +674,6 @@ namespace Azure.ResourceManager.ServiceFabricManagedClusters.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 isPrimary is null && vmInstanceCount is null && dataDiskSizeInGB is null && dataDiskType is null && dataDiskLetter is null && placementProperties is null && capacities is null && applicationPorts is null && ephemeralPorts is null && vmSize is null && vmImagePublisher is null && vmImageOffer is null && vmImageSku is null && vmImageVersion is null && vmSecrets is null && vmExtensions is null && isStateless is null && hasMultiplePlacementGroups is null && frontendConfigurations is null && networkSecurityRules is null && additionalDataDisks is null && isEncryptionAtHostEnabled is null && provisioningState is null && isAcceleratedNetworkingEnabled is null && useDefaultPublicLoadBalancer is null && useTempDataDisk is null && isOverProvisioningEnabled is null && zones is null && isSpotVm is null && hostGroupId is null && useEphemeralOSDisk is null && spotRestoreTimeout is null && evictionPolicy is null && vmImageResourceId is null && subnetId is null && vmSetupActions is null && securityType is null && securityEncryptionType is null && isSecureBootEnabled is null && isNodePublicIPEnabled is null && isNodePublicIPv6Enabled is null && vmSharedGalleryImageId is null && natGatewayId is null && natConfigurations is null && vmImagePlan is null && serviceArtifactReferenceId is null && dscpConfigurationId is null && additionalNetworkInterfaceConfigurations is null && computerNamePrefix is null && vmApplications is null && isZoneBalanceEnabled is null && isOutboundOnly is null && enableResilientEphemeralOsDisk is null && vmManagedIdentityUserAssignedIdentities is null ? default : new ServiceFabricManagedNodeTypeProperties(
                     isPrimary.GetValueOrDefault(),
                     vmInstanceCount.GetValueOrDefault(),
@@ -732,7 +731,8 @@ namespace Azure.ResourceManager.ServiceFabricManagedClusters.Models
                     enableResilientEphemeralOsDisk,
                     null),
                 tags,
-                sku);
+                sku,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Specifies set of certificates that should be installed onto the virtual machines. </summary>
@@ -875,11 +875,11 @@ namespace Azure.ResourceManager.ServiceFabricManagedClusters.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 default,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -896,8 +896,8 @@ namespace Azure.ResourceManager.ServiceFabricManagedClusters.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                serviceFabricManagedVmSize is null ? default : new ServiceFabricManagedVmSizeProperties(serviceFabricManagedVmSize, default));
+                serviceFabricManagedVmSize is null ? default : new ServiceFabricManagedVmSizeProperties(serviceFabricManagedVmSize, default),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="ServiceFabricManagedClusters.ServiceFabricManagedClusterData"/>. </summary>
@@ -959,7 +959,6 @@ namespace Azure.ResourceManager.ServiceFabricManagedClusters.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 dnsName is null && fqdn is null && ipv4Address is null && clusterId is null && clusterState is null && clusterCertificateThumbprints is null && clientConnectionPort is null && httpGatewayConnectionPort is null && adminUserName is null && adminPassword is null && loadBalancingRules is null && isRdpAccessAllowed is null && networkSecurityRules is null && clients is null && azureActiveDirectory is null && fabricSettings is null && provisioningState is null && clusterCodeVersion is null && clusterUpgradeMode is null && clusterUpgradeCadence is null && addOnFeatures is null && isAutoOSUpgradeEnabled is null && hasZoneResiliency is null && maxUnusedVersionsToKeep is null && isIPv6Enabled is null && subnetId is null && ipTags is null && ipv6Address is null && isServicePublicIPEnabled is null && auxiliarySubnets is null && serviceEndpoints is null && zonalUpdateMode is null && useCustomVnet is null && publicIPPrefixId is null && publicIPv6PrefixId is null && ddosProtectionPlanId is null && upgradeDescription is null && httpGatewayTokenAuthConnectionPort is null && isHttpGatewayExclusiveAuthModeEnabled is null ? default : new ManagedClusterProperties(
@@ -1009,7 +1008,8 @@ namespace Azure.ResourceManager.ServiceFabricManagedClusters.Models
                     default,
                     default),
                 etag,
-                skuName is null ? default : new ServiceFabricManagedClustersSku(skuName.GetValueOrDefault(), default));
+                skuName is null ? default : new ServiceFabricManagedClustersSku(skuName.GetValueOrDefault(), default),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="ServiceFabricManagedClusters.ServiceFabricManagedNodeTypeData"/>. </summary>
@@ -1079,7 +1079,6 @@ namespace Azure.ResourceManager.ServiceFabricManagedClusters.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 isPrimary is null && vmInstanceCount is null && dataDiskSizeInGB is null && dataDiskType is null && dataDiskLetter is null && placementProperties is null && capacities is null && applicationPorts is null && ephemeralPorts is null && vmSize is null && vmImagePublisher is null && vmImageOffer is null && vmImageSku is null && vmImageVersion is null && vmSecrets is null && vmExtensions is null && userAssignedIdentities is null && isStateless is null && hasMultiplePlacementGroups is null && frontendConfigurations is null && networkSecurityRules is null && additionalDataDisks is null && isEncryptionAtHostEnabled is null && provisioningState is null && isAcceleratedNetworkingEnabled is null && useDefaultPublicLoadBalancer is null && useTempDataDisk is null && isOverProvisioningEnabled is null && zones is null && isSpotVm is null && hostGroupId is null && useEphemeralOSDisk is null && spotRestoreTimeout is null && evictionPolicy is null && vmImageResourceId is null && subnetId is null && vmSetupActions is null && securityType is null && isSecureBootEnabled is null && isNodePublicIPEnabled is null && isNodePublicIPv6Enabled is null && vmSharedGalleryImageId is null && natGatewayId is null && natConfigurations is null && vmImagePlan is null && serviceArtifactReferenceId is null && dscpConfigurationId is null && additionalNetworkInterfaceConfigurations is null && computerNamePrefix is null ? default : new ServiceFabricManagedNodeTypeProperties(
                     isPrimary.GetValueOrDefault(),
                     vmInstanceCount.GetValueOrDefault(),
@@ -1137,7 +1136,8 @@ namespace Azure.ResourceManager.ServiceFabricManagedClusters.Models
                     default,
                     default),
                 tags,
-                sku);
+                sku,
+                additionalBinaryDataProperties: null);
         }
     }
 }

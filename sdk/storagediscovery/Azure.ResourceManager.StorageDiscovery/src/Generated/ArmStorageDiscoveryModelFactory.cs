@@ -36,10 +36,10 @@ namespace Azure.ResourceManager.StorageDiscovery.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Storage Discovery Workspace Properties. </summary>

@@ -37,10 +37,10 @@ namespace Azure.ResourceManager.Sphere.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                tenantId is null && provisioningState is null ? default : new CatalogProperties(tenantId, provisioningState, null));
+                tenantId is null && provisioningState is null ? default : new CatalogProperties(tenantId, provisioningState, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The type used for update operations of the Catalog. </summary>
@@ -85,8 +85,8 @@ namespace Azure.ResourceManager.Sphere.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                deploymentId is null && deployedImages is null && deploymentDateUtc is null && provisioningState is null ? default : new DeploymentProperties(deploymentId, (deployedImages ?? new ChangeTrackingList<SphereImageData>()).ToList(), deploymentDateUtc, provisioningState, null));
+                deploymentId is null && deployedImages is null && deploymentDateUtc is null && provisioningState is null ? default : new DeploymentProperties(deploymentId, (deployedImages ?? new ChangeTrackingList<SphereImageData>()).ToList(), deploymentDateUtc, provisioningState, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -110,7 +110,6 @@ namespace Azure.ResourceManager.Sphere.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 image is null && imageId is null && imageName is null && regionalDataBoundary is null && uri is null && description is null && componentId is null && imageType is null && provisioningState is null ? default : new ImageProperties(
                     image,
                     imageId,
@@ -121,7 +120,8 @@ namespace Azure.ResourceManager.Sphere.Models
                     componentId,
                     imageType,
                     provisioningState,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -143,7 +143,6 @@ namespace Azure.ResourceManager.Sphere.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 description is null && osFeedType is null && updatePolicy is null && allowCrashDumpsCollection is null && regionalDataBoundary is null && hasDeployment is null && provisioningState is null ? default : new DeviceGroupProperties(
                     description,
                     osFeedType,
@@ -152,7 +151,8 @@ namespace Azure.ResourceManager.Sphere.Models
                     regionalDataBoundary,
                     hasDeployment,
                     provisioningState,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Device insight report. </summary>
@@ -198,7 +198,6 @@ namespace Azure.ResourceManager.Sphere.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 deviceId is null && chipSku is null && lastAvailableOSVersion is null && lastInstalledOSVersion is null && lastOSUpdateUtc is null && lastUpdateRequestUtc is null && provisioningState is null ? default : new DeviceProperties(
                     deviceId,
                     chipSku,
@@ -207,7 +206,8 @@ namespace Azure.ResourceManager.Sphere.Models
                     lastOSUpdateUtc,
                     lastUpdateRequestUtc,
                     provisioningState,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -229,7 +229,6 @@ namespace Azure.ResourceManager.Sphere.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 certificate is null && status is null && subject is null && thumbprint is null && expiryUtc is null && notBeforeUtc is null && provisioningState is null ? default : new SphereCertificateProperties(
                     certificate,
                     status,
@@ -238,7 +237,8 @@ namespace Azure.ResourceManager.Sphere.Models
                     expiryUtc,
                     notBeforeUtc,
                     provisioningState,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The properties of certificate. </summary>
@@ -315,8 +315,8 @@ namespace Azure.ResourceManager.Sphere.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                description is null && provisioningState is null ? default : new ProductProperties(description, provisioningState, null));
+                description is null && provisioningState is null ? default : new ProductProperties(description, provisioningState, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Request to the action call to bulk claim devices. </summary>

@@ -59,7 +59,6 @@ namespace Azure.ResourceManager.Resources.DeploymentStacks.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 error is null && template is null && templateLink is null && parameters is null && parametersLink is null && extensionConfigs is null && externalInputs is null && externalInputDefinitions is null && actionOnUnmanage is null && deploymentScope is null && description is null && denySettings is null && provisioningState is null && correlationId is null && validationLevel is null && bypassStackOutOfSyncError is null && detachedResources is null && deletedResources is null && failedResources is null && resources is null && deploymentExtensions is null && deploymentId is null && outputs is null && duration is null && debugSettingDetailLevel is null ? default : new DeploymentStackProperties(
                     error,
                     template,
@@ -88,7 +87,8 @@ namespace Azure.ResourceManager.Resources.DeploymentStacks.Models
                     duration,
                     null),
                 location,
-                tags);
+                tags,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The resource management error additional info. </summary>
@@ -243,10 +243,10 @@ namespace Azure.ResourceManager.Resources.DeploymentStacks.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
                 location,
-                tags);
+                tags,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="error"> The error detail. </param>
@@ -456,9 +456,9 @@ namespace Azure.ResourceManager.Resources.DeploymentStacks.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 error,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
     }
 }

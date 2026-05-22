@@ -89,7 +89,6 @@ namespace Azure.ResourceManager.SignalR.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 provisioningState is null && externalIP is null && hostName is null && publicPort is null && serverPort is null && version is null && privateEndpointConnections is null && sharedPrivateLinkResources is null && hostNamePrefix is null && features is null && liveTraceConfiguration is null && serverless is null && networkACLs is null && applicationFirewall is null && publicNetworkAccess is null && disableLocalAuth is null && disableAadAuth is null && regionEndpointEnabled is null && resourceStopped is null && routeSettings is null && isClientCertEnabled is null && resourceLogCategories is null && corsAllowedOrigins is null && upstreamTemplates is null ? default : new SignalRProperties(
@@ -120,7 +119,8 @@ namespace Azure.ResourceManager.SignalR.Models
                     null),
                 sku,
                 kind,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -141,7 +141,6 @@ namespace Azure.ResourceManager.SignalR.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 groupId is null && privateLinkResourceId is null && provisioningState is null && requestMessage is null && fqdns is null && status is null ? default : new SharedPrivateLinkResourceProperties(
                     groupId,
                     privateLinkResourceId,
@@ -149,7 +148,8 @@ namespace Azure.ResourceManager.SignalR.Models
                     requestMessage,
                     (fqdns ?? new ChangeTrackingList<string>()).ToList(),
                     status,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Feature of a resource, which controls the runtime behavior. </summary>
@@ -325,8 +325,8 @@ namespace Azure.ResourceManager.SignalR.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                new CustomCertificateProperties(provisioningState, keyVaultBaseUri, keyVaultSecretName, keyVaultSecretVersion, null));
+                new CustomCertificateProperties(provisioningState, keyVaultBaseUri, keyVaultSecretName, keyVaultSecretVersion, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -344,8 +344,8 @@ namespace Azure.ResourceManager.SignalR.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                new CustomDomainProperties(provisioningState, domainName, new ResourceReference(customCertificateId, null), null));
+                new CustomDomainProperties(provisioningState, domainName, new ResourceReference(customCertificateId, null), null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -375,11 +375,11 @@ namespace Azure.ResourceManager.SignalR.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 provisioningState is null && regionEndpointEnabled is null && resourceStopped is null ? default : new ReplicaProperties(provisioningState, regionEndpointEnabled, resourceStopped, null),
-                sku);
+                sku,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Data POST-ed to the nameAvailability action. </summary>
@@ -502,8 +502,8 @@ namespace Azure.ResourceManager.SignalR.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                default);
+                default,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="SignalR.SignalRSharedPrivateLinkResourceData"/>. </summary>
@@ -544,8 +544,8 @@ namespace Azure.ResourceManager.SignalR.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                default);
+                default,
+                additionalBinaryDataProperties: null);
         }
     }
 }

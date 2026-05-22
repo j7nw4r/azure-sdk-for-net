@@ -33,8 +33,8 @@ namespace Azure.ResourceManager.SiteManager.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Site properties. </summary>

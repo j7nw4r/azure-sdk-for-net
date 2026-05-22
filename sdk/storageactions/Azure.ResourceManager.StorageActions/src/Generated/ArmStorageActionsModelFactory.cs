@@ -39,11 +39,11 @@ namespace Azure.ResourceManager.StorageActions.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 identity,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties of the storage task. </summary>
@@ -181,8 +181,8 @@ namespace Azure.ResourceManager.StorageActions.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Storage task execution report for a run instance. </summary>

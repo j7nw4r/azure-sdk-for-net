@@ -34,9 +34,9 @@ namespace Azure.ResourceManager.ServiceBus.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 rights is null ? default : new SBAuthorizationRuleProperties((rights ?? new ChangeTrackingList<ServiceBusAccessRight>()).ToList(), null),
-                location);
+                location,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Namespace/ServiceBus Connection String. </summary>
@@ -79,7 +79,6 @@ namespace Azure.ResourceManager.ServiceBus.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 provisioningState is null && pendingReplicationOperationsCount is null && partnerNamespace is null && alternateName is null && role is null ? default : new ArmDisasterRecoveryProperties(
                     provisioningState,
                     pendingReplicationOperationsCount,
@@ -87,7 +86,8 @@ namespace Azure.ResourceManager.ServiceBus.Models
                     alternateName,
                     role,
                     null),
-                location);
+                location,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Description of a Check Name availability request properties. </summary>
@@ -153,7 +153,6 @@ namespace Azure.ResourceManager.ServiceBus.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 countDetails is null && createdOn is null && updatedOn is null && accessedOn is null && sizeInBytes is null && messageCount is null && lockDuration is null && maxSizeInMegabytes is null && maxMessageSizeInKilobytes is null && requiresDuplicateDetection is null && requiresSession is null && defaultMessageTimeToLive is null && deadLetteringOnMessageExpiration is null && duplicateDetectionHistoryTimeWindow is null && maxDeliveryCount is null && status is null && enableBatchedOperations is null && autoDeleteOnIdle is null && enablePartitioning is null && enableExpress is null && forwardTo is null && forwardDeadLetteredMessagesTo is null && userMetadata is null ? default : new SBQueueProperties(
                     countDetails,
                     createdOn,
@@ -179,7 +178,8 @@ namespace Azure.ResourceManager.ServiceBus.Models
                     forwardDeadLetteredMessagesTo,
                     userMetadata,
                     null),
-                location);
+                location,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Message Count Details. </summary>
@@ -231,7 +231,6 @@ namespace Azure.ResourceManager.ServiceBus.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 sizeInBytes is null && createdOn is null && updatedOn is null && accessedOn is null && subscriptionCount is null && countDetails is null && defaultMessageTimeToLive is null && maxSizeInMegabytes is null && maxMessageSizeInKilobytes is null && requiresDuplicateDetection is null && duplicateDetectionHistoryTimeWindow is null && enableBatchedOperations is null && status is null && supportOrdering is null && autoDeleteOnIdle is null && enablePartitioning is null && enableExpress is null && userMetadata is null ? default : new SBTopicProperties(
                     sizeInBytes,
                     createdOn,
@@ -252,7 +251,8 @@ namespace Azure.ResourceManager.ServiceBus.Models
                     enableExpress,
                     userMetadata,
                     null),
-                location);
+                location,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -271,9 +271,9 @@ namespace Azure.ResourceManager.ServiceBus.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 connectionState is null && provisioningState is null && privateEndpointId is null ? default : new PrivateEndpointConnectionProperties(new PrivateEndpoint(privateEndpointId, null), connectionState, provisioningState, null),
-                location);
+                location,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -298,7 +298,6 @@ namespace Azure.ResourceManager.ServiceBus.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 provisioningState is null && provisioningIssues is null && networkSecurityPerimeter is null && resourceAssociation is null && profile is null && isBackingResource is null && applicableFeatures is null && parentAssociationName is null && sourceResourceId is null ? default : new NetworkSecurityPerimeterConfigurationProperties(
                     provisioningState,
                     (provisioningIssues ?? new ChangeTrackingList<ServiceBusNspConfigurationProvisioningIssue>()).ToList(),
@@ -310,7 +309,8 @@ namespace Azure.ResourceManager.ServiceBus.Models
                     parentAssociationName,
                     sourceResourceId,
                     null),
-                location);
+                location,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Describes Provisioning issue for given NetworkSecurityPerimeterConfiguration. </summary>
@@ -422,7 +422,6 @@ namespace Azure.ResourceManager.ServiceBus.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 provisioningState is null && pendingReplicationOperationsCount is null && targetServiceBusNamespace is null && postMigrationName is null && migrationState is null ? default : new MigrationConfigPropertiesProperties(
                     provisioningState,
                     pendingReplicationOperationsCount,
@@ -430,7 +429,8 @@ namespace Azure.ResourceManager.ServiceBus.Models
                     postMigrationName,
                     migrationState,
                     null),
-                location);
+                location,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -450,9 +450,9 @@ namespace Azure.ResourceManager.ServiceBus.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 action is null && filterType is null && sqlFilter is null && correlationFilter is null ? default : new Ruleproperties(action, filterType, sqlFilter, correlationFilter, null),
-                location);
+                location,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Represents the correlation filter expression. </summary>
@@ -519,7 +519,6 @@ namespace Azure.ResourceManager.ServiceBus.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 minimumTlsVersion is null && provisioningState is null && status is null && createdOn is null && updatedOn is null && serviceBusEndpoint is null && metricId is null && isZoneRedundant is null && encryption is null && privateEndpointConnections is null && disableLocalAuth is null && alternateName is null && publicNetworkAccess is null && premiumMessagingPartitions is null && geoDataReplication is null && platformCapabilitiesConfidentialComputeMode is null ? default : new SBNamespaceProperties(
@@ -541,7 +540,8 @@ namespace Azure.ResourceManager.ServiceBus.Models
                     geoDataReplication,
                     null),
                 sku,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties to configure Encryption. </summary>
@@ -595,7 +595,6 @@ namespace Azure.ResourceManager.ServiceBus.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 provisioningState is null && status is null && createdOn is null && updatedOn is null && serviceBusEndpoint is null && metricId is null && encryption is null && privateEndpointConnections is null && disableLocalAuth is null && alternateName is null ? default : new SBNamespaceUpdateProperties(
@@ -611,7 +610,8 @@ namespace Azure.ResourceManager.ServiceBus.Models
                     alternateName,
                     null),
                 sku,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -632,7 +632,6 @@ namespace Azure.ResourceManager.ServiceBus.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 isTrustedServiceAccessEnabled is null && defaultAction is null && virtualNetworkRules is null && ipRules is null && publicNetworkAccess is null ? default : new NetworkRuleSetProperties(
                     isTrustedServiceAccessEnabled,
                     defaultAction,
@@ -640,7 +639,8 @@ namespace Azure.ResourceManager.ServiceBus.Models
                     (ipRules ?? new ChangeTrackingList<ServiceBusNetworkRuleSetIPRules>()).ToList(),
                     publicNetworkAccess,
                     null),
-                location);
+                location,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -658,8 +658,8 @@ namespace Azure.ResourceManager.ServiceBus.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                groupId is null && requiredMembers is null && requiredZoneNames is null ? default : new ServiceBusPrivateLinkResourceProperties(groupId, (requiredMembers ?? new ChangeTrackingList<string>()).ToList(), (requiredZoneNames ?? new ChangeTrackingList<string>()).ToList(), null));
+                groupId is null && requiredMembers is null && requiredZoneNames is null ? default : new ServiceBusPrivateLinkResourceProperties(groupId, (requiredMembers ?? new ChangeTrackingList<string>()).ToList(), (requiredZoneNames ?? new ChangeTrackingList<string>()).ToList(), null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -695,7 +695,6 @@ namespace Azure.ResourceManager.ServiceBus.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 messageCount is null && createdOn is null && accessedOn is null && updatedOn is null && countDetails is null && lockDuration is null && requiresSession is null && defaultMessageTimeToLive is null && deadLetteringOnFilterEvaluationExceptions is null && deadLetteringOnMessageExpiration is null && duplicateDetectionHistoryTimeWindow is null && maxDeliveryCount is null && status is null && enableBatchedOperations is null && autoDeleteOnIdle is null && forwardTo is null && forwardDeadLetteredMessagesTo is null && isClientAffine is null && userMetadata is null && clientAffineProperties is null ? default : new SBSubscriptionProperties(
                     messageCount,
                     createdOn,
@@ -718,7 +717,8 @@ namespace Azure.ResourceManager.ServiceBus.Models
                     userMetadata,
                     clientAffineProperties,
                     null),
-                location);
+                location,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="ServiceBus.ServiceBusNamespaceData"/>. </summary>

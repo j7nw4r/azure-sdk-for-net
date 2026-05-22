@@ -48,7 +48,6 @@ namespace Azure.ResourceManager.WorkloadsSapVirtualInstance.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 environment is null && sapProduct is null && managedResourcesNetworkAccessType is null && configuration is null && status is null && health is null && state is null && provisioningState is null && managedResourceGroupName is null && errorsProperties is null ? default : new SapVirtualInstanceProperties(
@@ -63,7 +62,8 @@ namespace Azure.ResourceManager.WorkloadsSapVirtualInstance.Models
                     provisioningState,
                     new SapVirtualInstanceError(errorsProperties, null),
                     null),
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Discovery Details. </summary>
@@ -397,7 +397,6 @@ namespace Azure.ResourceManager.WorkloadsSapVirtualInstance.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 instanceNo is null && subnetId is null && messageServerProperties is null && enqueueServerProperties is null && gatewayServerProperties is null && enqueueReplicationServerProperties is null && kernelVersion is null && kernelPatch is null && vmDetails is null && status is null && health is null && provisioningState is null && loadBalancerDetailsId is null && errorsProperties is null ? default : new SapCentralServerProperties(
@@ -415,7 +414,8 @@ namespace Azure.ResourceManager.WorkloadsSapVirtualInstance.Models
                     health,
                     provisioningState,
                     new SapVirtualInstanceError(errorsProperties, null),
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Defines the SAP message server properties. </summary>
@@ -529,7 +529,6 @@ namespace Azure.ResourceManager.WorkloadsSapVirtualInstance.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 subnetId is null && databaseSid is null && databaseType is null && ipAddress is null && vmDetails is null && status is null && provisioningState is null && loadBalancerDetailsId is null && errorsProperties is null ? default : new SapDatabaseProperties(
@@ -542,7 +541,8 @@ namespace Azure.ResourceManager.WorkloadsSapVirtualInstance.Models
                     status,
                     provisioningState,
                     new SapVirtualInstanceError(errorsProperties, null),
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Database VM details. </summary>
@@ -599,7 +599,6 @@ namespace Azure.ResourceManager.WorkloadsSapVirtualInstance.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 instanceNo is null && subnetId is null && hostname is null && kernelVersion is null && kernelPatch is null && ipAddress is null && gatewayPort is null && icmHttpPort is null && icmHttpsPort is null && dispatcherStatus is null && vmDetails is null && status is null && health is null && provisioningState is null && loadBalancerDetailsId is null && errorsProperties is null ? default : new SapApplicationServerProperties(
@@ -619,7 +618,8 @@ namespace Azure.ResourceManager.WorkloadsSapVirtualInstance.Models
                     health,
                     provisioningState,
                     new SapVirtualInstanceError(errorsProperties, null),
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The Application Server VM Details. </summary>

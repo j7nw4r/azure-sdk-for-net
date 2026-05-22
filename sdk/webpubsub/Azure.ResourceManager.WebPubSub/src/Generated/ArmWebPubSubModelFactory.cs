@@ -82,7 +82,6 @@ namespace Azure.ResourceManager.WebPubSub.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 provisioningState is null && externalIP is null && hostName is null && publicPort is null && serverPort is null && version is null && privateEndpointConnections is null && sharedPrivateLinkResources is null && hostNamePrefix is null && liveTraceConfiguration is null && networkAcls is null && applicationFirewall is null && publicNetworkAccess is null && isLocalAuthDisabled is null && isAadAuthDisabled is null && isRegionEndpointEnabled is null && resourceStopped is null && isClientCertEnabled is null && resourceLogCategories is null && socketIOServiceMode is null ? default : new WebPubSubProperties(
@@ -109,7 +108,8 @@ namespace Azure.ResourceManager.WebPubSub.Models
                     null),
                 sku,
                 kind,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -130,7 +130,6 @@ namespace Azure.ResourceManager.WebPubSub.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 groupId is null && privateLinkResourceId is null && provisioningState is null && requestMessage is null && fqdns is null && status is null ? default : new SharedPrivateLinkResourceProperties(
                     groupId,
                     privateLinkResourceId,
@@ -138,7 +137,8 @@ namespace Azure.ResourceManager.WebPubSub.Models
                     requestMessage,
                     (fqdns ?? new ChangeTrackingList<string>()).ToList(),
                     status,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Live trace configuration of a Microsoft.SignalRService resource. </summary>
@@ -299,8 +299,8 @@ namespace Azure.ResourceManager.WebPubSub.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                new CustomCertificateProperties(provisioningState, keyVaultBaseUri, keyVaultSecretName, keyVaultSecretVersion, null));
+                new CustomCertificateProperties(provisioningState, keyVaultBaseUri, keyVaultSecretName, keyVaultSecretVersion, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -318,8 +318,8 @@ namespace Azure.ResourceManager.WebPubSub.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                new CustomDomainProperties(provisioningState, domainName, new ResourceReference(customCertificateId, null), null));
+                new CustomDomainProperties(provisioningState, domainName, new ResourceReference(customCertificateId, null), null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> A hub setting. </summary>
@@ -336,8 +336,8 @@ namespace Azure.ResourceManager.WebPubSub.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties of a hub. </summary>
@@ -442,11 +442,11 @@ namespace Azure.ResourceManager.WebPubSub.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 provisioningState is null && isRegionEndpointEnabled is null && resourceStopped is null ? default : new ReplicaProperties(provisioningState, isRegionEndpointEnabled, resourceStopped, null),
-                sku);
+                sku,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Data POST-ed to the nameAvailability action. </summary>
@@ -558,8 +558,8 @@ namespace Azure.ResourceManager.WebPubSub.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                default);
+                default,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="WebPubSub.WebPubSubSharedPrivateLinkData"/>. </summary>
@@ -600,8 +600,8 @@ namespace Azure.ResourceManager.WebPubSub.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                default);
+                default,
+                additionalBinaryDataProperties: null);
         }
     }
 }

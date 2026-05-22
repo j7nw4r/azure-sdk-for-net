@@ -38,11 +38,11 @@ namespace Azure.ResourceManager.WeightsAndBiases.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties specific to Instance. </summary>

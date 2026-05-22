@@ -36,10 +36,10 @@ namespace Azure.ResourceManager.ServiceGroups.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
                 kind,
-                tags);
+                tags,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="provisioningState"> The provisioning state of the serviceGroup. For example, Running. </param>

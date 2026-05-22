@@ -33,8 +33,8 @@ namespace Azure.ResourceManager.Subscription.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Put subscription creation result properties. </summary>
@@ -103,8 +103,8 @@ namespace Azure.ResourceManager.Subscription.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Tenant policy. </summary>
@@ -146,8 +146,8 @@ namespace Azure.ResourceManager.Subscription.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Put billing account policies response properties. </summary>
@@ -184,8 +184,8 @@ namespace Azure.ResourceManager.Subscription.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties of subscription Response for Changed Target Directory. </summary>
