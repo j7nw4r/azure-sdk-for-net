@@ -39,13 +39,13 @@ namespace Azure.ResourceManager.Elastic.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
                 kind,
                 skuName is null ? default : new ElasticSku(skuName, null),
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties specific to the monitor resource. </summary>
@@ -361,8 +361,8 @@ namespace Azure.ResourceManager.Elastic.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The request to update subscriptions needed to be monitored by the Elastic monitor resource. </summary>
@@ -404,8 +404,8 @@ namespace Azure.ResourceManager.Elastic.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Open AI Integration details. </summary>
@@ -447,8 +447,8 @@ namespace Azure.ResourceManager.Elastic.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="availableVersion"> Available elastic version of the given region. </param>

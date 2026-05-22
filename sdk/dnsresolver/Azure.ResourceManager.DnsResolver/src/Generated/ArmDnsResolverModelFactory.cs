@@ -40,11 +40,11 @@ namespace Azure.ResourceManager.DnsResolver.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 new DnsResolverProperties(new SubResource(virtualNetworkId, null), dnsResolverState, provisioningState, resourceGuid, null),
-                eTag);
+                eTag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Describes a DNS resolver for PATCH operation. </summary>
@@ -77,11 +77,11 @@ namespace Azure.ResourceManager.DnsResolver.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 new InboundEndpointProperties((ipConfigurations ?? new ChangeTrackingList<InboundEndpointIPConfiguration>()).ToList(), provisioningState, resourceGuid, null),
-                eTag);
+                eTag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Describes an inbound endpoint for a DNS resolver for PATCH operation. </summary>
@@ -114,11 +114,11 @@ namespace Azure.ResourceManager.DnsResolver.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 new OutboundEndpointProperties(new SubResource(subnetId, null), provisioningState, resourceGuid, null),
-                eTag);
+                eTag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Describes an outbound endpoint for a DNS resolver for PATCH operation. </summary>
@@ -140,10 +140,9 @@ namespace Azure.ResourceManager.DnsResolver.Models
         /// <param name="dnsResolverOutboundEndpoints"> The reference to the DNS resolver outbound endpoints that are used to route DNS queries matching the forwarding rules in the ruleset to the target DNS servers. </param>
         /// <param name="provisioningState"> The current provisioning state of the DNS forwarding ruleset. This is a read-only property and any attempt to set this value will be ignored. </param>
         /// <param name="resourceGuid"> The resourceGuid for the DNS forwarding ruleset. </param>
-        /// <param name="rulesetName"> The name of the DNS forwarding ruleset. </param>
         /// <param name="eTag"> "If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields."). </param>
         /// <returns> A new <see cref="DnsResolver.DnsForwardingRulesetData"/> instance for mocking. </returns>
-        public static DnsForwardingRulesetData DnsForwardingRulesetData(ResourceIdentifier id = default, string name = default, ResourceType resourceType = default, SystemData systemData = default, IDictionary<string, string> tags = default, AzureLocation location = default, IEnumerable<WritableSubResource> dnsResolverOutboundEndpoints = default, DnsResolverProvisioningState? provisioningState = default, Guid? resourceGuid = default, string rulesetName = default, ETag? eTag = default)
+        public static DnsForwardingRulesetData DnsForwardingRulesetData(ResourceIdentifier id = default, string name = default, ResourceType resourceType = default, SystemData systemData = default, IDictionary<string, string> tags = default, AzureLocation location = default, IEnumerable<WritableSubResource> dnsResolverOutboundEndpoints = default, DnsResolverProvisioningState? provisioningState = default, Guid? resourceGuid = default, ETag? eTag = default)
         {
             tags ??= new ChangeTrackingDictionary<string, string>();
 
@@ -152,12 +151,11 @@ namespace Azure.ResourceManager.DnsResolver.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 new DnsForwardingRulesetProperties((dnsResolverOutboundEndpoints ?? new ChangeTrackingList<WritableSubResource>()).ToList(), provisioningState, resourceGuid, null),
-                rulesetName,
-                eTag);
+                eTag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Describes a DNS forwarding ruleset PATCH operation. </summary>
@@ -198,7 +196,6 @@ namespace Azure.ResourceManager.DnsResolver.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 new ForwardingRuleProperties(
                     domainName,
                     (targetDnsServers ?? new ChangeTrackingList<TargetDnsServer>()).ToList(),
@@ -206,7 +203,8 @@ namespace Azure.ResourceManager.DnsResolver.Models
                     dnsForwardingRuleState,
                     provisioningState,
                     null),
-                eTag);
+                eTag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -225,9 +223,9 @@ namespace Azure.ResourceManager.DnsResolver.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 new VirtualNetworkLinkProperties(new SubResource(virtualNetworkId, null), metadata, provisioningState, null),
-                eTag);
+                eTag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -249,11 +247,11 @@ namespace Azure.ResourceManager.DnsResolver.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 provisioningState is null && resourceGuid is null ? default : new DnsResolverPolicyProperties(provisioningState, resourceGuid, null),
-                eTag);
+                eTag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Describes a DNS resolver policy for PATCH operation. </summary>
@@ -289,7 +287,6 @@ namespace Azure.ResourceManager.DnsResolver.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 new DnsSecurityRuleProperties(
@@ -300,7 +297,8 @@ namespace Azure.ResourceManager.DnsResolver.Models
                     dnsSecurityRuleState,
                     provisioningState,
                     null),
-                eTag);
+                eTag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="dnsResolverDomainLists"> DNS resolver policy domains lists that the DNS security rule applies to. </param>
@@ -342,11 +340,11 @@ namespace Azure.ResourceManager.DnsResolver.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 new DnsResolverPolicyVirtualNetworkLinkProperties(new SubResource(virtualNetworkId, null), provisioningState, null),
-                eTag);
+                eTag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Describes a DNS resolver policy virtual network link for PATCH operation. </summary>
@@ -380,11 +378,11 @@ namespace Azure.ResourceManager.DnsResolver.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 domains is null && domainsUri is null && provisioningState is null && resourceGuid is null ? default : new DnsResolverDomainListProperties((domains ?? new ChangeTrackingList<string>()).ToList(), domainsUri, provisioningState, resourceGuid, null),
-                eTag);
+                eTag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="domains"> The domains in the domain list. </param>

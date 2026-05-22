@@ -33,9 +33,9 @@ namespace Azure.ResourceManager.DeviceProvisioningServices.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
-                etag);
+                etag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The description of an X509 CA Certificate. </summary>
@@ -74,9 +74,9 @@ namespace Azure.ResourceManager.DeviceProvisioningServices.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 etag,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The CertificateVerificationCodeProperties. </summary>
@@ -126,7 +126,6 @@ namespace Azure.ResourceManager.DeviceProvisioningServices.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 eTag,
@@ -134,7 +133,8 @@ namespace Azure.ResourceManager.DeviceProvisioningServices.Models
                 subscriptionId,
                 properties,
                 sku,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> the service specific properties of a provisioning service, including keys, linked iot hubs, current state, and system generated properties such as hostname and idScope. </summary>
@@ -195,8 +195,8 @@ namespace Azure.ResourceManager.DeviceProvisioningServices.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Description of the IoT hub. </summary>
@@ -259,8 +259,8 @@ namespace Azure.ResourceManager.DeviceProvisioningServices.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The properties for a group information object. </summary>
@@ -315,7 +315,6 @@ namespace Azure.ResourceManager.DeviceProvisioningServices.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 etag,
@@ -323,7 +322,8 @@ namespace Azure.ResourceManager.DeviceProvisioningServices.Models
                 default,
                 properties,
                 sku,
-                default);
+                default,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Models.DeviceProvisioningServiceProperties"/>. </summary>

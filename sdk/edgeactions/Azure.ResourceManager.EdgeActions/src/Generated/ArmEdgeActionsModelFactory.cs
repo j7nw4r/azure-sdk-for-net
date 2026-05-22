@@ -37,11 +37,11 @@ namespace Azure.ResourceManager.EdgeActions.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                sku);
+                sku,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Represents an edge action properties. </summary>
@@ -94,10 +94,10 @@ namespace Azure.ResourceManager.EdgeActions.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Represents an edge action version. </summary>
@@ -147,10 +147,10 @@ namespace Azure.ResourceManager.EdgeActions.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties for edge action execution filter. </summary>

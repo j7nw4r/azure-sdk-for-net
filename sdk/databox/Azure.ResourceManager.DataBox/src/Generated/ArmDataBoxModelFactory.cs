@@ -1491,12 +1491,12 @@ namespace Azure.ResourceManager.DataBox.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 default,
                 sku,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Models.DeviceErasureDetails"/>. </summary>

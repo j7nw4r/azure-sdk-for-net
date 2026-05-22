@@ -33,8 +33,8 @@ namespace Azure.ResourceManager.DataBoxEdge.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                networkAdapters is null ? default : new NetworkSettingsProperties((networkAdapters ?? new ChangeTrackingList<DataBoxEdgeNetworkAdapter>()).ToList(), null));
+                networkAdapters is null ? default : new NetworkSettingsProperties((networkAdapters ?? new ChangeTrackingList<DataBoxEdgeNetworkAdapter>()).ToList(), null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="adapterId"> Instance ID of network adapter. </param>
@@ -144,7 +144,6 @@ namespace Azure.ResourceManager.DataBoxEdge.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 dataBoxEdgeSystemData is null && dataBoxEdgeDeviceStatus is null && serialNumber is null && description is null && modelDescription is null && deviceType is null && friendlyName is null && culture is null && deviceModel is null && deviceSoftwareVersion is null && deviceLocalCapacity is null && timeZone is null && deviceHcsVersion is null && configuredRoleTypes is null && nodeCount is null && resourceMoveDetails is null && kubernetesWorkloadProfile is null && edgeSubscription is null && residencyType is null ? default : new DataBoxEdgeDeviceProperties(
@@ -171,7 +170,8 @@ namespace Azure.ResourceManager.DataBoxEdge.Models
                 sku,
                 eTag,
                 identity,
-                kind);
+                kind,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Fields for tracking resource move. </summary>
@@ -275,7 +275,6 @@ namespace Azure.ResourceManager.DataBoxEdge.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 encryptionKeyThumbprint is null && encryptionKey is null && resourceKey is null && clientSecretStoreId is null && clientSecretStoreUri is null && channelIntegrityKeyName is null && channelIntegrityKeyVersion is null && keyVaultSyncStatus is null && deviceSecrets is null && clusterWitnessType is null && fileShareWitnessLocation is null && fileShareWitnessUsername is null && cloudWitnessStorageAccountName is null && cloudWitnessContainerName is null && cloudWitnessStorageEndpoint is null ? default : new DataBoxEdgeDeviceExtendedInfoProperties(
                     encryptionKeyThumbprint,
                     encryptionKey,
@@ -292,7 +291,8 @@ namespace Azure.ResourceManager.DataBoxEdge.Models
                     cloudWitnessStorageAccountName,
                     cloudWitnessContainerName,
                     cloudWitnessStorageEndpoint,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Holds device secret either as a KeyVault reference or as an encrypted value. </summary>
@@ -317,8 +317,8 @@ namespace Azure.ResourceManager.DataBoxEdge.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                new SecuritySettingsProperties(deviceAdminPassword, null));
+                new SecuritySettingsProperties(deviceAdminPassword, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The upload registration certificate response. </summary>
@@ -382,7 +382,6 @@ namespace Azure.ResourceManager.DataBoxEdge.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 deviceVersionNumber is null && friendlyDeviceVersionName is null && deviceLastScannedOn is null && lastCompletedScanJobOn is null && lastSuccessfulScanJobOn is null && lastCompletedDownloadJobOn is null && lastCompletedDownloadJobId is null && lastDownloadJobStatus is null && lastSuccessfulInstallJobOn is null && lastCompletedInstallJobOn is null && lastCompletedInstallJobId is null && lastInstallJobStatus is null && totalNumberOfUpdatesAvailable is null && totalNumberOfUpdatesPendingDownload is null && totalNumberOfUpdatesPendingInstall is null && rebootBehavior is null && ongoingUpdateOperation is null && inProgressDownloadJobId is null && inProgressInstallJobId is null && inProgressDownloadJobStartedOn is null && inProgressInstallJobStartedOn is null && updateTitles is null && updates is null && totalUpdateSizeInBytes is null && totalTimeInMinutes is null ? default : new UpdateSummaryProperties(
                     deviceVersionNumber,
                     friendlyDeviceVersionName,
@@ -409,7 +408,8 @@ namespace Azure.ResourceManager.DataBoxEdge.Models
                     (updates ?? new ChangeTrackingList<DataBoxEdgeUpdateDetails>()).ToList(),
                     totalUpdateSizeInBytes,
                     totalTimeInMinutes,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Update Specific attributes. </summary>
@@ -457,7 +457,6 @@ namespace Azure.ResourceManager.DataBoxEdge.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 title is null && alertType is null && appearedOn is null && recommendation is null && severity is null && errorDetails is null && detailedInformation is null ? default : new AlertProperties(
                     title,
                     alertType,
@@ -466,7 +465,8 @@ namespace Azure.ResourceManager.DataBoxEdge.Models
                     severity,
                     errorDetails,
                     detailedInformation,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Error details for the alert. </summary>
@@ -492,8 +492,8 @@ namespace Azure.ResourceManager.DataBoxEdge.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                new DiagnosticRemoteSupportSettingsProperties((remoteSupportSettingsList ?? new ChangeTrackingList<EdgeRemoteSupportSettings>()).ToList(), null));
+                new DiagnosticRemoteSupportSettingsProperties((remoteSupportSettingsList ?? new ChangeTrackingList<EdgeRemoteSupportSettings>()).ToList(), null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Details about the download progress of update. </summary>
@@ -618,8 +618,8 @@ namespace Azure.ResourceManager.DataBoxEdge.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                new DataBoxEdgeRoleType(kind));
+                new DataBoxEdgeRoleType(kind),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -642,8 +642,8 @@ namespace Azure.ResourceManager.DataBoxEdge.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 DataBoxEdgeRoleType.IoT,
+                additionalBinaryDataProperties: null,
                 hostPlatform is null && iotDeviceDetails is null && iotEdgeDeviceDetails is null && shareMappings is null && iotEdgeAgentInfo is null && hostPlatformType is null && computeResource is null && roleStatus is null ? default : new IoTRoleProperties(
                     hostPlatform,
                     iotDeviceDetails,
@@ -692,8 +692,8 @@ namespace Azure.ResourceManager.DataBoxEdge.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 DataBoxEdgeRoleType.Kubernetes,
+                additionalBinaryDataProperties: null,
                 hostPlatform is null && provisioningState is null && hostPlatformType is null && kubernetesClusterInfo is null && kubernetesRoleResources is null && roleStatus is null ? default : new KubernetesRoleProperties(
                     hostPlatform,
                     provisioningState,
@@ -836,8 +836,8 @@ namespace Azure.ResourceManager.DataBoxEdge.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 DataBoxEdgeRoleType.Mec,
+                additionalBinaryDataProperties: null,
                 connectionString is null && controllerEndpoint is null && resourceUniqueId is null && roleStatus is null ? default : new MECRoleProperties(connectionString, controllerEndpoint, resourceUniqueId, roleStatus, null));
         }
 
@@ -855,8 +855,8 @@ namespace Azure.ResourceManager.DataBoxEdge.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                new AddonType(kind));
+                new AddonType(kind),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -877,8 +877,8 @@ namespace Azure.ResourceManager.DataBoxEdge.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 AddonType.IotEdge,
+                additionalBinaryDataProperties: null,
                 new IoTAddonProperties(
                     iotDeviceDetails,
                     iotEdgeDeviceDetails,
@@ -903,8 +903,8 @@ namespace Azure.ResourceManager.DataBoxEdge.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                new TriggerEventType(kind));
+                new TriggerEventType(kind),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Specifies the mapping between this particular user and the type of access he has on shares on this device. </summary>
@@ -956,7 +956,6 @@ namespace Azure.ResourceManager.DataBoxEdge.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 nodeStatus is null && nodeChassisSerialNumber is null && nodeSerialNumber is null && nodeDisplayName is null && nodeFriendlySoftwareVersion is null && nodeHcsVersion is null && nodeInstanceId is null ? default : new NodeProperties(
                     nodeStatus,
                     nodeChassisSerialNumber,
@@ -965,7 +964,8 @@ namespace Azure.ResourceManager.DataBoxEdge.Models
                     nodeFriendlySoftwareVersion,
                     nodeHcsVersion,
                     nodeInstanceId,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -987,8 +987,8 @@ namespace Azure.ResourceManager.DataBoxEdge.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                new SupportPackageRequestProperties(minimumTimeStamp, maximumTimeStamp, include, null));
+                new SupportPackageRequestProperties(minimumTimeStamp, maximumTimeStamp, include, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -1007,8 +1007,8 @@ namespace Azure.ResourceManager.DataBoxEdge.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                timeStamp is null && clusterStorageCapacityInfo is null && clusterComputeCapacityInfo is null && nodeCapacityInfos is null ? default : new DeviceCapacityInfoProperties(timeStamp, clusterStorageCapacityInfo, clusterComputeCapacityInfo, nodeCapacityInfos, null));
+                timeStamp is null && clusterStorageCapacityInfo is null && clusterComputeCapacityInfo is null && nodeCapacityInfos is null ? default : new DeviceCapacityInfoProperties(timeStamp, clusterStorageCapacityInfo, clusterComputeCapacityInfo, nodeCapacityInfos, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Host Capacity Data. </summary>
@@ -1073,8 +1073,8 @@ namespace Azure.ResourceManager.DataBoxEdge.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                new MonitoringMetricConfigurationProperties((metricConfigurations ?? new ChangeTrackingList<DataBoxEdgeMetricConfiguration>()).ToList(), null));
+                new MonitoringMetricConfigurationProperties((metricConfigurations ?? new ChangeTrackingList<DataBoxEdgeMetricConfiguration>()).ToList(), null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Metric configuration. </summary>
@@ -1230,7 +1230,6 @@ namespace Azure.ResourceManager.DataBoxEdge.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 dataBoxEdgeDeviceStatus is null && serialNumber is null && description is null && modelDescription is null && deviceType is null && friendlyName is null && culture is null && deviceModel is null && deviceSoftwareVersion is null && deviceLocalCapacity is null && timeZone is null && deviceHcsVersion is null && configuredRoleTypes is null && nodeCount is null && resourceMoveDetails is null && edgeSubscription is null && residencyType is null ? default : new DataBoxEdgeDeviceProperties(
@@ -1257,7 +1256,8 @@ namespace Azure.ResourceManager.DataBoxEdge.Models
                 sku,
                 etag,
                 identity,
-                kind);
+                kind,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="DataBoxEdge.DataBoxEdgeJobData"/>. </summary>
@@ -1286,13 +1286,13 @@ namespace Azure.ResourceManager.DataBoxEdge.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 default,
                 status,
                 startOn,
                 endOn,
                 percentComplete,
-                error);
+                error,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="DataBoxEdge.DataBoxEdgeOrderData"/>. </summary>
@@ -1322,9 +1322,9 @@ namespace Azure.ResourceManager.DataBoxEdge.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 default,
-                kind);
+                kind,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Models.UploadCertificateContent"/>. </summary>
@@ -1353,8 +1353,8 @@ namespace Azure.ResourceManager.DataBoxEdge.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 DataBoxEdgeRoleType.CloudEdgeManagement,
+                additionalBinaryDataProperties: null,
                 default);
         }
 
@@ -1374,8 +1374,8 @@ namespace Azure.ResourceManager.DataBoxEdge.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 TriggerEventType.FileEvent,
+                additionalBinaryDataProperties: null,
                 default);
         }
 
@@ -1405,8 +1405,8 @@ namespace Azure.ResourceManager.DataBoxEdge.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 TriggerEventType.PeriodicTimerEvent,
+                additionalBinaryDataProperties: null,
                 default);
         }
     }

@@ -36,10 +36,10 @@ namespace Azure.ResourceManager.DependencyMap.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                dependencyMapProvisioningState is null ? default : new DependencyMapProperties(dependencyMapProvisioningState, null));
+                dependencyMapProvisioningState is null ? default : new DependencyMapProperties(dependencyMapProvisioningState, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The type used for updating tags in MapsResource resources. </summary>
@@ -174,10 +174,10 @@ namespace Azure.ResourceManager.DependencyMap.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary>

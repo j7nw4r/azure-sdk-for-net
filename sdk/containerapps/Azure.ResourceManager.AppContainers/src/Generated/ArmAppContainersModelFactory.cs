@@ -52,7 +52,6 @@ namespace Azure.ResourceManager.AppContainers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 environmentId is null && containerType is null && poolManagementType is null && nodeCount is null && scaleConfiguration is null && secrets is null && customContainerTemplate is null && templateUpdateStatus is null && poolManagementEndpoint is null && provisioningState is null && managedIdentitySettings is null && mcpServerSettings is null && dynamicPoolLifecycleConfiguration is null && sessionNetworkStatus is null ? default : new SessionPoolProperties(
@@ -71,7 +70,8 @@ namespace Azure.ResourceManager.AppContainers.Models
                     (managedIdentitySettings ?? new ChangeTrackingList<SessionPoolManagedIdentitySetting>()).ToList(),
                     mcpServerSettings,
                     null),
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="registryCredentials"> Private container registry credentials for containers used by the sessions of the session pool. </param>
@@ -239,8 +239,8 @@ namespace Azure.ResourceManager.AppContainers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                operationState is null && repoUri is null && branch is null && gitHubActionConfiguration is null ? default : new SourceControlProperties(operationState, repoUri, branch, gitHubActionConfiguration, null));
+                operationState is null && repoUri is null && branch is null && gitHubActionConfiguration is null ? default : new SourceControlProperties(operationState, repoUri, branch, gitHubActionConfiguration, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Configuration properties that define the mutable settings of a Container App SourceControl. </summary>
@@ -310,7 +310,6 @@ namespace Azure.ResourceManager.AppContainers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 provisioningState is null && runningStatus is null && deploymentErrors is null && managedEnvironmentId is null && environmentId is null && workloadProfileName is null && latestRevisionName is null && latestReadyRevisionName is null && latestRevisionFqdn is null && customDomainVerificationId is null && configuration is null && template is null && outboundIPAddressList is null && eventStreamEndpoint is null && patchingMode is null ? default : new ContainerAppProperties(
@@ -333,7 +332,8 @@ namespace Azure.ResourceManager.AppContainers.Models
                 extendedLocation,
                 identity,
                 managedBy,
-                kind);
+                kind,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="fqdn"> Hostname. </param>
@@ -759,10 +759,10 @@ namespace Azure.ResourceManager.AppContainers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                token is null && expireOn is null ? default : new ContainerAppAuthTokenProperties(token, expireOn, null));
+                token is null && expireOn is null ? default : new ContainerAppAuthTokenProperties(token, expireOn, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -782,14 +782,14 @@ namespace Azure.ResourceManager.AppContainers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 provisioningState is null && buildStatus is null && destinationContainerRegistry is null && configuration is null && logStreamEndpoint is null ? default : new ContainerAppsBuildProperties(
                     provisioningState,
                     buildStatus,
                     destinationContainerRegistry,
                     configuration,
                     logStreamEndpoint,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Configuration of the build. </summary>
@@ -853,8 +853,8 @@ namespace Azure.ResourceManager.AppContainers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                invokeUrlTemplate is null && triggerType is null && language is null && isDisabled is null ? default : new ContainerAppsFunctionProperties(invokeUrlTemplate, triggerType, language, isDisabled, null));
+                invokeUrlTemplate is null && triggerType is null && language is null && isDisabled is null ? default : new ContainerAppsFunctionProperties(invokeUrlTemplate, triggerType, language, isDisabled, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -888,7 +888,6 @@ namespace Azure.ResourceManager.AppContainers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 createdOn is null && lastActiveOn is null && fqdn is null && template is null && isActive is null && replicas is null && trafficWeight is null && labels is null && provisioningError is null && healthState is null && provisioningState is null && runningState is null ? default : new RevisionProperties(
                     createdOn,
                     lastActiveOn,
@@ -902,7 +901,8 @@ namespace Azure.ResourceManager.AppContainers.Models
                     healthState,
                     provisioningState,
                     runningState,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -918,8 +918,8 @@ namespace Azure.ResourceManager.AppContainers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                labelHistoryRecords is null ? default : new LabelHistoryProperties((labelHistoryRecords ?? new ChangeTrackingList<LabelHistoryRecordItem>()).ToList(), null));
+                labelHistoryRecords is null ? default : new LabelHistoryProperties((labelHistoryRecords ?? new ChangeTrackingList<LabelHistoryRecordItem>()).ToList(), null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Container App Label History Item resource specific properties. </summary>
@@ -947,8 +947,8 @@ namespace Azure.ResourceManager.AppContainers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Top level properties that describes current states of the patch resource. </summary>
@@ -1036,14 +1036,14 @@ namespace Azure.ResourceManager.AppContainers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 createdOn is null && runningState is null && runningStateDetails is null && containers is null && initContainers is null ? default : new ReplicaProperties(
                     createdOn,
                     runningState,
                     runningStateDetails,
                     (containers ?? new ChangeTrackingList<ContainerAppReplicaContainer>()).ToList(),
                     (initContainers ?? new ChangeTrackingList<ContainerAppReplicaContainer>()).ToList(),
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Container object under Container App Revision Replica. </summary>
@@ -1090,8 +1090,8 @@ namespace Azure.ResourceManager.AppContainers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                componentType is null && provisioningState is null && configurations is null && serviceBinds is null ? default : new DotNetComponentProperties(componentType, provisioningState, (configurations ?? new ChangeTrackingList<DotNetComponentConfigurationProperty>()).ToList(), (serviceBinds ?? new ChangeTrackingList<DotNetComponentServiceBind>()).ToList(), null));
+                componentType is null && provisioningState is null && configurations is null && serviceBinds is null ? default : new DotNetComponentProperties(componentType, provisioningState, (configurations ?? new ChangeTrackingList<DotNetComponentConfigurationProperty>()).ToList(), (serviceBinds ?? new ChangeTrackingList<DotNetComponentServiceBind>()).ToList(), null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Java Component. </summary>
@@ -1108,8 +1108,8 @@ namespace Azure.ResourceManager.AppContainers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary>
@@ -1332,7 +1332,6 @@ namespace Azure.ResourceManager.AppContainers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 platform is null && globalValidation is null && identityProviders is null && login is null && httpSettings is null && encryptionSettings is null ? default : new AuthConfigProperties(
                     platform,
                     globalValidation,
@@ -1340,7 +1339,8 @@ namespace Azure.ResourceManager.AppContainers.Models
                     login,
                     httpSettings,
                     encryptionSettings,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The configuration settings that determines the validation flow of users using ContainerApp Service Authentication/Authorization. </summary>
@@ -1505,11 +1505,11 @@ namespace Azure.ResourceManager.AppContainers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 provisioningState is null && environmentId is null && containerRegistries is null ? default : new BuilderProperties(provisioningState, environmentId, (containerRegistries ?? new ChangeTrackingList<ContainerRegistry>()).ToList(), null),
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="identity"> The managed service identities assigned to this resource. </param>
@@ -1542,7 +1542,6 @@ namespace Azure.ResourceManager.AppContainers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 provisioningState is null && buildStatus is null && destinationContainerRegistry is null && configuration is null && uploadEndpoint is null && logStreamEndpoint is null && tokenEndpoint is null ? default : new BuildProperties(
                     provisioningState,
                     buildStatus,
@@ -1551,7 +1550,8 @@ namespace Azure.ResourceManager.AppContainers.Models
                     uploadEndpoint,
                     logStreamEndpoint,
                     tokenEndpoint,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Configuration of the build. </summary>
@@ -1647,10 +1647,10 @@ namespace Azure.ResourceManager.AppContainers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Certificate resource specific properties. </summary>
@@ -1744,7 +1744,6 @@ namespace Azure.ResourceManager.AppContainers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 provisioningState is null && daprAIInstrumentationKey is null && daprAIConnectionString is null && vnetConfiguration is null && deploymentErrors is null && defaultDomain is null && privateLinkDefaultDomain is null && staticIP is null && appLogsConfiguration is null && openTelemetryConfiguration is null && isZoneRedundant is null && availabilityZones is null && customDomainConfiguration is null && eventStreamEndpoint is null && workloadProfiles is null && infrastructureResourceGroup is null && ingressConfiguration is null && privateEndpointConnections is null && publicNetworkAccess is null && appInsightsConnectionString is null && kedaVersion is null && daprVersion is null && isMtlsEnabled is null && isEnabled is null && diskEncryptionKeyVaultConfiguration is null ? default : new ManagedEnvironmentProperties(
@@ -1775,7 +1774,8 @@ namespace Azure.ResourceManager.AppContainers.Models
                     new DiskEncryptionConfiguration(diskEncryptionKeyVaultConfiguration, null),
                     null),
                 kind,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Configuration of Open Telemetry destinations. </summary>
@@ -1842,10 +1842,10 @@ namespace Azure.ResourceManager.AppContainers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                token is null && expireOn is null ? default : new EnvironmentAuthTokenProperties(token, expireOn, null));
+                token is null && expireOn is null ? default : new EnvironmentAuthTokenProperties(token, expireOn, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Collection of all the workload Profile States for a Managed Environment.. </summary>
@@ -1862,8 +1862,8 @@ namespace Azure.ResourceManager.AppContainers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -1889,7 +1889,6 @@ namespace Azure.ResourceManager.AppContainers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 componentType is null && version is null && ignoreErrors is null && initTimeout is null && secrets is null && secretStoreComponent is null && metadata is null && scopes is null && serviceComponentBind is null && provisioningState is null && deploymentErrors is null ? default : new DaprComponentProperties(
                     componentType,
                     version,
@@ -1902,7 +1901,8 @@ namespace Azure.ResourceManager.AppContainers.Models
                     (serviceComponentBind ?? new ChangeTrackingList<DaprComponentServiceBinding>()).ToList(),
                     provisioningState,
                     deploymentErrors,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Dapr component Secret for ListSecrets Action. </summary>
@@ -1928,8 +1928,8 @@ namespace Azure.ResourceManager.AppContainers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Storage properties. </summary>
@@ -1961,10 +1961,10 @@ namespace Azure.ResourceManager.AppContainers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Certificate resource specific properties. </summary>
@@ -2009,8 +2009,8 @@ namespace Azure.ResourceManager.AppContainers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                inboundPolicy is null && outboundPolicy is null ? default : new DaprComponentResiliencyPolicyProperties(inboundPolicy, outboundPolicy, null));
+                inboundPolicy is null && outboundPolicy is null ? default : new DaprComponentResiliencyPolicyProperties(inboundPolicy, outboundPolicy, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -2032,7 +2032,6 @@ namespace Azure.ResourceManager.AppContainers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 pubsubName is null && topic is null && deadLetterTopic is null && routes is null && scopes is null && metadata is null && bulkSubscribe is null ? default : new DaprSubscriptionProperties(
                     pubsubName,
                     topic,
@@ -2041,7 +2040,8 @@ namespace Azure.ResourceManager.AppContainers.Models
                     (scopes ?? new ChangeTrackingList<string>()).ToList(),
                     metadata,
                     bulkSubscribe,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Dapr PubSub Event Subscription Routes configuration. </summary>
@@ -2068,8 +2068,8 @@ namespace Azure.ResourceManager.AppContainers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                scheduledEntries is null ? default : new ContainerAppMaintenanceScheduledEntries((scheduledEntries ?? new ChangeTrackingList<ManagedEnvironmentScheduledEntry>()).ToList(), null));
+                scheduledEntries is null ? default : new ContainerAppMaintenanceScheduledEntries((scheduledEntries ?? new ChangeTrackingList<ManagedEnvironmentScheduledEntry>()).ToList(), null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Storage resource for managedEnvironment. </summary>
@@ -2086,8 +2086,8 @@ namespace Azure.ResourceManager.AppContainers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -2116,7 +2116,6 @@ namespace Azure.ResourceManager.AppContainers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 provisioningState is null && runningState is null && environmentId is null && workloadProfileName is null && configuration is null && template is null && outboundIPAddresses is null && eventStreamEndpoint is null ? default : new JobProperties(
@@ -2130,7 +2129,8 @@ namespace Azure.ResourceManager.AppContainers.Models
                     eventStreamEndpoint,
                     null),
                 extendedLocation,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Non versioned Container Apps Job configuration properties. </summary>
@@ -2321,7 +2321,6 @@ namespace Azure.ResourceManager.AppContainers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 status is null && startOn is null && endOn is null && template is null && reason is null && message is null && detailedStatusReplicas is null ? default : new JobExecutionProperties(
                     status,
                     startOn,
@@ -2330,7 +2329,8 @@ namespace Azure.ResourceManager.AppContainers.Models
                     new ExecutionStatus((detailedStatusReplicas ?? new ChangeTrackingList<ReplicaExecutionStatus>()).ToList(), null),
                     reason,
                     message,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Container Apps Job execution replica status. </summary>
@@ -2369,8 +2369,8 @@ namespace Azure.ResourceManager.AppContainers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Diagnostics resource specific properties. </summary>
@@ -2408,13 +2408,13 @@ namespace Azure.ResourceManager.AppContainers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 description,
                 author,
                 category,
                 supportTopicList.ToList(),
                 analysisTypes.ToList(),
-                score);
+                score,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Support topic information. </summary>
@@ -2468,7 +2468,6 @@ namespace Azure.ResourceManager.AppContainers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 timeoutPolicy is null && httpRetryPolicy is null && circuitBreakerPolicy is null && httpConnectionPool is null && tcpRetryMaxConnectAttempts is null && tcpConnectionPoolMaxConnections is null ? default : new AppResiliencyProperties(
                     timeoutPolicy,
                     httpRetryPolicy,
@@ -2476,7 +2475,8 @@ namespace Azure.ResourceManager.AppContainers.Models
                     circuitBreakerPolicy,
                     httpConnectionPool,
                     new TcpConnectionPool(tcpConnectionPoolMaxConnections, null),
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Build Auth Token. </summary>
@@ -2503,8 +2503,8 @@ namespace Azure.ResourceManager.AppContainers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                groupId is null && requiredMembers is null && requiredZoneNames is null ? default : new AppContainersPrivateLinkResourceProperties(groupId, (requiredMembers ?? new ChangeTrackingList<string>()).ToList(), (requiredZoneNames ?? new ChangeTrackingList<string>()).ToList(), null));
+                groupId is null && requiredMembers is null && requiredZoneNames is null ? default : new AppContainersPrivateLinkResourceProperties(groupId, (requiredMembers ?? new ChangeTrackingList<string>()).ToList(), (requiredZoneNames ?? new ChangeTrackingList<string>()).ToList(), null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Advanced Ingress routing for path/header based routing for a Container App Environment. </summary>
@@ -2521,8 +2521,8 @@ namespace Azure.ResourceManager.AppContainers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Http Route Config properties. </summary>
@@ -2584,9 +2584,9 @@ namespace Azure.ResourceManager.AppContainers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 location,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Billing meter. </summary>
@@ -2604,9 +2604,9 @@ namespace Azure.ResourceManager.AppContainers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 location,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Describes Compute Resource Usage. </summary>
@@ -2644,8 +2644,8 @@ namespace Azure.ResourceManager.AppContainers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                managedEnvironmentStorageAzureFile is null ? default : new ManagedEnvironmentStorageProperties(managedEnvironmentStorageAzureFile, default, default));
+                managedEnvironmentStorageAzureFile is null ? default : new ManagedEnvironmentStorageProperties(managedEnvironmentStorageAzureFile, default, default),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="AppContainers.ContainerAppConnectedEnvironmentStorageData"/>. </summary>
@@ -2663,8 +2663,8 @@ namespace Azure.ResourceManager.AppContainers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                connectedEnvironmentStorageAzureFile is null ? default : new ConnectedEnvironmentStorageProperties(default, default, connectedEnvironmentStorageAzureFile, default, default));
+                connectedEnvironmentStorageAzureFile is null ? default : new ConnectedEnvironmentStorageProperties(default, default, connectedEnvironmentStorageAzureFile, default, default),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="AppContainers.ContainerAppConnectedEnvironmentData"/>. </summary>
@@ -2691,11 +2691,11 @@ namespace Azure.ResourceManager.AppContainers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 default,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Models.ContainerAppCertificateProperties"/>. </summary>
@@ -2917,8 +2917,8 @@ namespace Azure.ResourceManager.AppContainers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                default);
+                default,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="AppContainers.ContainerAppJobData"/>. </summary>
@@ -3000,8 +3000,8 @@ namespace Azure.ResourceManager.AppContainers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                default);
+                default,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="AppContainers.LogicAppWorkflowEnvelopeData"/>. </summary>
@@ -3019,9 +3019,9 @@ namespace Azure.ResourceManager.AppContainers.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
-                kind);
+                kind,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Models.ContainerAppCertificateProperties"/>. </summary>

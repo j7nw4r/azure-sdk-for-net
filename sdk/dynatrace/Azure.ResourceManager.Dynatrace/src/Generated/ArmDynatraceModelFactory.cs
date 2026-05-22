@@ -33,8 +33,8 @@ namespace Azure.ResourceManager.Dynatrace.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The request to update subscriptions needed to be monitored by the Dynatrace monitor resource. </summary>
@@ -101,8 +101,8 @@ namespace Azure.ResourceManager.Dynatrace.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                new DynatraceTagRuleProperties(logRules, metricRules, provisioningState, null));
+                new DynatraceTagRuleProperties(logRules, metricRules, provisioningState, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -131,7 +131,6 @@ namespace Azure.ResourceManager.Dynatrace.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 new DynatraceMonitorProperties(
@@ -145,7 +144,8 @@ namespace Azure.ResourceManager.Dynatrace.Models
                     liftrResourcePreference,
                     provisioningState,
                     null),
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The details of a Dynatrace single sign-on. </summary>
@@ -366,14 +366,14 @@ namespace Azure.ResourceManager.Dynatrace.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 new DynatraceSingleSignOnProperties(
                     singleSignOnState,
                     enterpriseAppId,
                     singleSignOnUri,
                     (aadDomains ?? new ChangeTrackingList<string>()).ToList(),
                     provisioningState,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
     }
 }

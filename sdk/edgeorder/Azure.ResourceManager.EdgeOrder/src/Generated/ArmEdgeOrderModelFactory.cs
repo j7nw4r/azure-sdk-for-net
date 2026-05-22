@@ -42,7 +42,6 @@ namespace Azure.ResourceManager.EdgeOrder.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 new EdgeOrderItemAddressProperties(
@@ -51,7 +50,8 @@ namespace Azure.ResourceManager.EdgeOrder.Models
                     contactDetails,
                     addressValidationStatus,
                     provisioningState,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Address Properties. </summary>
@@ -125,7 +125,6 @@ namespace Azure.ResourceManager.EdgeOrder.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 new OrderItemProperties(
@@ -135,7 +134,8 @@ namespace Azure.ResourceManager.EdgeOrder.Models
                     orderId,
                     provisioningState,
                     null),
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="productDetails"> Represents product details. </param>
@@ -462,8 +462,8 @@ namespace Azure.ResourceManager.EdgeOrder.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                new OrderProperties((orderItemIds ?? new ChangeTrackingList<ResourceIdentifier>()).ToList(), currentStage, (orderStageHistory ?? new ChangeTrackingList<EdgeOrderStageDetails>()).ToList(), orderMode, null));
+                new OrderProperties((orderItemIds ?? new ChangeTrackingList<ResourceIdentifier>()).ToList(), currentStage, (orderStageHistory ?? new ChangeTrackingList<EdgeOrderStageDetails>()).ToList(), orderMode, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Configuration filters. </summary>

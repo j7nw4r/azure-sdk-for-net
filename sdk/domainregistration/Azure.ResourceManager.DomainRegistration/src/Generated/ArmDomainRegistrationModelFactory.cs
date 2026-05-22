@@ -56,7 +56,6 @@ namespace Azure.ResourceManager.DomainRegistration.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 contactAdmin is null && contactBilling is null && contactRegistrant is null && contactTech is null && registrationStatus is null && provisioningState is null && nameServers is null && isDomainPrivacyEnabled is null && createdOn is null && expireOn is null && lastRenewedOn is null && isAutoRenew is null && isDnsRecordManagementReady is null && managedHostNames is null && consent is null && domainNotRenewableReasons is null && dnsType is null && dnsZoneId is null && targetDnsType is null && authCode is null ? default : new DomainProperties(
@@ -81,7 +80,8 @@ namespace Azure.ResourceManager.DomainRegistration.Models
                     targetDnsType,
                     authCode,
                     null),
-                kind);
+                kind,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Details of a hostname derived from a domain. </summary>
@@ -154,7 +154,6 @@ namespace Azure.ResourceManager.DomainRegistration.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 contactAdmin is null && contactBilling is null && contactRegistrant is null && contactTech is null && registrationStatus is null && provisioningState is null && nameServers is null && isDomainPrivacyEnabled is null && createdOn is null && expireOn is null && lastRenewedOn is null && isAutoRenew is null && isDnsRecordManagementReady is null && managedHostNames is null && consent is null && domainNotRenewableReasons is null && dnsType is null && dnsZoneId is null && targetDnsType is null && authCode is null ? default : new DomainPatchResourceProperties(
                     contactAdmin,
                     contactBilling,
@@ -178,7 +177,8 @@ namespace Azure.ResourceManager.DomainRegistration.Models
                     authCode,
                     null),
                 kind,
-                tags);
+                tags,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -195,9 +195,9 @@ namespace Azure.ResourceManager.DomainRegistration.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 ownershipId is null ? default : new DomainOwnershipIdentifierProperties(ownershipId, null),
-                kind);
+                kind,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -214,9 +214,9 @@ namespace Azure.ResourceManager.DomainRegistration.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 isDomainPrivacySupported is null ? default : new TopLevelDomainProperties(isDomainPrivacySupported, null),
-                kind);
+                kind,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Legal agreement for a top level domain. </summary>

@@ -65,7 +65,6 @@ namespace Azure.ResourceManager.ContainerInstance.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 zones.ToList(),
@@ -93,7 +92,8 @@ namespace Azure.ResourceManager.ContainerInstance.Models
                     containerGroupProfile,
                     standbyPoolProfile,
                     isCreatedFromStandbyPool,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The instance view of the container instance. Only valid in response. </summary>
@@ -303,10 +303,10 @@ namespace Azure.ResourceManager.ContainerInstance.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                zones.ToList());
+                zones.ToList(),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Application Gateway the CG profile will use to interact with CGs in a backend pool. </summary>
@@ -479,7 +479,6 @@ namespace Azure.ResourceManager.ContainerInstance.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 zones.ToList(),
@@ -507,7 +506,8 @@ namespace Azure.ResourceManager.ContainerInstance.Models
                     default,
                     default,
                     default,
-                    default));
+                    default),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="ContainerInstance.ContainerGroupData"/>. </summary>
@@ -558,7 +558,6 @@ namespace Azure.ResourceManager.ContainerInstance.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 zones.ToList(),
@@ -586,7 +585,8 @@ namespace Azure.ResourceManager.ContainerInstance.Models
                     containerGroupProfile,
                     standbyPoolProfile,
                     isCreatedFromStandbyPool,
-                    default));
+                    default),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Models.ContainerInstanceContainer"/>. </summary>
@@ -671,12 +671,12 @@ namespace Azure.ResourceManager.ContainerInstance.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 default,
                 zones.ToList(),
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Models.NGroupPatch"/>. </summary>
@@ -754,11 +754,11 @@ namespace Azure.ResourceManager.ContainerInstance.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 default,
-                zones.ToList());
+                zones.ToList(),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Models.ContainerInstanceContainer"/>. </summary>

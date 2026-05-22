@@ -37,9 +37,9 @@ namespace Azure.ResourceManager.DataProtectionBackup.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
-                tags);
+                tags,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Backup Instance. </summary>
@@ -233,12 +233,12 @@ namespace Azure.ResourceManager.DataProtectionBackup.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
                 identity,
-                etag);
+                etag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="monitoringAlertSettingsForAllJobFailures"> Gets or sets the AlertSettingsForAllJobFailures. </param>
@@ -348,8 +348,8 @@ namespace Azure.ResourceManager.DataProtectionBackup.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="monitoringAlertSettingsForAllJobFailures"> Gets or sets the AlertSettingsForAllJobFailures. </param>
@@ -419,8 +419,8 @@ namespace Azure.ResourceManager.DataProtectionBackup.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary>
@@ -947,8 +947,8 @@ namespace Azure.ResourceManager.DataProtectionBackup.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> List Restore Ranges Response. </summary>
@@ -976,8 +976,8 @@ namespace Azure.ResourceManager.DataProtectionBackup.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Azure backup discrete RecoveryPoint. </summary>
@@ -1053,8 +1053,8 @@ namespace Azure.ResourceManager.DataProtectionBackup.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="activityId"> Job Activity Id. </param>
@@ -1191,8 +1191,8 @@ namespace Azure.ResourceManager.DataProtectionBackup.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Deleted Backup Instance. </summary>
@@ -1276,11 +1276,11 @@ namespace Azure.ResourceManager.DataProtectionBackup.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                etag);
+                etag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The ResourceGuardProperties. </summary>
@@ -1337,8 +1337,8 @@ namespace Azure.ResourceManager.DataProtectionBackup.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> ResourceGuardProxyBase object, used in ResourceGuardProxyBaseResource. </summary>

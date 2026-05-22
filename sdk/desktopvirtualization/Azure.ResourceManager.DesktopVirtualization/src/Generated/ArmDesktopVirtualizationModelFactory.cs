@@ -37,10 +37,10 @@ namespace Azure.ResourceManager.DesktopVirtualization.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Schema for App Attach Package properties. </summary>
@@ -131,9 +131,9 @@ namespace Azure.ResourceManager.DesktopVirtualization.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Schema for patchable fields on an App Attach Package. </summary>
@@ -175,14 +175,14 @@ namespace Azure.ResourceManager.DesktopVirtualization.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 appAlias is null && filePath is null && commandLineArguments is null && iconPath is null && iconIndex is null ? default : new StartMenuItemProperties(
                     appAlias,
                     filePath,
                     commandLineArguments,
                     iconPath,
                     iconIndex,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -217,7 +217,6 @@ namespace Azure.ResourceManager.DesktopVirtualization.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 new ApplicationGroupProperties(
@@ -237,7 +236,8 @@ namespace Azure.ResourceManager.DesktopVirtualization.Models
                 kind,
                 managedBy,
                 plan,
-                sku);
+                sku,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -258,9 +258,9 @@ namespace Azure.ResourceManager.DesktopVirtualization.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
-                description is null && friendlyName is null && showInFeed is null ? default : new ApplicationGroupPatchProperties(description, friendlyName, showInFeed, null));
+                description is null && friendlyName is null && showInFeed is null ? default : new ApplicationGroupPatchProperties(description, friendlyName, showInFeed, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -290,7 +290,6 @@ namespace Azure.ResourceManager.DesktopVirtualization.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 packageAlias is null && imagePath is null && packageName is null && packageFamilyName is null && packageFullName is null && displayName is null && packageRelativePath is null && isRegularRegistration is null && isActive is null && packageDependencies is null && version is null && lastUpdatedOn is null && packageApplications is null && certificateName is null && certificateExpiry is null ? default : new ExpandMsixImageProperties(
                     packageAlias,
                     imagePath,
@@ -307,7 +306,8 @@ namespace Azure.ResourceManager.DesktopVirtualization.Models
                     (packageApplications ?? new ChangeTrackingList<MsixPackageApplications>()).ToList(),
                     certificateName,
                     certificateExpiry,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -325,8 +325,8 @@ namespace Azure.ResourceManager.DesktopVirtualization.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                groupId is null && requiredMembers is null && requiredZoneNames is null ? default : new DesktopVirtualizationPrivateLinkResourceProperties(groupId, (requiredMembers ?? new ChangeTrackingList<string>()).ToList(), (requiredZoneNames ?? new ChangeTrackingList<string>()).ToList(), null));
+                groupId is null && requiredMembers is null && requiredZoneNames is null ? default : new DesktopVirtualizationPrivateLinkResourceProperties(groupId, (requiredMembers ?? new ChangeTrackingList<string>()).ToList(), (requiredZoneNames ?? new ChangeTrackingList<string>()).ToList(), null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -383,7 +383,6 @@ namespace Azure.ResourceManager.DesktopVirtualization.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 new HostPoolProperties(
@@ -425,7 +424,8 @@ namespace Azure.ResourceManager.DesktopVirtualization.Models
                 kind,
                 managedBy,
                 plan,
-                sku);
+                sku,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -467,7 +467,6 @@ namespace Azure.ResourceManager.DesktopVirtualization.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 friendlyName is null && description is null && customRdpProperty is null && maxSessionLimit is null && personalDesktopAssignmentType is null && loadBalancerType is null && ring is null && isValidationEnvironment is null && registrationInfo is null && vmTemplate is null && ssoAdfsAuthority is null && ssoClientId is null && ssoClientSecretKeyVaultPath is null && ssoSecretType is null && preferredAppGroupType is null && startVmOnConnect is null && publicNetworkAccess is null && agentUpdate is null && managedPrivateUdp is null && directUdp is null && publicUdp is null && relayUdp is null && allowRdpShortPathWithPrivateLink is null ? default : new HostPoolPatchProperties(
                     friendlyName,
@@ -494,7 +493,8 @@ namespace Azure.ResourceManager.DesktopVirtualization.Models
                     relayUdp,
                     allowRdpShortPathWithPrivateLink,
                     null),
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Represents a Minimal set of properties for RegistrationToken definition. </summary>
@@ -536,7 +536,6 @@ namespace Azure.ResourceManager.DesktopVirtualization.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 new ScalingPlanProperties(
@@ -554,7 +553,8 @@ namespace Azure.ResourceManager.DesktopVirtualization.Models
                 kind,
                 managedBy,
                 plan,
-                sku);
+                sku,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> A ScalingPlanPooledSchedule. </summary>
@@ -638,7 +638,6 @@ namespace Azure.ResourceManager.DesktopVirtualization.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 objectId is null && description is null && friendlyName is null && isCloudPCResource is null && publicNetworkAccess is null && privateEndpointConnections is null && oboTenantId is null && deploymentScope is null && applicationGroupReferences is null ? default : new WorkspaceProperties(
@@ -657,7 +656,8 @@ namespace Azure.ResourceManager.DesktopVirtualization.Models
                 kind,
                 managedBy,
                 plan,
-                sku);
+                sku,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -677,14 +677,14 @@ namespace Azure.ResourceManager.DesktopVirtualization.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 objectId is null && description is null && friendlyName is null && iconHash is null && iconContent is null ? default : new DesktopProperties(
                     objectId,
                     description,
                     friendlyName,
                     iconHash,
                     iconContent,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -721,7 +721,6 @@ namespace Azure.ResourceManager.DesktopVirtualization.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 activeSessions is null && disconnectedSessions is null && pendingSessions is null && objectId is null && allowNewSession is null && vmId is null && resourceId is null && assignedUser is null && friendlyName is null && statusTimestamp is null && lastUpdatedOn is null && lastSessionHostUpdateOn is null && sessionHostConfiguration is null && sessionHostHealthCheckResults is null && agentVersion is null && lastHeartBeatOn is null && osVersion is null && sessions is null && status is null && sxsStackVersion is null && updateErrorMessage is null && updateState is null ? default : new SessionHostProperties(
                     activeSessions,
                     disconnectedSessions,
@@ -745,7 +744,8 @@ namespace Azure.ResourceManager.DesktopVirtualization.Models
                     lastSessionHostUpdateOn,
                     sessionHostConfiguration,
                     (sessionHostHealthCheckResults ?? new ChangeTrackingList<SessionHostHealthCheckReport>()).ToList(),
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The report for session host information. </summary>
@@ -783,8 +783,8 @@ namespace Azure.ResourceManager.DesktopVirtualization.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                allowNewSession is null && assignedUser is null && friendlyName is null ? default : new SessionHostPatchProperties(allowNewSession, assignedUser, friendlyName, null));
+                allowNewSession is null && assignedUser is null && friendlyName is null ? default : new SessionHostPatchProperties(allowNewSession, assignedUser, friendlyName, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Request body for listing scoped registration tokens for a session host. </summary>
@@ -813,7 +813,6 @@ namespace Azure.ResourceManager.DesktopVirtualization.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 objectId is null && userPrincipalName is null && applicationType is null && sessionState is null && activeDirectoryUserName is null && createOn is null ? default : new UserSessionProperties(
                     objectId,
                     userPrincipalName,
@@ -821,7 +820,8 @@ namespace Azure.ResourceManager.DesktopVirtualization.Models
                     sessionState,
                     activeDirectoryUserName,
                     createOn,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -862,7 +862,6 @@ namespace Azure.ResourceManager.DesktopVirtualization.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 new ScalingPlanPersonalScheduleProperties(
                     (daysOfWeek ?? new ChangeTrackingList<DesktopVirtualizationDayOfWeek>()).ToList(),
                     rampUpStartTime,
@@ -890,7 +889,8 @@ namespace Azure.ResourceManager.DesktopVirtualization.Models
                     offPeakMinutesToWaitOnDisconnect,
                     offPeakActionOnLogoff,
                     offPeakMinutesToWaitOnLogoff,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -925,7 +925,6 @@ namespace Azure.ResourceManager.DesktopVirtualization.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 new ScalingPlanPooledScheduleProperties(
                     scheduleName,
                     (daysOfWeek ?? new ChangeTrackingList<DesktopVirtualizationDayOfWeek>()).ToList(),
@@ -947,7 +946,8 @@ namespace Azure.ResourceManager.DesktopVirtualization.Models
                     rampDownNotificationMessage,
                     offPeakStartTime,
                     offPeakLoadBalancingAlgorithm,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -982,7 +982,6 @@ namespace Azure.ResourceManager.DesktopVirtualization.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 scheduleName is null && daysOfWeek is null && scalingMethod is null && createDelete is null && rampUpStartTime is null && rampUpLoadBalancingAlgorithm is null && rampUpMinimumHostsPct is null && rampUpCapacityThresholdPct is null && peakStartTime is null && peakLoadBalancingAlgorithm is null && rampDownStartTime is null && rampDownLoadBalancingAlgorithm is null && rampDownMinimumHostsPct is null && rampDownCapacityThresholdPct is null && rampDownForceLogoffUsers is null && rampDownStopHostsWhen is null && rampDownWaitTimeMinutes is null && rampDownNotificationMessage is null && offPeakStartTime is null && offPeakLoadBalancingAlgorithm is null ? default : new ScalingPlanPooledSchedulePatchProperties(
                     scheduleName,
                     (daysOfWeek ?? new ChangeTrackingList<DesktopVirtualizationDayOfWeek>()).ToList(),
@@ -1004,7 +1003,8 @@ namespace Azure.ResourceManager.DesktopVirtualization.Models
                     rampDownNotificationMessage,
                     offPeakStartTime,
                     offPeakLoadBalancingAlgorithm,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -1030,7 +1030,6 @@ namespace Azure.ResourceManager.DesktopVirtualization.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 new MSIXPackageProperties(
                     imagePath,
                     packageName,
@@ -1043,7 +1042,8 @@ namespace Azure.ResourceManager.DesktopVirtualization.Models
                     version,
                     lastUpdatedOn,
                     (packageApplications ?? new ChangeTrackingList<MsixPackageApplications>()).ToList(),
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -1061,8 +1061,8 @@ namespace Azure.ResourceManager.DesktopVirtualization.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                isActive is null && isRegularRegistration is null && displayName is null ? default : new MSIXPackagePatchProperties(isActive, isRegularRegistration, displayName, null));
+                isActive is null && isRegularRegistration is null && displayName is null ? default : new MSIXPackagePatchProperties(isActive, isRegularRegistration, displayName, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Schema for ActiveSessionHostConfiguration properties. </summary>
@@ -1079,8 +1079,8 @@ namespace Azure.ResourceManager.DesktopVirtualization.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Represents a ActiveSessionHostConfiguration definition. This has all of the sessionHostConfiguration properties except provisioningState. </summary>
@@ -1158,8 +1158,8 @@ namespace Azure.ResourceManager.DesktopVirtualization.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Schema for SessionHostConfiguration properties. </summary>
@@ -1176,8 +1176,8 @@ namespace Azure.ResourceManager.DesktopVirtualization.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Session host configurations of HostPool. </summary>
@@ -1402,7 +1402,6 @@ namespace Azure.ResourceManager.DesktopVirtualization.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 objectId is null && description is null && friendlyName is null && applicationGroupReferences is null && isCloudPCResource is null && publicNetworkAccess is null && privateEndpointConnections is null ? default : new WorkspaceProperties(
@@ -1421,7 +1420,8 @@ namespace Azure.ResourceManager.DesktopVirtualization.Models
                 kind,
                 managedBy,
                 plan,
-                sku);
+                sku,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Models.DesktopVirtualizationPrivateEndpointConnection"/>. </summary>
@@ -1443,8 +1443,8 @@ namespace Azure.ResourceManager.DesktopVirtualization.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                default);
+                default,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="DesktopVirtualization.DesktopVirtualizationPrivateEndpointConnectionDataData"/>. </summary>
@@ -1466,8 +1466,8 @@ namespace Azure.ResourceManager.DesktopVirtualization.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                default);
+                default,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="DesktopVirtualization.ScalingPlanData"/>. </summary>
@@ -1502,7 +1502,6 @@ namespace Azure.ResourceManager.DesktopVirtualization.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 objectId is null && description is null && friendlyName is null && timeZone is null && scalingHostPoolType is null && exclusionTag is null && schedules is null && hostPoolReferences is null ? default : new ScalingPlanProperties(
@@ -1520,7 +1519,8 @@ namespace Azure.ResourceManager.DesktopVirtualization.Models
                 kind,
                 managedBy,
                 plan,
-                sku);
+                sku,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="DesktopVirtualization.ScalingPlanPooledScheduleData"/>. </summary>
@@ -1613,7 +1613,6 @@ namespace Azure.ResourceManager.DesktopVirtualization.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 objectId is null && description is null && friendlyName is null && hostPoolId is null && workspaceId is null && isCloudPCResource is null && showInFeed is null ? default : new ApplicationGroupProperties(
@@ -1633,7 +1632,8 @@ namespace Azure.ResourceManager.DesktopVirtualization.Models
                 kind,
                 managedBy,
                 plan,
-                sku);
+                sku,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="DesktopVirtualization.HostPoolData"/>. </summary>
@@ -1684,7 +1684,6 @@ namespace Azure.ResourceManager.DesktopVirtualization.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 objectId is null && friendlyName is null && description is null && personalDesktopAssignmentType is null && customRdpProperty is null && maxSessionLimit is null && ring is null && isValidationEnvironment is null && registrationInfo is null && vmTemplate is null && applicationGroupReferences is null && appAttachPackageReferences is null && ssoAdfsAuthority is null && ssoClientId is null && ssoClientSecretKeyVaultPath is null && ssoSecretType is null && startVmOnConnect is null && isCloudPCResource is null && publicNetworkAccess is null && agentUpdate is null && privateEndpointConnections is null ? default : new HostPoolProperties(
@@ -1726,7 +1725,8 @@ namespace Azure.ResourceManager.DesktopVirtualization.Models
                 kind,
                 managedBy,
                 plan,
-                sku);
+                sku,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Models.HostPoolPatch"/>. </summary>
@@ -1858,7 +1858,6 @@ namespace Azure.ResourceManager.DesktopVirtualization.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 objectId is null && friendlyName is null && description is null && personalDesktopAssignmentType is null && customRdpProperty is null && maxSessionLimit is null && ring is null && isValidationEnvironment is null && registrationInfo is null && vmTemplate is null && applicationGroupReferences is null && ssoAdfsAuthority is null && ssoClientId is null && ssoClientSecretKeyVaultPath is null && ssoSecretType is null && startVmOnConnect is null && isCloudPCResource is null && agentUpdate is null ? default : new HostPoolProperties(
@@ -1900,7 +1899,8 @@ namespace Azure.ResourceManager.DesktopVirtualization.Models
                 kind,
                 managedBy,
                 plan,
-                sku);
+                sku,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of HostPoolPatch. </summary>
@@ -1962,7 +1962,6 @@ namespace Azure.ResourceManager.DesktopVirtualization.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 objectId is null && description is null && friendlyName is null && hostPoolId is null && workspaceId is null && isCloudPCResource is null ? default : new ApplicationGroupProperties(
@@ -1982,7 +1981,8 @@ namespace Azure.ResourceManager.DesktopVirtualization.Models
                 kind,
                 managedBy,
                 plan,
-                sku);
+                sku,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of VirtualApplicationGroupPatch. </summary>
@@ -2027,7 +2027,6 @@ namespace Azure.ResourceManager.DesktopVirtualization.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 objectId is null && description is null && friendlyName is null && applicationGroupReferences is null && isCloudPCResource is null ? default : new WorkspaceProperties(
@@ -2046,7 +2045,8 @@ namespace Azure.ResourceManager.DesktopVirtualization.Models
                 kind,
                 managedBy,
                 plan,
-                sku);
+                sku,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of HostPoolData. </summary>
@@ -2096,7 +2096,6 @@ namespace Azure.ResourceManager.DesktopVirtualization.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 objectId is null && friendlyName is null && description is null && personalDesktopAssignmentType is null && customRdpProperty is null && maxSessionLimit is null && ring is null && isValidationEnvironment is null && registrationInfo is null && vmTemplate is null && applicationGroupReferences is null && ssoAdfsAuthority is null && ssoClientId is null && ssoClientSecretKeyVaultPath is null && ssoSecretType is null && startVmOnConnect is null && isCloudPCResource is null && publicNetworkAccess is null && agentUpdate is null && privateEndpointConnections is null ? default : new HostPoolProperties(
@@ -2138,7 +2137,8 @@ namespace Azure.ResourceManager.DesktopVirtualization.Models
                 kind,
                 managedBy,
                 plan,
-                sku);
+                sku,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of ExpandMsixImage. </summary>

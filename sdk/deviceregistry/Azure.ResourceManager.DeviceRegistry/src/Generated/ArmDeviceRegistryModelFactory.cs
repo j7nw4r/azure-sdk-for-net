@@ -38,11 +38,11 @@ namespace Azure.ResourceManager.DeviceRegistry.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Defines the asset properties. </summary>
@@ -247,11 +247,11 @@ namespace Azure.ResourceManager.DeviceRegistry.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="uuid"> Globally unique, immutable, non-reusable id. </param>
@@ -311,9 +311,9 @@ namespace Azure.ResourceManager.DeviceRegistry.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 billingContainerProvisioningState is null ? default : new BillingContainerProperties(billingContainerProvisioningState, null),
-                etag);
+                etag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Namespace definition. </summary>
@@ -335,11 +335,11 @@ namespace Azure.ResourceManager.DeviceRegistry.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="uuid"> Globally unique, immutable, non-reusable ID. </param>
@@ -411,10 +411,10 @@ namespace Azure.ResourceManager.DeviceRegistry.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                credentialProvisioningState is null ? default : new CredentialProperties(credentialProvisioningState, null));
+                credentialProvisioningState is null ? default : new CredentialProperties(credentialProvisioningState, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The type used for update operations of the Credential. </summary>
@@ -441,8 +441,8 @@ namespace Azure.ResourceManager.DeviceRegistry.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Details of the Credential Policy. </summary>
@@ -510,11 +510,11 @@ namespace Azure.ResourceManager.DeviceRegistry.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Defines the asset properties. </summary>
@@ -918,12 +918,12 @@ namespace Azure.ResourceManager.DeviceRegistry.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
                 eTag,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="uuid"> A unique identifier for the device. </param>
@@ -1053,11 +1053,11 @@ namespace Azure.ResourceManager.DeviceRegistry.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Defines the discovered asset properties. </summary>
@@ -1350,11 +1350,11 @@ namespace Azure.ResourceManager.DeviceRegistry.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                extendedLocation);
+                extendedLocation,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Defines the discovered device properties. </summary>
@@ -1471,11 +1471,11 @@ namespace Azure.ResourceManager.DeviceRegistry.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Defines the schema registry properties. </summary>
@@ -1524,8 +1524,8 @@ namespace Azure.ResourceManager.DeviceRegistry.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Defines the schema properties. </summary>
@@ -1566,8 +1566,8 @@ namespace Azure.ResourceManager.DeviceRegistry.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Defines the schema version properties. </summary>

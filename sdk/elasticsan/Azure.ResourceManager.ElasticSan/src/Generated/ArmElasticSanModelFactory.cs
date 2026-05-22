@@ -114,8 +114,8 @@ namespace Azure.ResourceManager.ElasticSan.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                groupId is null && requiredMembers is null && requiredZoneNames is null ? default : new ElasticSanPrivateLinkResourceProperties(groupId, (requiredMembers ?? new ChangeTrackingList<string>()).ToList(), (requiredZoneNames ?? new ChangeTrackingList<string>()).ToList(), null));
+                groupId is null && requiredMembers is null && requiredZoneNames is null ? default : new ElasticSanPrivateLinkResourceProperties(groupId, (requiredMembers ?? new ChangeTrackingList<string>()).ToList(), (requiredZoneNames ?? new ChangeTrackingList<string>()).ToList(), null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> ElasticSAN SKU and its properties. </summary>
@@ -192,7 +192,6 @@ namespace Azure.ResourceManager.ElasticSan.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 sku is null && availabilityZones is null && provisioningState is null && totalVolumeSizeGiB is null && volumeGroupCount is null && totalIops is null && totalMbps is null && totalSizeTiB is null && privateEndpointConnections is null && publicNetworkAccess is null ? default : new ElasticSanProperties(
@@ -209,7 +208,8 @@ namespace Azure.ResourceManager.ElasticSan.Models
                     (privateEndpointConnections ?? new ChangeTrackingList<ElasticSanPrivateEndpointConnectionData>()).ToList(),
                     publicNetworkAccess,
                     default,
-                    default));
+                    default),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="ElasticSan.ElasticSanPrivateEndpointConnectionData"/>. </summary>
@@ -231,8 +231,8 @@ namespace Azure.ResourceManager.ElasticSan.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                default);
+                default,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="ElasticSan.ElasticSanVolumeGroupData"/>. </summary>
@@ -259,9 +259,9 @@ namespace Azure.ResourceManager.ElasticSan.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 identity,
-                default);
+                default,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="ElasticSan.ElasticSanVolumeData"/>. </summary>
@@ -283,8 +283,8 @@ namespace Azure.ResourceManager.ElasticSan.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                default);
+                default,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="ElasticSan.ElasticSanSnapshotData"/>. </summary>
@@ -304,8 +304,8 @@ namespace Azure.ResourceManager.ElasticSan.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                default);
+                default,
+                additionalBinaryDataProperties: null);
         }
     }
 }

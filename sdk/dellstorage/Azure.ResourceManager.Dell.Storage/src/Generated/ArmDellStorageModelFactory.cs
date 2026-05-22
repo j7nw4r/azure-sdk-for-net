@@ -38,11 +38,11 @@ namespace Azure.ResourceManager.Dell.Storage.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="capacity"> Capacity for Dell Filesystem, Will be received as part of Job Status. </param>

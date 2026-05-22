@@ -39,7 +39,6 @@ namespace Azure.ResourceManager.ContainerRegistry.Tasks.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 count is null && tier is null && os is null && virtualNetworkSubnetResourceId is null && provisioningState is null ? default : new AgentPoolProperties(
@@ -48,7 +47,8 @@ namespace Azure.ResourceManager.ContainerRegistry.Tasks.Models
                     os,
                     virtualNetworkSubnetResourceId,
                     provisioningState,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="count"> The count of agent machine. </param>
@@ -103,7 +103,6 @@ namespace Azure.ResourceManager.ContainerRegistry.Tasks.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 runId is null && status is null && lastUpdatedOn is null && runType is null && agentPoolName is null && createdOn is null && startOn is null && finishOn is null && outputImages is null && task is null && imageUpdateTrigger is null && sourceTrigger is null && timerTrigger is null && platform is null && sourceRegistryAuth is null && customRegistries is null && runErrorMessage is null && updateTriggerToken is null && logArtifact is null && provisioningState is null && isArchiveEnabled is null && agentCpu is null ? default : new RunProperties(
                     runId,
                     status,
@@ -127,7 +126,8 @@ namespace Azure.ResourceManager.ContainerRegistry.Tasks.Models
                     logArtifact,
                     provisioningState,
                     isArchiveEnabled,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties for a registry image. </summary>
@@ -211,10 +211,10 @@ namespace Azure.ResourceManager.ContainerRegistry.Tasks.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 provisioningState is null && runRequest is null && runResult is null && forceUpdateTag is null ? default : new TaskRunProperties(provisioningState, runRequest, runResult, forceUpdateTag, null),
                 identity,
-                location);
+                location,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="isArchiveEnabled"> The value that indicates whether archiving is enabled for the run or not. </param>
@@ -439,7 +439,6 @@ namespace Azure.ResourceManager.ContainerRegistry.Tasks.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 provisioningState is null && createdOn is null && status is null && platform is null && agentPoolName is null && timeoutInSeconds is null && step is null && trigger is null && credentials is null && logTemplate is null && isSystemTask is null && agentCpu is null ? default : new TaskProperties(
@@ -456,7 +455,8 @@ namespace Azure.ResourceManager.ContainerRegistry.Tasks.Models
                     logTemplate,
                     isSystemTask,
                     null),
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary>

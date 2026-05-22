@@ -36,10 +36,10 @@ namespace Azure.ResourceManager.DisconnectedOperations.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The disconnected operation properties. </summary>
@@ -141,8 +141,8 @@ namespace Azure.ResourceManager.DisconnectedOperations.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The image properties. </summary>
@@ -235,8 +235,8 @@ namespace Azure.ResourceManager.DisconnectedOperations.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The artifact properties. </summary>
@@ -293,8 +293,8 @@ namespace Azure.ResourceManager.DisconnectedOperations.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The hardware setting properties. </summary>

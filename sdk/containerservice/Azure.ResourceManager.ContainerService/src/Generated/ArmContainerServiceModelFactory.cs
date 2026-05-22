@@ -102,7 +102,6 @@ namespace Azure.ResourceManager.ContainerService.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 eTag is null && count is null && vmSize is null && osDiskSizeInGB is null && osDiskType is null && kubeletDiskType is null && workloadRuntime is null && messageOfTheDay is null && vnetSubnetId is null && podSubnetId is null && podIPAllocationMode is null && maxPods is null && osType is null && osSku is null && maxCount is null && minCount is null && isAutoScalingEnabled is null && scaleDownMode is null && agentPoolType is null && mode is null && orchestratorVersion is null && currentOrchestratorVersion is null && nodeImageVersion is null && upgradeStrategy is null && isOSDiskFullCachingEnabled is null && upgradeSettings is null && upgradeSettingsBlueGreen is null && provisioningState is null && availabilityZones is null && isNodePublicIpEnabled is null && nodePublicIPPrefixId is null && scaleSetPriority is null && scaleSetEvictionPolicy is null && spotMaxPrice is null && tags is null && nodeLabels is null && nodeTaints is null && nodeInitializationTaints is null && proximityPlacementGroupId is null && kubeletConfig is null && linuxOSConfig is null && isEncryptionAtHostEnabled is null && isUltraSsdEnabled is null && isFipsEnabled is null && gpuInstanceProfile is null && capacityReservationGroupId is null && hostGroupId is null && networkProfile is null && securityProfile is null && gpuProfile is null && virtualMachineNodesStatus is null && localDnsProfile is null && powerStateCode is null && creationDataSourceResourceId is null && isOutboundNatDisabled is null && gatewayPublicIPPrefixSize is null && isArtifactStreamingEnabled is null && virtualMachinesScale is null && statusProvisioningError is null && nodeCustomizationId is null && upgradeMaxSurge is null && scaleManual is null && virtualMachinesScaleManual is null && gpuDriver is null && enableAutoScaling is null && enableNodePublicIP is null && enableEncryptionAtHost is null && enableFips is null && enableUltraSsd is null ? default : new ManagedClusterAgentPoolProfileProperties(
                     eTag,
                     count,
@@ -164,7 +163,8 @@ namespace Azure.ResourceManager.ContainerService.Models
                     new AgentPoolStatus(statusProvisioningError, null),
                     localDnsProfile,
                     new NodeCustomizationProfile(nodeCustomizationId, null),
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="eTag"> Unique read-only string used to implement optimistic concurrency. The eTag value will change when the resource is updated. Specify an if-match or if-none-match header with the eTag value for a subsequent request to enable optimistic concurrency per the normal eTag convention. </param>
@@ -455,7 +455,6 @@ namespace Azure.ResourceManager.ContainerService.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 provisioningState is null && maxAgentPools is null && kubernetesVersion is null && currentKubernetesVersion is null && dnsPrefix is null && fqdnSubdomain is null && fqdn is null && privateFqdn is null && azurePortalFqdn is null && agentPoolProfiles is null && linuxProfile is null && windowsProfile is null && servicePrincipalProfile is null && addonProfiles is null && podIdentityProfile is null && oidcIssuerProfile is null && nodeResourceGroup is null && isRbacEnabled is null && supportPlan is null && isNamespaceResourcesEnabled is null && networkProfile is null && aadProfile is null && autoUpgradeProfile is null && autoScalerProfile is null && apiServerAccessProfile is null && diskEncryptionSetId is null && identityProfile is null && privateLinkResources is null && isLocalAccountsDisabled is null && httpProxyConfig is null && securityProfile is null && storageProfile is null && ingressProfile is null && publicNetworkAccess is null && workloadAutoScalerProfile is null && azureMonitorProfile is null && serviceMeshProfile is null && resourceId is null && nodeProvisioningProfile is null && bootstrapProfile is null && healthMonitorProfile is null && powerStateCode is null && creationDataSourceResourceId is null && nodeResourceGroupRestrictionLevel is null && upgradeOverrideSettings is null && isCostAnalysisEnabled is null && isAIToolchainOperatorEnabled is null && upstreamSchedulerConfigMode is null && isHostedSystemAddonsEnabled is null && statusProvisioningError is null ? default : new ManagedClusterProperties(
@@ -514,7 +513,8 @@ namespace Azure.ResourceManager.ContainerService.Models
                 sku,
                 extendedLocation,
                 clusterIdentity,
-                kind);
+                kind,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="eTag"> Unique read-only string used to implement optimistic concurrency. The eTag value will change when the resource is updated. Specify an if-match or if-none-match header with the eTag value for a subsequent request to enable optimistic concurrency per the normal eTag convention. </param>
@@ -1034,10 +1034,10 @@ namespace Azure.ResourceManager.ContainerService.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                kubeConfig is null ? default : new AccessProfile(kubeConfig, null));
+                kubeConfig is null ? default : new AccessProfile(kubeConfig, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The list credential result response. </summary>
@@ -1145,8 +1145,8 @@ namespace Azure.ResourceManager.ContainerService.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                new AgentPoolAvailableVersionsProperties((agentPoolVersions ?? new ChangeTrackingList<AgentPoolAvailableVersion>()).ToList(), null));
+                new AgentPoolAvailableVersionsProperties((agentPoolVersions ?? new ChangeTrackingList<AgentPoolAvailableVersion>()).ToList(), null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Available version information for an agent pool. </summary>
@@ -1173,8 +1173,8 @@ namespace Azure.ResourceManager.ContainerService.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                new ManagedClusterUpgradeProfileProperties(controlPlaneProfile, (agentPoolProfiles ?? new ChangeTrackingList<ManagedClusterPoolUpgradeProfile>()).ToList(), null));
+                new ManagedClusterUpgradeProfileProperties(controlPlaneProfile, (agentPoolProfiles ?? new ChangeTrackingList<ManagedClusterPoolUpgradeProfile>()).ToList(), null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The list of available upgrade versions. </summary>
@@ -1243,8 +1243,8 @@ namespace Azure.ResourceManager.ContainerService.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Whether the version is default or not and support info. </summary>
@@ -1270,8 +1270,8 @@ namespace Azure.ResourceManager.ContainerService.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Whether the version is default or not and support info. </summary>
@@ -1296,8 +1296,8 @@ namespace Azure.ResourceManager.ContainerService.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                meshRevisions is null ? default : new MeshRevisionProfileProperties((meshRevisions ?? new ChangeTrackingList<MeshRevision>()).ToList(), null));
+                meshRevisions is null ? default : new MeshRevisionProfileProperties((meshRevisions ?? new ChangeTrackingList<MeshRevision>()).ToList(), null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Holds information on upgrades and compatibility for given major.minor mesh release. </summary>
@@ -1338,8 +1338,8 @@ namespace Azure.ResourceManager.ContainerService.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Mesh upgrade profile properties for a major.minor release. </summary>
@@ -1370,8 +1370,8 @@ namespace Azure.ResourceManager.ContainerService.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                timesInWeek is null && notAllowedTimes is null && maintenanceWindow is null ? default : new MaintenanceConfigurationProperties((timesInWeek ?? new ChangeTrackingList<ContainerServiceTimeInWeek>()).ToList(), (notAllowedTimes ?? new ChangeTrackingList<ContainerServiceTimeSpan>()).ToList(), maintenanceWindow, null));
+                timesInWeek is null && notAllowedTimes is null && maintenanceWindow is null ? default : new MaintenanceConfigurationProperties((timesInWeek ?? new ChangeTrackingList<ContainerServiceTimeInWeek>()).ToList(), (notAllowedTimes ?? new ChangeTrackingList<ContainerServiceTimeSpan>()).ToList(), maintenanceWindow, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Time in a week. </summary>
@@ -1426,11 +1426,11 @@ namespace Azure.ResourceManager.ContainerService.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                eTag);
+                eTag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties of a namespace managed by ARM. </summary>
@@ -1478,7 +1478,6 @@ namespace Azure.ResourceManager.ContainerService.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 new AgentPoolUpgradeProfileProperties(
                     kubernetesVersion,
                     osType,
@@ -1486,7 +1485,8 @@ namespace Azure.ResourceManager.ContainerService.Models
                     (componentsByReleases ?? new ChangeTrackingList<KubernetesVersionComponents>()).ToList(),
                     (recentlyUsedVersions ?? new ChangeTrackingList<AgentPoolRecentlyUsedVersion>()).ToList(),
                     latestNodeImageVersion,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Available upgrades for an AgentPool. </summary>
@@ -1657,7 +1657,6 @@ namespace Azure.ResourceManager.ContainerService.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 snapshotType is null && kubernetesVersion is null && nodeImageVersion is null && osType is null && osSku is null && vmSize is null && isFipsEnabled is null && creationDataSourceResourceId is null ? default : new SnapshotProperties(
@@ -1669,7 +1668,8 @@ namespace Azure.ResourceManager.ContainerService.Models
                     osSku,
                     vmSize,
                     isFipsEnabled,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -1691,10 +1691,10 @@ namespace Azure.ResourceManager.ContainerService.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                snapshotType is null && managedClusterPropertiesReadOnly is null && creationDataSourceResourceId is null ? default : new ManagedClusterSnapshotProperties(new ContainerServiceCreationData(creationDataSourceResourceId, null), snapshotType, managedClusterPropertiesReadOnly, null));
+                snapshotType is null && managedClusterPropertiesReadOnly is null && creationDataSourceResourceId is null ? default : new ManagedClusterSnapshotProperties(new ContainerServiceCreationData(creationDataSourceResourceId, null), snapshotType, managedClusterPropertiesReadOnly, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> managed cluster properties for snapshot, these properties are read only. </summary>
@@ -1741,8 +1741,8 @@ namespace Azure.ResourceManager.ContainerService.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                new TrustedAccessRoleBindingProperties(provisioningState, sourceResourceId, (roles ?? new ChangeTrackingList<string>()).ToList(), null));
+                new TrustedAccessRoleBindingProperties(provisioningState, sourceResourceId, (roles ?? new ChangeTrackingList<string>()).ToList(), null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -1763,7 +1763,6 @@ namespace Azure.ResourceManager.ContainerService.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 primaryAgentPoolName is null && isServicePlacementAllowed is null && serviceLabelSelector is null && serviceNamespaceSelector is null && nodeSelector is null && provisioningState is null ? default : new ManagedClusterLoadBalancerProperties(
                     primaryAgentPoolName,
                     isServicePlacementAllowed,
@@ -1771,7 +1770,8 @@ namespace Azure.ResourceManager.ContainerService.Models
                     serviceNamespaceSelector,
                     nodeSelector,
                     provisioningState,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all objects. A null label selector matches no objects. </summary>
@@ -1813,9 +1813,9 @@ namespace Azure.ResourceManager.ContainerService.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
-                eTag);
+                eTag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="managedIdentity"> Managed identity profile for the identity binding. </param>
@@ -1852,8 +1852,8 @@ namespace Azure.ResourceManager.ContainerService.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The properties of JWTAuthenticator. For details on how to configure the properties of a JWT authenticator, please refer to the Kubernetes documentation: https://kubernetes.io/docs/reference/access-authn-authz/authentication/#using-authentication-configuration. Please note that not all fields available in the Kubernetes documentation are supported by AKS. For troubleshooting, please see https://aka.ms/aks-external-issuers-docs. </summary>
@@ -1916,10 +1916,10 @@ namespace Azure.ResourceManager.ContainerService.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
                 managedBy,
-                eTag);
+                eTag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Mesh membership properties of a managed cluster. </summary>
@@ -2233,7 +2233,6 @@ namespace Azure.ResourceManager.ContainerService.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 etag is null && count is null && vmSize is null && osDiskSizeInGB is null && osDiskType is null && kubeletDiskType is null && workloadRuntime is null && messageOfTheDay is null && vnetSubnetId is null && podSubnetId is null && podIPAllocationMode is null && maxPods is null && osType is null && osSku is null && maxCount is null && minCount is null && isAutoScalingEnabled is null && scaleDownMode is null && agentPoolType is null && mode is null && orchestratorVersion is null && currentOrchestratorVersion is null && nodeImageVersion is null && upgradeSettings is null && provisioningState is null && powerStateCode is null && availabilityZones is null && isNodePublicIpEnabled is null && nodePublicIPPrefixId is null && scaleSetPriority is null && scaleSetEvictionPolicy is null && spotMaxPrice is null && tags is null && nodeLabels is null && nodeTaints is null && proximityPlacementGroupId is null && kubeletConfig is null && linuxOSConfig is null && isEncryptionAtHostEnabled is null && isUltraSsdEnabled is null && isFipsEnabled is null && gpuInstanceProfile is null && creationDataSourceResourceId is null && capacityReservationGroupId is null && hostGroupId is null && networkProfile is null && isOutboundNatDisabled is null && securityProfile is null && gpuDriver is null && gatewayPublicIPPrefixSize is null && scaleManual is null && minCount is null && maxCount is null && virtualMachineNodesStatus is null && statusProvisioningError is null && localDnsProfile is null ? default : new ManagedClusterAgentPoolProfileProperties(
                     etag,
                     count,
@@ -2295,7 +2294,8 @@ namespace Azure.ResourceManager.ContainerService.Models
                     new AgentPoolStatus(statusProvisioningError, default),
                     localDnsProfile,
                     default,
-                    default));
+                    default),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="etag"> Unique read-only string used to implement optimistic concurrency. The eTag value will change when the resource is updated. Specify an if-match or if-none-match header with the eTag value for a subsequent request to enable optimistic concurrency per the normal eTag convention. </param>
@@ -2512,7 +2512,6 @@ namespace Azure.ResourceManager.ContainerService.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 provisioningState is null && powerStateCode is null && maxAgentPools is null && kubernetesVersion is null && currentKubernetesVersion is null && dnsPrefix is null && fqdnSubdomain is null && fqdn is null && privateFqdn is null && azurePortalFqdn is null && agentPoolProfiles is null && linuxProfile is null && windowsProfile is null && servicePrincipalProfile is null && addonProfiles is null && podIdentityProfile is null && oidcIssuerProfile is null && nodeResourceGroup is null && nodeResourceGroupRestrictionLevel is null && isRbacEnabled is null && supportPlan is null && networkProfile is null && aadProfile is null && autoUpgradeProfile is null && upgradeOverrideSettings is null && autoScalerProfile is null && apiServerAccessProfile is null && diskEncryptionSetId is null && identityProfile is null && privateLinkResources is null && isLocalAccountsDisabled is null && httpProxyConfig is null && securityProfile is null && storageProfile is null && ingressWebAppRouting is null && resourceId is null && publicNetworkAccess is null && workloadAutoScalerProfile is null && azureMonitorMetrics is null && serviceMeshProfile is null && resourceId is null && isCostAnalysisEnabled is null && nodeProvisioningProfile is null && bootstrapProfile is null && isAIToolchainOperatorEnabled is null && statusProvisioningError is null ? default : new ManagedClusterProperties(
@@ -2571,7 +2570,8 @@ namespace Azure.ResourceManager.ContainerService.Models
                 sku,
                 extendedLocation,
                 clusterIdentity,
-                kind);
+                kind,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="etag"> Unique read-only string used to implement optimistic concurrency. The eTag value will change when the resource is updated. Specify an if-match or if-none-match header with the eTag value for a subsequent request to enable optimistic concurrency per the normal eTag convention. </param>
@@ -2890,7 +2890,6 @@ namespace Azure.ResourceManager.ContainerService.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 provisioningState is null && powerStateCode is null && maxAgentPools is null && kubernetesVersion is null && currentKubernetesVersion is null && dnsPrefix is null && fqdnSubdomain is null && fqdn is null && privateFqdn is null && azurePortalFqdn is null && agentPoolProfiles is null && linuxProfile is null && windowsProfile is null && servicePrincipalProfile is null && addonProfiles is null && podIdentityProfile is null && oidcIssuerProfile is null && nodeResourceGroup is null && supportPlan is null && networkProfile is null && aadProfile is null && autoUpgradeProfile is null && upgradeOverrideSettings is null && autoScalerProfile is null && apiServerAccessProfile is null && diskEncryptionSetId is null && identityProfile is null && privateLinkResources is null && httpProxyConfig is null && securityProfile is null && storageProfile is null && resourceId is null && resourceId is null && publicNetworkAccess is null && workloadAutoScalerProfile is null && azureMonitorMetrics is null && serviceMeshProfile is null && resourceId is null ? default : new ManagedClusterProperties(
@@ -2956,7 +2955,8 @@ namespace Azure.ResourceManager.ContainerService.Models
                 sku,
                 extendedLocation,
                 clusterIdentity,
-                default);
+                default,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="ContainerService.ContainerServiceManagedClusterData"/>. </summary>
@@ -3027,7 +3027,6 @@ namespace Azure.ResourceManager.ContainerService.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 provisioningState is null && powerStateCode is null && maxAgentPools is null && kubernetesVersion is null && currentKubernetesVersion is null && dnsPrefix is null && fqdnSubdomain is null && fqdn is null && privateFqdn is null && azurePortalFqdn is null && agentPoolProfiles is null && linuxProfile is null && windowsProfile is null && servicePrincipalProfile is null && addonProfiles is null && podIdentityProfile is null && oidcIssuerProfile is null && nodeResourceGroup is null && nodeResourceGroupRestrictionLevel is null && supportPlan is null && networkProfile is null && aadProfile is null && autoUpgradeProfile is null && upgradeOverrideSettings is null && autoScalerProfile is null && apiServerAccessProfile is null && diskEncryptionSetId is null && identityProfile is null && privateLinkResources is null && httpProxyConfig is null && securityProfile is null && storageProfile is null && ingressWebAppRouting is null && resourceId is null && publicNetworkAccess is null && workloadAutoScalerProfile is null && azureMonitorMetrics is null && serviceMeshProfile is null && resourceId is null && isCostAnalysisEnabled is null && nodeProvisioningProfile is null && bootstrapProfile is null && isAIToolchainOperatorEnabled is null && statusProvisioningError is null ? default : new ManagedClusterProperties(
@@ -3086,7 +3085,8 @@ namespace Azure.ResourceManager.ContainerService.Models
                 sku,
                 extendedLocation,
                 clusterIdentity,
-                kind);
+                kind,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Models.ManagedClusterPodIdentity"/>. </summary>
@@ -3130,11 +3130,11 @@ namespace Azure.ResourceManager.ContainerService.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                etag);
+                etag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="ContainerService.ContainerServiceAgentPoolData"/>. </summary>
@@ -3206,7 +3206,6 @@ namespace Azure.ResourceManager.ContainerService.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 etag is null && count is null && vmSize is null && osDiskSizeInGB is null && osDiskType is null && kubeletDiskType is null && workloadRuntime is null && messageOfTheDay is null && vnetSubnetId is null && podSubnetId is null && podIPAllocationMode is null && maxPods is null && osType is null && osSku is null && maxCount is null && minCount is null && scaleDownMode is null && mode is null && orchestratorVersion is null && currentOrchestratorVersion is null && nodeImageVersion is null && upgradeSettings is null && provisioningState is null && powerStateCode is null && availabilityZones is null && nodePublicIPPrefixId is null && scaleSetPriority is null && scaleSetEvictionPolicy is null && spotMaxPrice is null && tags is null && nodeLabels is null && nodeTaints is null && proximityPlacementGroupId is null && kubeletConfig is null && linuxOSConfig is null && gpuInstanceProfile is null && creationDataSourceResourceId is null && capacityReservationGroupId is null && hostGroupId is null && networkProfile is null && isOutboundNatDisabled is null && securityProfile is null && gpuDriver is null && gatewayPublicIPPrefixSize is null && scaleManual is null && minCount is null && maxCount is null && virtualMachineNodesStatus is null && statusProvisioningError is null && localDnsProfile is null ? default : new ManagedClusterAgentPoolProfileProperties(
                     etag,
                     count,
@@ -3268,7 +3267,8 @@ namespace Azure.ResourceManager.ContainerService.Models
                     new AgentPoolStatus(statusProvisioningError, default),
                     localDnsProfile,
                     default,
-                    default));
+                    default),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="ContainerService.ContainerServicePrivateEndpointConnectionData"/>. </summary>
@@ -3287,8 +3287,8 @@ namespace Azure.ResourceManager.ContainerService.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                default);
+                default,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="ContainerService.AgentPoolSnapshotData"/>. </summary>
@@ -3317,7 +3317,6 @@ namespace Azure.ResourceManager.ContainerService.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 creationDataSourceResourceId is null && snapshotType is null && kubernetesVersion is null && nodeImageVersion is null && osType is null && osSku is null && vmSize is null ? default : new SnapshotProperties(
@@ -3329,7 +3328,8 @@ namespace Azure.ResourceManager.ContainerService.Models
                     osSku,
                     vmSize,
                     default,
-                    default));
+                    default),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="ContainerService.ContainerServiceMachineData"/>. </summary>
@@ -3349,9 +3349,9 @@ namespace Azure.ResourceManager.ContainerService.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 properties,
-                zones.ToList());
+                zones.ToList(),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Models.KubernetesVersion"/>. </summary>
@@ -3660,7 +3660,6 @@ namespace Azure.ResourceManager.ContainerService.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 count is null && vmSize is null && osDiskSizeInGB is null && osDiskType is null && kubeletDiskType is null && workloadRuntime is null && vnetSubnetId is null && podSubnetId is null && maxPods is null && osType is null && osSku is null && maxCount is null && minCount is null && scaleDownMode is null && mode is null && orchestratorVersion is null && currentOrchestratorVersion is null && nodeImageVersion is null && upgradeSettings is null && provisioningState is null && powerStateCode is null && availabilityZones is null && nodePublicIPPrefixId is null && scaleSetPriority is null && scaleSetEvictionPolicy is null && spotMaxPrice is null && tags is null && nodeLabels is null && nodeTaints is null && proximityPlacementGroupId is null && kubeletConfig is null && linuxOSConfig is null && gpuInstanceProfile is null && creationDataSourceResourceId is null && capacityReservationGroupId is null && hostGroupId is null && networkProfile is null && minCount is null && maxCount is null ? default : new ManagedClusterAgentPoolProfileProperties(
                     default,
                     count,
@@ -3722,7 +3721,8 @@ namespace Azure.ResourceManager.ContainerService.Models
                     default,
                     default,
                     default,
-                    default));
+                    default),
+                additionalBinaryDataProperties: null);
         }
     }
 }

@@ -58,7 +58,6 @@ namespace Azure.ResourceManager.DevTestLabs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 new LabProperties(
@@ -82,7 +81,8 @@ namespace Azure.ResourceManager.DevTestLabs.Models
                     extendedProperties,
                     provisioningState,
                     uniqueIdentifier,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties of a lab's announcement banner. </summary>
@@ -275,7 +275,6 @@ namespace Azure.ResourceManager.DevTestLabs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 new ArtifactSourceProperties(
@@ -290,7 +289,8 @@ namespace Azure.ResourceManager.DevTestLabs.Models
                     createdOn,
                     provisioningState,
                     uniqueIdentifier,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties of an artifact source. </summary>
@@ -327,7 +327,6 @@ namespace Azure.ResourceManager.DevTestLabs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 new ArmTemplateProperties(
@@ -339,7 +338,8 @@ namespace Azure.ResourceManager.DevTestLabs.Models
                     createdOn,
                     (parametersValueFilesInfo ?? new ChangeTrackingList<DevTestLabParametersValueFileInfo>()).ToList(),
                     isEnabled,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> A file containing a set of parameter values for an ARM template. </summary>
@@ -375,7 +375,6 @@ namespace Azure.ResourceManager.DevTestLabs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 new ArtifactProperties(
@@ -387,7 +386,8 @@ namespace Azure.ResourceManager.DevTestLabs.Models
                     targetOSType,
                     parameters,
                     createdOn,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Parameters for generating an ARM template for deploying artifacts. </summary>
@@ -498,7 +498,6 @@ namespace Azure.ResourceManager.DevTestLabs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 new CustomImageProperties(
@@ -514,7 +513,8 @@ namespace Azure.ResourceManager.DevTestLabs.Models
                     isPlanAuthorized,
                     provisioningState,
                     uniqueIdentifier,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> A custom image. </summary>
@@ -561,7 +561,6 @@ namespace Azure.ResourceManager.DevTestLabs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 new GalleryImageProperties(
@@ -573,7 +572,8 @@ namespace Azure.ResourceManager.DevTestLabs.Models
                     isEnabled,
                     planId,
                     isPlanAuthorized,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -600,7 +600,6 @@ namespace Azure.ResourceManager.DevTestLabs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 new NotificationChannelProperties(
@@ -612,7 +611,8 @@ namespace Azure.ResourceManager.DevTestLabs.Models
                     createdOn,
                     provisioningState,
                     uniqueIdentifier,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> A notification. </summary>
@@ -650,7 +650,6 @@ namespace Azure.ResourceManager.DevTestLabs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 new PolicyProperties(
@@ -663,7 +662,8 @@ namespace Azure.ResourceManager.DevTestLabs.Models
                     createdOn,
                     provisioningState,
                     uniqueIdentifier,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> A Policy. </summary>
@@ -734,10 +734,10 @@ namespace Azure.ResourceManager.DevTestLabs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -761,7 +761,6 @@ namespace Azure.ResourceManager.DevTestLabs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 new UserProperties(
@@ -770,7 +769,8 @@ namespace Azure.ResourceManager.DevTestLabs.Models
                     createdOn,
                     provisioningState,
                     uniqueIdentifier,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Profile of a lab user. </summary>
@@ -810,7 +810,6 @@ namespace Azure.ResourceManager.DevTestLabs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 new DiskProperties(
@@ -825,7 +824,8 @@ namespace Azure.ResourceManager.DevTestLabs.Models
                     managedDiskId,
                     provisioningState,
                     uniqueIdentifier,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> A Disk. </summary>
@@ -860,7 +860,6 @@ namespace Azure.ResourceManager.DevTestLabs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 new EnvironmentProperties(
@@ -870,7 +869,8 @@ namespace Azure.ResourceManager.DevTestLabs.Models
                     createdByUser,
                     provisioningState,
                     uniqueIdentifier,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties of an environment deployment. </summary>
@@ -913,10 +913,10 @@ namespace Azure.ResourceManager.DevTestLabs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                new SecretProperties(value, provisioningState, uniqueIdentifier, null));
+                new SecretProperties(value, provisioningState, uniqueIdentifier, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> A secret. </summary>
@@ -950,7 +950,6 @@ namespace Azure.ResourceManager.DevTestLabs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 new ServiceFabricProperties(
@@ -959,7 +958,8 @@ namespace Azure.ResourceManager.DevTestLabs.Models
                     applicableSchedule,
                     provisioningState,
                     uniqueIdentifier,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -980,10 +980,10 @@ namespace Azure.ResourceManager.DevTestLabs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                new ApplicableScheduleProperties(labVmsShutdown, labVmsStartup, null));
+                new ApplicableScheduleProperties(labVmsShutdown, labVmsStartup, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> A Service Fabric. </summary>
@@ -1047,7 +1047,6 @@ namespace Azure.ResourceManager.DevTestLabs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 new LabVirtualMachineProperties(
@@ -1086,7 +1085,8 @@ namespace Azure.ResourceManager.DevTestLabs.Models
                     lastKnownPowerState,
                     provisioningState,
                     uniqueIdentifier,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties of an artifact deployment. </summary>
@@ -1198,7 +1198,6 @@ namespace Azure.ResourceManager.DevTestLabs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 new VirtualNetworkProperties(
@@ -1210,7 +1209,8 @@ namespace Azure.ResourceManager.DevTestLabs.Models
                     createdOn,
                     provisioningState,
                     uniqueIdentifier,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Subnet information as returned by the Microsoft.Network API. </summary>
@@ -1260,10 +1260,10 @@ namespace Azure.ResourceManager.DevTestLabs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                default);
+                default,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="DevTestLabs.DevTestLabCostData"/>. </summary>
@@ -1295,10 +1295,10 @@ namespace Azure.ResourceManager.DevTestLabs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                default);
+                default,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="DevTestLabs.DevTestLabFormulaData"/>. </summary>
@@ -1326,10 +1326,10 @@ namespace Azure.ResourceManager.DevTestLabs.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                default);
+                default,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Models.DevTestLabScheduleCreationParameter"/>. </summary>

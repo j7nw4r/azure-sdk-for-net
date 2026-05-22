@@ -38,11 +38,11 @@ namespace Azure.ResourceManager.DatabaseWatcher.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The RP specific properties of the resource. </summary>
@@ -82,8 +82,8 @@ namespace Azure.ResourceManager.DatabaseWatcher.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The generic properties of the alert rule proxy resource. </summary>
@@ -120,8 +120,8 @@ namespace Azure.ResourceManager.DatabaseWatcher.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The generic properties of the health validation resource. </summary>
@@ -180,8 +180,8 @@ namespace Azure.ResourceManager.DatabaseWatcher.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary>
@@ -286,8 +286,8 @@ namespace Azure.ResourceManager.DatabaseWatcher.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The generic properties of a Shared Private Link resource. </summary>

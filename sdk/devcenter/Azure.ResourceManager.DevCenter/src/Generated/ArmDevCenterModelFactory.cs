@@ -40,7 +40,6 @@ namespace Azure.ResourceManager.DevCenter.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 description is null && publisher is null && offer is null && sku is null && recommendedMachineConfiguration is null && provisioningState is null && hibernateSupport is null && architecture is null ? default : new ImageProperties(
                     description,
                     publisher,
@@ -50,7 +49,8 @@ namespace Azure.ResourceManager.DevCenter.Models
                     provisioningState,
                     hibernateSupport,
                     architecture,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties for a recommended machine configuration. </summary>
@@ -95,7 +95,6 @@ namespace Azure.ResourceManager.DevCenter.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 displayName is null && customerManagedKeyEncryption is null && catalogItemSyncEnableStatus is null && microsoftHostedNetworkEnableStatus is null && devBoxProvisioningInstallAzureMonitorAgentEnableStatus is null && provisioningState is null && devCenterUri is null ? default : new DevCenterProperties(
@@ -107,7 +106,8 @@ namespace Azure.ResourceManager.DevCenter.Models
                     null,
                     provisioningState,
                     devCenterUri),
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="tags"> Resource tags. </param>
@@ -159,8 +159,8 @@ namespace Azure.ResourceManager.DevCenter.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                resourcePolicies is null && scopes is null && configurationPolicies is null && provisioningState is null ? default : new ProjectPolicyProperties((resourcePolicies ?? new ChangeTrackingList<DevCenterResourcePolicy>()).ToList(), (scopes ?? new ChangeTrackingList<string>()).ToList(), configurationPolicies, null, provisioningState));
+                resourcePolicies is null && scopes is null && configurationPolicies is null && provisioningState is null ? default : new ProjectPolicyProperties((resourcePolicies ?? new ChangeTrackingList<DevCenterResourcePolicy>()).ToList(), (scopes ?? new ChangeTrackingList<string>()).ToList(), configurationPolicies, null, provisioningState),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Feature state. </summary>
@@ -206,7 +206,6 @@ namespace Azure.ResourceManager.DevCenter.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 devCenterId is null && description is null && maxDevBoxesPerUser is null && displayName is null && customizationSettings is null && devBoxScheduleDeleteSettings is null && serverlessGpuSessionsSettings is null && assignedGroups is null && catalogItemSyncTypes is null && azureAiServicesMode is null && workspaceStorageMode is null && provisioningState is null && devCenterUri is null ? default : new ProjectProperties(
@@ -224,7 +223,8 @@ namespace Azure.ResourceManager.DevCenter.Models
                     null,
                     provisioningState,
                     devCenterUri),
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Settings to be used for customizations. </summary>
@@ -336,14 +336,14 @@ namespace Azure.ResourceManager.DevCenter.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 provisioningState is null && networkConnectionId is null && networkConnectionLocation is null && healthCheckStatus is null && domainJoinType is null ? default : new AttachedNetworkConnectionProperties(
                     provisioningState,
                     networkConnectionId,
                     networkConnectionLocation,
                     healthCheckStatus,
                     domainJoinType,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -369,7 +369,6 @@ namespace Azure.ResourceManager.DevCenter.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 gitHub is null && adoGit is null && syncType is null && autoImageBuildEnableStatus is null && tags is null && provisioningState is null && syncState is null && lastSyncStats is null && connectionState is null && lastConnectionOn is null && lastSyncOn is null ? default : new CatalogProperties(
                     gitHub,
                     adoGit,
@@ -382,7 +381,8 @@ namespace Azure.ResourceManager.DevCenter.Models
                     lastSyncStats,
                     connectionState,
                     lastConnectionOn,
-                    lastSyncOn));
+                    lastSyncOn),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Stats of the synchronization. </summary>
@@ -467,8 +467,8 @@ namespace Azure.ResourceManager.DevCenter.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                description is null && parameters is null && templatePath is null && validationStatus is null ? default : new EnvironmentDefinitionProperties(description, (parameters ?? new ChangeTrackingList<DevCenterEnvironmentDefinitionParameterInfo>()).ToList(), templatePath, validationStatus, null));
+                description is null && parameters is null && templatePath is null && validationStatus is null ? default : new EnvironmentDefinitionProperties(description, (parameters ?? new ChangeTrackingList<DevCenterEnvironmentDefinitionParameterInfo>()).ToList(), templatePath, validationStatus, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties of an Environment Definition parameter. </summary>
@@ -515,8 +515,8 @@ namespace Azure.ResourceManager.DevCenter.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                provisioningState is null && galleryResourceId is null ? default : new GalleryProperties(provisioningState, galleryResourceId, null));
+                provisioningState is null && galleryResourceId is null ? default : new GalleryProperties(provisioningState, galleryResourceId, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -536,14 +536,14 @@ namespace Azure.ResourceManager.DevCenter.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 namePropertiesName is null && publishedOn is null && isExcludedFromLatest is null && osDiskImageSizeInGB is null && provisioningState is null ? default : new ImageVersionProperties(
                     namePropertiesName,
                     publishedOn,
                     isExcludedFromLatest,
                     osDiskImageSizeInGB,
                     provisioningState,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -563,9 +563,9 @@ namespace Azure.ResourceManager.DevCenter.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 displayName is null && provisioningState is null ? default : new EnvironmentTypeProperties(displayName, null, provisioningState),
-                tags);
+                tags,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="displayName"> The display name of the environment type. </param>
@@ -602,7 +602,6 @@ namespace Azure.ResourceManager.DevCenter.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 deploymentTargetId is null && displayName is null && status is null && userRoleAssignments is null && roles is null && provisioningState is null && environmentCount is null ? default : new ProjectEnvironmentTypeProperties(
@@ -614,7 +613,8 @@ namespace Azure.ResourceManager.DevCenter.Models
                     null,
                     provisioningState,
                     environmentCount),
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> A role that can be assigned to a user. </summary>
@@ -682,7 +682,6 @@ namespace Azure.ResourceManager.DevCenter.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 imageReference is null && sku is null && osStorageType is null && hibernateSupport is null && provisioningState is null && imageValidationStatus is null && imageValidationErrorDetails is null && validationStatus is null && activeImageReference is null ? default : new DevBoxDefinitionProperties(
@@ -695,7 +694,8 @@ namespace Azure.ResourceManager.DevCenter.Models
                     imageValidationStatus,
                     imageValidationErrorDetails,
                     validationStatus,
-                    activeImageReference));
+                    activeImageReference),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Image validation error details. </summary>
@@ -745,8 +745,8 @@ namespace Azure.ResourceManager.DevCenter.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                inputs is null && timeout is null && validationStatus is null ? default : new CustomizationTaskProperties(inputs, timeout, validationStatus, null));
+                inputs is null && timeout is null && validationStatus is null ? default : new CustomizationTaskProperties(inputs, timeout, validationStatus, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Input for a Task. </summary>
@@ -782,7 +782,6 @@ namespace Azure.ResourceManager.DevCenter.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 imageReference is null && fileUri is null && latestBuild is null && imageValidationStatus is null && imageValidationErrorDetails is null && validationStatus is null && activeImageReference is null && autoImageBuild is null && tasks is null && userTasks is null && extends is null ? default : new ImageDefinitionProperties(
                     imageReference,
                     fileUri,
@@ -795,7 +794,8 @@ namespace Azure.ResourceManager.DevCenter.Models
                     (tasks ?? new ChangeTrackingList<DevCenterCustomizationTaskInstance>()).ToList(),
                     (userTasks ?? new ChangeTrackingList<DevCenterCustomizationTaskInstance>()).ToList(),
                     extends,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Details about the latest build. </summary>
@@ -866,14 +866,14 @@ namespace Azure.ResourceManager.DevCenter.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 imageReference is null && status is null && startOn is null && endOn is null && errorDetails is null ? default : new ImageDefinitionBuildProperties(
                     imageReference,
                     status,
                     startOn,
                     endOn,
                     errorDetails,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Image creation error details. </summary>
@@ -906,13 +906,13 @@ namespace Azure.ResourceManager.DevCenter.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 imageReference,
                 status,
                 startOn,
                 endOn,
                 errorDetails,
-                taskGroups.ToList());
+                taskGroups.ToList(),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> A task group executed during the image definition build. </summary>
@@ -1004,7 +1004,6 @@ namespace Azure.ResourceManager.DevCenter.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 devBoxDefinitionType is null && devBoxDefinitionName is null && devBoxDefinition is null && networkConnectionName is null && licenseType is null && localAdministrator is null && stopOnDisconnect is null && stopOnNoConnect is null && singleSignOnStatus is null && displayName is null && virtualNetworkType is null && managedVirtualNetworkRegions is null && activeHoursConfiguration is null && devBoxTunnelEnableStatus is null && healthStatus is null && healthStatusDetails is null && devBoxCount is null && provisioningState is null ? default : new PoolProperties(
@@ -1026,7 +1025,8 @@ namespace Azure.ResourceManager.DevCenter.Models
                     healthStatus,
                     (healthStatusDetails ?? new ChangeTrackingList<DevCenterHealthStatusDetail>()).ToList(),
                     devBoxCount,
-                    provisioningState));
+                    provisioningState),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Pool health status detail. </summary>
@@ -1131,7 +1131,6 @@ namespace Azure.ResourceManager.DevCenter.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags is null && location is null && scheduledType is null && frequency is null && time is null && timeZone is null && state is null && provisioningState is null ? default : new ScheduleProperties(
                     tags,
                     location,
@@ -1141,7 +1140,8 @@ namespace Azure.ResourceManager.DevCenter.Models
                     timeZone,
                     state,
                     null,
-                    provisioningState));
+                    provisioningState),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="tags"> Resource tags. </param>
@@ -1190,7 +1190,6 @@ namespace Azure.ResourceManager.DevCenter.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 subnetId is null && domainName is null && organizationUnit is null && domainUsername is null && domainPassword is null && provisioningState is null && healthCheckStatus is null && networkingResourceGroupName is null && domainJoinType is null ? default : new NetworkProperties(
@@ -1203,7 +1202,8 @@ namespace Azure.ResourceManager.DevCenter.Models
                     provisioningState,
                     healthCheckStatus,
                     networkingResourceGroupName,
-                    domainJoinType.GetValueOrDefault()));
+                    domainJoinType.GetValueOrDefault()),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="tags"> Resource tags. </param>
@@ -1273,8 +1273,8 @@ namespace Azure.ResourceManager.DevCenter.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                startOn is null && endOn is null && healthChecks is null ? default : new HealthCheckStatusDetailsProperties(startOn, endOn, (healthChecks ?? new ChangeTrackingList<DevCenterHealthCheck>()).ToList(), null));
+                startOn is null && endOn is null && healthChecks is null ? default : new HealthCheckStatusDetailsProperties(startOn, endOn, (healthChecks ?? new ChangeTrackingList<DevCenterHealthCheck>()).ToList(), null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> An individual health check item. </summary>
@@ -1320,11 +1320,11 @@ namespace Azure.ResourceManager.DevCenter.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 devboxDisksEncryptionEnableStatus is null && keyEncryptionKeyUri is null && keyEncryptionKeyIdentity is null && provisioningState is null ? default : new DevCenterEncryptionSetProperties(devboxDisksEncryptionEnableStatus, keyEncryptionKeyUri, keyEncryptionKeyIdentity, null, provisioningState),
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="tags"> Resource tags. </param>
@@ -1391,8 +1391,8 @@ namespace Azure.ResourceManager.DevCenter.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                provisioningState is null && displayName is null ? default : new AllowedEnvironmentTypeProperties(provisioningState, displayName, null));
+                provisioningState is null && displayName is null ? default : new AllowedEnvironmentTypeProperties(provisioningState, displayName, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The core usage details. </summary>

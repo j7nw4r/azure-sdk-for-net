@@ -38,10 +38,10 @@ namespace Azure.ResourceManager.DurableTask.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Details of the Scheduler. </summary>
@@ -91,8 +91,8 @@ namespace Azure.ResourceManager.DurableTask.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="groupIds"> The group ids for the private endpoint resource. </param>
@@ -162,8 +162,8 @@ namespace Azure.ResourceManager.DurableTask.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties of a private link resource. </summary>
@@ -193,8 +193,8 @@ namespace Azure.ResourceManager.DurableTask.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The properties of Task Hub. </summary>
@@ -220,8 +220,8 @@ namespace Azure.ResourceManager.DurableTask.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The retention policy settings for the resource. </summary>

@@ -39,12 +39,12 @@ namespace Azure.ResourceManager.Datadog.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
                 skuName is null ? default : new DatadogSku(skuName, null),
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="provisioningState"></param>
@@ -103,8 +103,8 @@ namespace Azure.ResourceManager.Datadog.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="provisioningState"></param>
@@ -164,8 +164,8 @@ namespace Azure.ResourceManager.Datadog.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The request to update subscriptions needed to be monitored by the Datadog monitor resource. </summary>
@@ -203,8 +203,8 @@ namespace Azure.ResourceManager.Datadog.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                saaSId);
+                saaSId,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="properties"> The set of properties that can be update in a PATCH request to a monitor resource. </param>
@@ -360,8 +360,8 @@ namespace Azure.ResourceManager.Datadog.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The DatadogSingleSignOnProperties. </summary>
@@ -389,8 +389,8 @@ namespace Azure.ResourceManager.Datadog.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Datadog resource can be created or not. </summary>

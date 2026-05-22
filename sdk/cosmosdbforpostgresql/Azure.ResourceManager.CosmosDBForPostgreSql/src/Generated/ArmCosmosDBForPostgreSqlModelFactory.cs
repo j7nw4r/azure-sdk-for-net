@@ -70,7 +70,6 @@ namespace Azure.ResourceManager.CosmosDBForPostgreSql.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 aadAuthEnabled is null && administratorLogin is null && administratorLoginPassword is null && dataEncryption is null && provisioningState is null && state is null && postgresqlVersion is null && citusVersion is null && maintenanceWindow is null && preferredPrimaryZone is null && isShardsOnCoordinatorEnabled is null && isHAEnabled is null && coordinatorServerEdition is null && coordinatorStorageQuotaInMb is null && coordinatorVCores is null && isCoordinatorPublicIPAccessEnabled is null && nodeServerEdition is null && nodeCount is null && nodeStorageQuotaInMb is null && nodeVCores is null && isNodePublicIPAccessEnabled is null && serverNames is null && sourceResourceId is null && sourceLocation is null && passwordEnabled is null && pointInTimeUTC is null && readReplicas is null && earliestRestoreOn is null && privateEndpointConnections is null && databaseName is null && enableGeoBackup is null && authConfig is null ? default : new ClusterProperties(
@@ -107,7 +106,8 @@ namespace Azure.ResourceManager.CosmosDBForPostgreSql.Models
                     enableGeoBackup,
                     authConfig,
                     null),
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The name object for a server. </summary>
@@ -202,7 +202,6 @@ namespace Azure.ResourceManager.CosmosDBForPostgreSql.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 description is null && dataType is null && allowedValues is null && isRestartRequired is null && serverRoleGroupConfigurations is null && provisioningState is null ? default : new ConfigurationProperties(
                     description,
                     dataType,
@@ -210,7 +209,8 @@ namespace Azure.ResourceManager.CosmosDBForPostgreSql.Models
                     isRestartRequired,
                     (serverRoleGroupConfigurations ?? new ChangeTrackingList<CosmosDBForPostgreSqlServerRoleGroupConfiguration>()).ToList(),
                     provisioningState,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Represents server role group configuration value. </summary>
@@ -244,7 +244,6 @@ namespace Azure.ResourceManager.CosmosDBForPostgreSql.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 value is null && source is null && description is null && defaultValue is null && dataType is null && allowedValues is null && isRestartRequired is null && provisioningState is null ? default : new ServerConfigurationProperties(
                     value,
                     source,
@@ -254,7 +253,8 @@ namespace Azure.ResourceManager.CosmosDBForPostgreSql.Models
                     allowedValues,
                     isRestartRequired,
                     provisioningState,
-                    null));
+                    null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -272,8 +272,8 @@ namespace Azure.ResourceManager.CosmosDBForPostgreSql.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                new FirewallRuleProperties(startIPAddress, endIPAddress, provisioningState, null));
+                new FirewallRuleProperties(startIPAddress, endIPAddress, provisioningState, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -291,8 +291,8 @@ namespace Azure.ResourceManager.CosmosDBForPostgreSql.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                groupId is null && requiredMembers is null && requiredZoneNames is null ? default : new CosmosDBForPostgreSqlPrivateLinkResourceProperties(groupId, (requiredMembers ?? new ChangeTrackingList<string>()).ToList(), (requiredZoneNames ?? new ChangeTrackingList<string>()).ToList(), null));
+                groupId is null && requiredMembers is null && requiredZoneNames is null ? default : new CosmosDBForPostgreSqlPrivateLinkResourceProperties(groupId, (requiredMembers ?? new ChangeTrackingList<string>()).ToList(), (requiredZoneNames ?? new ChangeTrackingList<string>()).ToList(), null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -313,8 +313,8 @@ namespace Azure.ResourceManager.CosmosDBForPostgreSql.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                new RoleProperties(roleType, password, new RolePropertiesExternalIdentity(objectId, principalType.GetValueOrDefault(), tenantId, null), provisioningState, null));
+                new RoleProperties(roleType, password, new RolePropertiesExternalIdentity(objectId, principalType.GetValueOrDefault(), tenantId, null), provisioningState, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -343,7 +343,6 @@ namespace Azure.ResourceManager.CosmosDBForPostgreSql.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 serverEdition is null && storageQuotaInMb is null && vCores is null && isHAEnabled is null && isPublicIPAccessEnabled is null && isReadOnly is null && administratorLogin is null && fullyQualifiedDomainName is null && role is null && state is null && haState is null && availabilityZone is null && postgresqlVersion is null && citusVersion is null ? default : new ClusterServerProperties(
                     serverEdition,
                     storageQuotaInMb,
@@ -359,7 +358,8 @@ namespace Azure.ResourceManager.CosmosDBForPostgreSql.Models
                     haState,
                     availabilityZone,
                     postgresqlVersion,
-                    citusVersion));
+                    citusVersion),
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of CosmosDBForPostgreSqlClusterData. </summary>
@@ -420,8 +420,8 @@ namespace Azure.ResourceManager.CosmosDBForPostgreSql.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                default);
+                default,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of CosmosDBForPostgreSqlRoleData. </summary>
@@ -457,8 +457,8 @@ namespace Azure.ResourceManager.CosmosDBForPostgreSql.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                default);
+                default,
+                additionalBinaryDataProperties: null);
         }
     }
 }

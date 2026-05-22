@@ -38,11 +38,11 @@ namespace Azure.ResourceManager.DevOpsInfrastructure.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 tags,
                 location,
                 properties,
-                identity);
+                identity,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> GitHub organization profile. </summary>
@@ -245,8 +245,8 @@ namespace Azure.ResourceManager.DevOpsInfrastructure.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Details of the ResourceDetailsObject. </summary>
@@ -273,8 +273,8 @@ namespace Azure.ResourceManager.DevOpsInfrastructure.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties of a ResourceSku. </summary>
@@ -405,8 +405,8 @@ namespace Azure.ResourceManager.DevOpsInfrastructure.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                imageVersion is null ? default : new ImageVersionProperties(imageVersion, null));
+                imageVersion is null ? default : new ImageVersionProperties(imageVersion, null),
+                additionalBinaryDataProperties: null);
         }
     }
 }

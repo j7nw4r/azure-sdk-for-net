@@ -33,8 +33,8 @@ namespace Azure.ResourceManager.EdgeZones.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The properties of an Extended Zone resource. </summary>

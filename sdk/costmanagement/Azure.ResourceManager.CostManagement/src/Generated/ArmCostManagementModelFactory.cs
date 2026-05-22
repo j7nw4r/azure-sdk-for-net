@@ -38,12 +38,12 @@ namespace Azure.ResourceManager.CostManagement.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 expiryOn is null && validTill is null && downloadUri is null ? default : new DownloadURL(expiryOn, validTill, downloadUri, null),
                 statusValue is null ? default : new ReportOperationStatus(statusValue, null),
                 startTime,
                 endTime,
-                error);
+                error,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The URL to download the generated report. </summary>
@@ -119,7 +119,6 @@ namespace Azure.ResourceManager.CostManagement.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 category is null && amount is null && timeGrain is null && timePeriod is null && filter is null && currentSpend is null && notifications is null && forecastSpend is null ? default : new BudgetProperties(
                     category.GetValueOrDefault(),
                     amount,
@@ -130,7 +129,8 @@ namespace Azure.ResourceManager.CostManagement.Models
                     notifications,
                     forecastSpend,
                     null),
-                etag);
+                etag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary>
@@ -287,7 +287,6 @@ namespace Azure.ResourceManager.CostManagement.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 format is null && definition is null && partitionData is null && dataOverwriteBehavior is null && compressionMode is null && exportDescription is null && nextRunTimeEstimate is null && systemSuspensionContext is null && deliveryInfoDestination is null && runHistoryValue is null && schedule is null ? default : new ExportProperties(
                     format,
                     new ExportDeliveryInfo(deliveryInfoDestination, null),
@@ -303,7 +302,8 @@ namespace Azure.ResourceManager.CostManagement.Models
                     schedule),
                 identity,
                 location,
-                etag);
+                etag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="format"> The format of the export being delivered. </param>
@@ -387,7 +387,6 @@ namespace Azure.ResourceManager.CostManagement.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 executionType is null && status is null && submittedBy is null && submittedOn is null && processingStartOn is null && processingEndOn is null && startOn is null && endOn is null && fileName is null && manifestFile is null && runSettings is null && error is null ? default : new ExportRunProperties(
                     executionType,
                     status,
@@ -402,7 +401,8 @@ namespace Azure.ResourceManager.CostManagement.Models
                     runSettings,
                     error,
                     null),
-                etag);
+                etag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The properties of the export run. This is not populated currently. </summary>
@@ -430,8 +430,8 @@ namespace Azure.ResourceManager.CostManagement.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                expiryOn is null && validTill is null && downloadUri is null ? default : new DownloadURL(expiryOn, validTill, downloadUri, null));
+                expiryOn is null && validTill is null && downloadUri is null ? default : new DownloadURL(expiryOn, validTill, downloadUri, null),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -463,7 +463,6 @@ namespace Azure.ResourceManager.CostManagement.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 displayName is null && scope is null && createdOn is null && modifiedOn is null && dateRange is null && currency is null && chart is null && accumulated is null && metric is null && kpis is null && pivots is null && typePropertiesQueryType is null && timeframe is null && timePeriod is null && dataSet is null && includeMonetaryCommitment is null ? default : new ViewProperties(
                     displayName,
                     scope,
@@ -484,7 +483,8 @@ namespace Azure.ResourceManager.CostManagement.Models
                     (kpis ?? new ChangeTrackingList<ViewKpiProperties>()).ToList(),
                     (pivots ?? new ChangeTrackingList<ViewPivotProperties>()).ToList(),
                     null),
-                etag);
+                etag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="granularity"> The granularity of rows in the report. </param>
@@ -560,7 +560,6 @@ namespace Azure.ResourceManager.CostManagement.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 definition is null && description is null && source is null && details is null && costEntityId is null && status is null && createdOn is null && closeOn is null && modifiedOn is null && statusModificationUserName is null && statusModifiedOn is null ? default : new AlertProperties(
                     definition,
                     description,
@@ -574,7 +573,8 @@ namespace Azure.ResourceManager.CostManagement.Models
                     statusModificationUserName,
                     statusModifiedOn,
                     null),
-                etag);
+                etag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Alert details. </summary>
@@ -658,7 +658,6 @@ namespace Azure.ResourceManager.CostManagement.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 displayName is null && notification is null && notificationEmail is null && schedule is null && scope is null && status is null && viewId is null && fileFormats is null ? default : new ScheduledActionProperties(
                     displayName,
                     new FileDestination((fileFormats ?? new ChangeTrackingList<ScheduledActionFileFormat>()).ToList(), null),
@@ -670,7 +669,8 @@ namespace Azure.ResourceManager.CostManagement.Models
                     viewId,
                     null),
                 etag,
-                kind);
+                kind,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The properties of the scheduled action notification. </summary>
@@ -754,8 +754,8 @@ namespace Azure.ResourceManager.CostManagement.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                new SettingsKind(kind));
+                new SettingsKind(kind),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -771,8 +771,8 @@ namespace Azure.ResourceManager.CostManagement.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 SettingsKind.Taginheritance,
+                additionalBinaryDataProperties: null,
                 preferContainerTags is null ? default : new TagInheritanceProperties(preferContainerTags.GetValueOrDefault(), null));
         }
 
@@ -835,8 +835,8 @@ namespace Azure.ResourceManager.CostManagement.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The properties of a cost allocation rule. </summary>
@@ -1073,8 +1073,8 @@ namespace Azure.ResourceManager.CostManagement.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                kind);
+                kind,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Benefit utilization summary resource. </summary>
@@ -1091,8 +1091,8 @@ namespace Azure.ResourceManager.CostManagement.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                new BillingAccountBenefitKind(kind));
+                new BillingAccountBenefitKind(kind),
+                additionalBinaryDataProperties: null);
         }
 
         /// <param name="id"> Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. </param>
@@ -1113,8 +1113,8 @@ namespace Azure.ResourceManager.CostManagement.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 BillingAccountBenefitKind.IncludedQuantity,
+                additionalBinaryDataProperties: null,
                 armSkuName is null && benefitId is null && benefitOrderId is null && benefitType is null && usageOn is null && utilizationPercentage is null ? default : new IncludedQuantityUtilizationSummaryProperties(
                     armSkuName,
                     benefitId,
@@ -1145,8 +1145,8 @@ namespace Azure.ResourceManager.CostManagement.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 BillingAccountBenefitKind.SavingsPlan,
+                additionalBinaryDataProperties: null,
                 armSkuName is null && benefitId is null && benefitOrderId is null && benefitType is null && usageOn is null && avgUtilizationPercentage is null && minUtilizationPercentage is null && maxUtilizationPercentage is null ? default : new SavingsPlanUtilizationSummaryProperties(
                     armSkuName,
                     benefitId,
@@ -1285,12 +1285,12 @@ namespace Azure.ResourceManager.CostManagement.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 nextLink is null && columns is null && rows is null ? default : new ForecastProperties(nextLink, (columns ?? new ChangeTrackingList<ForecastColumn>()).ToList(), (rows ?? new ChangeTrackingList<IList<BinaryData>>()).ToList(), null),
                 location,
                 sku,
                 etag,
-                tags);
+                tags,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Forecast column properties. </summary>
@@ -1329,7 +1329,6 @@ namespace Azure.ResourceManager.CostManagement.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 description is null && isFilterEnabled is null && isGroupingEnabled is null && data is null && total is null && category is null && usageStart is null && usageEnd is null && nextLink is null ? default : new DimensionProperties(
                     description,
                     isFilterEnabled,
@@ -1344,7 +1343,8 @@ namespace Azure.ResourceManager.CostManagement.Models
                 location,
                 sku,
                 etag,
-                tags);
+                tags,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> The definition of a query. </summary>
@@ -1452,12 +1452,12 @@ namespace Azure.ResourceManager.CostManagement.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 nextLink is null && columns is null && rows is null ? default : new QueryProperties(nextLink, (columns ?? new ChangeTrackingList<QueryColumn>()).ToList(), (rows ?? new ChangeTrackingList<IList<BinaryData>>()).ToList(), null),
                 location,
                 sku,
                 etag,
-                tags);
+                tags,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> QueryColumn properties. </summary>
@@ -1583,8 +1583,8 @@ namespace Azure.ResourceManager.CostManagement.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 kind,
+                additionalBinaryDataProperties: null,
                 properties);
         }
 
@@ -1611,7 +1611,6 @@ namespace Azure.ResourceManager.CostManagement.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 format is null && deliveryInfoDestination is null && definition is null && runHistoryValue is null && partitionData is null && nextRunTimeEstimate is null && schedule is null ? default : new ExportProperties(
                     format,
                     new ExportDeliveryInfo(deliveryInfoDestination, default),
@@ -1627,7 +1626,8 @@ namespace Azure.ResourceManager.CostManagement.Models
                     schedule),
                 default,
                 default,
-                eTag);
+                eTag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="Models.CommonExportProperties"/>. </summary>
@@ -1668,7 +1668,6 @@ namespace Azure.ResourceManager.CostManagement.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 executionType is null && status is null && submittedBy is null && submittedOn is null && processingStartOn is null && processingEndOn is null && fileName is null && runSettings is null && error is null ? default : new ExportRunProperties(
                     executionType,
                     status,
@@ -1683,7 +1682,8 @@ namespace Azure.ResourceManager.CostManagement.Models
                     runSettings,
                     error,
                     default),
-                eTag);
+                eTag,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Initializes a new instance of <see cref="CostManagement.ScheduledActionData"/>. </summary>
@@ -1711,7 +1711,6 @@ namespace Azure.ResourceManager.CostManagement.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
                 displayName is null && fileFormats is null && notification is null && notificationEmail is null && schedule is null && scope is null && status is null && viewId is null ? default : new ScheduledActionProperties(
                     displayName,
                     new FileDestination((fileFormats ?? new ChangeTrackingList<ScheduledActionFileFormat>()).ToList(), default),
@@ -1723,7 +1722,8 @@ namespace Azure.ResourceManager.CostManagement.Models
                     viewId,
                     default),
                 eTag,
-                kind);
+                kind,
+                additionalBinaryDataProperties: null);
         }
     }
 }

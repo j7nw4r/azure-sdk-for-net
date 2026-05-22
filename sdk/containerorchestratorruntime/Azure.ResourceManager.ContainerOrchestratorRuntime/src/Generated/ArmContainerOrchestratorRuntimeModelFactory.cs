@@ -32,8 +32,8 @@ namespace Azure.ResourceManager.ContainerOrchestratorRuntime.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Details of the StorageClass StorageClass. </summary>
@@ -116,8 +116,8 @@ namespace Azure.ResourceManager.ContainerOrchestratorRuntime.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Details of the LoadBalancer. </summary>
@@ -156,8 +156,8 @@ namespace Azure.ResourceManager.ContainerOrchestratorRuntime.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Details of the BgpPeer. </summary>
@@ -185,8 +185,8 @@ namespace Azure.ResourceManager.ContainerOrchestratorRuntime.Models
                 name,
                 resourceType,
                 systemData,
-                additionalBinaryDataProperties: null,
-                properties);
+                properties,
+                additionalBinaryDataProperties: null);
         }
 
         /// <summary> Properties for the service resource. </summary>
