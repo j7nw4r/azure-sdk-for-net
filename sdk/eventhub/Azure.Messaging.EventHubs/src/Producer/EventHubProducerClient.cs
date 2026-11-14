@@ -62,6 +62,12 @@ namespace Azure.Messaging.EventHubs.Producer
     [SuppressMessage("Usage", "AZC0007:DO provide a minimal constructor that takes only the parameters required to connect to the service.", Justification = "Event Hubs are AMQP-based services and don't use ClientOptions functionality")]
     public class EventHubProducerClient : IAsyncDisposable
     {
+        /// <summary>The diagnostics associated with publishing.</summary>
+        private EventHubsTelemetry _telemetry;
+
+        /// <summary>The diagnostics associated with publishing.</summary>
+        private EventHubsTelemetry Telemetry => _telemetry ??= new EventHubsTelemetry(FullyQualifiedNamespace, EventHubName);
+
         /// <summary>The maximum number of attempts that may be made to get a <see cref="TransportProducer" /> from the pool.</summary>
         internal const int MaximumCreateProducerAttempts = 3;
 
@@ -622,11 +628,21 @@ namespace Azure.Messaging.EventHubs.Producer
                 return;
             }
 
-            var sendTask = (Options.EnableIdempotentPartitions)
-                ? SendIdempotentAsync(events, options, cancellationToken)
-                : SendInternalAsync(events, options, cancellationToken);
+            using var telemetry = Telemetry.StartOperation("send");
+            try
+            {
+                var sendTask = (Options.EnableIdempotentPartitions)
+                    ? SendIdempotentAsync(events, options, cancellationToken)
+                    : SendInternalAsync(events, options, cancellationToken);
 
-            await sendTask.ConfigureAwait(false);
+                await sendTask.ConfigureAwait(false);
+                telemetry?.Complete(events.Count);
+            }
+            catch (Exception ex)
+            {
+                telemetry?.Failed(ex);
+                throw;
+            }
         }
 
         /// <summary>
@@ -661,11 +677,21 @@ namespace Azure.Messaging.EventHubs.Producer
                 return;
             }
 
-            var sendTask = (Options.EnableIdempotentPartitions)
-                ? SendIdempotentAsync(eventBatch, cancellationToken)
-                : SendInternalAsync(eventBatch, cancellationToken);
+            using var telemetry = Telemetry.StartOperation("send");
+            try
+            {
+                var sendTask = (Options.EnableIdempotentPartitions)
+                    ? SendIdempotentAsync(eventBatch, cancellationToken)
+                    : SendInternalAsync(eventBatch, cancellationToken);
 
-            await sendTask.ConfigureAwait(false);
+                await sendTask.ConfigureAwait(false);
+                telemetry?.Complete(eventBatch.Count);
+            }
+            catch (Exception ex)
+            {
+                telemetry?.Failed(ex);
+                throw;
+            }
         }
 
         /// <summary>
@@ -932,6 +958,7 @@ namespace Azure.Messaging.EventHubs.Producer
                 }
             }
 
+            scope.Failed("cancelled");
             throw new TaskCanceledException();
         }
 
@@ -986,6 +1013,7 @@ namespace Azure.Messaging.EventHubs.Producer
                 eventBatch.Unlock();
             }
 
+            scope.Failed("cancelled");
             throw new TaskCanceledException();
         }
 

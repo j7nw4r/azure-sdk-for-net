@@ -2912,5 +2912,14 @@ namespace Azure.Messaging.EventHubs.Diagnostics
         {
             WriteEvent(128, identifier ?? string.Empty, eventHubName ?? string.Empty, ownershipIntervalSeconds, loadBalancingIntervalSeconds, troubleshootingGuideLink);
         }
+        /// <summary>Reports an AMQP component creation attempt or connection invalidation.</summary>
+        [Event(132, Level = EventLevel.Informational, Message = "AMQP {3} generation {4}: {5}. Namespace: {0}; Event Hub: {1}; Client: {2}.")]
+        public void AmqpLifecycle(string fullyQualifiedNamespace, string eventHubName, string clientIdentifier, string component, long generation, string outcome)
+        {
+            if (IsEnabled())
+            {
+                WriteEvent(132, fullyQualifiedNamespace, eventHubName, clientIdentifier, component, generation, outcome);
+            }
+        }
     }
 }
